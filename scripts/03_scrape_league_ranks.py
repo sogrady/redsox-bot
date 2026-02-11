@@ -37,7 +37,7 @@ is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
 aws_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
 aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
 aws_region = "us-west-1"
-s3_bucket_name = "stilesdata.com" # Consistent with other scripts
+s3_bucket_name = "redsox-data" # Consistent with other scripts
 
 # Conditional AWS session creation based on the environment
 if is_github_actions:

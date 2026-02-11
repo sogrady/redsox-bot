@@ -91,7 +91,7 @@ output_dir = "data/standings"
 csv_file = f"{output_dir}/redsox_schedule.csv"
 json_file = f"{output_dir}/redsox_schedule.json"
 parquet_file = f"{output_dir}/redsox_schedule.parquet"
-s3_bucket = "stilesdata.com"
+s3_bucket = "redsox-data"
 
 def fetch_clean_current_schedule(url, year):
     response = requests.get(url)
@@ -183,4 +183,4 @@ def save_to_s3(df, base_path, s3_bucket, formats):
 # Saving files locally and to S3
 file_path = os.path.join(data_dir, 'redsox_schedule')
 formats = ["csv", "json"]
-save_to_s3(schedule_df, "redsox/data/standings/redsox_schedule", "stilesdata.com", formats)
+save_to_s3(schedule_df, "redsox/data/standings/redsox_schedule", "redsox-data", formats)

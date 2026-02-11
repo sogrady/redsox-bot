@@ -159,7 +159,7 @@ def save_to_s3(df, base_path, s3_bucket, formats):
 file_path = os.path.join(data_dir, 'redsox_season_outcomes')
 formats = ["csv", "json", "parquet"]
 save_dataframe(history_df, file_path, formats)
-save_to_s3(history_df, "redsox/data/standings/redsox_season_outcomes", "stilesdata.com", formats)
+save_to_s3(history_df, "redsox/data/standings/redsox_season_outcomes", "redsox-data", formats)
 
 file_path = os.path.join(data_dir, 'dodgers_season_outcomes')
 formats = ["csv", "json", "parquet"]

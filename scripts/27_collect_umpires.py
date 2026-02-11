@@ -9,7 +9,7 @@ Data source:
 
 Output:
 - data/pitches/dodgers_umpires_{year}.json
-- s3://stilesdata.com/dodgers/data/pitches/dodgers_umpires_{year}.json
+- s3://redsox-data/dodgers/data/pitches/dodgers_umpires_{year}.json
 
 Idempotent: Reuses existing output and appends only missing game_pks.
 Also reuses local Savant gamefeeds (data/gamefeeds/*.json) to seed game_pks.
@@ -38,7 +38,7 @@ LOCAL_OUT_DIR = os.path.join(BASE_DIR, "data", "pitches")
 YEAR = pd.Timestamp.now().year
 LOCAL_OUT_PATH = os.path.join(LOCAL_OUT_DIR, f"redsox_umpires_{YEAR}.json")
 
-S3_BUCKET = "stilesdata.com"
+S3_BUCKET = "redsox-data"
 S3_KEY = f"redsox/data/pitches/redsox_umpires_{YEAR}.json"
 
 

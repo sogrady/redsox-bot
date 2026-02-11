@@ -15,7 +15,7 @@ output_file_name = "redsox_wins_projection_timeseries.json"
 local_output_file_path = os.path.join(output_dir, output_file_name)
 
 # S3 Configuration
-s3_bucket_name = "stilesdata.com"
+s3_bucket_name = "redsox-data"
 s3_object_key = f"redsox/data/standings/{output_file_name}"
 
 # Ensure the output directory exists for local save
@@ -66,7 +66,7 @@ logging.info(f"DEBUG: Initial output_data defined. Target local file: {local_out
 try:
     # Load game-by-game results data
     local_source_data_path = os.path.join(output_dir, "redsox_wins_losses_current.json")
-    source_data_url = "https://stilesdata.com/redsox/data/standings/redsox_wins_losses_current.json"
+    source_data_url = "https://redsox-data/redsox/data/standings/redsox_wins_losses_current.json"
 
     if not os.path.exists(local_source_data_path):
         logging.info(f"Local source file {local_source_data_path} not found. Attempting to fetch from URL: {source_data_url}")

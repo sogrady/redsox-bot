@@ -143,10 +143,10 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"], pro
 save_to_s3(
     totals,
     "redsox/data/pitching/redsox_pitching_totals_current",
-    "stilesdata.com",
+    "redsox-data",
 )
 save_to_s3(
     ranks,
     "redsox/data/pitching/redsox_pitching_ranks_current",
-    "stilesdata.com",
+    "redsox-data",
 )

@@ -25,7 +25,7 @@ logging.basicConfig(
 from scripts import config
 
 DODGERS_TEAM_ID = config.TEAM_ID
-BUCKET = "stilesdata.com"
+BUCKET = "redsox-data"
 ARCHIVE_KEY_JSON = "redsox/data/standings/redsox_boxscores.json"
 ARCHIVE_KEY_CSV = "redsox/data/standings/redsox_boxscores.csv"  # legacy fallback
 LOCAL_ARCHIVE_JSON = os.path.join("data", "standings", "redsox_boxscores.json")

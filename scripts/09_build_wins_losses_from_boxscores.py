@@ -9,7 +9,7 @@ import pandas as pd
 
 from scripts import config
 
-BUCKET = "stilesdata.com"
+BUCKET = "redsox-data"
 BOXES_KEY_JSON = "redsox/data/standings/redsox_boxscores.json"
 BOXES_KEY_CSV = "redsox/data/standings/redsox_boxscores.csv"
 LOCAL_BOXES_JSON = os.path.join("data", "standings", "redsox_boxscores.json")

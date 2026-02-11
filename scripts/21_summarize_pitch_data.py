@@ -7,7 +7,7 @@ from botocore.exceptions import NoCredentialsError
 
 # === Configuration ===
 LOCAL_JSON_PATH = "data/summary/umpire_summary.json"
-S3_BUCKET = "stilesdata.com"
+S3_BUCKET = "redsox-data"
 S3_KEY = "redsox/data/summary/umpire_summary.json"
 
 # === AWS Session Setup ===

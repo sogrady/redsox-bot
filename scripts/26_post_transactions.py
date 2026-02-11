@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Environment Variables & AWS/S3
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
-s3_bucket_name = "stilesdata.com"
+s3_bucket_name = "redsox-data"
 s3_key_transactions_archive = "redsox/data/roster/redsox_transactions_archive.json"
 
 if is_github_actions:

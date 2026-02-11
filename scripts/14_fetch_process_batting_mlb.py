@@ -144,6 +144,6 @@ formats = ["csv", "json", "parquet"]
 save_to_s3(
     df,
     "redsox/data/batting/redsox_player_batting_current_table",
-    "stilesdata.com",
+    "redsox-data",
     formats,
 )

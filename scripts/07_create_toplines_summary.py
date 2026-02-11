@@ -128,12 +128,12 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
 
 # URLs for data
 # URLs for data
-standings_live_url = f"https://stilesdata.com/redsox/data/standings/all_teams_standings_metrics_2025.json"
-standings_url = f"https://stilesdata.com/redsox/data/standings/redsox_standings_1958_present.parquet"
-batting_url = f"https://stilesdata.com/redsox/data/batting/redsox_team_batting_1958_present.parquet"
-pitching_url = 'https://stilesdata.com/redsox/data/pitching/redsox_pitching_totals_current.parquet'
-# pitching_ranks_url = 'https://stilesdata.com/dodgers/data/pitching/dodgers_pitching_ranks_current.parquet' # Removed
-# batting_ranks_url = 'https://stilesdata.com/dodgers/data/batting/dodgers_team_batting_ranks_1958_present.parquet' # Removed
+standings_live_url = f"https://redsox-data/redsox/data/standings/all_teams_standings_metrics_2025.json"
+standings_url = f"https://redsox-data/redsox/data/standings/redsox_standings_1958_present.parquet"
+batting_url = f"https://redsox-data/redsox/data/batting/redsox_team_batting_1958_present.parquet"
+pitching_url = 'https://redsox-data/redsox/data/pitching/redsox_pitching_totals_current.parquet'
+# pitching_ranks_url = 'https://redsox-data/dodgers/data/pitching/dodgers_pitching_ranks_current.parquet' # Removed
+# batting_ranks_url = 'https://redsox-data/dodgers/data/batting/dodgers_team_batting_ranks_1958_present.parquet' # Removed
 
 mlb_teams = {
     "ARI": "Arizona Diamondbacks",
@@ -959,4 +959,4 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json"]):
         s3_resource.Bucket(s3_bucket).put_object(Key=file_path, Body=buffer, ContentType=content_type)
         logging.info(f"Uploaded {fmt} to {s3_bucket}/{file_path}")
 
-save_to_s3(summary_df, "dodgers/data/standings/season_summary_latest", "stilesdata.com")
+save_to_s3(summary_df, "dodgers/data/standings/season_summary_latest", "redsox-data")

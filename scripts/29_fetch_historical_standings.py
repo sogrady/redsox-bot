@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 CURRENT_YEAR = datetime.now().year
 START_YEAR = 1901
 OUTPUT_DIR = "data/standings"
-S3_BUCKET = "stilesdata.com"
+S3_BUCKET = "redsox-data"
 
 # File paths
 CSV_FILE = f"{OUTPUT_DIR}/redsox_standings_{START_YEAR}_present.csv"

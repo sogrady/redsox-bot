@@ -15,7 +15,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # === Configuration ===
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "pitches")
-S3_BUCKET = "stilesdata.com"
+S3_BUCKET = "redsox-data"
 current_year_for_paths = datetime.now().year
 S3_KEY_CSV = f"redsox/data/pitches/redsox_pitches_{current_year_for_paths}.csv"
 S3_KEY_JSON = f"redsox/data/pitches/redsox_pitches_{current_year_for_paths}.json"
@@ -188,8 +188,8 @@ all_pitches = []
 all_pitches_thrown_by_team = []
 
 # Load existing datasets from public URLs to support incremental updates
-public_to_url = f"https://stilesdata.com/{S3_KEY_JSON}"
-public_by_url = f"https://stilesdata.com/redsox/data/pitches/redsox_pitches_thrown_{current_year_for_paths}.json"
+public_to_url = f"https://redsox-data/{S3_KEY_JSON}"
+public_by_url = f"https://redsox-data/redsox/data/pitches/redsox_pitches_thrown_{current_year_for_paths}.json"
 existing_to_df = load_existing_json(public_to_url)
 existing_by_df = load_existing_json(public_by_url)
 processed_gamepks_to = set(existing_to_df['game_pk'].unique()) if not existing_to_df.empty and 'game_pk' in existing_to_df.columns else set()

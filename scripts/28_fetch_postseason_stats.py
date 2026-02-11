@@ -25,7 +25,7 @@ def fetch_roster_data():
             return json.load(f)
     else:
         # Fallback to URL
-        s3_key_json = "https://stilesdata.com/redsox/data/roster/redsox_roster_current.json"
+        s3_key_json = "https://redsox-data/redsox/data/roster/redsox_roster_current.json"
         response = requests.get(s3_key_json)
         return response.json()
 

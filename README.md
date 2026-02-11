@@ -82,7 +82,7 @@ The project uses AWS S3 to store and serve processed data files. Here's how to s
 1. Log into the [AWS Console](https://console.aws.amazon.com/)
 2. Navigate to **S3** service
 3. Click **Create bucket**
-4. Choose a bucket name (e.g., `stilesdata.com` or `your-domain.com`)
+4. Choose a bucket name (e.g., `redsox-data` or `your-domain.com`)
 5. Select your preferred **region** (e.g., `us-west-1`)
 6. **Uncheck** "Block all public access" (data files need to be publicly readable)
 7. Acknowledge the warning about public access
@@ -113,7 +113,7 @@ Add a bucket policy to allow public read access to your data files:
 ### Step 3: Create IAM User for GitHub Actions
 
 1. Navigate to **IAM** service → **Users** → **Add users**
-2. Username: `github-actions-redsox-bot` (or similar)
+2. Username: `github-actions-redsox-data` (or similar)
 3. Select **Access key - Programmatic access**
 4. Click **Next: Permissions**
 5. Click **Attach existing policies directly**
@@ -125,7 +125,7 @@ Add a bucket policy to allow public read access to your data files:
 
 All scripts use `scripts/config.py` for S3 configuration. Verify these settings:
 
-- `S3_BUCKET`: Your bucket name (e.g., `"stilesdata.com"`)
+- `S3_BUCKET`: Your bucket name (e.g., `"redsox-data"`)
 - `S3_PREFIX`: Path prefix for Red Sox data (e.g., `"redsox"`)
 - `AWS_REGION`: Your bucket's region (e.g., `"us-west-1"`)
 
@@ -141,7 +141,7 @@ The easiest and most cost-effective hosting solution. Already configured in this
 2. Under **Source**, select **Deploy from a branch**
 3. Choose branch: **gh-pages**
 4. Click **Save**
-5. Your site will be available at: `https://yourusername.github.io/redsox-bot/`
+5. Your site will be available at: `https://yourusername.github.io/redsox-data/`
 
 **Custom Domain (Optional):**
 - Add a `CNAME` file to the root with your domain (already done: `redsoxdata.bot`)
@@ -321,7 +321,7 @@ bundle update
 
 **Manual backups (recommended quarterly):**
 ```bash
-aws s3 sync s3://stilesdata.com/redsox ./backups/redsox-$(date +%Y%m%d)
+aws s3 sync s3://redsox-data/redsox ./backups/redsox-$(date +%Y%m%d)
 ```
 
 ### Cost Monitoring
@@ -439,12 +439,12 @@ Error: NoCredentialsError
 
 **Solutions:**
 1. Check browser console for JavaScript errors
-2. Verify data file exists: `https://stilesdata.com/redsox/data/standings/redsox_standings_1901_present_optimized.json`
+2. Verify data file exists: `https://redsox-data/redsox/data/standings/redsox_standings_1901_present_optimized.json`
 3. Check `assets/js/dashboard.js` points to correct data URL
 4. Ensure S3 bucket policy allows public read access
 5. Test data endpoint with curl:
    ```bash
-   curl -I https://stilesdata.com/redsox/data/standings/redsox_standings_1901_present_optimized.json
+   curl -I https://redsox-data/redsox/data/standings/redsox_standings_1901_present_optimized.json
    # Should return HTTP 200
    ```
 
@@ -472,39 +472,39 @@ The processed datasets are uploaded to an AWS S3 bucket.
 
 **Latest season summary**
 
-- [JSON](https://stilesdata.com/redsox/data/standings/season_summary_latest.json)
-- [CSV](https://stilesdata.com/redsox/data/standings/season_summary_latest.csv)
+- [JSON](https://redsox-data/redsox/data/standings/season_summary_latest.json)
+- [CSV](https://redsox-data/redsox/data/standings/season_summary_latest.csv)
 
 **Game-by-game standings, 1901 to present:**
 
-- [JSON](https://stilesdata.com/redsox/data/standings/redsox_standings_1901_present.json)
-- [CSV](https://stilesdata.com/redsox/data/standings/redsox_standings_1901_present.csv)
-- [Parquet](https://stilesdata.com/redsox/data/standings/redsox_standings_1901_present.parquet)
+- [JSON](https://redsox-data/redsox/data/standings/redsox_standings_1901_present.json)
+- [CSV](https://redsox-data/redsox/data/standings/redsox_standings_1901_present.csv)
+- [Parquet](https://redsox-data/redsox/data/standings/redsox_standings_1901_present.parquet)
 
 ### Batting
 
 **Season-by-season batting statistics, by player, 1901 to present:**
 
-- [JSON](https://stilesdata.com/redsox/data/batting/redsox_player_batting_1901_present.json)
-- [CSV](https://stilesdata.com/redsox/data/batting/redsox_player_batting_1901_present.csv)
-- [Parquet](https://stilesdata.com/redsox/data/batting/redsox_player_batting_1901_present.parquet)
+- [JSON](https://redsox-data/redsox/data/batting/redsox_player_batting_1901_present.json)
+- [CSV](https://redsox-data/redsox/data/batting/redsox_player_batting_1901_present.csv)
+- [Parquet](https://redsox-data/redsox/data/batting/redsox_player_batting_1901_present.parquet)
 
 **Other current season player batting statistics:**
 - Batting average, on-base and slugging percentage and walks, home runs and strikeouts by plate appearance via Baseball Savant.
-    - [JSON](https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json)
-    - [CSV](https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.parquet)
+    - [JSON](https://redsox-data/redsox/data/batting/redsox_player_batting_current_table.json)
+    - [CSV](https://redsox-data/redsox/data/batting/redsox_player_batting_current_table.csv)
+    - [Parquet](https://redsox-data/redsox/data/batting/redsox_player_batting_current_table.parquet)
 
 **Season-by-season batting at the team level, 1901 to present:**
 - How the team ranks or ranked in the league by season
-    - [JSON](https://stilesdata.com/redsox/data/batting/redsox_team_batting_ranks_1901_present.json)
-    - [CSV](https://stilesdata.com/redsox/data/batting/redsox_team_batting_ranks_1901_present.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/batting/redsox_team_batting_ranks_1901_present.parquet)
+    - [JSON](https://redsox-data/redsox/data/batting/redsox_team_batting_ranks_1901_present.json)
+    - [CSV](https://redsox-data/redsox/data/batting/redsox_team_batting_ranks_1901_present.csv)
+    - [Parquet](https://redsox-data/redsox/data/batting/redsox_team_batting_ranks_1901_present.parquet)
 
 - Team aggregates by season for major batting stats: hits, homers, strikeouts, etc.
-    - [JSON](https://stilesdata.com/redsox/data/batting/redsox_team_batting_1901_present.json)
-    - [CSV](https://stilesdata.com/redsox/data/batting/redsox_team_batting_1901_present.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/batting/redsox_team_batting_1901_present.parquet)
+    - [JSON](https://redsox-data/redsox/data/batting/redsox_team_batting_1901_present.json)
+    - [CSV](https://redsox-data/redsox/data/batting/redsox_team_batting_1901_present.csv)
+    - [Parquet](https://redsox-data/redsox/data/batting/redsox_team_batting_1901_present.parquet)
 
 #### xwOBA (current season)
 
@@ -512,25 +512,25 @@ The processed datasets are uploaded to an AWS S3 bucket.
 - Filters to a maintained allowlist of regular batters and normalizes names to match roster output
 - Writes outputs and uploads to S3
   - Current timeseries per allowed batter
-    - [JSON](https://stilesdata.com/redsox/data/batting/redsox_xwoba_current.json)
-    - [CSV](https://stilesdata.com/redsox/data/batting/redsox_xwoba_current.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/batting/redsox_xwoba_current.parquet)
+    - [JSON](https://redsox-data/redsox/data/batting/redsox_xwoba_current.json)
+    - [CSV](https://redsox-data/redsox/data/batting/redsox_xwoba_current.csv)
+    - [Parquet](https://redsox-data/redsox/data/batting/redsox_xwoba_current.parquet)
   - League average xwOBA snapshot
-    - [JSON](https://stilesdata.com/redsox/data/batting/league_avg_xwoba.json)
+    - [JSON](https://redsox-data/redsox/data/batting/league_avg_xwoba.json)
 
 ### Pitching
 
 **Current season pitching:**
 - Team aggregates for major pitching stats: runs, ERA, etc.
-    - [JSON](https://stilesdata.com/redsox/data/pitching/redsox_pitching_totals_current.json)
-    - [CSV](https://stilesdata.com/redsox/data/pitching/redsox_pitching_totals_current.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/pitching/redsox_pitching_totals_current.parquet)
+    - [JSON](https://redsox-data/redsox/data/pitching/redsox_pitching_totals_current.json)
+    - [CSV](https://redsox-data/redsox/data/pitching/redsox_pitching_totals_current.csv)
+    - [Parquet](https://redsox-data/redsox/data/pitching/redsox_pitching_totals_current.parquet)
 
 - Team's league ranking for major pitching stats: runs, ERA, etc.
 
-    - [JSON](https://stilesdata.com/redsox/data/pitching/redsox_pitching_ranks_current.json)
-    - [CSV](https://stilesdata.com/redsox/data/pitching/redsox_pitching_ranks_current.csv)
-    - [Parquet](https://stilesdata.com/redsox/data/pitching/redsox_pitching_ranks_current.parquet)
+    - [JSON](https://redsox-data/redsox/data/pitching/redsox_pitching_ranks_current.json)
+    - [CSV](https://redsox-data/redsox/data/pitching/redsox_pitching_ranks_current.csv)
+    - [Parquet](https://redsox-data/redsox/data/pitching/redsox_pitching_ranks_current.parquet)
 
 ---
 

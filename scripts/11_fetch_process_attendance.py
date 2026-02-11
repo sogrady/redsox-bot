@@ -101,4 +101,4 @@ def save_to_s3(df, s3_path, s3_bucket):
 
 # Saving DataFrame to S3
 s3_path = "redsox/data/standings/mlb_team_attendance.json"
-save_to_s3(merged, s3_path, "stilesdata.com")
+save_to_s3(merged, s3_path, "redsox-data")

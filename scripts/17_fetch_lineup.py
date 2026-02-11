@@ -29,7 +29,7 @@ is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
 
 # AWS credentials and session initialization
 aws_region = "us-west-1"
-s3_bucket_name = "stilesdata.com" # Consistent with other scripts
+s3_bucket_name = "redsox-data" # Consistent with other scripts
 
 # Conditional AWS session creation based on the environment
 if is_github_actions:
@@ -317,7 +317,7 @@ def fetch_schedule_data(target_date_iso: str):
     Fetch the Red Sox schedule and return the row matching the provided ISO date (YYYY-MM-DD)
     with placement == 'next'. Only returns the row if game_start looks like a real time.
     """
-    schedule_url = "https://stilesdata.com/redsox/data/standings/redsox_schedule.json"
+    schedule_url = "https://redsox-data/redsox/data/standings/redsox_schedule.json"
     logging.info(f"Fetching schedule from: {schedule_url}")
 
     # Convert ISO date to the schedule's 'date' format, e.g. 'Aug 26'

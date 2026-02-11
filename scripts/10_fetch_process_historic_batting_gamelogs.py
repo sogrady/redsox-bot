@@ -54,7 +54,7 @@ headers = {
 }
 
 # Fetch Archive game logs
-# archive_url = "https://stilesdata.com/dodgers/data/batting/archive/dodgers_team_cumulative_batting_logs_1958_2024.parquet"
+# archive_url = "https://redsox-data/dodgers/data/batting/archive/dodgers_team_cumulative_batting_logs_1958_2024.parquet"
 # archive_df = pd.read_parquet(archive_url)
 
 # Fetch Current game logs
@@ -153,4 +153,4 @@ def save_to_s3(df, base_path, s3_bucket, formats):
 file_path = os.path.join(data_dir, 'redsox_historic_batting_gamelogs')
 formats = ["csv", "json", "parquet"]
 # save_dataframe(optimized_df, file_path, formats)
-save_to_s3(optimized_df, "redsox/data/batting/archive/redsox_historic_batting_gamelogs", "stilesdata.com", formats)
+save_to_s3(optimized_df, "redsox/data/batting/archive/redsox_historic_batting_gamelogs", "redsox-data", formats)
