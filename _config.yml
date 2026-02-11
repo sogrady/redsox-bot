@@ -18,25 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Dodgers Data Bot
-name: Dodgers Data Bot
-owner: Matt Stiles
-owner_url: https://mattstiles.me
-headline: How are the Dodgers doing?
-email: mattstiles@gmail.com
+title: Red Sox Data Bot
+name: Red Sox Data Bot
+owner: Red Sox Bot
+owner_url: https://github.com/sogrady
+headline: How are the Red Sox doing?
+email: sogrady@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  An auto-updating baseball statistics dashboard that answers the question: How are the Dodgers doing?
+  An auto-updating baseball statistics dashboard that answers the question: How are the Red Sox doing?
 baseurl: ""
-url: "https://dodgersdata.bot"
+url: "https://redsoxdata.bot"
 
 # SEO and social settings
 logo: "/assets/images/meta_card.png"
 og_image: "/assets/images/meta_card.png"
-twitter_username: stiles
-github_username:  stiles
+twitter_username: sogrady
+github_username:  sogrady
 
 # Site Author
-author: stiles
+author: sogrady
 
 # Build settings
 theme: minimal-mistakes-jekyll
@@ -61,11 +61,11 @@ destination: ./_site
 
 # Social Sharing
 twitter:
-  username: stiles
+  username: sogrady
 
 # Production settings
 # Masthead title and subtitle
-masthead_title: "Dodgers Data Bot"
+masthead_title: "Red Sox Data Bot"
 
 # Defaults
 defaults:

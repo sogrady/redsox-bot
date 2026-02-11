@@ -22,12 +22,14 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-DODGERS_TEAM_ID = 119
+from scripts import config
+
+DODGERS_TEAM_ID = config.TEAM_ID
 BUCKET = "stilesdata.com"
-ARCHIVE_KEY_JSON = "dodgers/data/standings/dodgers_boxscores.json"
-ARCHIVE_KEY_CSV = "dodgers/data/standings/dodgers_boxscores.csv"  # legacy fallback
-LOCAL_ARCHIVE_JSON = os.path.join("data", "standings", "dodgers_boxscores.json")
-LOCAL_ARCHIVE_CSV = os.path.join("data", "standings", "dodgers_boxscores.csv")
+ARCHIVE_KEY_JSON = "redsox/data/standings/redsox_boxscores.json"
+ARCHIVE_KEY_CSV = "redsox/data/standings/redsox_boxscores.csv"  # legacy fallback
+LOCAL_ARCHIVE_JSON = os.path.join("data", "standings", "redsox_boxscores.json")
+LOCAL_ARCHIVE_CSV = os.path.join("data", "standings", "redsox_boxscores.csv")
 
 
 def get_s3_client(profile_name: Optional[str] = None):
@@ -213,17 +215,17 @@ def parse_game_log_rows(table: BeautifulSoup) -> pd.DataFrame:
 
 
 def get_los_angeles_date_iso() -> str:
-    """Return today's date string in America/Los_Angeles as YYYY-MM-DD."""
-    la_now = datetime.now(ZoneInfo("America/Los_Angeles"))
+    """Return today's date string in Team Local Time as YYYY-MM-DD."""
+    la_now = datetime.now(ZoneInfo(config.TEAM_TIMEZONE))
     return la_now.strftime("%Y-%m-%d")
 
 
 def get_dodgers_final_gamepks_for_date(date_iso: str) -> List[int]:
     """Query MLB Stats API schedule for the given local date and return any
-    Dodgers gamePk values that are Final.
+    Team gamePk values that are Final.
     """
     url = (
-        f"https://statsapi.mlb.com/api/v1/schedule?timeZone=America/Los_Angeles&sportId=1&date={date_iso}"
+        f"https://statsapi.mlb.com/api/v1/schedule?timeZone={config.TEAM_TIMEZONE}&sportId=1&date={date_iso}"
     )
     payload = fetch_json(url)
     if payload is None:
@@ -282,14 +284,14 @@ def build_boxscore_row(gamefeed: dict) -> Optional[dict]:
         status = sb.get("status", {}).get("detailedState")
         is_final = status == "Final"
 
-        dodgers_is_home = home_id == DODGERS_TEAM_ID
-        if dodgers_is_home:
-            dodgers_runs = home_runs
+        team_is_home = home_id == DODGERS_TEAM_ID
+        if team_is_home:
+            team_runs = home_runs
             opponent_runs = away_runs
             opponent_name = away_name
             opponent_abbr = away_abbr
         else:
-            dodgers_runs = away_runs
+            team_runs = away_runs
             opponent_runs = home_runs
             opponent_name = home_name
             opponent_abbr = home_abbr
@@ -312,12 +314,12 @@ def build_boxscore_row(gamefeed: dict) -> Optional[dict]:
             "home_runs": home_runs,
             "away_runs": away_runs,
             "winner": winner_abbr,
-            "dodgers_is_home": dodgers_is_home,
-            "dodgers_runs": dodgers_runs,
+            "team_is_home": team_is_home,
+            "team_runs": team_runs,
             "opponent_runs": opponent_runs,
             "opponent_name": opponent_name,
             "opponent_abbr": opponent_abbr,
-            "diff": dodgers_runs - opponent_runs,
+            "diff": team_runs - opponent_runs,
             "runs_by_inning_home": rbi_home,
             "runs_by_inning_away": rbi_away,
             "status": status,
@@ -372,7 +374,7 @@ def save_archive(df: pd.DataFrame, profile_name: Optional[str] = None) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Update Dodgers boxscore archive from Baseball Savant")
+    parser = argparse.ArgumentParser(description="Update Red Sox boxscore archive from Baseball Savant")
     parser.add_argument(
         "--profile",
         default=os.environ.get("AWS_PROFILE"),

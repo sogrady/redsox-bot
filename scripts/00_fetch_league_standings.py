@@ -174,7 +174,7 @@ def main():
     local_filename = f"all_teams_standings_metrics_{CURRENT_YEAR}.json"
     local_file_path = os.path.join(local_dir, local_filename)
     jekyll_file_path = os.path.join(data_dir_for_jekyll, local_filename) # Path for Jekyll data file
-    s3_key = f"dodgers/data/standings/{local_filename}" # Path on S3
+    s3_key = f"redsox/data/standings/{local_filename}" # Path on S3
 
     try:
         os.makedirs(local_dir, exist_ok=True)

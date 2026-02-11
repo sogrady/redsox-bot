@@ -3,7 +3,7 @@
 async function fetchData() {
   try {
     const response = await d3.json(
-      'https://stilesdata.com/dodgers/data/standings/dodgers_standings_1958_present_optimized.json'
+      '/data/standings/redsox_standings_1901_present_optimized.json'
     );
     // Group data by year, converting the year to a string for consistency
     const groupedByYear = d3.group(response, (d) => d.year.toString());
@@ -117,7 +117,7 @@ function renderChart(data) {
     .attr('class', 'line')
     .attr('d', (d) => line(d[1]))
     .style('fill', 'none')
-    .style('stroke', '#005A9C')
+    .style('stroke', '#0C2340')
     .style('stroke-width', 2);
 
   // Add a horizontal line at y = 0
@@ -168,7 +168,7 @@ function renderChart(data) {
       .attr('x', xScale(lastDataCurrent.gm + 1)) // Reduced horizontal offset
       .attr('y', yScale(lastDataCurrent.gb) - 20)
       .text(currentYear)
-      .attr('class', 'anno-dodgers')
+      .attr('class', 'anno-team')
       .style('stroke', '#fff')
       .style('stroke-width', '4px')
       .style('stroke-linejoin', 'round')
@@ -212,7 +212,7 @@ fetchData();
 
 async function fetchGameData() {
   try {
-    const response = await d3.json('https://stilesdata.com/dodgers/data/standings/dodgers_wins_losses_current.json');
+    const response = await d3.json('/data/standings/redsox_wins_losses_current.json');
     response.reverse(); // Reverse the array to start from the beginning of the season
     renderRunDiffChart(response);
   } catch (error) {
@@ -306,7 +306,7 @@ function renderRunDiffChart(data) {
     .attr("y", d => yScale(Math.max(0, d.run_diff)))
     .attr("width", xScale.bandwidth())
     .attr("height", d => Math.abs(yScale(d.run_diff) - yScale(0)))
-    .attr("fill", d => d.run_diff >= 0 ? "#005a9c" : "#ef3e42");
+    .attr("fill", d => d.run_diff >= 0 ? "#0C2340" : "#BD3039");
 }
 fetchGameData();
 
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   async function fetchCumulativeWinsData() {
       try {
-          const response = await d3.json('https://stilesdata.com/dodgers/data/standings/dodgers_standings_1958_present.json');
+          const response = await d3.json('/data/standings/redsox_standings_1958_present.json');
           // Group data by year
           groupedByYear = d3.group(response, (d) => d.year);
           populateYearSelect(Array.from(groupedByYear.keys()));
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .attr('class', 'line line-selected-year')
           .attr('d', (d) => line(d[1]))
           .style('fill', 'none')
-          .style('stroke', '#ef3e42')
+          .style('stroke', '#BD3039')
           .style('stroke-width', 1.5);
   
         svg.append('text')
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr('class', 'line line-current-year')
       .attr('d', (d) => line(d[1]))
       .style('fill', 'none')
-      .style('stroke', '#005A9C')
+      .style('stroke', '#0C2340')
       .style('stroke-width', 2);
   
     // Set lastDataCurrentYear safely
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('x', xScale(Number(lastDataCurrentYear.gm)) + 5)
         .attr('y', yScale(Number(lastDataCurrentYear.wins)) - 20)
         .text(currentYear)
-        .attr('class', 'anno-dodgers')
+        .attr('class', 'anno-team')
         .style('stroke', '#fff')
         .style('stroke-width', '4px')
         .style('stroke-linejoin', 'round')
@@ -565,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
       async function fetchData() {
         try {
           const response = await d3.json(
-            'https://stilesdata.com/dodgers/data/batting/archive/dodgers_historic_batting_gamelogs.json'
+            'data/batting/archive/redsox_historic_batting_gamelogs.json'
           );
           const groupedData = d3.group(response, (d) => d.year.toString());
           const maxVal = d3.max(response, d => Math.max(d['2b_cum'], d['hr_cum']));
@@ -662,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .attr('class', 'line')
             .attr('d', (d) => line(d[1]))
             .style('fill', 'none')
-            .style('stroke', '#005A9C')
+            .style('stroke', '#0C2340')
             .style('stroke-width', 2);
         }
     
@@ -687,7 +687,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .attr('x', xScale(lastDataCurrentYear.gtm + 1))
             .attr('y', yScale(lastDataCurrentYear[config.dataField]) - 20)
             .text(currentYear)
-            .attr('class', 'anno-dodgers')
+            .attr('class', 'anno-team')
             .style('stroke', '#fff')
             .style('stroke-width', '4px')
             .style('stroke-linejoin', 'round')
@@ -744,7 +744,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function fetchData() {
     try {
       const response = await d3.json(
-        'https://stilesdata.com/dodgers/data/pitching/dodgers_historic_pitching_gamelogs_1958-present.json'
+        'data/pitching/redsox_historic_pitching_gamelogs_1958-present.json'
       );
       const groupedData = d3.group(response, (d) => d.year.toString());
       const maxVal = d3.max(response, d => Math.max(d['so_cum'], d['h_cum']));
@@ -839,7 +839,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('class', 'line')
         .attr('d', (d) => line(d[1]))
         .style('fill', 'none')
-        .style('stroke', '#005A9C')
+        .style('stroke', '#0C2340')
         .style('stroke-width', 2);
     }
 
@@ -865,7 +865,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('x', xScale(lastDataCurrentYear.gtm + 1))
         .attr('y', yScale(lastDataCurrentYear[config.dataField]) - 20)
         .text(currentYear)
-        .attr('class', 'anno-dodgers')
+        .attr('class', 'anno-team')
         .style('stroke', '#fff')
         .style('stroke-width', '4px')
         .style('stroke-linejoin', 'round')
@@ -907,7 +907,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function fetchCumulativeERAData() {
     try {
       const response = await d3.json(
-        'https://stilesdata.com/dodgers/data/pitching/dodgers_historic_pitching_gamelogs_1958-present.json'
+        'data/pitching/redsox_historic_pitching_gamelogs_1958-present.json'
       );
       // Group data by year
       const groupedByYear = d3.group(response, (d) => d.year.toString());
@@ -1009,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('class', 'line')
         .attr('d', line)
         .style('fill', 'none')
-        .style('stroke', '#005A9C')
+        .style('stroke', '#0C2340')
         .style('stroke-width', 2);
 
       const lastDataCurrentYear = lineCurrentYear.slice(-1)[0];
@@ -1019,7 +1019,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('x', xScale(lastDataCurrentYear.gtm + 1))
         .attr('y', yScale(lastDataCurrentYear.era_cum) - 20)
         .text(currentYear)
-        .attr('class', 'anno-dodgers')
+        .attr('class', 'anno-team')
         .style('stroke', '#fff')
         .style('stroke-width', '4px')
         .style('stroke-linejoin', 'round')
@@ -1094,7 +1094,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const fetchDataAndRenderTables = async () => {
     try {
-      const response = await fetch('https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json');
+      const response = await fetch('https://stilesdata.com/redsox/data/standings/redsox_schedule.json');
       const games = await response.json();
 
       const lastGames = games.filter(game => game.placement === 'last');
@@ -1113,7 +1113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+  const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
   const fetchDataAndRenderBattingTables = async () => {
       try {
@@ -1167,16 +1167,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field === 'soper') {
           // Red color scale for strikeouts, reversed scale
           // return getColorFromScale(value, min, max, '#ffcccc', '#ff0000', true);
-          return getColorFromScale(value, min, max, '#005a9c', '#cce5ff', false);
+          return getColorFromScale(value, min, max, '#BD3039', '#cce5ff', false);
       } else {
           // Blue color scale for other metrics
-          return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+          return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
       }
   };
 
   const getColorScaleBlue = (field, value, min, max) => {
       // Blue color scale for batting stats
-      return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+      return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
   };
 
   const getColorFromScale = (value, min, max, colorMin, colorMax, reverse = false) => {
@@ -1207,7 +1207,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // document.addEventListener('DOMContentLoaded', function () {
-//     const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+//     const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
 //     const fetchDataAndRenderBattingTables = async () => {
 //         try {
@@ -1333,7 +1333,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const fetchDataAndRenderTables = async () => {
     try {
-      const response = await fetch('https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json');
+      const response = await fetch('https://stilesdata.com/redsox/data/standings/redsox_schedule.json');
       const games = await response.json();
 
       const lastGames = games.filter(game => game.placement === 'last');
@@ -1352,7 +1352,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+  const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
   const fetchDataAndRenderBattingTables = async () => {
       try {
@@ -1406,16 +1406,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field === 'soper') {
           // Red color scale for strikeouts, reversed scale
           // return getColorFromScale(value, min, max, '#ffcccc', '#ff0000', true);
-          return getColorFromScale(value, min, max, '#005a9c', '#cce5ff', false);
+          return getColorFromScale(value, min, max, '#BD3039', '#cce5ff', false);
       } else {
           // Blue color scale for other metrics
-          return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+          return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
       }
   };
 
   const getColorScaleBlue = (field, value, min, max) => {
       // Blue color scale for batting stats
-      return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+      return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
   };
 
   const getColorFromScale = (value, min, max, colorMin, colorMax, reverse = false) => {
@@ -1446,7 +1446,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // document.addEventListener('DOMContentLoaded', function () {
-//     const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+//     const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
 //     const fetchDataAndRenderBattingTables = async () => {
 //         try {
@@ -1572,7 +1572,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const fetchDataAndRenderTables = async () => {
     try {
-      const response = await fetch('https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json');
+      const response = await fetch('https://stilesdata.com/redsox/data/standings/redsox_schedule.json');
       const games = await response.json();
 
       const lastGames = games.filter(game => game.placement === 'last');
@@ -1591,7 +1591,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+  const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
   const fetchDataAndRenderBattingTables = async () => {
       try {
@@ -1645,16 +1645,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field === 'soper') {
           // Red color scale for strikeouts, reversed scale
           // return getColorFromScale(value, min, max, '#ffcccc', '#ff0000', true);
-          return getColorFromScale(value, min, max, '#005a9c', '#cce5ff', false);
+          return getColorFromScale(value, min, max, '#BD3039', '#cce5ff', false);
       } else {
           // Blue color scale for other metrics
-          return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+          return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
       }
   };
 
   const getColorScaleBlue = (field, value, min, max) => {
       // Blue color scale for batting stats
-      return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+      return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
   };
 
   const getColorFromScale = (value, min, max, colorMin, colorMax, reverse = false) => {
@@ -1685,7 +1685,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // document.addEventListener('DOMContentLoaded', function () {
-//     const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+//     const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
 //     const fetchDataAndRenderBattingTables = async () => {
 //         try {
@@ -1811,7 +1811,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const fetchDataAndRenderTables = async () => {
     try {
-      const response = await fetch('https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json');
+      const response = await fetch('https://stilesdata.com/redsox/data/standings/redsox_schedule.json');
       const games = await response.json();
 
       const lastGames = games.filter(game => game.placement === 'last');
@@ -1830,7 +1830,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+  const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
   const fetchDataAndRenderBattingTables = async () => {
       try {
@@ -1884,16 +1884,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field === 'soper') {
           // Red color scale for strikeouts, reversed scale
           // return getColorFromScale(value, min, max, '#ffcccc', '#ff0000', true);
-          return getColorFromScale(value, min, max, '#005a9c', '#cce5ff', false);
+          return getColorFromScale(value, min, max, '#BD3039', '#cce5ff', false);
       } else {
           // Blue color scale for other metrics
-          return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+          return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
       }
   };
 
   const getColorScaleBlue = (field, value, min, max) => {
       // Blue color scale for batting stats
-      return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+      return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
   };
 
   const getColorFromScale = (value, min, max, colorMin, colorMax, reverse = false) => {
@@ -1924,7 +1924,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // document.addEventListener('DOMContentLoaded', function () {
-//     const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+//     const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
 //     const fetchDataAndRenderBattingTables = async () => {
 //         try {
@@ -2050,7 +2050,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const fetchDataAndRenderTables = async () => {
     try {
-      const response = await fetch('https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json');
+      const response = await fetch('https://stilesdata.com/redsox/data/standings/redsox_schedule.json');
       const games = await response.json();
 
       const lastGames = games.filter(game => game.placement === 'last');
@@ -2069,7 +2069,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+  const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
   const fetchDataAndRenderBattingTables = async () => {
       try {
@@ -2123,16 +2123,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field === 'soper') {
           // Red color scale for strikeouts, reversed scale
           // return getColorFromScale(value, min, max, '#ffcccc', '#ff0000', true);
-          return getColorFromScale(value, min, max, '#005a9c', '#cce5ff', false);
+          return getColorFromScale(value, min, max, '#BD3039', '#cce5ff', false);
       } else {
           // Blue color scale for other metrics
-          return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+          return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
       }
   };
 
   const getColorScaleBlue = (field, value, min, max) => {
       // Blue color scale for batting stats
-      return getColorFromScale(value, min, max, '#cce5ff', '#005a9c', false);
+      return getColorFromScale(value, min, max, '#cce5ff', '#BD3039', false);
   };
 
   const getColorFromScale = (value, min, max, colorMin, colorMax, reverse = false) => {
@@ -2163,7 +2163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // document.addEventListener('DOMContentLoaded', function () {
-//     const url = 'https://stilesdata.com/dodgers/data/batting/dodgers_player_batting_current_table.json';
+//     const url = 'https://stilesdata.com/redsox/data/batting/redsox_player_batting_current_table.json';
 
 //     const fetchDataAndRenderBattingTables = async () => {
 //         try {
@@ -2262,7 +2262,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   async function fetchTableData() {
     try {
-      const response = await d3.json('https://stilesdata.com/dodgers/data/standings/mlb_team_attendance.json');
+      const response = await d3.json('https://stilesdata.com/redsox/data/standings/mlb_team_attendance.json');
       renderTables(response);
       renderMaxAttendanceInfo(response);
     } catch (error) {
@@ -2317,12 +2317,12 @@ document.addEventListener('DOMContentLoaded', function () {
       .style('width', '100%')
       .each(function(d) {
         const barWidth = (d.attend_game / maxAttendance) * 100;
-        const isDodgers = d.team === 'Los Angeles Dodgers';
+        const isRedSox = d.team === 'Boston Red Sox';
         d3.select(this).append('div')
-          .attr('class', `attendance-bar-bg ${isDodgers ? 'attendance-bar-dodgers' : ''}`)
+          .attr('class', `attendance-bar-bg ${isRedSox ? 'attendance-bar-redsox' : ''}`)
           .style('width', `${barWidth}%`);
         d3.select(this).append('div')
-          .attr('class', `attendance-bar-text ${isDodgers ? 'attendance-bar-dodgers' : ''}`)
+          .attr('class', `attendance-bar-text ${isRedSox ? 'attendance-bar-redsox' : ''}`)
           .text(() => {
             // Check if attend_game is a valid number; if not, use 0.
             return (d.attend_game != null && !isNaN(d.attend_game))
@@ -2351,7 +2351,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // xwOBA charts
 async function fetchAndRenderXwoba() {
   try {
-    const data = await d3.json('https://stilesdata.com/dodgers/data/batting/dodgers_xwoba_current.json');
+    const data = await d3.json('https://stilesdata.com/redsox/data/batting/redsox_xwoba_current.json');
     
     const playerGroups = d3.group(data, d => d.player_name);
     const players = Array.from(playerGroups.keys()).sort();
@@ -2532,8 +2532,8 @@ document.addEventListener('DOMContentLoaded', fetchAndRenderXwoba);
 
 document.addEventListener('DOMContentLoaded', function () {
   async function fetchShoheiData() {
-    const hrUrl = 'https://stilesdata.com/dodgers/data/batting/shohei_home_runs_cumulative_timeseries_combined.json';
-    const sbUrl = 'https://stilesdata.com/dodgers/data/batting/shohei_stolen_bases_cumulative_timeseries_combined.json';
+    const hrUrl = 'https://stilesdata.com/redsox/data/batting/shohei_home_runs_cumulative_timeseries_combined.json';
+    const sbUrl = 'https://stilesdata.com/redsox/data/batting/shohei_stolen_bases_cumulative_timeseries_combined.json';
     const [hrData, sbData] = await Promise.all([d3.json(hrUrl), d3.json(sbUrl)]);
     return { hrData, sbData };
   }
@@ -2640,7 +2640,7 @@ document.addEventListener('DOMContentLoaded', function () {
       svg.append('text')
         .attr('x', xPosText2025)
         .attr('y', yPosLabel2025)
-        .attr('class', 'anno-dodgers')
+        .attr('class', 'anno-team')
         .attr('text-anchor', 'end') // Right-align text since it's positioned to the left
         .style('stroke', '#fff')
         .style('stroke-width', '3px')
@@ -2948,7 +2948,7 @@ document.addEventListener('DOMContentLoaded', function () {
 async function fetchWinsProjectionDataWithCI() {
   try {
     // Fetch data from the new single endpoint that includes timeseries data
-    const response = await d3.json('https://stilesdata.com/dodgers/data/standings/dodgers_wins_projection_timeseries.json');
+    const response = await d3.json('https://stilesdata.com/redsox/data/standings/redsox_wins_projection_timeseries.json');
 
     if (!response || !response.timeseries) {
         console.error('Invalid data structure received for wins projection CI chart.');
@@ -3083,7 +3083,7 @@ function renderWinsProjectionChartWithCI(data) {
   if (ciAreaPath.length > 1) {
       svg.append('path')
         .datum(ciAreaPath)
-        .attr('fill', '#005a9c')
+        .attr('fill', '#BD3039')
         .attr('opacity', 0.1)
         .attr('d', areaGenerator);
   }
@@ -3219,7 +3219,7 @@ if (document.readyState === 'loading') {
 (function () {
   async function fetchUmpireData() {
     try {
-      const response = await d3.json('https://stilesdata.com/dodgers/data/summary/umpire_summary.json');
+      const response = await d3.json('https://stilesdata.com/redsox/data/summary/umpire_summary.json');
       renderUmpireScorecard(response);
       } catch (error) {
       console.error('Failed to fetch umpire scorecard data:', error);
@@ -3375,7 +3375,7 @@ if (document.readyState === 'loading') {
 (function () {
   async function fetchUmpireDataPitching() {
     try {
-      const response = await d3.json('https://stilesdata.com/dodgers/data/summary/umpire_summary.json');
+      const response = await d3.json('https://stilesdata.com/redsox/data/summary/umpire_summary.json');
       renderUmpireScorecardPitching(response);
     } catch (error) {
       console.error('Failed to fetch umpire scorecard pitching data:', error);
@@ -3499,8 +3499,8 @@ document.addEventListener('DOMContentLoaded', function () {
   async function fetchOhtaniPitchData() {
     try {
       const cacheBuster = `?v=${Date.now()}`;
-      const mixResponse = await d3.json(`https://stilesdata.com/dodgers/data/pitching/shohei_ohtani_pitch_mix.json${cacheBuster}`);
-      const pitchesResponse = await d3.json(`https://stilesdata.com/dodgers/data/pitching/shohei_ohtani_pitches.json${cacheBuster}`);
+      const mixResponse = await d3.json(`https://stilesdata.com/redsox/data/pitching/shohei_ohtani_pitch_mix.json${cacheBuster}`);
+      const pitchesResponse = await d3.json(`https://stilesdata.com/redsox/data/pitching/shohei_ohtani_pitches.json${cacheBuster}`);
       
       // Calculate total pitches and games
       const totalPitches = pitchesResponse.length;
@@ -3672,7 +3672,7 @@ document.addEventListener('DOMContentLoaded', function () {
 async function fetchPlayoffBracketData() {
   try {
     const currentYear = new Date().getFullYear();
-    const response = await fetch(`https://stilesdata.com/dodgers/data/standings/all_teams_standings_metrics_${currentYear}.json`);
+    const response = await fetch(`https://stilesdata.com/redsox/data/standings/all_teams_standings_metrics_${currentYear}.json`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -3743,7 +3743,7 @@ function calculatePlayoffSeeds(standings) {
 
 function getTeamAbbreviation(teamName) {
   const abbrevMap = {
-    'Los Angeles Dodgers': 'LAD',
+    'Boston Red Sox': 'LAD',
     'New York Yankees': 'NYY',
     'Los Angeles Angels': 'LAA',
     'Houston Astros': 'HOU',
@@ -3780,7 +3780,7 @@ function getTeamAbbreviation(teamName) {
 function getTeamMascot(teamName) {
   // Extract just the mascot/nickname from full team name
   const mascotMap = {
-    'Los Angeles Dodgers': 'Dodgers',
+    'Boston Red Sox': 'Red Sox',
     'New York Yankees': 'Yankees', 
     'Los Angeles Angels': 'Angels',
     'Houston Astros': 'Astros',
@@ -3865,9 +3865,9 @@ function populateTeamSlot(element, team) {
   };
   logoImg.src = logoUrl;
   
-  // Special styling for Dodgers
-  if (teamAbbr === 'LAD') {
-    element.classList.add('dodgers-team');
+  // Special styling for Red Sox
+  if (teamAbbr === 'BOS') {
+    element.classList.add('redsox-team');
   }
 }
 
@@ -3962,8 +3962,8 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchPostseasonStats() {
   try {
     // Try local path first (for development), then fallback to S3
-    const localUrl = '/data/postseason/dodgers_postseason_stats_2025.json';
-    const s3Url = 'https://stilesdata.com/dodgers/data/postseason/dodgers_postseason_stats_2025.json';
+    const localUrl = '/data/postseason/redsox_postseason_stats_2025.json';
+    const s3Url = 'https://stilesdata.com/redsox/data/postseason/redsox_postseason_stats_2025.json';
     
     let response = await fetch(localUrl);
     if (!response.ok) {
@@ -4074,8 +4074,8 @@ async function initPostseasonStats() {
 async function fetchPlayoffJourney() {
   try {
     // Try local path first (for development), then fallback to S3
-    const localUrl = '/data/postseason/dodgers_postseason_series_2025.json';
-    const s3Url = 'https://stilesdata.com/dodgers/data/postseason/dodgers_postseason_series_2025.json';
+    const localUrl = '/data/postseason/redsox_postseason_series_2025.json';
+    const s3Url = 'https://stilesdata.com/redsox/data/postseason/redsox_postseason_series_2025.json';
     
     let response = await fetch(localUrl);
     if (!response.ok) {

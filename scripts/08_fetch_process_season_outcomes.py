@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-LA Dodgers season outcomes
+Boston Red Sox season outcomes
 > This notebook downloads the team's past season outcomes table from [Baseball Reference](https://www.baseball-reference.com/teams/LAD/) and outputs the data to CSV, JSON and Parquet formats for later analysis and visualization.
 """
 
@@ -11,6 +11,7 @@ import pandas as pd
 import boto3
 from io import BytesIO
 import logging
+from scripts import config
 
 # Set up basic configuration for logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -49,7 +50,7 @@ Fetch
 """
 
 
-url = "https://www.baseball-reference.com/teams/LAD/"
+url = f"https://www.baseball-reference.com/teams/{config.TEAM_ID_BBREF}/"
 try:
     history_df = pd.read_html(url)[0]
     logging.info("Data fetched successfully from Baseball Reference.")
@@ -155,10 +156,10 @@ def save_to_s3(df, base_path, s3_bucket, formats):
             logging.error(f"Failed to upload {fmt} to S3: {e}")
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, 'dodgers_season_outcomes')
+file_path = os.path.join(data_dir, 'redsox_season_outcomes')
 formats = ["csv", "json", "parquet"]
 save_dataframe(history_df, file_path, formats)
-save_to_s3(history_df, "dodgers/data/standings/dodgers_season_outcomes", "stilesdata.com", formats)
+save_to_s3(history_df, "redsox/data/standings/redsox_season_outcomes", "stilesdata.com", formats)
 
 file_path = os.path.join(data_dir, 'dodgers_season_outcomes')
 formats = ["csv", "json", "parquet"]

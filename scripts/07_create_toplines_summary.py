@@ -3,7 +3,7 @@
 
 
 """
-LA Dodgers toplines
+Boston Red Sox toplines
 This notebook extracts key statistics from the project's processed tables for display in a dashboard.
 """
 
@@ -19,6 +19,8 @@ import requests
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+from scripts import config
 
 # Base directory calculation for file paths
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -125,10 +127,11 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
         return None
 
 # URLs for data
-standings_live_url = "https://stilesdata.com/dodgers/data/standings/all_teams_standings_metrics_2025.json"
-standings_url = "https://stilesdata.com/dodgers/data/standings/dodgers_standings_1958_present.parquet"
-batting_url = "https://stilesdata.com/dodgers/data/batting/dodgers_team_batting_1958_present.parquet"
-pitching_url = 'https://stilesdata.com/dodgers/data/pitching/dodgers_pitching_totals_current.parquet'
+# URLs for data
+standings_live_url = f"https://stilesdata.com/redsox/data/standings/all_teams_standings_metrics_2025.json"
+standings_url = f"https://stilesdata.com/redsox/data/standings/redsox_standings_1958_present.parquet"
+batting_url = f"https://stilesdata.com/redsox/data/batting/redsox_team_batting_1958_present.parquet"
+pitching_url = 'https://stilesdata.com/redsox/data/pitching/redsox_pitching_totals_current.parquet'
 # pitching_ranks_url = 'https://stilesdata.com/dodgers/data/pitching/dodgers_pitching_ranks_current.parquet' # Removed
 # batting_ranks_url = 'https://stilesdata.com/dodgers/data/batting/dodgers_team_batting_ranks_1958_present.parquet' # Removed
 
@@ -172,7 +175,7 @@ last_year = (now - pd.DateOffset(years=1)).strftime("%Y")  # subtract one year
 
 # Load league ranks data from JSON
 league_ranks_data = {}
-ranks_file_path = os.path.join(base_dir, 'data', 'standings', f'dodgers_league_ranks_{year}.json')
+ranks_file_path = os.path.join(base_dir, 'data', 'standings', f'redsox_league_ranks_{year}.json')
 try:
     with open(ranks_file_path, 'r') as f:
         league_ranks_data = json.load(f)
@@ -220,7 +223,7 @@ except Exception:
     else:
         standings_live = pd.DataFrame(data)
         
-standings_live_lad = standings_live.query("team_name == 'Los Angeles Dodgers'")
+standings_live_lad = standings_live.query(f"team_name == '{config.TEAM_NAME}'")
 print(standings_live_lad.iloc[0])
 
 # Derive last game result from live standings (streak_type)
@@ -248,7 +251,8 @@ except Exception:
     standings_division_rank_ordinal = standings['rank_ordinal'].iloc[0]
 
 # Prefer live standings to compute a positive 'games up/back' value
-games_up_back_value = compute_games_up_back_from_live(standings_live, 'Los Angeles Dodgers')
+# Prefer live standings to compute a positive 'games up/back' value
+games_up_back_value = compute_games_up_back_from_live(standings_live, config.TEAM_NAME)
 # If live data couldn't compute, fall back; otherwise keep live (including 0 for ties)
 if games_up_back_value is None:
     games_back_raw = standings['gb'].iloc[0]
@@ -399,7 +403,7 @@ def get_live_last_game_summary():
     today = date.today()
     five_days_ago = today - timedelta(days=5)
     
-    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=119&startDate={five_days_ago.strftime('%Y-%m-%d')}&endDate={today.strftime('%Y-%m-%d')}&hydrate=team,linescore"
+    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId={config.TEAM_ID}&startDate={five_days_ago.strftime('%Y-%m-%d')}&endDate={today.strftime('%Y-%m-%d')}&hydrate=team,linescore"
     
     try:
         response = requests.get(url, headers=headers)
@@ -428,7 +432,7 @@ def get_live_last_game_summary():
                     home_abbr = teams.get('home', {}).get('team', {}).get('abbreviation')
                     logging.info(f"Processing final game: {away_abbr} @ {home_abbr}")
                     
-                    if away_abbr == 'LAD':
+                    if away_abbr == config.TEAM_ABBR:
                         home_away = "away"
                         result_clean = "win" if teams['away'].get('isWinner') else "loss"
                         r = teams['away'].get('score', 'N/A')
@@ -440,7 +444,7 @@ def get_live_last_game_summary():
                             f"The last game was a <span class='highlight'>{r}-{ra}</span> "
                             f"{home_away} <span class='highlight'>{result_clean}</span>."
                         )
-                    elif teams.get('home', {}).get('team', {}).get('abbreviation') == 'LAD':
+                    elif teams.get('home', {}).get('team', {}).get('abbreviation') == config.TEAM_ABBR:
                         home_away = "home"
                         result_clean = "win" if teams['home'].get('isWinner') else "loss"
                         r = teams['home'].get('score', 'N/A')
@@ -466,7 +470,7 @@ def get_live_last_game_result():
     }
     today = date.today()
     yesterday = today - timedelta(days=1)
-    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=119&startDate={yesterday.strftime('%Y-%m-%d')}&endDate={today.strftime('%Y-%m-%d')}&hydrate=team,linescore"
+    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId={config.TEAM_ID}&startDate={yesterday.strftime('%Y-%m-%d')}&endDate={today.strftime('%Y-%m-%d')}&hydrate=team,linescore"
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
@@ -476,7 +480,7 @@ def get_live_last_game_result():
                 if game['status']['abstractGameState'] == 'Final':
                     teams = game['teams']
                     # Determine result for LAD
-                    if teams.get('away', {}).get('team', {}).get('abbreviation') == 'LAD':
+                    if teams.get('away', {}).get('team', {}).get('abbreviation') == config.TEAM_ABBR:
                         return 'win' if teams['away'].get('isWinner') else 'loss'
                     else:
                         return 'win' if teams['home'].get('isWinner') else 'loss'
@@ -494,7 +498,7 @@ def get_next_game_info():
     today = date.today()
     ten_days_ahead = today + timedelta(days=10)
     
-    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=119&startDate={today.strftime('%Y-%m-%d')}&endDate={ten_days_ahead.strftime('%Y-%m-%d')}&hydrate=team,venue"
+    url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId={config.TEAM_ID}&startDate={today.strftime('%Y-%m-%d')}&endDate={ten_days_ahead.strftime('%Y-%m-%d')}&hydrate=team,venue"
     
     try:
         response = requests.get(url, headers=headers)
@@ -522,7 +526,7 @@ def get_next_game_info():
                     
                     # Determine if home or away
                     home_team_id = game.get('teams', {}).get('home', {}).get('team', {}).get('id')
-                    is_dodgers_home = home_team_id == 119
+                    is_dodgers_home = home_team_id == config.TEAM_ID
                     
                     location_text = f"at {highlighted_venue}" if not is_dodgers_home else f"at {highlighted_venue}"
                     
@@ -538,7 +542,7 @@ def generate_postseason_summary():
     """Generate a summary of the current postseason status"""
     try:
         # Try to load postseason series data
-        postseason_file = "data/postseason/dodgers_postseason_series_2025.json"
+        postseason_file = "data/postseason/redsox_postseason_series_2025.json"
         if os.path.exists(postseason_file):
             with open(postseason_file, 'r') as f:
                 postseason_data = json.load(f)
@@ -560,16 +564,17 @@ def generate_postseason_summary():
                 result = current_series['result']
 
                 # Parse the series result to determine who's leading
+                # Parse the series result to determine who's leading
                 result = current_series['result']
-                if 'LAD leads' in result:
+                if f'{config.TEAM_ABBR} leads' in result:
                     # Extract the series score and highlight it
-                    series_score = result.replace('LAD leads ', '')
-                    series_status = f"Dodgers lead the series <span class='highlight'>{series_score}</span>"
-                elif 'LAD wins' in result:
+                    series_score = result.replace(f'{config.TEAM_ABBR} leads ', '')
+                    series_status = f"{config.TEAM_NAME_SIMPLE} lead the series <span class='highlight'>{series_score}</span>"
+                elif f'{config.TEAM_ABBR} wins' in result:
                     # Extract the series score and highlight it
-                    series_score = result.replace('LAD wins ', '')
-                    series_status = f"Dodgers won the series <span class='highlight'>{series_score}</span>"
-                elif 'leads' in result and 'LAD' not in result:
+                    series_score = result.replace(f'{config.TEAM_ABBR} wins ', '')
+                    series_status = f"{config.TEAM_NAME_SIMPLE} won the series <span class='highlight'>{series_score}</span>"
+                elif 'leads' in result and config.TEAM_ABBR not in result:
                     # Handle case where opponent is leading - highlight the score
                     series_status = result.replace('leads', 'lead the series').replace(' ', " <span class='highlight'>", 1).replace('-', "-</span>", 1)
                 elif 'tied' in result.lower():
@@ -589,7 +594,7 @@ def generate_postseason_summary():
             elif completed_series:
                 # All completed, check if they advanced or were eliminated
                 last_series = completed_series[-1]
-                if 'LAD wins' in last_series['result'] or 'LAD leads' in last_series['result']:
+                if f'{config.TEAM_ABBR} wins' in last_series['result'] or f'{config.TEAM_ABBR} leads' in last_series['result']:
                     # Check if the last series was the World Series
                     if last_series['round'] == 'World Series':
                         opponent = last_series.get('opponent', 'their opponent')
@@ -601,11 +606,11 @@ def generate_postseason_summary():
             else:
                 return {"text": "The team is preparing for their postseason run."}
         else:
-            return {"text": "The team won the National League West division and is off to the postseason!"}
+            return {"text": "The team won the American League East division and is off to the postseason!"}
             
     except Exception as e:
         logging.warning(f"Could not generate postseason summary: {e}")
-        return {"text": "The team won the National League West division and is off to the postseason!"}
+        return {"text": "The team won the American League East division and is off to the postseason!"}
 
 def generate_summary(
     update_date_str, standings_live_lad=None
@@ -645,7 +650,8 @@ def generate_summary(
             "sec-ch-ua-mobile": "?0",
         }
         today_str = date.today().strftime("%Y-%m-%d")
-        url = f"https://bdfed.stitch.mlbinfra.com/bdfed/transform-mlb-standings?&splitPcts=false&numberPcts=false&standingsView=division&sortTemplate=3&season={current_year}&leagueIds=103&&leagueIds=104&standingsTypes=regularSeason&contextTeamId=&teamId=&date={today_str}&hydrateAlias=noSchedule&favoriteTeams=119&sortDivisions=201,202,200,204,205,203&sortLeagues=103,104,115,114&sortSports=1"
+        today_str = date.today().strftime("%Y-%m-%d")
+        url = f"https://bdfed.stitch.mlbinfra.com/bdfed/transform-mlb-standings?&splitPcts=false&numberPcts=false&standingsView=division&sortTemplate=3&season={current_year}&leagueIds=103&&leagueIds=104&standingsTypes=regularSeason&contextTeamId=&teamId=&date={today_str}&hydrateAlias=noSchedule&favoriteTeams={config.TEAM_ID}&sortDivisions=201,202,200,204,205,203&sortLeagues=103,104,115,114&sortSports=1"
 
         try:
             response = requests.get(url, headers=headers)
@@ -658,18 +664,18 @@ def generate_summary(
             df = pd.json_normalize(team_records, sep="_")
             # Try different possible column names for team abbreviation
             if 'abbreviation' in df.columns:
-                row = df.query('abbreviation == "LAD"').iloc[0]
+                row = df.query(f'abbreviation == "{config.TEAM_ABBR}"').iloc[0]
             elif 'team_abbreviation' in df.columns:
-                row = df.query('team_abbreviation == "LAD"').iloc[0]
+                row = df.query(f'team_abbreviation == "{config.TEAM_ABBR}"').iloc[0]
             elif 'teamAbbreviation' in df.columns:
-                row = df.query('teamAbbreviation == "LAD"').iloc[0]
+                row = df.query(f'teamAbbreviation == "{config.TEAM_ABBR}"').iloc[0]
             else:
                 # Fallback: find by team name
-                lad_rows = df[df.astype(str).apply(lambda x: x.str.contains('Los Angeles Dodgers|LAD', na=False)).any(axis=1)]
+                lad_rows = df[df.astype(str).apply(lambda x: x.str.contains(f'{config.TEAM_NAME}|{config.TEAM_ABBR}', na=False)).any(axis=1)]
                 if len(lad_rows) > 0:
                     row = lad_rows.iloc[0]
                 else:
-                    raise ValueError("Could not find LAD team in standings data")
+                    raise ValueError(f"Could not find {config.TEAM_ABBR} team in standings data")
 
             # Parse variables from API data
             games_played = row["wins"] + row["losses"]
@@ -717,7 +723,7 @@ def generate_summary(
         
         try:
             # Load postseason series data to check for transitions
-            postseason_file = "data/postseason/dodgers_postseason_series_2025.json"
+            postseason_file = "data/postseason/redsox_postseason_series_2025.json"
             if os.path.exists(postseason_file):
                 with open(postseason_file, 'r') as f:
                     postseason_data = json.load(f)
@@ -776,8 +782,8 @@ def generate_summary(
             
             # Create the summary with series transition flow
             summary = (
-                f"<span class='highlight'>LOS ANGELES</span> <span class='updated'>({current_date})</span> — "
-                f"The Dodgers compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+                f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
+                f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
                 f"{enhanced_last_game} "
                 f"The team is now competing in the <span class='highlight'>{current_series['round']}</span> against the <span class='highlight'>{current_series['opponent']}</span>. "
                 f"The {series_status.lower()}{next_game_text}."
@@ -790,7 +796,7 @@ def generate_summary(
                 # Extract current series info to compare
                 current_series_info = ""
                 try:
-                    postseason_file = "data/postseason/dodgers_postseason_series_2025.json"
+                    postseason_file = "data/postseason/redsox_postseason_series_2025.json"
                     if os.path.exists(postseason_file):
                         with open(postseason_file, 'r') as f:
                             postseason_data = json.load(f)

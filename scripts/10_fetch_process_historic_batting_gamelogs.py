@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-LA Dodgers cumulative batting statistics by season, 1958-2024
+Boston Red Sox cumulative batting statistics by season, 1901-2024
 This script fetches and processes current and past game-by-game and cumulative totals for hits, doubles, home runs, walks, strikeouts and other statistics using data from [Baseball Reference](https://www.baseball-reference.com/teams/tgl.cgi?team=LAD&t=b&year=2024).
 """
 
@@ -12,6 +12,7 @@ import datetime
 import logging
 import pandas as pd
 from io import BytesIO
+from scripts import config
 
 # Set up basic configuration for logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -53,11 +54,11 @@ headers = {
 }
 
 # Fetch Archive game logs
-archive_url = "https://stilesdata.com/dodgers/data/batting/archive/dodgers_team_cumulative_batting_logs_1958_2024.parquet"
-archive_df = pd.read_parquet(archive_url)
+# archive_url = "https://stilesdata.com/dodgers/data/batting/archive/dodgers_team_cumulative_batting_logs_1958_2024.parquet"
+# archive_df = pd.read_parquet(archive_url)
 
 # Fetch Current game logs
-current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team=LAD&t=b&year={year}"
+current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=b&year={year}"
 current_df = pd.read_html(current_url)[0].assign(year=year)
 # Drop the top level of the MultiIndex columns
 current_df.columns = current_df.columns.droplevel(0)
@@ -100,12 +101,13 @@ for col in existing_val_cols:
 current_df = current_df.drop("gtm_cum", axis=1)
 
 # Combine current and archive data
-df = (
-    pd.concat([current_df, archive_df])
-    .sort_values(["year", "gtm"], ascending=[False, True])
-    .reset_index(drop=True)
-    .drop_duplicates()
-)
+# df = (
+#     pd.concat([current_df, archive_df])
+#     .sort_values(["year", "gtm"], ascending=[False, True])
+#     .reset_index(drop=True)
+#     .drop_duplicates()
+# )
+df = current_df.sort_values(["year", "gtm"], ascending=[False, True]).reset_index(drop=True)
 
 # Optimize DataFrame for output
 optimized_df = df[
@@ -148,7 +150,7 @@ def save_to_s3(df, base_path, s3_bucket, formats):
             logging.error(f"Failed to upload {fmt} to S3: {e}")
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, 'dodgers_historic_batting_gamelogs')
+file_path = os.path.join(data_dir, 'redsox_historic_batting_gamelogs')
 formats = ["csv", "json", "parquet"]
 # save_dataframe(optimized_df, file_path, formats)
-save_to_s3(optimized_df, "dodgers/data/batting/archive/dodgers_historic_batting_gamelogs", "stilesdata.com", formats)
+save_to_s3(optimized_df, "redsox/data/batting/archive/redsox_historic_batting_gamelogs", "stilesdata.com", formats)

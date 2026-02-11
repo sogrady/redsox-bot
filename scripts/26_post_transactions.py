@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from botocore.exceptions import ClientError
+from scripts import config
 
 # Setup
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -14,7 +15,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Environment Variables & AWS/S3
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
 s3_bucket_name = "stilesdata.com"
-s3_key_transactions_archive = "dodgers/data/roster/dodgers_transactions_archive.json"
+s3_key_transactions_archive = "redsox/data/roster/redsox_transactions_archive.json"
 
 if is_github_actions:
     session = boto3.Session(region_name="us-west-1")
@@ -26,7 +27,7 @@ s3_resource = session.resource("s3")
 
 def get_posted_transactions():
     """Reads the list of already posted transaction IDs from S3."""
-    s3_key = "dodgers/data/tweets/posted_transactions.json"
+    s3_key = "redsox/data/tweets/posted_transactions.json"
     try:
         obj = s3_resource.Object(s3_bucket_name, s3_key)
         posted_data = json.loads(obj.get()['Body'].read().decode('utf-8'))
@@ -38,7 +39,7 @@ def get_posted_transactions():
 
 def add_posted_transaction(transaction_id):
     """Adds a transaction ID to the list of posted transactions in S3."""
-    s3_key = "dodgers/data/tweets/posted_transactions.json"
+    s3_key = "redsox/data/tweets/posted_transactions.json"
     
     # Get existing posted transactions
     posted_ids = get_posted_transactions()
@@ -63,21 +64,21 @@ def create_transaction_id(transaction_row):
 
 def post_tweet(tweet_text, transaction_id):
     """Posts a tweet and marks the transaction as posted on success."""
-    DODGERS_TWITTER_API_KEY = os.environ.get("DODGERS_TWITTER_API_KEY")
-    DODGERS_TWITTER_API_SECRET = os.environ.get("DODGERS_TWITTER_API_SECRET")
-    DODGERS_TWITTER_TOKEN = os.environ.get("DODGERS_TWITTER_TOKEN")
-    DODGERS_TWITTER_TOKEN_SECRET = os.environ.get("DODGERS_TWITTER_TOKEN_SECRET")
+    TEAM_TWITTER_API_KEY = os.environ.get("TEAM_TWITTER_API_KEY")
+    TEAM_TWITTER_API_SECRET = os.environ.get("TEAM_TWITTER_API_SECRET")
+    TEAM_TWITTER_TOKEN = os.environ.get("TEAM_TWITTER_TOKEN")
+    TEAM_TWITTER_TOKEN_SECRET = os.environ.get("TEAM_TWITTER_TOKEN_SECRET")
     
-    if not all([DODGERS_TWITTER_API_KEY, DODGERS_TWITTER_API_SECRET, DODGERS_TWITTER_TOKEN, DODGERS_TWITTER_TOKEN_SECRET]):
+    if not all([TEAM_TWITTER_API_KEY, TEAM_TWITTER_API_SECRET, TEAM_TWITTER_TOKEN, TEAM_TWITTER_TOKEN_SECRET]):
         logging.error("Twitter API credentials are not fully set. Cannot post tweet.")
         return False
 
     try:
         client = tweepy.Client(
-            consumer_key=DODGERS_TWITTER_API_KEY,
-            consumer_secret=DODGERS_TWITTER_API_SECRET,
-            access_token=DODGERS_TWITTER_TOKEN,
-            access_token_secret=DODGERS_TWITTER_TOKEN_SECRET
+            consumer_key=TEAM_TWITTER_API_KEY,
+            consumer_secret=TEAM_TWITTER_API_SECRET,
+            access_token=TEAM_TWITTER_TOKEN,
+            access_token_secret=TEAM_TWITTER_TOKEN_SECRET
         )
         response = client.create_tweet(text=tweet_text)
         logging.info(f"Tweet posted successfully: {response.data['id']}")
@@ -100,14 +101,14 @@ def format_transaction_tweet(transaction_row):
         formatted_date = date
     
     # Create the tweet
-    tweet_text = f"🏟️ Dodgers transaction ({formatted_date}):\n\n{transaction_text}"
+    tweet_text = f"🏟️ {config.TEAM_NAME_SIMPLE} transaction ({formatted_date}):\n\n{transaction_text}"
     
     # Ensure tweet fits in character limit (280 chars)
     if len(tweet_text) > 280:
         # Truncate the transaction text if needed
-        max_transaction_length = 280 - len(f"🏟️ Dodgers transaction ({formatted_date}):\n\n") - 3  # 3 for "..."
+        max_transaction_length = 280 - len(f"🏟️ {config.TEAM_NAME_SIMPLE} transaction ({formatted_date}):\n\n") - 3  # 3 for "..."
         truncated_transaction = transaction_text[:max_transaction_length] + "..."
-        tweet_text = f"🏟️ Dodgers transaction ({formatted_date}):\n\n{truncated_transaction}"
+        tweet_text = f"🏟️ {config.TEAM_NAME_SIMPLE} transaction ({formatted_date}):\n\n{truncated_transaction}"
     
     return tweet_text
 
@@ -133,10 +134,10 @@ def fetch_new_transactions():
         
         # Only consider transactions from the last 7 days to avoid posting very old ones
         # that might not have been posted due to script not running
-        la_tz = ZoneInfo("America/Los_Angeles")
-        seven_days_ago = datetime.now(la_tz).date().strftime('%Y-%m-%d')
+        team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+        seven_days_ago = datetime.now(team_tz).date().strftime('%Y-%m-%d')
         from datetime import timedelta
-        seven_days_ago_obj = datetime.now(la_tz).date() - timedelta(days=7)
+        seven_days_ago_obj = datetime.now(team_tz).date() - timedelta(days=7)
         seven_days_ago = seven_days_ago_obj.strftime('%Y-%m-%d')
         
         recent_new_transactions = [
@@ -152,8 +153,8 @@ def fetch_new_transactions():
 
 def should_post_transactions():
     """Determines if transactions should be posted based on time."""
-    la_tz = ZoneInfo("America/Los_Angeles")
-    current_hour = datetime.now(la_tz).hour
+    team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+    current_hour = datetime.now(team_tz).hour
     
     # Post transactions during reasonable hours (7 AM to 10 PM PT)
     if 7 <= current_hour <= 22:
@@ -164,7 +165,7 @@ def should_post_transactions():
         return False
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Post new Dodgers transactions to Twitter.")
+    parser = argparse.ArgumentParser(description=f"Post new {config.TEAM_NAME_SIMPLE} transactions to Twitter.")
     parser.add_argument("--post-tweet", action="store_true", help="Post new transactions to Twitter.")
     parser.add_argument("--force", action="store_true", help="Force posting regardless of time constraints.")
     args = parser.parse_args()

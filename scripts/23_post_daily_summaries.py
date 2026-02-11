@@ -16,6 +16,7 @@ import tweepy
 import boto3
 from botocore.exceptions import ClientError
 from zoneinfo import ZoneInfo
+from scripts import config
 
 # --- Setup ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -39,7 +40,7 @@ s3_resource = session.resource("s3")
 # --- Twitter & S3 Functions ---
 def get_last_tweet_date(tweet_type):
     """Reads the last tweet date for a given type from S3."""
-    s3_key = f"dodgers/data/tweets/last_tweet_date_{tweet_type}.txt"
+    s3_key = f"redsox/data/tweets/last_tweet_date_{tweet_type}.txt"
     try:
         obj = s3_resource.Object(s3_bucket_name, s3_key)
         last_date_str = obj.get()['Body'].read().decode('utf-8').strip()
@@ -55,7 +56,7 @@ def get_last_tweet_date(tweet_type):
 
 def set_last_tweet_date(date_str, tweet_type):
     """Writes the last tweet date for a given type to S3."""
-    s3_key = f"dodgers/data/tweets/last_tweet_date_{tweet_type}.txt"
+    s3_key = f"redsox/data/tweets/last_tweet_date_{tweet_type}.txt"
     try:
         obj = s3_resource.Object(s3_bucket_name, s3_key)
         obj.put(Body=date_str)
@@ -65,36 +66,36 @@ def set_last_tweet_date(date_str, tweet_type):
 
 def post_tweet(tweet_text, tweet_type):
     """Posts a tweet and updates the last tweet date on success."""
-    DODGERS_TWITTER_API_KEY = os.environ.get("DODGERS_TWITTER_API_KEY")
-    DODGERS_TWITTER_API_SECRET = os.environ.get("DODGERS_TWITTER_API_SECRET")
-    DODGERS_TWITTER_TOKEN = os.environ.get("DODGERS_TWITTER_TOKEN")
-    DODGERS_TWITTER_TOKEN_SECRET = os.environ.get("DODGERS_TWITTER_TOKEN_SECRET")
+    TEAM_TWITTER_API_KEY = os.environ.get("TEAM_TWITTER_API_KEY")
+    TEAM_TWITTER_API_SECRET = os.environ.get("TEAM_TWITTER_API_SECRET")
+    TEAM_TWITTER_TOKEN = os.environ.get("TEAM_TWITTER_TOKEN")
+    TEAM_TWITTER_TOKEN_SECRET = os.environ.get("TEAM_TWITTER_TOKEN_SECRET")
 
-    if not all([DODGERS_TWITTER_API_KEY, DODGERS_TWITTER_API_SECRET, DODGERS_TWITTER_TOKEN, DODGERS_TWITTER_TOKEN_SECRET]):
+    if not all([TEAM_TWITTER_API_KEY, TEAM_TWITTER_API_SECRET, TEAM_TWITTER_TOKEN, TEAM_TWITTER_TOKEN_SECRET]):
         logging.error("Twitter API credentials are not fully set. Cannot post tweet.")
         return
 
     try:
         client = tweepy.Client(
-            consumer_key=DODGERS_TWITTER_API_KEY,
-            consumer_secret=DODGERS_TWITTER_API_SECRET,
-            access_token=DODGERS_TWITTER_TOKEN,
-            access_token_secret=DODGERS_TWITTER_TOKEN_SECRET
+            consumer_key=TEAM_TWITTER_API_KEY,
+            consumer_secret=TEAM_TWITTER_API_SECRET,
+            access_token=TEAM_TWITTER_TOKEN,
+            access_token_secret=TEAM_TWITTER_TOKEN_SECRET
         )
         response = client.create_tweet(text=tweet_text)
         logging.info(f"Tweet posted successfully: {response.data['id']}")
         # Use timezone-aware date for setting last tweet
-        la_tz = ZoneInfo("America/Los_Angeles")
-        today_str = datetime.now(la_tz).strftime('%Y-%m-%d')
+        team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+        today_str = datetime.now(team_tz).strftime('%Y-%m-%d')
         set_last_tweet_date(today_str, tweet_type)
     except Exception as e:
         logging.error(f"Failed to post tweet: {e}")
 
 # --- Main Logic ---
 def determine_summary_type():
-    """Determines which type of summary to post based on current time in LA."""
-    la_tz = ZoneInfo("America/Los_Angeles")
-    current_hour = datetime.now(la_tz).hour
+    """Determines which type of summary to post based on current time in Team Timezone."""
+    team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+    current_hour = datetime.now(team_tz).hour
     
     if 8 <= current_hour < 11:
         return 'summary'
@@ -104,7 +105,7 @@ def determine_summary_type():
         return 'pitching'
     else:
         # Outside prime hours, check what hasn't been posted today
-        today_str = datetime.now(la_tz).strftime('%Y-%m-%d')
+        today_str = datetime.now(team_tz).strftime('%Y-%m-%d')
         
         # Check in order of priority: summary, batting, pitching
         for tweet_type in ['summary', 'batting', 'pitching']:
@@ -118,13 +119,13 @@ def determine_summary_type():
         return None
 
 def main():
-    parser = argparse.ArgumentParser(description="Post daily Dodgers summary updates to Twitter.")
+    parser = argparse.ArgumentParser(description="Post daily Red Sox summary updates to Twitter.")
     parser.add_argument("--type", type=str, required=True, choices=['auto', 'summary', 'batting', 'pitching'], help="The type of update to post. Use 'auto' to determine based on time.")
     args = parser.parse_args()
 
     # Use timezone-aware date for all checks
-    la_tz = ZoneInfo("America/Los_Angeles")
-    today_date = datetime.now(la_tz).date()
+    team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+    today_date = datetime.now(team_tz).date()
     today_str = today_date.strftime('%Y-%m-%d')
 
     # Determine the summary type to post
@@ -145,7 +146,7 @@ def main():
     logging.info(f"Proceeding to post summary of type: {summary_type}")
 
     # Fetch data
-    url = "https://stilesdata.com/dodgers/data/standings/season_summary_latest.json"
+    url = "https://stilesdata.com/redsox/data/standings/season_summary_latest.json"
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -175,7 +176,7 @@ def main():
                 return
 
         summary_text = re.sub('<[^<]+?>', '', summary_html).replace('\\/','/')
-        tweet_text = f"⚾️ Dodgers daily summary ⚾️\n\n{summary_text}"
+        tweet_text = f"⚾️ {config.TEAM_NAME_SIMPLE} daily summary ⚾️\n\n{summary_text}"
 
     elif summary_type == 'batting':
         ba = stats.get('batting_average', {}).get('value', 'N/A')
@@ -187,12 +188,12 @@ def main():
         sb_val = sb.get('value', 'N/A')
         sb_rank = sb.get('context_value', 'N/A')
         tweet_text = (
-            f" Dodgers batting report ⚾️\n\n"
+            f" {config.TEAM_NAME_SIMPLE} batting report ⚾️\n\n"
             f"• BA: {ba}\n"
             f"• OBP: {obp}\n"
             f"• Home Runs: {hr_val} ({hr_rank} in MLB)\n"
             f"• Stolen Bases: {sb_val} ({sb_rank} in MLB)\n\n"
-            f"More: https://DodgersData.bot"
+            f"More: https://RedSoxData.bot"
         )
 
     elif summary_type == 'pitching':
@@ -206,11 +207,11 @@ def main():
         walks_val = walks.get('value', 'N/A')
         walks_rank = walks.get('context_value', 'N/A')
         tweet_text = (
-            f" Dodgers pitching report ⚾️\n\n"
+            f" {config.TEAM_NAME_SIMPLE} pitching report ⚾️\n\n"
             f"• ERA: {era_val} ({era_rank} in MLB)\n"
             f"• Strikeouts: {so_val} ({so_rank} in MLB)\n"
             f"• Walks: {walks_val} ({walks_rank} in MLB)\n\n"
-            f"More: https://DodgersData.bot"
+            f"More: https://RedSoxData.bot"
         )
 
     if tweet_text:

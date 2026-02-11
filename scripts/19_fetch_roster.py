@@ -11,23 +11,24 @@ import unicodedata
 import shutil
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from scripts import config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Output config
 output_dir = "data/roster"
 jekyll_data_dir = "_data/roster"
-csv_file = f"{output_dir}/dodgers_roster_current.csv"
-json_file = f"{output_dir}/dodgers_roster_current.json"
-transactions_csv_file = f"{output_dir}/dodgers_transactions_current.csv"
-transactions_json_file = f"{output_dir}/dodgers_transactions_current.json"
-transactions_archive_json_file = f"{output_dir}/dodgers_transactions_archive.json"
+csv_file = f"{output_dir}/redsox_roster_current.csv"
+json_file = f"{output_dir}/redsox_roster_current.json"
+transactions_csv_file = f"{output_dir}/redsox_transactions_current.csv"
+transactions_json_file = f"{output_dir}/redsox_transactions_current.json"
+transactions_archive_json_file = f"{output_dir}/redsox_transactions_archive.json"
 s3_bucket = "stilesdata.com"
-s3_key_csv = "dodgers/data/roster/dodgers_roster_current.csv"
-s3_key_json = "dodgers/data/roster/dodgers_roster_current.json"
-s3_key_transactions_csv = "dodgers/data/roster/dodgers_transactions_current.csv"
-s3_key_transactions_json = "dodgers/data/roster/dodgers_transactions_current.json"
-s3_key_transactions_archive_json = "dodgers/data/roster/dodgers_transactions_archive.json"
+s3_key_csv = "redsox/data/roster/redsox_roster_current.csv"
+s3_key_json = "redsox/data/roster/redsox_roster_current.json"
+s3_key_transactions_csv = "redsox/data/roster/redsox_transactions_current.csv"
+s3_key_transactions_json = "redsox/data/roster/redsox_transactions_current.json"
+s3_key_transactions_archive_json = "redsox/data/roster/redsox_transactions_archive.json"
 
 # AWS session (same logic as your other scripts)
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
@@ -136,7 +137,7 @@ def fetch_transactions():
         target_date = today - relativedelta(months=i)
         year = target_date.year
         month = target_date.strftime('%m')
-        urls_to_fetch.append(f'https://www.mlb.com/dodgers/roster/transactions/{year}/{month}')
+        urls_to_fetch.append(f'https://www.mlb.com/{config.TEAM_NAME.lower().replace(" ", "")}/roster/transactions/{year}/{month}')
 
     # Fetch new data
     new_transactions_list = []
@@ -160,7 +161,7 @@ def fetch_transactions():
     new_df.dropna(subset=['date', 'transaction'], inplace=True)
 
     # Process new data
-    new_df['transaction'] = new_df['transaction'].str.replace('Los Angeles Dodgers', 'Dodgers', regex=False)
+    new_df['transaction'] = new_df['transaction'].str.replace(config.TEAM_FULL_NAME, config.TEAM_NAME_SIMPLE, regex=False)
     new_df['date'] = pd.to_datetime(new_df['date'], format='%m/%d/%y')
 
     positions = ["RHP", "LHP", "P", "C", "1B", "2B", "3B", "SS", "INF", "OF", "LF", "CF", "RF", "DH"]
@@ -209,7 +210,7 @@ def fetch_transactions():
 def main():
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(jekyll_data_dir, exist_ok=True)
-    url = "https://www.mlb.com/dodgers/roster"  # Active roster instead of 40-man
+    url = f"https://www.mlb.com/{config.TEAM_NAME.lower().replace(' ', '')}/roster"  # Active roster instead of 40-man
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     tables = soup.find_all('table', class_='roster__table')

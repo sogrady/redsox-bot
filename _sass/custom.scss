@@ -10,6 +10,7 @@
   max-width: 900px;
   margin: 30px auto;
   line-height: 1.4;
+
   @media (max-width: 767px) {
     padding: 0 15px;
   }
@@ -47,10 +48,12 @@ h1 {
 p {
   font-family: f.$font-family-body;
   font-weight: f.$font-weight-body;
+
   &.byline {
     text-transform: uppercase;
     font-size: 14px;
   }
+
   &.prose {
     margin: 18px 0;
     font-size: 18px;
@@ -58,7 +61,7 @@ p {
 }
 
 span.highlight {
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
   font-weight: bold;
 }
 
@@ -66,23 +69,28 @@ span.highlight {
   font-family: f.$font-family-table;
   border-collapse: collapse;
   width: 100%;
+
   caption {
     text-align: left;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
   }
+
   td,
   th {
     border: 1px solid #ddd;
     padding: 8px;
   }
+
   tr:nth-child(even) {
     background-color: c.$gray;
   }
+
   tr:hover {
     background-color: #ddd;
   }
+
   th {
     text-align: left;
     background-color: c.$black;
@@ -125,46 +133,53 @@ body {
 
 .card {
   font-family: 'Roboto', sans-serif;
-  color: #444; /* Darker text for better readability */
-  border: 1px solid rgba(0, 0, 0, 0.125); /* Slight border */
-  border-radius: 0.25rem; /* Modern border radius */
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+  color: #444;
+  /* Darker text for better readability */
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  /* Slight border */
+  border-radius: 0.25rem;
+  /* Modern border radius */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  /* Subtle shadow for depth */
 }
 
 .card-header {
-  background-color: #eeeeee; 
+  background-color: #eeeeee;
   color: #333333;
-  padding: 10px 15px; 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); 
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   font-weight: 400;
-  font-size: .8em; 
+  font-size: .8em;
 }
 
 .card-body {
-  padding: 20px; /* More padding for body content */
-  font-weight: 400; /* Regular weight for body text */
+  padding: 20px;
+  /* More padding for body content */
+  font-weight: 400;
+  /* Regular weight for body text */
 }
 
 .bg-primary {
-  background-color: #005a9c !important;
+  background-color: #BD3039 !important;
 }
 
 .header {
-  background-color: c.$dodger-blue;
-  color: c.$dodger-silver;
+  background-color: c.$team-secondary;
+  color: c.$team-tertiary;
 }
 
 .footer {
-  background-color: c.$dodger-silver;
-  color: c.$dodger-red;
+  background-color: c.$team-secondary;
+  color: c.$team-tertiary;
 }
 
 .button-primary {
-  background-color: c.$dodger-red;
+  background-color: c.$team-primary;
+
   &:hover {
-    background-color: darken(c.$dodger-red, 10%);
+    background-color: darken(c.$team-primary, 10%);
   }
 }
 
@@ -197,8 +212,8 @@ body {
   font-size: 14px;
 }
 
-.anno-dodgers {
-  fill: c.$dodger-blue;
+.anno-team {
+  fill: c.$team-secondary;
   font-weight: bold;
   font-size: 14px;
   font-family: 'Roboto Slab', serif;
@@ -207,7 +222,7 @@ body {
 .anno-mean {
   text-decoration: underline;
   text-decoration-style: dashed;
-  text-decoration-color: #EF3E42;
+  text-decoration-color: c.$team-primary;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   opacity: 1 !important;
@@ -217,7 +232,7 @@ body {
 .anno-xwoba {
   text-decoration: underline;
   text-decoration-style: dashed;
-  text-decoration-color: #005A9C;
+  text-decoration-color: c.$team-secondary;
   text-underline-offset: 3px;
   text-decoration-thickness: 2px;
 }
@@ -250,12 +265,14 @@ path.domain {
   margin: 30px auto;
   line-height: 1.4;
 }
+
 h1,
 .headline,
 .chart-headline {
   font-family: 'Roboto Slab', serif;
   font-style: normal;
 }
+
 p,
 .subhead {
   font-family: 'Roboto', serif;
@@ -268,21 +285,26 @@ p,
   margin: 0px 0px 40px 0px;
   text-align: center;
 }
+
 .subhead,
 p.chart-subhead {
   font-size: 20px;
   margin: 20px 0px 40px 0px;
 }
+
 h1 {
   font-weight: f.$font-weight-headline;
   font-size: 26px;
 }
+
 p {
   font-weight: f.$font-weight-body;
+
   &.byline {
     text-transform: uppercase;
     font-size: 14px;
   }
+
   &.prose {
     margin: 18px 0;
     font-size: 18px;
@@ -297,9 +319,11 @@ p {
 }
 
 .card-footer {
-  background-color: #f8f9fa; /* Lighter footer background */
+  background-color: #f8f9fa;
+  /* Lighter footer background */
   // padding: 6px 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.125); /* Border top to separate from the body */
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  /* Border top to separate from the body */
 }
 
 .card-header,
@@ -321,7 +345,7 @@ p {
   font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-size: 50px;
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
   font-weight: bold;
   padding-bottom: 20px;
   line-height: 30px;
@@ -348,31 +372,32 @@ p {
 
 @media (max-width: 767px) {
   .data-table .place-col {
-    display: none; /* Hide the "Place" column on mobile */
+    display: none;
+    /* Hide the "Place" column on mobile */
   }
 }
 
 .win {
-  background: c.$dodger-blue;
+  background: c.$team-secondary;
   padding: 1px 4px;
   color: white;
   border-radius: 4px;
 }
 
 .loss {
-  background: c.$dodger-red;
+  background: c.$team-primary;
   padding: 1px 4px;
   color: white;
   border-radius: 4px;
 }
 
 td .home-icon {
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
   vertical-align: middle;
 }
 
 td .road-icon {
-  color: c.$dodger-silver;
+  color: c.$team-tertiary;
   vertical-align: middle;
 }
 
@@ -380,19 +405,24 @@ td .road-icon {
   .container {
     padding: 0 15px;
   }
+
   .headline {
-    font-size: 50px; /* Smaller font size for mobile */
+    font-size: 50px;
+    /* Smaller font size for mobile */
     margin: 0px 15px;
   }
+
   .subhead,
   p.chart-subhead {
     font-size: 16px;
     margin: 30px 15px 10px 15px;
   }
+
   .card-footer {
     text-transform: uppercase;
     font-size: 0.7em;
   }
+
   .masthead {
     position: relative;
     border-bottom: 0px solid #f2f3f3;
@@ -417,13 +447,14 @@ td .road-icon {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  
+
 }
 
 .grid-column {
   padding-right: 15px;
   padding-left: 15px;
   flex: 1 0 33%;
+
   @media (max-width: 767px) {
     flex: 1 0 100%;
   }
@@ -449,33 +480,33 @@ td .road-icon {
 }
 
 a:visited {
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
   text-decoration: underline;
 }
 
 a {
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
   text-decoration: underline;
 }
 
 .winning {
-  color: c.$dodger-blue;
+  color: c.$team-secondary;
 }
 
 .losing {
-  color: c.$dodger-red;
+  color: c.$team-primary;
 }
 
 .masthead {
-  background-color: c.$dodger-blue;
-  
+  background-color: c.$team-secondary;
+
   &__inner-wrap {
     padding: 0.5em 1em; // Reduced from default 1em to make it shorter
   }
 }
 
 .greedy-nav {
-  background-color: c.$dodger-blue;
+  background-color: c.$team-secondary;
 }
 
 .greedy-nav a {
@@ -536,9 +567,9 @@ a {
   right: 0;
   margin-top: 15px;
   padding: 5px;
-  border: 1px solid c.$dodger-blue;
+  border: 1px solid c.$team-secondary;
   border-radius: 4px;
-  background: c.$dodger-blue;
+  background: c.$team-secondary;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
@@ -578,20 +609,20 @@ a {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: c.$dodger-blue;
+  background-color: c.$team-secondary;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   pointer-events: none;
 }
 
 .win {
-  background: c.$dodger-blue;
+  background: c.$team-secondary;
   padding: 1px 4px;
   color: white;
 }
 
 .loss {
-  background: c.$dodger-red;
+  background: c.$team-primary;
   padding: 1px 4px;
   color: white;
 }
@@ -600,8 +631,8 @@ a {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  display: block; /* align chart block with container edges */
-  vertical-align: top;
+  display: block;
+  /* align chart block with container edges */
   margin-bottom: 20px;
 }
 
@@ -616,8 +647,10 @@ a {
 
 @media (min-width: 768px) {
   .chart-container {
-    max-width: 100%; /* Allow chart to use full width of its parent */
-    margin: 0 auto 20px auto; /* Center the chart and add bottom margin for spacing */
+    max-width: 100%;
+    /* Allow chart to use full width of its parent */
+    margin: 0 auto 20px auto;
+    /* Center the chart and add bottom margin for spacing */
   }
 }
 
@@ -678,7 +711,8 @@ thead {
   }
 
   .data-table .place-col {
-    display: none; /* Hide the "Place" column on mobile */
+    display: none;
+    /* Hide the "Place" column on mobile */
   }
 }
 
@@ -695,7 +729,7 @@ thead {
 }
 
 .attendance-bar-bg {
-  background: rgba(0, 90, 156, 0.3);
+  background: rgba(12, 35, 64, 0.3);
   height: 100%;
   position: absolute;
   top: 0;
@@ -708,8 +742,8 @@ thead {
   color: black;
 }
 
-.attendance-bar-dodgers {
-  background: #005A9C;
+.attendance-bar-team {
+  background: c.$team-secondary;
   color: white;
   font-weight: bold;
 }
@@ -719,7 +753,7 @@ input,
 optgroup,
 select,
 textarea {
-  fill: c.$dodger-silver;
+  fill: c.$team-tertiary;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -789,13 +823,14 @@ h2.stat-group {
   font-size: 1.3em;
   padding-top: 40px;
   border-top: 1px solid #e9ecef;
-  
-  &:first-of-type, &.postseason-header {
+
+  &:first-of-type,
+  &.postseason-header {
     border-top: none;
     padding-top: 0;
     margin-top: 30px;
   }
-  
+
   &.performance-header {
     border-top: 1px solid #e9ecef;
     padding-top: 40px;
@@ -820,7 +855,7 @@ h2.about-subhead {
 }
 
 .table-wrapper {
-  flex: 1 1 calc(50% - 5px); 
+  flex: 1 1 calc(50% - 5px);
   max-width: calc(50% - 5px);
   padding: 10px;
   border-radius: 8px;
@@ -863,10 +898,11 @@ td.loss {
 .drop-cap {
   font-family: 'Roboto Slab', serif;
   float: left;
-  font-size: 3em; /* Adjust the size as needed */
+  font-size: 3em;
+  /* Adjust the size as needed */
   line-height: 1;
   margin: 0.1em 0.1em 0 0;
-  
+
 }
 
 hr.style-two {
@@ -876,16 +912,18 @@ hr.style-two {
 }
 
 hr.style-eight {
-  overflow: visible; /* For IE */
+  overflow: visible;
+  /* For IE */
   padding: 0;
   border: none;
-  border-top: medium double c.$dodger-blue;
-  color: c.$dodger-blue;
+  border-top: medium double c.$team-primary;
+  color: c.$team-primary;
   text-align: center;
   width: 70%;
-  margin-right: auto; 
+  margin-right: auto;
   margin-left: auto;
 }
+
 hr.style-eight:after {
   content: "§";
   display: inline-block;
@@ -899,8 +937,9 @@ hr.style-eight:after {
 #year-select {
   font-family: 'Roboto', serif;
   color: #666;
-  background-color: #eee; /* Adjust background color if needed */
-  border: 1px solid #888; 
+  background-color: #eee;
+  /* Adjust background color if needed */
+  border: 1px solid #888;
   padding: 5px;
   border-radius: 5px;
   font-size: .9em;
@@ -909,7 +948,8 @@ hr.style-eight:after {
 
 #year-select option {
   font-family: 'Roboto Slab', serif;
-  color: #000; /* Options text color */
+  color: #000;
+  /* Options text color */
 }
 
 .chart-chatter {
@@ -918,7 +958,7 @@ hr.style-eight:after {
 }
 
 .anno-selected-year {
-  fill: c.$dodger-red;
+  fill: c.$team-primary;
   font-weight: bold;
   font-size: 14px;
   font-family: 'Roboto Slab', serif;
@@ -927,7 +967,7 @@ hr.style-eight:after {
 // tables
 
 .table-wrapper {
-  flex: 1 1 calc(50% - 5px); 
+  flex: 1 1 calc(50% - 5px);
   max-width: calc(50% - 5px);
   padding: 10px;
   border-radius: 8px;
@@ -955,8 +995,8 @@ hr.style-eight:after {
 
 @media (max-width: 900px) {
   .table-wrapper {
-      flex: 1 1 100%;
-      max-width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
     padding: 8px 0; // compressed vertical spacing for all table wrappers
   }
 }
@@ -967,33 +1007,38 @@ hr.style-eight:after {
 }
 
 @media (max-width: 900px) {
-  .tables-container.schedule-tables { 
-    gap: 0px !important; 
-    justify-content: flex-start !important; 
+  .tables-container.schedule-tables {
+    gap: 0px !important;
+    justify-content: flex-start !important;
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: nowrap !important;
   }
-  .tables-container.schedule-tables .table-wrapper { 
-    padding: 0 !important; 
+
+  .tables-container.schedule-tables .table-wrapper {
+    padding: 0 !important;
     margin-bottom: 15px !important;
-    flex: 0 0 100% !important; 
-    max-width: 100% !important; 
-    width: 100% !important; 
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
     background-color: transparent !important;
     box-sizing: border-box !important;
   }
+
   .tables-container.schedule-tables .table-wrapper:last-child {
     margin-bottom: 0 !important;
   }
-  .tables-container.schedule-tables .data-table { 
-    width: 100% !important; 
+
+  .tables-container.schedule-tables .data-table {
+    width: 100% !important;
     margin-bottom: 0 !important;
     table-layout: fixed !important;
   }
+
   .tables-container.schedule-tables h3.visual-subhead {
     margin: 15px 0 10px 0 !important;
   }
+
   .tables-container.schedule-tables h3.visual-subhead:first-child {
     margin-top: 0 !important;
   }
@@ -1003,12 +1048,15 @@ hr.style-eight:after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px; /* Adjust this to reduce gutter space */
+  gap: 10px;
+  /* Adjust this to reduce gutter space */
 }
 
 .table-wrapper {
-  flex: 1 1 49%; /* Adjusted to ensure both tables are equal width on desktop */
-  max-width: 49%; /* Adjusted to ensure both tables are equal width on desktop */
+  flex: 1 1 49%;
+  /* Adjusted to ensure both tables are equal width on desktop */
+  max-width: 49%;
+  /* Adjusted to ensure both tables are equal width on desktop */
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
@@ -1025,7 +1073,8 @@ hr.style-eight:after {
   }
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   border: 0.2px solid #ddd;
   padding: 5px 10px;
   font-family: 'Roboto';
@@ -1033,7 +1082,8 @@ hr.style-eight:after {
 }
 
 .table-value {
-  width: 10%; /* Apply a common width to specific table cells */
+  width: 10%;
+  /* Apply a common width to specific table cells */
 }
 
 .data-table th {
@@ -1047,34 +1097,44 @@ hr.style-eight:after {
 }
 
 @keyframes jump-up {
-  0%, 100% {
-      transform: translateY(0);
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
 @keyframes jump-down {
-  0%, 100% {
-      transform: translateY(0);
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(20px);
+    transform: translateY(20px);
   }
 }
 
 .fa-arrow-trend-up {
-  animation: jump-up 1s ease-in-out 3; /* Jumps up three times */
+  animation: jump-up 1s ease-in-out 3;
+  /* Jumps up three times */
 }
 
 .fa-arrow-trend-down {
-  animation: jump-down 1s ease-in-out 3; /* Jumps down three times */
+  animation: jump-down 1s ease-in-out 3;
+  /* Jumps down three times */
 }
 
 .trend-icon {
-  text-align: center; /* Centers the icon in the div */
-  margin-bottom: 0px; /* Adds space between the icon and the headline */
+  text-align: center;
+  /* Centers the icon in the div */
+  margin-bottom: 0px;
+  /* Adds space between the icon and the headline */
 }
 
 
@@ -1086,29 +1146,36 @@ h3.visual-subhead {
 }
 
 label {
-  margin: 10px 0px 20px 0px; /* Reduced margins */
+  margin: 10px 0px 20px 0px;
+  /* Reduced margins */
   font-family: 'Roboto Slab', serif;
-  font-size: .95em; /* Adjust font size as needed */
+  font-size: .95em;
+  /* Adjust font size as needed */
   color: #666;
-  display: block; /* Ensure the subhead is displayed as a block element */
+  display: block;
+  /* Ensure the subhead is displayed as a block element */
   font-weight: bold;
 }
 
 #event-selection {
   margin-bottom: 20px;
-  display: block; /* Ensure the event selection is displayed as a block element */
+  display: block;
+  /* Ensure the event selection is displayed as a block element */
 }
 
 #event-select {
   padding: 5px;
   font-family: 'Roboto', serif;
   color: #666;
-  background-color: #eee; /* Adjust background color if needed */
-  border: 1px solid #888; 
+  background-color: #eee;
+  /* Adjust background color if needed */
+  border: 1px solid #888;
   border-radius: 5px;
   font-size: 0.9em;
-  display: block; /* Ensure the select box is displayed as a block element */
-  margin-top: 10px; /* Add some margin at the top for spacing */
+  display: block;
+  /* Ensure the select box is displayed as a block element */
+  margin-top: 10px;
+  /* Add some margin at the top for spacing */
 }
 
 #barcode-chart {
@@ -1134,12 +1201,12 @@ label {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
-  
+
   .chart-container {
     @media (max-width: 900px) {
       width: 50% !important; // 2 columns on medium screens
     }
-    
+
     @media (max-width: 600px) {
       width: 100% !important; // 1 column on small screens
     }
@@ -1148,11 +1215,11 @@ label {
   svg {
     width: 100%;
     height: auto;
-    
+
     .domain {
       stroke: #e9e9e9;
     }
-    
+
     .tick text {
       font-family: 'Roboto', sans-serif;
       fill: #a2a2a2;
@@ -1162,24 +1229,24 @@ label {
 }
 
 // Add space between xwoba grid and Shohei stats
-#xwoba-grid + h3.visual-subhead {
+#xwoba-grid+h3.visual-subhead {
   margin-top: 40px;
 }
 
 .trend-indicator {
   font-size: 14px;
   font-weight: bold;
-  
+
   &.up {
-    fill: #2ca02c;  // Green
+    fill: #2ca02c; // Green
   }
-  
+
   &.down {
-    fill: #d62728;  // Red
+    fill: #d62728; // Red
   }
-  
+
   &.neutral {
-    fill: #7f7f7f;  // Gray
+    fill: #7f7f7f; // Gray
   }
 }
 
@@ -1191,7 +1258,8 @@ label {
   text-anchor: middle;
 }
 
-.chart-title { // For titles inside SVG
+.chart-title {
+  // For titles inside SVG
   font-family: 'Roboto Slab', serif;
   font-weight: bold; // Similar to .chart-headline
   fill: #444; // Dark grey for titles
@@ -1222,23 +1290,29 @@ label {
 
 .underline-wins {
   text-decoration: underline;
-  text-decoration-color: #005A9C; /* Dodger blue for the underline */
-  -webkit-text-decoration-color: #005A9C; /* Safari */
-  text-decoration-thickness: 2px; /* Increased thickness */
+  text-decoration-color: #005A9C;
+  /* Red Sox red for the underline */
+  -webkit-text-decoration-color: #005A9C;
+  /* Safari */
+  text-decoration-thickness: 2px;
+  /* Increased thickness */
   text-underline-offset: 3px;
 }
 
 .underline-mean-projection {
   text-decoration: underline;
   text-decoration-style: dashed;
-  text-decoration-color: #4A4A4A; /* Grey to match mean projection line */
-  -webkit-text-decoration-color: #4A4A4A; /* Safari */
-  text-decoration-thickness: 2px; /* Increased thickness */
+  text-decoration-color: #4A4A4A;
+  /* Grey to match mean projection line */
+  -webkit-text-decoration-color: #4A4A4A;
+  /* Safari */
+  text-decoration-thickness: 2px;
+  /* Increased thickness */
   text-underline-offset: 3px;
 }
 
 .highlight-ci {
-  background-color: #005a9c26; // Light blue with alpha for background, matching chart area
+  background-color: #BD303926; // Light blue with alpha for background, matching chart area
   padding: 0.1em 0.2em;
   border-radius: 3px;
 }
@@ -1250,16 +1324,18 @@ label {
 }
 
 // Ensure on smaller screens they stack, if not already handled by existing @media query for .table-wrapper
-@media (max-width: 767px) { // Using 767px as it's common, adjust if your breakpoint is different
+@media (max-width: 767px) {
+
+  // Using 767px as it's common, adjust if your breakpoint is different
   .standings-tables .table-wrapper {
     flex: 1 1 100%;
     max-width: 100%;
   }
 }
 
-// Highlight for Dodgers row in standings
-.standings-tables .data-table tr.dodgers-row td {
-  color: c.$dodger-blue;
+// Highlight for Red Sox row in standings
+.standings-tables .data-table tr.redsox-row td {
+  color: c.$team-primary;
   font-weight: bold;
 }
 
@@ -1272,7 +1348,7 @@ label {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s ease;
-  
+
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
@@ -1292,7 +1368,7 @@ label {
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
   font-weight: 700;
-  color: c.$dodger-blue;
+  color: c.$team-primary;
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -1306,14 +1382,14 @@ label {
 
 // Modern header styling
 .hero-header {
-  background: linear-gradient(135deg, #005a9c 0%, #003d6b 100%);
+  background: linear-gradient(135deg, #BD3039 0%, #0C2340 100%);
   color: white;
   padding: 60px 0;
   margin: -30px -30px 40px -30px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  
+
   @media (max-width: 767px) {
     margin: -15px -15px 30px -15px;
     padding: 40px 20px;
@@ -1342,7 +1418,7 @@ label {
   font-size: 48px;
   margin-bottom: 20px;
   display: block;
-  
+
   @media (max-width: 767px) {
     font-size: 36px;
     margin-bottom: 15px;
@@ -1356,7 +1432,7 @@ label {
   margin: 0 0 20px 0;
   line-height: 1.1;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  
+
   @media (max-width: 767px) {
     font-size: 48px;
     margin-bottom: 15px;
@@ -1370,7 +1446,7 @@ label {
   margin: 0;
   opacity: 0.95;
   line-height: 1.4;
-  
+
   @media (max-width: 767px) {
     font-size: 18px;
   }
@@ -1382,7 +1458,7 @@ label {
   border-top: 1px solid #e9ecef;
   margin-top: 60px;
   padding: 40px 0 0 0;
-  
+
   @media (max-width: 767px) {
     margin-top: 40px;
     padding: 30px 0 0 0;
@@ -1393,7 +1469,7 @@ label {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 30px;
-  
+
   @media (max-width: 767px) {
     padding: 0 15px;
   }
@@ -1405,7 +1481,7 @@ label {
   align-items: flex-start;
   margin-bottom: 30px;
   gap: 30px;
-  
+
   @media (max-width: 767px) {
     flex-direction: column;
     gap: 25px;
@@ -1436,7 +1512,7 @@ label {
 .footer-links {
   display: flex;
   gap: 20px;
-  
+
   @media (max-width: 767px) {
     flex-direction: column;
     gap: 10px;
@@ -1446,10 +1522,10 @@ label {
 .footer-link {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: c.$dodger-blue;
+  color: c.$team-primary;
   text-decoration: none;
   font-weight: 500;
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -1457,7 +1533,7 @@ label {
 
 .footer-stats {
   margin-top: 20px;
-  
+
   @media (max-width: 767px) {
     margin-top: 15px;
   }
@@ -1481,7 +1557,7 @@ label {
   border-top: 1px solid #e9ecef;
   padding: 20px 0 30px 0;
   text-align: center;
-  
+
   @media (max-width: 767px) {
     padding: 20px 0 25px 0;
   }
@@ -1499,7 +1575,7 @@ label {
   gap: 15px;
   justify-content: flex-end;
   align-items: flex-start;
-  
+
   @media (max-width: 767px) {
     justify-content: flex-start;
     margin-top: 15px;
@@ -1510,12 +1586,12 @@ label {
   color: #666;
   font-size: 20px;
   transition: color 0.2s ease;
-  
+
   &:hover {
-    color: c.$dodger-blue;
+    color: c.$team-primary;
     text-decoration: none;
   }
-  
+
   i {
     width: 20px;
     text-align: center;
@@ -1528,7 +1604,7 @@ label {
   padding: 20px 0 25px 0;
   border-bottom: 1px solid #e9ecef;
   margin-bottom: 40px;
-  
+
   @media (max-width: 767px) {
     padding: 15px 0 20px 0;
     margin-bottom: 30px;
@@ -1539,15 +1615,15 @@ label {
   font-size: 24px;
   margin-bottom: 20px;
   display: block;
-  
+
   .fa-arrow-trend-up {
-    color: #005a9c;
+    color: #BD3039;
   }
-  
+
   .fa-arrow-trend-down {
     color: #ef3e42;
   }
-  
+
   @media (max-width: 767px) {
     font-size: 20px;
     margin-bottom: 8px;
@@ -1561,7 +1637,7 @@ label {
   margin: 0 0 25px 0;
   color: #333;
   line-height: 1.1;
-  
+
   @media (max-width: 767px) {
     font-size: 48px;
     margin-bottom: 25px;
@@ -1573,11 +1649,13 @@ label {
   font-size: 18px;
   font-weight: 400;
   color: #666;
-  margin: 0 auto; /* center under headline within container */
+  margin: 0 auto;
+  /* center under headline within container */
   line-height: 1.5;
   text-align: left;
-  max-width: 860px; /* visually align with container */
-  
+  max-width: 860px;
+  /* visually align with container */
+
   @media (max-width: 767px) {
     font-size: 16px;
   }
@@ -1590,7 +1668,7 @@ label {
   align-items: center;
   padding: 28px 18px 18px 18px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   margin-bottom: 24px;
   background: #fff;
   transition: box-shadow 0.2s;
@@ -1598,9 +1676,11 @@ label {
   max-width: 200px;
   position: relative;
 }
+
 .stat-card.player-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
 }
+
 .player-avatar {
   width: 96px;
   height: 96px;
@@ -1609,6 +1689,7 @@ label {
   margin-bottom: 14px;
   border: 2px solid #e8e8e8;
 }
+
 .player-name {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -1618,18 +1699,21 @@ label {
   margin-bottom: 8px;
   font-weight: 500;
 }
+
 .player-meta {
   font-family: "Roboto", sans-serif;
-    font-size: 12px;
-    color: #888;
-    margin: 0;
+  font-size: 12px;
+  color: #888;
+  margin: 0;
 }
+
 .player-details {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #888;
   margin: 0;
 }
+
 .player-jersey {
   font-size: 12px;
   font-weight: 500;
@@ -1657,13 +1741,13 @@ label {
 
 .player-flag-active {
   background: #eaf7e6; // very light green
-  color: #7bb661;      // soft green text
+  color: #7bb661; // soft green text
   border: 1px solid #b6e2b1; // thin, soft green border
 }
 
 .player-flag-injured {
   background: #fbeaea; // very light red
-  color: #e57373;     // soft red text
+  color: #e57373; // soft red text
   border: 1px solid #f5bcbc;
 }
 
@@ -1685,6 +1769,7 @@ label {
     gap: 15px;
     margin: 0;
   }
+
   .grid-column {
     flex: 1 1 calc(50% - 8px);
     max-width: calc(50% - 8px);
@@ -1697,22 +1782,27 @@ label {
   .roster-tab-content .grid-container {
     gap: 12px;
   }
+
   .roster-tab-content .grid-column {
     flex: 1 1 calc(50% - 6px);
     max-width: calc(50% - 6px);
     padding: 0;
     margin: 0;
   }
+
   .stat-card.player-card {
     padding: 16px 8px;
   }
+
   .player-avatar {
     width: 72px;
     height: 72px;
   }
+
   .player-name {
     font-size: 1em;
   }
+
   .player-flag {
     display: block;
     top: 8px;
@@ -1738,16 +1828,19 @@ label {
   border-radius: 6px;
   letter-spacing: 1px;
 }
+
 .player-badge-active {
   background: #eaf7e6;
   color: #7bb661;
   border: 1px solid #b6e2b1;
 }
+
 .player-badge-injured {
   background: #fbeaea;
   color: #e57373;
   border: 1px solid #f5bcbc;
 }
+
 .player-badge-minors {
   background: #f2f2f2;
   color: #aaa;
@@ -1768,16 +1861,20 @@ label {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
   .stat-card.player-card {
     padding: 16px 8px;
   }
+
   .player-avatar {
     width: 72px;
     height: 72px;
   }
+
   .player-name {
     font-size: 1em;
   }
+
   .player-flag {
     display: block;
     top: 8px;
@@ -1836,7 +1933,7 @@ label {
   stroke: #666;
   stroke-width: 2px;
   fill: none;
-  stroke-dasharray: 4,4;
+  stroke-dasharray: 4, 4;
 }
 
 // Umpire Scorecard
@@ -1987,55 +2084,65 @@ label {
 }
 
 @media (min-width: 1200px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 900px !important;
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 900px !important;
   }
 }
 
 .text-container {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .text-container a {
-    color: #005a9c;
-    font-weight: 500;
+  color: #BD3039;
+  font-weight: 500;
 }
 
 .footer-copyright a {
-  color: #005a9c;
+  color: #BD3039;
   font-weight: 500;
 }
 
 .minimal-subhead a {
-  color: #005a9c;
+  color: #BD3039;
   font-weight: 500;
 }
 
 .author-section::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .author-avatar {
-    float: right;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border: 3px solid #005a9c;
+  float: right;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: 3px solid #BD3039;
 }
 
 @media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 900px !important;
-    }
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 900px !important;
+  }
 }
 
 .note a {
-  color: #005a9c;
+  color: #BD3039;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2138,17 +2245,18 @@ label {
 
 // Custom mobile navigation - completely override theme behavior below 500px
 @media (max-width: 500px) {
+
   // Hide all visible navigation links
   .masthead .greedy-nav .visible-links,
   .masthead__menu .greedy-nav .visible-links,
   .greedy-nav .visible-links {
     display: none !important;
   }
-  
+
   // Add custom mobile menu toggle
   .masthead .greedy-nav {
     position: relative;
-    
+
     // Custom mobile toggle button
     &:after {
       content: '';
@@ -2158,17 +2266,17 @@ label {
       transform: translateY(-50%);
       width: 24px;
       height: 18px;
-      background: linear-gradient(to bottom, 
-        white 0%, white 20%, 
-        transparent 20%, transparent 40%, 
-        white 40%, white 60%, 
-        transparent 60%, transparent 80%, 
-        white 80%, white 100%);
+      background: linear-gradient(to bottom,
+          white 0%, white 20%,
+          transparent 20%, transparent 40%,
+          white 40%, white 60%,
+          transparent 60%, transparent 80%,
+          white 80%, white 100%);
       cursor: pointer;
       z-index: 1001;
     }
   }
-  
+
   // Custom mobile menu
   .custom-mobile-menu {
     position: absolute;
@@ -2176,18 +2284,18 @@ label {
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid #005a9c;
+    border: 1px solid #BD3039;
     border-radius: 4px;
-    background: #005a9c;
+    background: #BD3039;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     z-index: 1000;
     min-width: 200px;
     display: none;
-    
+
     &.show {
       display: block !important;
     }
-    
+
     // Arrow pointing up
     &:before {
       content: "";
@@ -2197,7 +2305,7 @@ label {
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #005a9c transparent;
+      border-color: #BD3039 transparent;
       display: block;
       z-index: 0;
     }
@@ -2210,24 +2318,24 @@ label {
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #005a9c transparent;
+      border-color: #BD3039 transparent;
       display: block;
       z-index: 1;
     }
-    
+
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      
+
       li {
         display: block;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        
+
         &:last-child {
           border-bottom: none;
         }
-        
+
         a {
           display: block;
           margin: 0;
@@ -2236,7 +2344,7 @@ label {
           font-family: "Roboto Slab", serif;
           font-size: 16px;
           text-decoration: none;
-          
+
           &:hover {
             color: rgb(182, 181, 181);
             background: rgba(255, 255, 255, 0.1);
@@ -2284,12 +2392,14 @@ label {
 #schedule-section .table-wrapper {
   width: 100%;
   max-width: 100%;
-  padding: 0; /* remove inner padding to avoid fake right gap */
+  padding: 0;
+  /* remove inner padding to avoid fake right gap */
 }
 
 /* Override theme table defaults inside schedule to ensure true 100% width */
 #schedule-section .data-table {
-  display: table; /* theme sets table to display:block; force table for width calc */
+  display: table;
+  /* theme sets table to display:block; force table for width calc */
   width: 100%;
   max-width: 100%;
   table-layout: fixed;
@@ -2307,6 +2417,7 @@ label {
 #schedule-section .data-table td:nth-child(1) {
   width: 18%;
 }
+
 #schedule-section .data-table th:nth-child(2),
 #schedule-section .data-table td:nth-child(2) {
   width: 40%;
@@ -2314,10 +2425,12 @@ label {
   overflow: visible;
   text-overflow: unset;
 }
+
 #schedule-section .data-table th:nth-child(3),
 #schedule-section .data-table td:nth-child(3) {
   width: 18%;
 }
+
 #schedule-section .data-table th:nth-child(4),
 #schedule-section .data-table td:nth-child(4) {
   width: 20%;
@@ -2332,38 +2445,50 @@ label {
 
 /* standings tables: align columns across divisions */
 .standings-tables .data-table {
-  display: table; /* override theme's display:block */
+  display: table;
+  /* override theme's display:block */
   width: 100%;
-  table-layout: fixed; /* ensure consistent column sizing */
+  table-layout: fixed;
+  /* ensure consistent column sizing */
 }
 
 .standings-tables .data-table th:nth-child(1),
-.standings-tables .data-table td:nth-child(1) { /* Team */
+.standings-tables .data-table td:nth-child(1) {
+  /* Team */
   width: 60%;
-  white-space: normal; /* allow wrapping for long names */
+  white-space: normal;
+  /* allow wrapping for long names */
 }
 
 .standings-tables .data-table th:nth-child(2),
-.standings-tables .data-table td:nth-child(2) { /* Win % */
+.standings-tables .data-table td:nth-child(2) {
+  /* Win % */
   width: 25%;
 }
 
 .standings-tables .data-table th:nth-child(3),
-.standings-tables .data-table td:nth-child(3) { /* GB */
+.standings-tables .data-table td:nth-child(3) {
+  /* GB */
   width: 15%;
 }
 
 @media (max-width: 767px) {
+
   .standings-tables .data-table th:nth-child(1),
-  .standings-tables .data-table td:nth-child(1) { /* Team */
+  .standings-tables .data-table td:nth-child(1) {
+    /* Team */
     width: 58%;
   }
+
   .standings-tables .data-table th:nth-child(2),
-  .standings-tables .data-table td:nth-child(2) { /* Win % */
+  .standings-tables .data-table td:nth-child(2) {
+    /* Win % */
     width: 22%;
   }
+
   .standings-tables .data-table th:nth-child(3),
-  .standings-tables .data-table td:nth-child(3) { /* GB */
+  .standings-tables .data-table td:nth-child(3) {
+    /* GB */
     width: 20%;
   }
 }
@@ -2376,7 +2501,7 @@ label {
 
 .bracket-section {
   margin-bottom: 40px;
-  
+
   @media (max-width: 767px) {
     margin-bottom: 30px;
   }
@@ -2391,7 +2516,7 @@ label {
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #e9ecef;
-  
+
   @media (max-width: 767px) {
     font-size: 1.1em;
     margin-bottom: 15px;
@@ -2403,7 +2528,7 @@ label {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   align-items: center;
-  
+
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -2443,7 +2568,7 @@ label {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   width: 100%;
   max-width: 280px;
-  
+
   @media (max-width: 767px) {
     max-width: 100%;
     padding: 15px;
@@ -2465,23 +2590,23 @@ label {
   min-height: 60px;
   transition: all 0.2s ease;
   position: relative; // For absolute positioned seed
-  
+
   &:hover {
     background: #e9ecef;
-    border-color: #005a9c;
+    border-color: #BD3039;
   }
-  
-  &.dodgers-team {
-    background: linear-gradient(135deg, #005a9c 0%, #003d6b 100%);
+
+  &.redsox-team {
+    background: linear-gradient(135deg, #BD3039 0%, #0C2340 100%);
     color: white;
-    border-color: #005a9c;
+    border-color: #BD3039;
     font-weight: 600;
-    
+
     &:hover {
       background: linear-gradient(135deg, #004080 0%, #002a4a 100%);
     }
   }
-  
+
   @media (max-width: 767px) {
     padding: 10px 40px 10px 12px; // Adjust for smaller seed
     min-height: 50px;
@@ -2503,13 +2628,13 @@ label {
   font-weight: bold;
   color: #666;
   overflow: hidden;
-  
+
   @media (max-width: 767px) {
     width: 32px;
     height: 32px;
     font-size: 14px;
   }
-  
+
   // When showing real logos, remove the fallback background colors
   &[style*="background-image"] {
     background: white;
@@ -2531,7 +2656,7 @@ label {
   font-weight: 500;
   color: inherit;
   text-align: left;
-  
+
   @media (max-width: 767px) {
     font-size: 13px;
   }
@@ -2543,11 +2668,11 @@ label {
   font-weight: 400;
   color: #a3a2a2;
   text-align: left;
-  
-  .dodgers-team & {
+
+  .redsox-team & {
     color: rgba(255, 255, 255, 0.8);
   }
-  
+
   @media (max-width: 767px) {
     font-size: 10px;
   }
@@ -2557,9 +2682,9 @@ label {
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   font-weight: 700;
-  color: #005a9c;
+  color: #BD3039;
   background: white;
-  border: 2px solid #005a9c;
+  border: 2px solid #BD3039;
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -2571,13 +2696,13 @@ label {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  
-  .dodgers-team & {
-    background: #005a9c;
+
+  .redsox-team & {
+    background: #BD3039;
     color: white;
     border-color: white;
   }
-  
+
   @media (max-width: 767px) {
     width: 24px;
     height: 24px;
@@ -2600,7 +2725,7 @@ label {
 .world-series-section {
   text-align: center;
   margin-top: 40px;
-  
+
   @media (max-width: 767px) {
     margin-top: 30px;
   }
@@ -2611,10 +2736,10 @@ label {
   margin: 0 auto;
   padding: 30px 20px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 2px solid #005a9c;
+  border: 2px solid #BD3039;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 90, 156, 0.15);
-  
+
   @media (max-width: 767px) {
     padding: 20px 15px;
   }
@@ -2626,11 +2751,11 @@ label {
     .bracket-section:first-child {
       order: 1; // NL first
     }
-    
+
     .bracket-section:nth-child(2) {
       order: 2; // AL second
     }
-    
+
     .world-series-section {
       order: 3; // WS last
     }
@@ -2640,29 +2765,35 @@ label {
 // Team abbreviation mapping for fallback styling (when logos fail to load)
 .team-logo {
   &[data-team="LAD"]:not([style*="background-image"]) {
-    background: #005a9c;
+    background: #BD3039;
     color: white;
   }
+
   &[data-team="NYY"]:not([style*="background-image"]) {
     background: #0c2340;
     color: white;
   }
+
   &[data-team="ATL"]:not([style*="background-image"]) {
     background: #ce1141;
     color: white;
   }
+
   &[data-team="NYM"]:not([style*="background-image"]) {
     background: #002d72;
     color: #ff5910;
   }
+
   &[data-team="PHI"]:not([style*="background-image"]) {
     background: #e81828;
     color: white;
   }
+
   &[data-team="SD"]:not([style*="background-image"]) {
     background: #2f241d;
     color: #ffc425;
   }
+
   // Add more teams as needed for fallback
 }
 
@@ -2691,7 +2822,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  
+
   // Connecting lines between boxes
   &::before {
     content: '';
@@ -2700,22 +2831,21 @@ label {
     left: 12.5%;
     right: 12.5%;
     height: 2px;
-    background: linear-gradient(to right, 
-      #ddd 0%, 
-      #ddd 30%, 
-      transparent 30%, 
-      transparent 35%, 
-      #ddd 35%, 
-      #ddd 65%, 
-      transparent 65%, 
-      transparent 70%, 
-      #ddd 70%, 
-      #ddd 100%
-    );
+    background: linear-gradient(to right,
+        #ddd 0%,
+        #ddd 30%,
+        transparent 30%,
+        transparent 35%,
+        #ddd 35%,
+        #ddd 65%,
+        transparent 65%,
+        transparent 70%,
+        #ddd 70%,
+        #ddd 100%);
     z-index: 0;
     pointer-events: none;
   }
-  
+
   // Simple connecting lines only
   &::after {
     content: '';
@@ -2739,31 +2869,31 @@ label {
   position: relative;
   transition: all 0.2s ease;
   z-index: 2;
-  
+
   &.completed {
-    border-color: #005a9c;
+    border-color: #BD3039;
     background: #f8f9ff;
-    
+
     .round-status {
-      background: #005a9c;
+      background: #BD3039;
       color: white;
-      
+
       &::after {
         content: '✓';
         font-weight: bold;
       }
     }
   }
-  
+
   &.in-progress {
     border-color: #28a745;
     background: #f8fff8;
-    
+
     .round-status {
       background: #28a745;
       color: white;
       animation: pulse 2s infinite;
-      
+
       &::after {
         content: '\f110';
         font-family: 'Font Awesome 5 Free';
@@ -2773,15 +2903,15 @@ label {
       }
     }
   }
-  
+
   &.upcoming {
     border-color: #ccc;
     background: #f9f9f9;
-    
+
     .round-status {
       background: #ccc;
       color: white;
-      
+
       &::after {
         content: '?';
         font-weight: bold;
@@ -2823,18 +2953,31 @@ label {
   justify-content: center;
   font-size: 12px;
   border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive adjustments for playoff journey */
@@ -2844,24 +2987,23 @@ label {
     grid-template-rows: repeat(2, 1fr);
     gap: 12px;
     max-width: 600px;
-    
+
     // Remove horizontal arrows, add vertical ones for 2x2 grid
     &::before {
-      background: linear-gradient(to bottom, 
-        transparent 0%, 
-        transparent 25%, 
-        #ddd 25%, 
-        #ddd 75%, 
-        transparent 75%, 
-        transparent 100%
-      );
+      background: linear-gradient(to bottom,
+          transparent 0%,
+          transparent 25%,
+          #ddd 25%,
+          #ddd 75%,
+          transparent 75%,
+          transparent 100%);
       width: 2px;
       height: 100%;
       left: 50%;
       top: 0;
       transform: translateX(-50%);
     }
-    
+
     &::after {
       content: '';
       width: 2px;
@@ -2872,19 +3014,19 @@ label {
       background: #ddd;
     }
   }
-  
+
   .playoff-round {
     padding: 12px;
   }
-  
+
   .round-title {
     font-size: 12px;
   }
-  
+
   .round-opponent {
     font-size: 11px;
   }
-  
+
   .round-result {
     font-size: 10px;
   }
@@ -2896,12 +3038,12 @@ label {
     grid-template-rows: auto;
     gap: 8px;
     max-width: 400px;
-    
+
     // Simpler connecting line for mobile
     &::before {
       display: none;
     }
-    
+
     &::after {
       display: none;
     }
@@ -2929,7 +3071,7 @@ label {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s ease;
-  
+
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
@@ -2937,13 +3079,13 @@ label {
 
 .postseason-player-name {
   font-family: "Roboto", sans-serif;
-    font-size: 13px;
-    color: #666;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    margin-bottom: 8px;
-    font-weight: 500;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .postseason-stats-grid {
@@ -2972,7 +3114,7 @@ label {
 }
 
 .postseason-stat-value.highlight {
-  color: #005a9c;
+  color: #BD3039;
 }
 
 @media (max-width: 1024px) {
@@ -2989,26 +3131,26 @@ label {
     grid-template-rows: auto;
     gap: 8px;
   }
-  
+
   .postseason-player-card {
     padding: 12px 8px;
   }
-  
+
   .postseason-player-name {
     font-size: 11px;
     margin-bottom: 6px;
     letter-spacing: 0.3px;
   }
-  
+
   .postseason-stats-grid {
     gap: 3px;
   }
-  
+
   .postseason-stat-label {
     font-size: 8px;
     margin-bottom: 1px;
   }
-  
+
   .postseason-stat-value {
     font-size: 10px;
     font-weight: 600;

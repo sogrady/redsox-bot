@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-LA Dodgers schedule snapshot
+Boston Red Sox schedule snapshot
 This notebook downloads the team's current standings table from [Baseball Reference](https://www.baseball-reference.com/teams/LAD/2024-schedule-scores.shtml) and creates a results/schedule table listing five games in the past and future.
 """
 
@@ -16,6 +16,7 @@ from io import StringIO
 from io import BytesIO
 import logging
 from datetime import datetime, timedelta
+from scripts import config
 
 # Set up basic configuration for logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -85,11 +86,11 @@ mlb_teams = {
 
 # Configuration
 year = pd.to_datetime("now").strftime("%Y")
-url = f"https://www.baseball-reference.com/teams/LAD/{year}-schedule-scores.shtml"
+url = f"https://www.baseball-reference.com/teams/{config.TEAM_ID_BBREF}/{year}-schedule-scores.shtml"
 output_dir = "data/standings"
-csv_file = f"{output_dir}/dodgers_schedule.csv"
-json_file = f"{output_dir}/dodgers_schedule.json"
-parquet_file = f"{output_dir}/dodgers_schedule.parquet"
+csv_file = f"{output_dir}/redsox_schedule.csv"
+json_file = f"{output_dir}/redsox_schedule.json"
+parquet_file = f"{output_dir}/redsox_schedule.parquet"
 s3_bucket = "stilesdata.com"
 
 def fetch_clean_current_schedule(url, year):
@@ -119,11 +120,15 @@ def fetch_clean_current_schedule(url, year):
     df = df.drop(["unnamed: 2", "streak", "orig. scheduled", 'inn', 'tm', 'ra', 'rank', 'gb', 'win', 'opp', 'loss', 'save', 'time', 'd/n', 'w-l', 'attendance'], axis=1)
     return df
 
-# Convert time from Eastern to Pacific manually
-def convert_time_to_pacific_manual(time_str):
+# Convert time from Eastern to Team Local Time manually
+def convert_time_to_local_manual(time_str):
     try:
         time = datetime.strptime(time_str, '%I:%M %p')
-        time -= timedelta(hours=3)
+        # BBRef is usually ET. If team is ET, no change needed.
+        # If team is PT, subtract 3 hours.
+        if config.TEAM_TIMEZONE == "America/Los_Angeles":
+            time -= timedelta(hours=3)
+        # Add other timezones if needed
         return time.strftime('%-I:%M %p')
     except Exception as e:
         logging.error(f"Failed to convert time: {e}")
@@ -148,14 +153,14 @@ schedule_df['game_start'] = schedule_df.apply(
 )
 schedule_df = schedule_df[['date', 'opp_name', 'home_away', 'result', 'placement', 'game_start']]
 
-# Convert time-like strings to Pacific Time; ignore scores like '5-3'
+# Convert time-like strings to Local Time; ignore scores like '5-3'
 def is_time_string(s: str) -> bool:
     if not isinstance(s, str):
         return False
     return bool(pd.Series([s]).str.match(r'^\d{1,2}:\d{2}\s?(AM|PM)$', case=False, na=False).iloc[0])
 
 schedule_df['game_start'] = schedule_df['game_start'].apply(
-    lambda x: convert_time_to_pacific_manual(x) if isinstance(x, str) and is_time_string(x) else x
+    lambda x: convert_time_to_local_manual(x) if isinstance(x, str) and is_time_string(x) else x
 )
 
 # Function to save DataFrame to S3
@@ -176,6 +181,6 @@ def save_to_s3(df, base_path, s3_bucket, formats):
             logging.error(f"Failed to upload {fmt} to S3: {e}")
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, 'dodgers_schedule')
+file_path = os.path.join(data_dir, 'redsox_schedule')
 formats = ["csv", "json"]
-save_to_s3(schedule_df, "dodgers/data/standings/dodgers_schedule", "stilesdata.com", formats)
+save_to_s3(schedule_df, "redsox/data/standings/redsox_schedule", "stilesdata.com", formats)

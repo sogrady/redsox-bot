@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Transactions | Los Angeles Dodgers moves & trades
-description: An auto-updating log of recent Dodgers player transactions.
+title: Transactions | Boston Red Sox moves & trades
+description: An auto-updating log of recent Red Sox player transactions.
 permalink: /transactions/
-canonical_url: https://dodgersdata.bot/transactions/
+canonical_url: https://redsoxdata.bot/transactions/
 header:
   og_image: /assets/images/meta_card.png
 twitter:
@@ -12,13 +12,13 @@ twitter:
 
 <div class="container">
   <div class="minimal-header">
-  <img src="{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}" alt="Dodgers Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
+  <img src="{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}" alt="Red Sox Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
     <h1 class="minimal-headline">Recent transactions</h1>
-    <p class="minimal-subhead">A log of the team's last 100 player moves, according to <a href="https://www.mlb.com/dodgers/roster/transactions">Major League Baseball</a>: </p>
+    <p class="minimal-subhead">A log of the team's last 100 player moves, according to <a href="https://www.mlb.com/redsox/roster/transactions">Major League Baseball</a>: </p>
   </div>
 
-  {% assign transactions = site.data.roster.dodgers_transactions_current %}
-  {% assign players_roster = site.data.roster.dodgers_roster_current %}
+  {% assign transactions = site.data.roster.redsox_transactions_current %}
+  {% assign players_roster = site.data.roster.redsox_roster_current %}
 
   <div class="transactions-grid">
     {% for transaction in transactions %}

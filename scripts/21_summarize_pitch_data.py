@@ -8,7 +8,7 @@ from botocore.exceptions import NoCredentialsError
 # === Configuration ===
 LOCAL_JSON_PATH = "data/summary/umpire_summary.json"
 S3_BUCKET = "stilesdata.com"
-S3_KEY = "dodgers/data/summary/umpire_summary.json"
+S3_KEY = "redsox/data/summary/umpire_summary.json"
 
 # === AWS Session Setup ===
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
@@ -99,7 +99,7 @@ def analyze_pitches(file_path, thrown_by_file_path=None):
         for _, row in df_worst.iterrows()
     ]
     
-    # --- Optional: Pitching-side analysis (balls called in zone against Dodgers pitchers) ---
+    # --- Optional: Pitching-side analysis (balls called in zone against Team pitchers) ---
     pitching_summary = None
     pitching_last_game = None
     pitching_worst_calls_list = []
@@ -244,4 +244,4 @@ def analyze_pitches(file_path, thrown_by_file_path=None):
 
 if __name__ == "__main__":
     year = pd.to_datetime("now").strftime("%Y")
-    analyze_pitches(f'data/pitches/dodgers_pitches_{year}.json', thrown_by_file_path=f'data/pitches/dodgers_pitches_thrown_{year}.json') 
+    analyze_pitches(f'data/pitches/redsox_pitches_{year}.json', thrown_by_file_path=f'data/pitches/redsox_pitches_thrown_{year}.json') 

@@ -83,7 +83,7 @@ jobs:
     - name: Build Jekyll site
       run: bundle exec jekyll build
       env:
-        TZ: America/Los_Angeles
+        TZ: America/New_York
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
@@ -103,7 +103,7 @@ jobs:
       run: |
         git config --global user.name 'Matt Stiles'
         git config --global user.email 'haekeostiles@gmail.com'
-        git commit -m "Automated update of Dodgers data, visuals"
+        git commit -m "Automated update of Red Sox data, visuals"
   
     - name: Push changes
       if: steps.changes.outputs.changes == 'true'

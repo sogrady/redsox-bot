@@ -9,11 +9,29 @@ processed_videos/
 
 .DS_Store
 
+# Environment and credentials
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+.aws/
+credentials
+
+# Old Dodgers data backups
+dodgers_*
+**/dodgers_*.json
+**/dodgers_*.csv
+**/dodgers_*.parquet
+
 # Ignore all data files and images
 data/*
 !data/roster/
 !data/pitches/
 data/roster/*
 !data/roster/avatars/
+!data/archive/
+!data/archive/*
 _data/
 !_data/navigation.yml
+!_data/team.yml

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Los Angeles Dodgers stats dashboard | Updated data & analysis"
-description: "An auto-updating team dashboard that answers the question: How are the Dodgers doing?"
+title: "Boston Red Sox stats dashboard | Updated data & analysis"
+description: "An auto-updating team dashboard that answers the question: How are the Red Sox doing?"
 permalink: /
-canonical_url: https://dodgersdata.bot/
+canonical_url: https://redsoxdata.bot/
 header:
   og_image: /assets/images/meta_card.png
 twitter:
@@ -73,7 +73,7 @@ twitter:
 <p class="note">Note: The projection is based on 10,000 simulations. For games played, it shows actual wins. For future games, it simulates outcomes by randomly drawing from the Dodgers' win/loss results so far this season, then calculates the mean and a 95% confidence range.</p> -->
 
 <h3 class="visual-subhead">Cumulative <span class="win">wins</span>: Then and now</h3>
-<p class="chart-chatter">Since moving to LA, the Dodgers have won the World Series seven times: 2024, 2020, 1988, 1981, 1965, 1963 and 1959. Compare this year's win trajectory with the past.</p>
+<p class="chart-chatter">Compare this year's win trajectory with the past.</p>
 <select id="year-select">
   <option>Previous seasons</option>
 </select>
@@ -106,19 +106,19 @@ twitter:
   {% assign teams_array = standings_data %}
 {% endif %}
 
-{% assign nl_teams = teams_array | where_exp: "item", "item.league_name == 'National League'" %}
-{% if nl_teams == nil %} {% assign nl_teams = "" | split: "" %} {% endif %}
+{% assign al_teams = teams_array | where_exp: "item", "item.league_name == 'American League'" %}
+{% if al_teams == nil %} {% assign al_teams = "" | split: "" %} {% endif %}
 
-{% assign nl_west = nl_teams | where_exp: "item", "item.division_name == 'National League West'" | sort: "division_rank" %}
-{% assign nl_central = nl_teams | where_exp: "item", "item.division_name == 'National League Central'" | sort: "division_rank" %}
-{% assign nl_east = nl_teams | where_exp: "item", "item.division_name == 'National League East'" | sort: "division_rank" %}
+{% assign al_east = al_teams | where_exp: "item", "item.division_name == 'American League East'" | sort: "division_rank" %}
+{% assign al_central = al_teams | where_exp: "item", "item.division_name == 'American League Central'" | sort: "division_rank" %}
+{% assign al_west = al_teams | where_exp: "item", "item.division_name == 'American League West'" | sort: "division_rank" %}
 
 <h2 class="stat-group">Final regular season standings</h2>
 
-<h3 class="visual-subhead">National League standings by division</h3>
+<h3 class="visual-subhead">American League standings by division</h3>
 <div class="tables-container standings-tables">
   <div class="table-wrapper">
-    <h3 class="stat-card-label">NL West</h3>
+    <h3 class="stat-card-label">AL East</h3>
     <table class="data-table">
       <thead>
         <tr>
@@ -128,8 +128,8 @@ twitter:
         </tr>
       </thead>
       <tbody>
-        {% for team in nl_west %}
-        <tr {% if team.team_name == "Los Angeles Dodgers" %}class="dodgers-row"{% endif %}>
+        {% for team in al_east %}
+        <tr {% if team.team_name == "Boston Red Sox" %}class="dodgers-row"{% endif %}>
           <td>{{ team.team_name }}</td>
           <td>{{ team.winning_percentage }}</td>
           <td>{{ team.games_back }}</td>
@@ -139,7 +139,7 @@ twitter:
     </table>
   </div>
   <div class="table-wrapper">
-    <h3 class="stat-card-label">NL Central</h3>
+    <h3 class="stat-card-label">AL Central</h3>
     <table class="data-table">
       <thead>
         <tr>
@@ -149,7 +149,7 @@ twitter:
         </tr>
       </thead>
       <tbody>
-        {% for team in nl_central %}
+        {% for team in al_central %}
         <tr>
           <td>{{ team.team_name }}</td>
           <td>{{ team.winning_percentage }}</td>
@@ -160,7 +160,7 @@ twitter:
     </table>
   </div>
   <div class="table-wrapper">
-    <h3 class="stat-card-label">NL East</h3>
+    <h3 class="stat-card-label">AL West</h3>
     <table class="data-table">
       <thead>
         <tr>
@@ -170,7 +170,7 @@ twitter:
         </tr>
       </thead>
       <tbody>
-        {% for team in nl_east %}
+        {% for team in al_west %}
         <tr>
          <td>{{ team.team_name }}</td>
           <td>{{ team.winning_percentage }}</td>
@@ -469,24 +469,24 @@ twitter:
 </div>
 
   <h3 class="visual-subhead">Recent form: Expected weighted on-base average</h3>
-  <p class="chart-chatter">Rolling 100-plate appearance <span class='anno-xwoba'>xwOBA</span> for each Dodgers batter compared to the <span class='anno-mean'>league average</span>. This stat predicts a player's offensive contributions based on the quality of contact they make with the ball.</p>
+  <p class="chart-chatter">Rolling 100-plate appearance <span class='anno-xwoba'>xwOBA</span> for each Red Sox batter compared to the <span class='anno-mean'>league average</span>. This stat predicts a player's offensive contributions based on the quality of contact they make with the ball.</p>
   <div id="xwoba-grid" class="xwoba-grid-container">
   </div>
 
-  <h2 class="stat-group">Shohei stats</h2>
+  <!-- <h2 class="stat-group">Shohei stats</h2>
 
   <h3 class="visual-subhead">50-50 trend</h3>
   <p id="shohei-comparison-subhead" class="chart-chatter"></p>
   <div class="charts-container">
     <div id="shohei-homers-chart" class="small-chart-container"></div>
     <div id="shohei-sb-chart" class="small-chart-container"></div>
-  </div>
+  </div> -->
 
   <h2 class="stat-group">Umpire scorecard</h2>
 <div class="scorecard-row">
   <div class="scorecard-left">
   <h3 class="visual-subhead">Strike zone analysis</h3>
-  <p class="chart-chatter">How often do Dodgers batters get called strikes on pitches outside the strike zone? Correctly called <span style="background-color: #53A796; color: #fff; font-weight: bold; padding: 1px 6px; border-radius: 5px;">strikes</span> vs. pitches that were actually <span style="background-color: #F18851; color: #fff; font-weight: bold; padding: 1px 6px; border-radius: 5px;">balls</span>:</p>
+  <p class="chart-chatter">How often do Red Sox batters get called strikes on pitches outside the strike zone? Correctly called <span style="background-color: #53A796; color: #fff; font-weight: bold; padding: 1px 6px; border-radius: 5px;">strikes</span> vs. pitches that were actually <span style="background-color: #F18851; color: #fff; font-weight: bold; padding: 1px 6px; border-radius: 5px;">balls</span>:</p>
     <div id="umpire-scorecard-chart"></div>
   </div>
   <div class="scorecard-right">
@@ -494,7 +494,7 @@ twitter:
     <div id="umpire-worst-calls"></div>
   </div>
 </div>
- <p class="note">Note: Strike zone calls are determined by Baseball Savant and <a href="https://github.com/stiles/dodgers/blob/main/scripts/20_fetch_game_pitches.py">collected</a> after each game from its gamefeed API. Download the data <a href="https://stilesdata.com/dodgers/data/pitches/dodgers_pitches_2025.json">here</a>.</p>
+ <p class="note">Note: Strike zone calls are determined by Baseball Savant and <a href="https://github.com/sogrady/redsox-bot/blob/main/scripts/20_fetch_game_pitches.py">collected</a> after each game from its gamefeed API. Download the data <a href="/data/pitches/dodgers_pitches_2025.json">here</a>.</p>
   
 
   <h2 class="stat-group">Pitching</h2>

@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-Fetches and parses the Dodgers daily starting lineup from MLB.com.
+Fetches and parses the Red Sox daily starting lineup from MLB.com.
 Saves the data locally and uploads to S3.
 """
 
@@ -19,6 +19,7 @@ import argparse
 import tweepy
 from botocore.exceptions import ClientError
 from zoneinfo import ZoneInfo
+from scripts import config
 
 # Set up basic configuration for logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -45,7 +46,7 @@ s3_resource = session.resource("s3")
 def get_last_tweet_date():
     """Reads the last tweet date from S3."""
     try:
-        obj = s3_resource.Object(s3_bucket_name, "dodgers/data/lineups/last_tweet_date.txt")
+        obj = s3_resource.Object(s3_bucket_name, "redsox/data/lineups/last_tweet_date.txt")
         last_date_str = obj.get()['Body'].read().decode('utf-8').strip()
         logging.info(f"Last tweet date found in S3: {last_date_str}")
         return last_date_str
@@ -61,7 +62,7 @@ def get_last_tweet_date():
 def set_last_tweet_date(date_str):
     """Writes the last tweet date to S3."""
     try:
-        obj = s3_resource.Object(s3_bucket_name, "dodgers/data/lineups/last_tweet_date.txt")
+        obj = s3_resource.Object(s3_bucket_name, "redsox/data/lineups/last_tweet_date.txt")
         obj.put(Body=date_str)
         logging.info(f"Successfully updated last tweet date in S3 to: {date_str}")
     except Exception as e:
@@ -97,7 +98,7 @@ def fetch_lineup_data(current_date_str):
     """
     Fetches and parses lineup data for the given date.
     """
-    url = f"https://www.mlb.com/dodgers/roster/starting-lineups/{current_date_str}"
+    url = f"https://www.mlb.com/{config.TEAM_NAME.lower().replace(' ', '')}/roster/starting-lineups/{current_date_str}"
     logging.info(f"Fetching lineup from: {url}")
     
     try:
@@ -289,21 +290,21 @@ def post_tweet(tweet_text, current_date_str):
     """
     Posts a tweet to the authenticated Twitter account.
     """
-    DODGERS_TWITTER_API_KEY = os.environ.get("DODGERS_TWITTER_API_KEY")
-    DODGERS_TWITTER_API_SECRET = os.environ.get("DODGERS_TWITTER_API_SECRET")
-    DODGERS_TWITTER_TOKEN = os.environ.get("DODGERS_TWITTER_TOKEN")
-    DODGERS_TWITTER_TOKEN_SECRET = os.environ.get("DODGERS_TWITTER_TOKEN_SECRET")
+    TEAM_TWITTER_API_KEY = os.environ.get("TEAM_TWITTER_API_KEY")
+    TEAM_TWITTER_API_SECRET = os.environ.get("TEAM_TWITTER_API_SECRET")
+    TEAM_TWITTER_TOKEN = os.environ.get("TEAM_TWITTER_TOKEN")
+    TEAM_TWITTER_TOKEN_SECRET = os.environ.get("TEAM_TWITTER_TOKEN_SECRET")
 
-    if not all([DODGERS_TWITTER_API_KEY, DODGERS_TWITTER_API_SECRET, DODGERS_TWITTER_TOKEN, DODGERS_TWITTER_TOKEN_SECRET]):
+    if not all([TEAM_TWITTER_API_KEY, TEAM_TWITTER_API_SECRET, TEAM_TWITTER_TOKEN, TEAM_TWITTER_TOKEN_SECRET]):
         logging.error("Twitter API credentials are not fully set in environment variables. Cannot post tweet.")
         return
 
     try:
         client = tweepy.Client(
-            consumer_key=DODGERS_TWITTER_API_KEY,
-            consumer_secret=DODGERS_TWITTER_API_SECRET,
-            access_token=DODGERS_TWITTER_TOKEN,
-            access_token_secret=DODGERS_TWITTER_TOKEN_SECRET
+            consumer_key=TEAM_TWITTER_API_KEY,
+            consumer_secret=TEAM_TWITTER_API_SECRET,
+            access_token=TEAM_TWITTER_TOKEN,
+            access_token_secret=TEAM_TWITTER_TOKEN_SECRET
         )
         response = client.create_tweet(text=tweet_text)
         logging.info(f"Tweet posted successfully: {response.data['id']}")
@@ -313,10 +314,10 @@ def post_tweet(tweet_text, current_date_str):
 
 def fetch_schedule_data(target_date_iso: str):
     """
-    Fetch the Dodgers schedule and return the row matching the provided ISO date (YYYY-MM-DD)
+    Fetch the Red Sox schedule and return the row matching the provided ISO date (YYYY-MM-DD)
     with placement == 'next'. Only returns the row if game_start looks like a real time.
     """
-    schedule_url = "https://stilesdata.com/dodgers/data/standings/dodgers_schedule.json"
+    schedule_url = "https://stilesdata.com/redsox/data/standings/redsox_schedule.json"
     logging.info(f"Fetching schedule from: {schedule_url}")
 
     # Convert ISO date to the schedule's 'date' format, e.g. 'Aug 26'
@@ -356,14 +357,14 @@ def fetch_schedule_data(target_date_iso: str):
         return None
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch Dodgers lineup and optionally post pitching matchup to Twitter.")
+    parser = argparse.ArgumentParser(description="Fetch Red Sox lineup and optionally post pitching matchup to Twitter.")
     parser.add_argument("--post-tweet", action="store_true", help="Post the pitching matchup to Twitter if available.")
     parser.add_argument("--force", action="store_true", help="Post even if today's tweet was already recorded.")
     args = parser.parse_args()
 
-    # Get current date in Los Angeles timezone to handle UTC on server
-    la_tz = ZoneInfo("America/Los_Angeles")
-    today_date = datetime.now(la_tz).date()
+    # Get current date in Team timezone to handle UTC on server
+    team_tz = ZoneInfo(config.TEAM_TIMEZONE)
+    today_date = datetime.now(team_tz).date()
     current_date_str = today_date.strftime("%Y-%m-%d")
     # current_date_str = "2025-05-15" # Test date
     
@@ -402,9 +403,9 @@ def main():
         logging.info(f"Successfully fetched and parsed lineup data for {current_date_str}. Shape: {lineup_df.shape}")
         
         # Define base file name and S3 path
-        base_filename = f"dodgers_lineup_{current_date_str}"
+        base_filename = f"redsox_lineup_{current_date_str}"
         local_base_path = os.path.join(local_output_dir, base_filename)
-        s3_base_path = f"dodgers/data/lineups/{base_filename}"
+        s3_base_path = f"redsox/data/lineups/{base_filename}"
 
         # Save locally
         try:
@@ -423,29 +424,29 @@ def main():
         # Twitter logic
         pitchers_df = lineup_df[lineup_df['role'] == 'Pitcher'].copy()
         if len(pitchers_df) == 2:
-            dodgers_pitcher = pitchers_df[pitchers_df['team_tricode'] == 'LAD']
-            opponent_pitcher = pitchers_df[pitchers_df['team_tricode'] != 'LAD']
+            team_pitcher = pitchers_df[pitchers_df['team_tricode'] == config.TEAM_ABBR]
+            opponent_pitcher = pitchers_df[pitchers_df['team_tricode'] != config.TEAM_ABBR]
 
-            if not dodgers_pitcher.empty and not opponent_pitcher.empty:
-                dodgers_pitcher = dodgers_pitcher.iloc[0]
+            if not team_pitcher.empty and not opponent_pitcher.empty:
+                team_pitcher = team_pitcher.iloc[0]
                 opponent_pitcher = opponent_pitcher.iloc[0]
 
                 # Fetch schedule data to get game start time for this exact date
                 next_game = fetch_schedule_data(current_date_str)
 
                 # Format date for the tweet
-                game_date = datetime.strptime(dodgers_pitcher['game_date'], '%Y-%m-%d').strftime('%B %-d')
+                game_date = datetime.strptime(team_pitcher['game_date'], '%Y-%m-%d').strftime('%B %-d')
 
                 line1 = f"The pitching matchup for {game_date} is set! 🌟"
-                line2 = f"{dodgers_pitcher['throwing_hand']} {dodgers_pitcher['player_name']} ({dodgers_pitcher['team_tricode']}) takes the mound against {opponent_pitcher['throwing_hand']} {opponent_pitcher['player_name']} ({opponent_pitcher['team_tricode']}). ⚾️🔥"
+                line2 = f"{team_pitcher['throwing_hand']} {team_pitcher['player_name']} ({team_pitcher['team_tricode']}) takes the mound against {opponent_pitcher['throwing_hand']} {opponent_pitcher['player_name']} ({opponent_pitcher['team_tricode']}). ⚾️🔥"
                 
                 # Add game start time if available
                 if next_game and next_game.get('game_start'):
-                    line3 = f"First pitch: {next_game['game_start']} (PT)."
-                    line4 = f"More: https://DodgersData.bot"
+                    line3 = f"First pitch: {next_game['game_start']} (Local)."
+                    line4 = f"More: https://RedSoxData.bot"
                     tweet_text = f"{line1}\n\n{line2}\n\n{line3}"
                 else:
-                    line3 = f"More: https://DodgersData.bot"
+                    line3 = f"More: https://RedSoxData.bot"
                     tweet_text = f"{line1}\n\n{line2}"
 
                 logging.info("Generated tweet text:")
@@ -461,7 +462,7 @@ def main():
                 else:
                     logging.info("Dry run: --post-tweet flag not provided. Not posting to Twitter.")
             else:
-                logging.warning("Could not identify both Dodgers and opponent pitcher.")
+                logging.warning("Could not identify both Red Sox and opponent pitcher.")
         else:
             logging.info("Not enough pitcher data to generate a tweet.")
     else:

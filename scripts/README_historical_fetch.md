@@ -1,11 +1,11 @@
-# LA Dodgers Historical Game Data Fetcher
+# Red Sox Historical Game Data Fetcher
 
-This script fetches historical game-by-game data for the LA Dodgers (and Brooklyn Dodgers/Robins) from Baseball Reference for the years 1925 to present.
+This script fetches historical game-by-game data for the Boston Red Sox from Baseball Reference for the years 1901 to present.
 
 ## Features
 
-- **Complete Historical Coverage**: Fetches data from 1925 to the current year
-- **Team Name Handling**: Automatically handles the transition from Brooklyn Dodgers/Robins (BRO) to Los Angeles Dodgers (LAD) in 1958
+- **Complete Historical Coverage**: Fetches data from 1901 to the current year
+- **Team Name Handling**: Handles Boston Red Sox (BOS) data
 - **Robust Error Handling**: Gracefully handles network errors, missing data, and parsing issues
 - **Multiple Output Formats**: Saves data in CSV, JSON, and Parquet formats
 - **S3 Integration**: Optional upload to AWS S3
@@ -24,7 +24,7 @@ pip install pandas requests beautifulsoup4 boto3 lxml html5lib
 
 ### Basic Usage
 
-Fetch all historical data from 1925 to present:
+Fetch all historical data from 1901 to present:
 
 ```bash
 python 29_fetch_historical_standings.py
@@ -38,7 +38,7 @@ python 29_fetch_historical_standings.py [OPTIONS]
 
 **Options:**
 
-- `--start-year YEAR`: First year to fetch data for (default: 1925)
+- `--start-year YEAR`: First year to fetch data for (default: 1901)
 - `--end-year YEAR`: Last year to fetch data for (default: current year)
 - `--output-dir DIR`: Output directory for data files (default: data/standings)
 - `--no-s3`: Skip uploading to S3 even if credentials are available
@@ -76,9 +76,9 @@ python 29_fetch_historical_standings.py --delay 0.5
 
 The script generates three files in the specified output directory:
 
-1. **CSV**: `dodgers_standings_YYYY_present.csv`
-2. **JSON**: `dodgers_standings_YYYY_present.json`
-3. **Parquet**: `dodgers_standings_YYYY_present.parquet`
+1. **CSV**: `redsox_standings_YYYY_present.csv`
+2. **JSON**: `redsox_standings_YYYY_present.json`
+3. **Parquet**: `redsox_standings_YYYY_present.parquet`
 
 ### Data Columns
 
@@ -89,8 +89,8 @@ The output includes the following columns (when available):
 - `home_away`: Whether the game was home or away
 - `opp`: Opponent team
 - `result`: Game result (W/L)
-- `r`: Runs scored by Dodgers
-- `ra`: Runs allowed by Dodgers
+- `r`: Runs scored by Red Sox
+- `ra`: Runs allowed by Red Sox
 - `record`: Team record (wins-losses)
 - `rank`: Team ranking in division/league
 - `gb`: Games back from first place
@@ -114,7 +114,7 @@ export AWS_SECRET_ACCESS_KEY="your_secret_key"
 
 **S3 Configuration:**
 - Bucket: `stilesdata.com`
-- Path: `dodgers/data/standings/`
+- Path: `redsox/data/standings/`
 
 Use `--no-s3` flag to disable S3 upload.
 
@@ -135,10 +135,9 @@ The script includes a 1-second delay between requests by default to be respectfu
 
 ## Historical Context
 
-- **1925-1957**: Brooklyn Dodgers/Robins (team code: BRO)
-- **1958-present**: Los Angeles Dodgers (team code: LAD)
+- **1901-present**: Boston Red Sox (team code: BOS)
 
-The script automatically handles this transition and fetches data from the appropriate Baseball Reference URLs.
+The script automatically handles this and fetches data from the appropriate Baseball Reference URLs.
 
 ## Troubleshooting
 
@@ -172,7 +171,7 @@ python test_historical_fetch.py
 
 ## Performance
 
-- **Full historical fetch (1925-2025)**: ~100 years × 1 second delay = ~2 minutes
+- **Full historical fetch (1901-2025)**: ~125 years × 1 second delay = ~2.5 minutes
 - **Recent years only (2020-2025)**: ~6 seconds
 - **Single year test**: ~1-2 seconds
 

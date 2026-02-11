@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # LA Dodgers pitching logs by season, 1958-2024
-# > This script processes current and past game-by-game and cumulative totals for strikeouts, walks, ERA, etc., using data from [Baseball Reference](https://www.baseball-reference.com/teams/tgl.cgi?team=LAD&t=p&year=2024).
+# # Boston Red Sox pitching logs by season, 1901-2024
+# > This script processes current and past game-by-game and cumulative totals for strikeouts, walks, ERA, etc., using data from [Baseball Reference](https://www.baseball-reference.com/teams/tgl.cgi?team=BOS&t=p&year=2024).
 
 # ---
 
@@ -16,6 +16,7 @@ import pandas as pd
 from io import BytesIO
 import boto3
 import logging
+from scripts import config
 
 
 # Set up basic configuration for logging
@@ -62,12 +63,14 @@ headers = {
 
 
 # Fetch archive game logs
-archive_url = "https://stilesdata.com/dodgers/data/pitching/archive/dodgers_historic_pitching_gamelogs_1958_2023.parquet"
-archive_df = pd.read_parquet(archive_url)
+# Fetch archive game logs
+# archive_url = "https://stilesdata.com/dodgers/data/pitching/archive/dodgers_historic_pitching_gamelogs_1958_2023.parquet"
+# archive_df = pd.read_parquet(archive_url)
 
 
 # Fetch Current game logs
-current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team=LAD&t=p&year={year}"
+# Fetch Current game logs
+current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=p&year={year}"
 # Use index [0] for the main table and assign year
 current_src = pd.read_html(current_url)[0].assign(year=year)
 # Drop the top level of the MultiIndex columns
@@ -122,12 +125,13 @@ current_df['year'] = pd.to_numeric(current_df['year'], errors='coerce').fillna(0
 current_df['gtm'] = pd.to_numeric(current_df['gtm'], errors='coerce').fillna(0).astype(int)
 
 # Combine current and archive data
-df = (
-    pd.concat([current_df, archive_df], ignore_index=True)
-    .sort_values(["year", "gtm"], ascending=[False, True])
-    .reset_index(drop=True)
-    .drop_duplicates()
-)
+# df = (
+#     pd.concat([current_df, archive_df], ignore_index=True)
+#     .sort_values(["year", "gtm"], ascending=[False, True])
+#     .reset_index(drop=True)
+#     .drop_duplicates()
+# )
+df = current_df.sort_values(["year", "gtm"], ascending=[False, True]).reset_index(drop=True)
 
 """
 OUTPUT
@@ -166,8 +170,8 @@ def save_to_s3(df, base_path, s3_bucket, formats):
             logging.error(f"Failed to upload {fmt} to S3: {e}")
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, 'dodgers_historic_pitching_gamelogs_1958-present')
+file_path = os.path.join(data_dir, 'redsox_historic_pitching_gamelogs_1958-present')
 formats = ["csv", "json", "parquet"]
 # save_dataframe(optimized_df, file_path, formats)
-save_to_s3(optimized_df, "dodgers/data/pitching/dodgers_historic_pitching_gamelogs_1958-present", "stilesdata.com", formats)
+save_to_s3(optimized_df, "redsox/data/pitching/redsox_historic_pitching_gamelogs_1958-present", "stilesdata.com", formats)
 

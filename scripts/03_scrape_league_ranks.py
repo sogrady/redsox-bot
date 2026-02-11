@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-Fetches and parses the Dodgers league ranks from MLB.com.
+Fetches and parses the Red Sox league ranks from MLB.com.
 Saves the data locally and uploads to S3.
 """
 
@@ -17,6 +17,7 @@ from datetime import datetime, date
 import re
 from typing import Optional
 import json # Added for JSON operations
+from scripts import config
 
 HEADERS = {
     'sec-ch-ua-platform': '"macOS"',
@@ -60,7 +61,7 @@ HITTING_STATS = ['runs', 'stolenBases', 'homeRuns', 'battingAverage', 'onBasePlu
 PITCHING_STATS = ['strikeouts', 'walks', 'earnedRunAverage', 'walksAndHitsPerInningPitched']
 STAT_TYPES = ['hitting', 'pitching']
 
-def get_team_rank_for_stat(stat_name: str, stat_group: str, team_name_query: str = "Los Angeles Dodgers") -> Optional[int]:
+def get_team_rank_for_stat(stat_name: str, stat_group: str, team_name_query: str = config.TEAM_FULL_NAME) -> Optional[int]:
     """
     Fetches MLB team stats for a given statistic and returns the rank of the specified team.
 
@@ -102,10 +103,10 @@ def get_team_rank_for_stat(stat_name: str, stat_group: str, team_name_query: str
 
 def main():
     """
-    Main function to fetch Dodgers league ranks for specified stats.
+    Main function to fetch Red Sox league ranks for specified stats.
     """
     dodgers_ranks = {}
-    team_to_find = "Los Angeles Dodgers"
+    team_to_find = config.TEAM_FULL_NAME
 
     logging.info(f"Fetching hitting stats for {team_to_find} for {CURRENT_YEAR}...")
     for stat in HITTING_STATS:
@@ -123,15 +124,15 @@ def main():
         else:
             dodgers_ranks[f'pitching_{stat}'] = 'Not found'
     
-    logging.info("Dodgers League Ranks:")
+    logging.info("Red Sox League Ranks:")
     for stat, rank in dodgers_ranks.items():
         logging.info(f"  {stat.replace('_', ' ').title()}: {rank}")
 
     # Define file paths
     local_dir = os.path.join("data", "standings")
-    local_filename = f"dodgers_league_ranks_{CURRENT_YEAR}.json"
+    local_filename = f"redsox_league_ranks_{CURRENT_YEAR}.json"
     local_file_path = os.path.join(local_dir, local_filename)
-    s3_key = f"dodgers/standings/{local_filename}" # S3 key structure
+    s3_key = f"redsox/standings/{local_filename}" # S3 key structure
 
     # Ensure local directory exists
     try:

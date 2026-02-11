@@ -3,7 +3,7 @@ name: Post News Roundup
 on:
   schedule:
     # Runs every 3 hours during daytime hours PT (converted to UTC)
-    - cron: '0 15,18,21,0 * * *'  # 8 AM, 11 AM, 2 PM, 5 PM PT
+    - cron: '0 15,18,21,0 * * *'  # 11 AM, 2 PM, 5 PM, 8 PM ET
   workflow_dispatch:
     inputs:
       force:
@@ -40,10 +40,10 @@ jobs:
 
       - name: Run news fetch and tweet
         env:
-          DODGERS_TWITTER_API_KEY: ${{ secrets.DODGERS_TWITTER_API_KEY }}
-          DODGERS_TWITTER_API_SECRET: ${{ secrets.DODGERS_TWITTER_API_SECRET }}
-          DODGERS_TWITTER_TOKEN: ${{ secrets.DODGERS_TWITTER_TOKEN }}
-          DODGERS_TWITTER_TOKEN_SECRET: ${{ secrets.DODGERS_TWITTER_TOKEN_SECRET }}
+          TEAM_TWITTER_API_KEY: ${{ secrets.TEAM_TWITTER_API_KEY }}
+          TEAM_TWITTER_API_SECRET: ${{ secrets.TEAM_TWITTER_API_SECRET }}
+          TEAM_TWITTER_TOKEN: ${{ secrets.TEAM_TWITTER_TOKEN }}
+          TEAM_TWITTER_TOKEN_SECRET: ${{ secrets.TEAM_TWITTER_TOKEN_SECRET }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             python scripts/24_fetch_news.py --post-tweet --force

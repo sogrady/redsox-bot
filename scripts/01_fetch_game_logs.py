@@ -7,9 +7,11 @@ import requests
 from bs4 import BeautifulSoup
 
 
+from scripts import config
+
 CURRENT_YEAR = pd.Timestamp.now().year
 GAME_LOGS_URL = (
-    f"https://baseballsavant.mlb.com/team/119?view=gamelogs&nav=hitting&season={CURRENT_YEAR}"
+    f"https://baseballsavant.mlb.com/team/{config.TEAM_ID}?view=gamelogs&nav=hitting&season={CURRENT_YEAR}"
 )
 
 

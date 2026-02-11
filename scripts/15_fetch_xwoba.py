@@ -2,8 +2,8 @@
 # coding: utf-8
 
 """
-LA Dodgers xwOBA Data
-This script downloads xwOBA data from Baseball Savant for all current Dodgers players.
+Boston Red Sox xwOBA Data
+This script downloads xwOBA data from Baseball Savant for all current Red Sox players.
 """
 
 import os
@@ -25,31 +25,32 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Get current year dynamically
 CURRENT_YEAR = datetime.now().year
 
+from scripts import config
+
 # Configuration
 output_dir = "data/batting"
-csv_file = f"{output_dir}/dodgers_xwoba_current.csv"
-json_file = f"{output_dir}/dodgers_xwoba_current.json"
-parquet_file = f"{output_dir}/dodgers_xwoba_current.parquet"
+csv_file = f"{output_dir}/redsox_xwoba_current.csv"
+json_file = f"{output_dir}/redsox_xwoba_current.json"
+parquet_file = f"{output_dir}/redsox_xwoba_current.parquet"
 s3_bucket = "stilesdata.com"
-s3_key_csv = "dodgers/data/batting/dodgers_xwoba_current.csv"
-s3_key_json = "dodgers/data/batting/dodgers_xwoba_current.json"
-s3_key_parquet = "dodgers/data/batting/dodgers_xwoba_current.parquet"
+s3_key_csv = "redsox/data/batting/redsox_xwoba_current.csv"
+s3_key_json = "redsox/data/batting/redsox_xwoba_current.json"
+s3_key_parquet = "redsox/data/batting/redsox_xwoba_current.parquet"
 
 # Allowlist of batter names to include (expected input: "First Last")
 ALLOWED_BATTERS = [
-    "Shohei Ohtani",
-    "Mookie Betts",
-    "Will Smith",
-    "Freddie Freeman",
-    "Andy Pages",
-    "Teo Hernandex",  # will be normalized/matched to Teoscar Hernández
-    "Max Muncy",
-    "Miguel Rojas",
-    "Tommy Edman",
-    # "Hyeseong Kim",  # not enough plate appearances
-    "Michael Conforto",
-    "Alex Call",
-    # "Alex Freeland",  # not enough plate appearances
+    "Rafael Devers",
+    "Triston Casas",
+    "Jarren Duran",
+    "Masataka Yoshida",
+    "Trevor Story",
+    "Wilyer Abreu",
+    "Ceddanne Rafaela",
+    "Connor Wong",
+    "Rob Refsnyder",
+    "Vaughn Grissom",
+    "Enmanuel Valdez",
+    "David Hamilton",
 ]
 
 # Known corrections to help match allowlist typos or alternate spellings
@@ -153,11 +154,11 @@ ALLOWED_NORMALIZED = build_allowed_set(ALLOWED_BATTERS)
 
 def fetch_player_ids():
     """
-    Scrape the Dodgers roster page to get all player IDs.
+    Scrape the Red Sox roster page to get all player IDs.
     Uses the current year dynamically to ensure we're getting the current roster.
     """
     logging.info(f"Fetching player IDs from roster page for {CURRENT_YEAR} season.")
-    team_url = f'https://baseballsavant.mlb.com/team/119?view=statcast&nav=hitting&season={CURRENT_YEAR}'
+    team_url = f'https://baseballsavant.mlb.com/team/{config.TEAM_ID}?view=statcast&nav=hitting&season={CURRENT_YEAR}'
     logging.info(f"Making request to: {team_url}")
     
     try:
@@ -427,7 +428,7 @@ def main():
             s3.Bucket(s3_bucket).upload_file(parquet_file, s3_key_parquet)
             s3.Bucket(s3_bucket).upload_file(
                 f'{output_dir}/league_avg_xwoba.json',
-                'dodgers/data/batting/league_avg_xwoba.json'
+                'redsox/data/batting/league_avg_xwoba.json'
             )
             logging.info("Files successfully uploaded to S3.")
         else:

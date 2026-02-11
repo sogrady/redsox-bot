@@ -5,6 +5,7 @@ from tqdm import tqdm
 import math
 import os
 import boto3
+from scripts import config
 
 # === Constants ===
 SCHEDULE_URL = "https://statsapi.mlb.com/api/v1/schedule"
@@ -16,8 +17,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "data", "pitches")
 S3_BUCKET = "stilesdata.com"
 current_year_for_paths = datetime.now().year
-S3_KEY_CSV = f"dodgers/data/pitches/dodgers_pitches_{current_year_for_paths}.csv"
-S3_KEY_JSON = f"dodgers/data/pitches/dodgers_pitches_{current_year_for_paths}.json"
+S3_KEY_CSV = f"redsox/data/pitches/redsox_pitches_{current_year_for_paths}.csv"
+S3_KEY_JSON = f"redsox/data/pitches/redsox_pitches_{current_year_for_paths}.json"
 
 # === AWS Session Setup ===
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
@@ -54,7 +55,7 @@ def _get_team_name(game, team_type):
     except KeyError:
         return None
 
-def get_dodgers_game_ids(date_str):
+def get_team_game_ids(date_str):
     params = {"sportId": 1, "date": date_str}
     try:
         resp = requests.get(SCHEDULE_URL, params=params)
@@ -69,18 +70,18 @@ def get_dodgers_game_ids(date_str):
         return []
     
     games = dates[0].get("games", [])
-    dodgers_games = []
+    team_games = []
     for g in games:
         home_team = _get_team_name(g, "home")
         away_team = _get_team_name(g, "away")
         game_date = g.get("officialDate")
 
-        if home_team == "Los Angeles Dodgers":
-            dodgers_games.append({"gamePk": g.get("gamePk"), "team_side": "home_batters", "game_date": game_date})
-        elif away_team == "Los Angeles Dodgers":
-            dodgers_games.append({"gamePk": g.get("gamePk"), "team_side": "away_batters", "game_date": game_date})
+        if home_team == config.TEAM_NAME:
+            team_games.append({"gamePk": g.get("gamePk"), "team_side": "home_batters", "game_date": game_date})
+        elif away_team == config.TEAM_NAME:
+            team_games.append({"gamePk": g.get("gamePk"), "team_side": "away_batters", "game_date": game_date})
     
-    return dodgers_games
+    return team_games
 
 def fetch_game_pitches(game_pk):
     resp = requests.get(GAMEFEED_URL, params={"game_pk": game_pk})
@@ -168,50 +169,50 @@ def analyze_pitches(game_info, batting_side_override: str = None, team_role: str
                 "pz": pz,
                 "sz_bot": sz_bot,
                 "sz_top": sz_top,
-                "team_role": team_role or "thrown_to_dodgers",
+                "team_role": team_role or "thrown_to_redsox",
             })
     rows.sort(key=lambda p: (p.get('inning', 0), p.get('ab_number', 0), p.get('pitch_number', 0)))
     return rows
 
 # === Main ===
-all_dodgers_games = []
+all_team_games = []
 total_days = (end_date - start_date).days + 1
 for day in tqdm(daterange(start_date, end_date), total=total_days, desc="Fetching game IDs"):
     date_str = day.strftime("%Y-%m-%d")
-    games = get_dodgers_game_ids(date_str)
-    all_dodgers_games.extend(games)
+    games = get_team_game_ids(date_str)
+    all_team_games.extend(games)
 
-print(f"\nTotal Dodgers games found: {len(all_dodgers_games)}")
+print(f"\nTotal {config.TEAM_NAME} games found: {len(all_team_games)}")
 
 all_pitches = []
-all_pitches_thrown_by_dodgers = []
+all_pitches_thrown_by_team = []
 
 # Load existing datasets from public URLs to support incremental updates
 public_to_url = f"https://stilesdata.com/{S3_KEY_JSON}"
-public_by_url = f"https://stilesdata.com/dodgers/data/pitches/dodgers_pitches_thrown_{current_year_for_paths}.json"
+public_by_url = f"https://stilesdata.com/redsox/data/pitches/redsox_pitches_thrown_{current_year_for_paths}.json"
 existing_to_df = load_existing_json(public_to_url)
 existing_by_df = load_existing_json(public_by_url)
 processed_gamepks_to = set(existing_to_df['game_pk'].unique()) if not existing_to_df.empty and 'game_pk' in existing_to_df.columns else set()
 processed_gamepks_by = set(existing_by_df['game_pk'].unique()) if not existing_by_df.empty and 'game_pk' in existing_by_df.columns else set()
 
-for game_info in tqdm(all_dodgers_games, desc="Analyzing games"):
+for game_info in tqdm(all_team_games, desc="Analyzing games"):
     gpk = game_info.get('gamePk')
 
-    # Pitches thrown to Dodgers batters (skip if already processed)
+    # Pitches thrown to Team batters (skip if already processed)
     if gpk not in processed_gamepks_to:
-        all_pitches.extend(analyze_pitches(game_info, team_role="thrown_to_dodgers"))
+        all_pitches.extend(analyze_pitches(game_info, team_role="thrown_to_redsox"))
 
-    # Pitches thrown BY Dodgers pitchers (skip if already processed)
+    # Pitches thrown BY Team pitchers (skip if already processed)
     if gpk not in processed_gamepks_by:
         ts = game_info.get("team_side")
         other_side = "away_batters" if ts == "home_batters" else "home_batters"
-        all_pitches_thrown_by_dodgers.extend(
-            analyze_pitches(game_info, batting_side_override=other_side, team_role="thrown_by_dodgers")
+        all_pitches_thrown_by_team.extend(
+            analyze_pitches(game_info, batting_side_override=other_side, team_role="thrown_by_redsox")
         )
 
 # === Results ===
 df = pd.DataFrame(all_pitches)
-df_by_dodgers = pd.DataFrame(all_pitches_thrown_by_dodgers)
+df_by_team = pd.DataFrame(all_pitches_thrown_by_team)
 
 # Append to existing and dedupe
 def combine_and_dedupe(existing: pd.DataFrame, new: pd.DataFrame) -> pd.DataFrame:
@@ -234,25 +235,25 @@ def combine_and_dedupe(existing: pd.DataFrame, new: pd.DataFrame) -> pd.DataFram
     return combined
 
 df = combine_and_dedupe(existing_to_df, df)
-df_by_dodgers = combine_and_dedupe(existing_by_df, df_by_dodgers)
+df_by_team = combine_and_dedupe(existing_by_df, df_by_team)
 
 # === Export the data ===
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-csv_path = os.path.join(OUTPUT_DIR, f"dodgers_pitches_{current_year}.csv")
-json_path = os.path.join(OUTPUT_DIR, f"dodgers_pitches_{current_year}.json")
-csv_path_by = os.path.join(OUTPUT_DIR, f"dodgers_pitches_thrown_{current_year}.csv")
-json_path_by = os.path.join(OUTPUT_DIR, f"dodgers_pitches_thrown_{current_year}.json")
+csv_path = os.path.join(OUTPUT_DIR, f"redsox_pitches_{current_year}.csv")
+json_path = os.path.join(OUTPUT_DIR, f"redsox_pitches_{current_year}.json")
+csv_path_by = os.path.join(OUTPUT_DIR, f"redsox_pitches_thrown_{current_year}.csv")
+json_path_by = os.path.join(OUTPUT_DIR, f"redsox_pitches_thrown_{current_year}.json")
 
 df.to_csv(csv_path, index=False)
 print(f"Pitch data saved locally to {csv_path}")
 df.to_json(json_path, indent=4, orient="records")
 print(f"Pitch data saved locally to {json_path}")
 
-# Save pitches thrown by Dodgers
-df_by_dodgers.to_csv(csv_path_by, index=False)
-print(f"Pitch data (thrown by Dodgers) saved locally to {csv_path_by}")
-df_by_dodgers.to_json(json_path_by, indent=4, orient="records")
-print(f"Pitch data (thrown by Dodgers) saved locally to {json_path_by}")
+# Save pitches thrown by Team
+df_by_team.to_csv(csv_path_by, index=False)
+print(f"Pitch data (thrown by {config.TEAM_NAME}) saved locally to {csv_path_by}")
+df_by_team.to_json(json_path_by, indent=4, orient="records")
+print(f"Pitch data (thrown by {config.TEAM_NAME}) saved locally to {json_path_by}")
 
 # === Upload to S3 ===
 try:
@@ -261,9 +262,9 @@ try:
     s3.Bucket(S3_BUCKET).upload_file(json_path, S3_KEY_JSON)
     print(f"Successfully uploaded {os.path.basename(json_path)} to {S3_BUCKET}/{S3_KEY_JSON}")
 
-    # Upload thrown-by-Dodgers files
-    s3_key_csv_by = f"dodgers/data/pitches/dodgers_pitches_thrown_{current_year_for_paths}.csv"
-    s3_key_json_by = f"dodgers/data/pitches/dodgers_pitches_thrown_{current_year_for_paths}.json"
+    # Upload thrown-by-Team files
+    s3_key_csv_by = f"redsox/data/pitches/redsox_pitches_thrown_{current_year_for_paths}.csv"
+    s3_key_json_by = f"redsox/data/pitches/redsox_pitches_thrown_{current_year_for_paths}.json"
     s3.Bucket(S3_BUCKET).upload_file(csv_path_by, s3_key_csv_by)
     print(f"Successfully uploaded {os.path.basename(csv_path_by)} to {S3_BUCKET}/{s3_key_csv_by}")
     s3.Bucket(S3_BUCKET).upload_file(json_path_by, s3_key_json_by)

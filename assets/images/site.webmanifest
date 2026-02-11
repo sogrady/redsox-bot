@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Red Sox Data Bot",
+    "short_name": "Red Sox Data",
     "icons": [
         {
             "src": "/android-chrome-144x144.png",
@@ -8,7 +8,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#BD3039",
+    "background_color": "#0C2340",
     "display": "standalone"
 }

@@ -6,6 +6,7 @@ import logging
 from datetime import datetime
 from dateutil import parser
 import pytz
+from scripts import config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -13,18 +14,18 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Output files
 output_dir = "data/postseason"
-json_file = f"{output_dir}/dodgers_postseason_stats_2025.json"
-series_file = f"{output_dir}/dodgers_postseason_series_2025.json"
+json_file = f"{output_dir}/redsox_postseason_stats_2025.json"
+series_file = f"{output_dir}/redsox_postseason_series_2025.json"
 
 def fetch_roster_data():
     """Fetch roster data from local file or URL"""
-    local_file = "data/roster/dodgers_roster_current.json"
+    local_file = "data/roster/redsox_roster_current.json"
     if os.path.exists(local_file):
         with open(local_file, 'r') as f:
             return json.load(f)
     else:
         # Fallback to URL
-        s3_key_json = "https://stilesdata.com/dodgers/data/roster/dodgers_roster_current.json"
+        s3_key_json = "https://stilesdata.com/redsox/data/roster/redsox_roster_current.json"
         response = requests.get(s3_key_json)
         return response.json()
 
@@ -74,7 +75,7 @@ def get_next_game_info(series_data):
                         home_team = game.get('teams', {}).get('home', {}).get('team', {}).get('name', '')
                         away_team = game.get('teams', {}).get('away', {}).get('team', {}).get('name', '')
                         
-                        if 'Los Angeles Dodgers' in [home_team, away_team]:
+                        if config.TEAM_FULL_NAME in [home_team, away_team]:
                             game_status = game.get('status', {}).get('detailedState', '')
                             
                             # Look for upcoming games (Scheduled, Pre-Game, etc.)
@@ -90,12 +91,12 @@ def get_next_game_info(series_data):
                                         game_pt = game_dt.astimezone(pt_tz)
                                         
                                         next_game_info = {
-                                            'opponent': away_team if home_team == 'Los Angeles Dodgers' else home_team,
+                                            'opponent': away_team if home_team == config.TEAM_FULL_NAME else home_team,
                                             'venue': venue_name,
                                             'datetime_pt': game_pt,
                                             'time_pt': game_pt.strftime('%-I:%M p.m. PT'),
                                             'day': game_pt.strftime('%A'),
-                                            'is_home': home_team == 'Los Angeles Dodgers'
+                                            'is_home': home_team == config.TEAM_FULL_NAME
                                         }
                                         
                                         logging.info(f"Found next game: {next_game_info}")
@@ -133,24 +134,24 @@ def fetch_postseason_series():
             if 'series' in data:
                 logging.info(f"Found {len(data['series'])} series groups")
             
-            # Extract Dodgers-relevant series information
-            dodgers_series = []
+            # Extract Red Sox-relevant series information
+            redsox_series = []
             
             if 'series' in data:
                 for series_group in data['series']:
                     if 'games' in series_group:
                         logging.info(f"Processing series group with {len(series_group['games'])} games")
                         for game in series_group['games']:
-                            # Check if Dodgers are involved
+                            # Check if Team is involved
                             home_team = game.get('teams', {}).get('home', {}).get('team', {}).get('name', '')
                             away_team = game.get('teams', {}).get('away', {}).get('team', {}).get('name', '')
                             
-                            if 'Los Angeles Dodgers' in [home_team, away_team]:
+                            if config.TEAM_FULL_NAME in [home_team, away_team]:
                                 series_status = game.get('seriesStatus', {})
                                 series_name = series_status.get('shortName', 'Unknown Series')
                                 game_date = game.get('gameDate', '')
                                 
-                                logging.info(f"Found Dodgers game: {series_name} on {game_date}")
+                                logging.info(f"Found Red Sox game: {series_name} on {game_date}")
                                 logging.info(f"Series status: {series_status}")
                                 
                                 # Determine series info
@@ -162,16 +163,16 @@ def fetch_postseason_series():
                                     'wins': series_status.get('wins', 0),
                                     'losses': series_status.get('losses', 0),
                                     'total_games': series_status.get('totalGames', 0),
-                                    'opponent': away_team if home_team == 'Los Angeles Dodgers' else home_team,
+                                    'opponent': away_team if home_team == config.TEAM_FULL_NAME else home_team,
                                     'game_date': game_date,
                                     'status': game.get('status', {}).get('detailedState', ''),
                                     'game_number': series_status.get('gameNumber', 0)
                                 }
                                 
                                 # Avoid duplicates by checking if we already have this series
-                                existing_series = next((s for s in dodgers_series if s['series_name'] == series_name), None)
+                                existing_series = next((s for s in redsox_series if s['series_name'] == series_name), None)
                                 if not existing_series:
-                                    dodgers_series.append(series_info)
+                                    redsox_series.append(series_info)
                                     logging.info(f"Added new series: {series_name} vs {series_info['opponent']} - {series_info['result']}")
                                 else:
                                     # Update with latest info if this game is more recent
@@ -179,9 +180,9 @@ def fetch_postseason_series():
                                         existing_series.update(series_info)
                                         logging.info(f"Updated series: {series_name} with more recent data")
             
-            if dodgers_series:
-                logging.info(f"Successfully found {len(dodgers_series)} Dodgers series with URL {i+1}")
-                return dodgers_series
+            if redsox_series:
+                logging.info(f"Successfully found {len(redsox_series)} Dodgers series with URL {i+1}")
+                return redsox_series
             else:
                 logging.warning(f"No Dodgers series found with URL {i+1}")
                 
@@ -249,9 +250,9 @@ def main():
     
     # Create a structured playoff journey
     playoff_journey = [
-        {"round": "Wild Card", "series_name": "NL Wild Card Series", "status": "upcoming", "opponent": "?", "result": "?"},
-        {"round": "NLDS", "series_name": "NL Division Series", "status": "upcoming", "opponent": "?", "result": "?"},
-        {"round": "NLCS", "series_name": "NL Championship Series", "status": "upcoming", "opponent": "?", "result": "?"},
+        {"round": "Wild Card", "series_name": "AL Wild Card Series", "status": "upcoming", "opponent": "?", "result": "?"},
+        {"round": "ALDS", "series_name": "AL Division Series", "status": "upcoming", "opponent": "?", "result": "?"},
+        {"round": "ALCS", "series_name": "AL Championship Series", "status": "upcoming", "opponent": "?", "result": "?"},
         {"round": "World Series", "series_name": "World Series", "status": "upcoming", "opponent": "?", "result": "?"}
     ]
     
@@ -271,7 +272,7 @@ def main():
                 "losses": series.get('losses', 0)
             })
             logging.info(f"Updated Wild Card: {playoff_journey[0]}")
-        elif 'division' in series_name or 'nlds' in series_name.lower() or 'division' in description:
+        elif 'division' in series_name or 'alds' in series_name.lower() or 'division' in description:
             playoff_journey[1].update({
                 "status": "completed" if series.get('is_over') else "in_progress",
                 "opponent": series.get('opponent', '?'),
@@ -279,8 +280,8 @@ def main():
                 "wins": series.get('wins', 0),
                 "losses": series.get('losses', 0)
             })
-            logging.info(f"Updated NLDS: {playoff_journey[1]}")
-        elif 'championship' in series_name or 'nlcs' in series_name.lower() or 'championship' in description:
+            logging.info(f"Updated ALDS: {playoff_journey[1]}")
+        elif 'championship' in series_name or 'alcs' in series_name.lower() or 'championship' in description:
             playoff_journey[2].update({
                 "status": "completed" if series.get('is_over') else "in_progress",
                 "opponent": series.get('opponent', '?'),
@@ -288,7 +289,7 @@ def main():
                 "wins": series.get('wins', 0),
                 "losses": series.get('losses', 0)
             })
-            logging.info(f"Updated NLCS: {playoff_journey[2]}")
+            logging.info(f"Updated ALCS: {playoff_journey[2]}")
         elif 'world series' in series_name or 'world series' in description:
             playoff_journey[3].update({
                 "status": "completed" if series.get('is_over') else "in_progress",
@@ -346,7 +347,7 @@ def main():
     logging.info(f"Saved postseason stats for top {len(top_12_stats)} players (by plate appearances) to {json_file}")
     
     # Print summary
-    print(f"\n=== Dodgers 2025 Postseason Journey (as of Oct 13, 2025) ===")
+    print(f"\n=== {config.TEAM_NAME} 2025 Postseason Journey (as of Oct 13, 2025) ===")
     for journey in playoff_journey:
         status_icon = "✅" if journey['status'] == "completed" else "🏃" if journey['status'] == "in_progress" else "❓"
         print(f"{status_icon} {journey['round']}: vs {journey['opponent']} - {journey['result']}")
@@ -360,9 +361,9 @@ def main():
         if journey['status'] == 'in_progress':
             current_series = journey
         elif journey['status'] == 'completed':
-            if previous_series is None or journey['round'] in ['World Series', 'NLCS', 'NLDS', 'Wild Card']:
+            if previous_series is None or journey['round'] in ['World Series', 'ALCS', 'ALDS', 'Wild Card']:
                 # Get the most recent completed series
-                round_order = {'Wild Card': 1, 'NLDS': 2, 'NLCS': 3, 'World Series': 4}
+                round_order = {'Wild Card': 1, 'ALDS': 2, 'ALCS': 3, 'World Series': 4}
                 if previous_series is None or round_order.get(journey['round'], 0) > round_order.get(previous_series['round'], 0):
                     previous_series = journey
     
@@ -372,7 +373,7 @@ def main():
         venue = next_game['venue']
         current_opponent = next_game['opponent']
         
-        print(f"\n📅 Current Status: NLCS Game 1 vs {current_opponent} starts {game_day} at {game_time}")
+        print(f"\n📅 Current Status: ALCS Game 1 vs {current_opponent} starts {game_day} at {game_time}")
         print(f"🏟️ Venue: {venue}")
         
         if previous_series and previous_series['opponent'] != current_opponent:

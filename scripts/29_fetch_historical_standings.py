@@ -2,10 +2,10 @@
 # coding: utf-8
 
 """
-LA Dodgers Historical Game-by-Game Data Fetcher, 1925-present
+Red Sox Historical Game-by-Game Data Fetcher, 1901-present
 
 This script downloads the team's game-by-game data from Baseball Reference 
-for all years from 1925 to the present and combines them into a comprehensive dataset.
+for all years from 1901 to the present and combines them into a comprehensive dataset.
 """
 
 import os
@@ -19,25 +19,26 @@ import logging
 import time
 import argparse
 from datetime import datetime
+from scripts import config
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configuration
 CURRENT_YEAR = datetime.now().year
-START_YEAR = 1925
+START_YEAR = 1901
 OUTPUT_DIR = "data/standings"
 S3_BUCKET = "stilesdata.com"
 
 # File paths
-CSV_FILE = f"{OUTPUT_DIR}/dodgers_standings_1925_present.csv"
-JSON_FILE = f"{OUTPUT_DIR}/dodgers_standings_1925_present.json"
-PARQUET_FILE = f"{OUTPUT_DIR}/dodgers_standings_1925_present.parquet"
+CSV_FILE = f"{OUTPUT_DIR}/redsox_standings_{START_YEAR}_present.csv"
+JSON_FILE = f"{OUTPUT_DIR}/redsox_standings_{START_YEAR}_present.json"
+PARQUET_FILE = f"{OUTPUT_DIR}/redsox_standings_{START_YEAR}_present.parquet"
 
 # S3 configuration
-S3_KEY_CSV = "dodgers/data/standings/dodgers_standings_1925_present.csv"
-S3_KEY_JSON = "dodgers/data/standings/dodgers_standings_1925_present.json"
-S3_KEY_PARQUET = "dodgers/data/standings/dodgers_standings_1925_present.parquet"
+S3_KEY_CSV = f"redsox/data/standings/redsox_standings_{START_YEAR}_present.csv"
+S3_KEY_JSON = f"redsox/data/standings/redsox_standings_{START_YEAR}_present.json"
+S3_KEY_PARQUET = f"redsox/data/standings/redsox_standings_{START_YEAR}_present.parquet"
 
 # AWS session
 session = boto3.Session(
@@ -58,11 +59,9 @@ def fetch_year_data(year):
     Returns:
         pandas.DataFrame: Processed game data for the year
     """
-    # Handle team name changes - Brooklyn Robins/Dodgers became LA Dodgers
-    if year <= 1957:
-        team_code = "BRO"  # Brooklyn Dodgers/Robins
-    else:
-        team_code = "LAD"  # Los Angeles Dodgers
+    # Handle team name changes
+    # Red Sox have been BOS since 1901
+    team_code = config.TEAM_ID_BBREF
     
     url = f"https://www.baseball-reference.com/teams/{team_code}/{year}-schedule-scores.shtml"
     
@@ -430,7 +429,7 @@ def upload_to_s3(local_files, s3_keys):
 def parse_arguments():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="Fetch historical LA Dodgers game-by-game data from Baseball Reference"
+        description=f"Fetch historical {config.TEAM_NAME} game-by-game data from Baseball Reference"
     )
     parser.add_argument(
         "--start-year", 
@@ -472,7 +471,7 @@ def parse_arguments():
 
 def main():
     """
-    Main function to fetch, process, and save historical Dodgers game data.
+    Main function to fetch, process, and save historical Red Sox game data.
     """
     args = parse_arguments()
     
@@ -498,7 +497,7 @@ def main():
                     logging.info(f"Date range: {df['game_date'].min()} to {df['game_date'].max()}")
                 
                 # Save test data
-                base_path = f"{output_dir}/dodgers_test_{args.test_year}"
+                base_path = f"{output_dir}/redsox_test_{args.test_year}"
                 save_data(df, base_path)
             else:
                 logging.error(f"❌ Failed to fetch data for {args.test_year}")
@@ -519,7 +518,7 @@ def main():
         logging.info(f"Games per year range: {df.groupby('year').size().min()} to {df.groupby('year').size().max()}")
         
         # Save data locally
-        base_path = f"{output_dir}/dodgers_standings_{start_year}_present"
+        base_path = f"{output_dir}/redsox_standings_{start_year}_present"
         csv_file, json_file, parquet_file = save_data(df, base_path)
         
         # Upload to S3 if credentials are available and not disabled

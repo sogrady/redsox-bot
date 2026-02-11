@@ -8,6 +8,7 @@ import pandas as pd
 from io import BytesIO
 import boto3
 import logging
+from scripts import config
 
 
 # Set up basic configuration for logging
@@ -55,7 +56,7 @@ headers = {
 }
 
 batter_list = requests.get(
-    f"https://bdfed.stitch.mlbinfra.com/bdfed/stats/player?&env=prod&season={year}&sportId=1&stats=season&group=hitting&gameType=R&offset=0&sortStat=plateAppearances&order=desc&teamId=119",
+    f"https://bdfed.stitch.mlbinfra.com/bdfed/stats/player?&env=prod&season={year}&sportId=1&stats=season&group=hitting&gameType=R&offset=0&sortStat=plateAppearances&order=desc&teamId={config.TEAM_ID}",
     headers=headers,
 )
 
@@ -137,12 +138,12 @@ def save_to_s3(df, base_path, s3_bucket, formats):
 
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, "dodgers_player_batting_current_table")
+file_path = os.path.join(data_dir, "redsox_player_batting_current_table")
 formats = ["csv", "json", "parquet"]
 # save_dataframe(optimized_df, file_path, formats)
 save_to_s3(
     df,
-    "dodgers/data/batting/dodgers_player_batting_current_table",
+    "redsox/data/batting/redsox_player_batting_current_table",
     "stilesdata.com",
     formats,
 )

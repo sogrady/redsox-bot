@@ -7,14 +7,16 @@ import boto3
 import pandas as pd
 
 
-BUCKET = "stilesdata.com"
-BOXES_KEY_JSON = "dodgers/data/standings/dodgers_boxscores.json"
-BOXES_KEY_CSV = "dodgers/data/standings/dodgers_boxscores.csv"
-LOCAL_BOXES_JSON = os.path.join("data", "standings", "dodgers_boxscores.json")
-LOCAL_BOXES_CSV = os.path.join("data", "standings", "dodgers_boxscores.csv")
+from scripts import config
 
-OUT_KEY_JSON = "dodgers/data/standings/dodgers_wins_losses_current.json"
-LOCAL_OUT_JSON = os.path.join("data", "standings", "dodgers_wins_losses_current.json")
+BUCKET = "stilesdata.com"
+BOXES_KEY_JSON = "redsox/data/standings/redsox_boxscores.json"
+BOXES_KEY_CSV = "redsox/data/standings/redsox_boxscores.csv"
+LOCAL_BOXES_JSON = os.path.join("data", "standings", "redsox_boxscores.json")
+LOCAL_BOXES_CSV = os.path.join("data", "standings", "redsox_boxscores.csv")
+
+OUT_KEY_JSON = "redsox/data/standings/redsox_wins_losses_current.json"
+LOCAL_OUT_JSON = os.path.join("data", "standings", "redsox_wins_losses_current.json")
 
 
 def get_s3_client(profile_name: Optional[str]) -> boto3.client:
@@ -97,7 +99,7 @@ def build_wins_losses(df: pd.DataFrame) -> pd.DataFrame:
     # df = df[df["game_date"] >= regular_season_start]
 
     # Compute fields
-    df["r"] = df["dodgers_runs"].astype(int)
+    df["r"] = df["team_runs"].astype(int)
     df["ra"] = df["opponent_runs"].astype(int)
     df["run_diff"] = df["r"] - df["ra"]
     df["result"] = pd.Series(

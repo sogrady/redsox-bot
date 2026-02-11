@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-Collect season home plate umpires for all Dodgers games and save to JSON + S3.
+Collect season home plate umpires for all Red Sox games and save to JSON + S3.
 
 Data source:
 - MLB StatsAPI live feed: https://statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live
@@ -24,9 +24,10 @@ from datetime import datetime
 import requests
 import pandas as pd
 import boto3
+from scripts import config
 
 
-DODGERS_TEAM_ID = 119
+DODGERS_TEAM_ID = config.TEAM_ID
 SCHEDULE_URL = "https://statsapi.mlb.com/api/v1/schedule"
 LIVE_FEED_URL_TMPL = "https://statsapi.mlb.com/api/v1.1/game/{game_pk}/feed/live"
 
@@ -35,10 +36,10 @@ LOCAL_GAMEFEEDS_DIR = os.path.join(BASE_DIR, "data", "gamefeeds")
 LOCAL_OUT_DIR = os.path.join(BASE_DIR, "data", "pitches")
 
 YEAR = pd.Timestamp.now().year
-LOCAL_OUT_PATH = os.path.join(LOCAL_OUT_DIR, f"dodgers_umpires_{YEAR}.json")
+LOCAL_OUT_PATH = os.path.join(LOCAL_OUT_DIR, f"redsox_umpires_{YEAR}.json")
 
 S3_BUCKET = "stilesdata.com"
-S3_KEY = f"dodgers/data/pitches/dodgers_umpires_{YEAR}.json"
+S3_KEY = f"redsox/data/pitches/redsox_umpires_{YEAR}.json"
 
 
 def get_session():
@@ -70,7 +71,7 @@ def find_local_gamepks(gamefeeds_dir: str) -> List[int]:
 
 
 def fetch_season_schedule_gamepks(year: int) -> List[Tuple[int, str]]:
-    """Return list of (gamePk, date_iso) for all Dodgers games in the given year."""
+    """Return list of (gamePk, date_iso) for all Red Sox games in the given year."""
     params = {
         "sportId": 1,
         "teamId": DODGERS_TEAM_ID,
