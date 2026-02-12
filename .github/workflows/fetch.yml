@@ -8,6 +8,8 @@ on:
 jobs:
   update_and_deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     defaults:
       run:
         working-directory: ${{github.workspace}}  # This sets the working directory for all run commands

@@ -1,9 +1,9 @@
 name: Post Transaction Updates
 
 on:
-  schedule:
+  # schedule:
     # Runs every 2 hours during daytime hours PT (converted to UTC)
-    - cron: '0 14,16,18,20,22,0,2 * * *'  # 10 AM, 12 PM, 2 PM, 4 PM, 6 PM, 8 PM, 10 PM ET
+#    - cron: '0 14,16,18,20,22,0,2 * * *'  # 10 AM, 12 PM, 2 PM, 4 PM, 6 PM, 8 PM, 10 PM ET
   workflow_dispatch:
     inputs:
       force:

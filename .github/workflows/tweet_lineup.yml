@@ -1,9 +1,9 @@
 name: Tweet Lineup
 
 on:
-  schedule:
+  # schedule:
     # Runs hourly, but the job will only proceed between 10am and 6pm PT.
-    - cron: '0 17-23,0-2 * * *'
+#    - cron: '0 17-23,0-2 * * *'
   workflow_dispatch:
 
 jobs:

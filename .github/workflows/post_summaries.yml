@@ -1,9 +1,9 @@
 name: Post Daily Summaries
 
 on:
-  schedule:
+  # schedule:
     # Runs every 2 hours during daytime hours PT (converted to UTC)
-    - cron: '0 15,17,19,21,23 * * *'  # 11 AM, 1 PM, 3 PM, 5 PM, 7 PM ET
+#    - cron: '0 15,17,19,21,23 * * *'  # 11 AM, 1 PM, 3 PM, 5 PM, 7 PM ET
   workflow_dispatch:
     inputs:
       summary_type:
