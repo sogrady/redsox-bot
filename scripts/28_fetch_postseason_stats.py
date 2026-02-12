@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import json
 import logging
+import boto3
 from datetime import datetime
 from dateutil import parser
 import pytz
@@ -16,6 +17,26 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 output_dir = "data/postseason"
 json_file = f"{output_dir}/redsox_postseason_stats_2025.json"
 series_file = f"{output_dir}/redsox_postseason_series_2025.json"
+
+# S3 configuration
+s3_bucket = "redsox-data"
+s3_key_stats = "redsox/data/postseason/redsox_postseason_stats_2025.json"
+s3_key_series = "redsox/data/postseason/redsox_postseason_series_2025.json"
+
+# AWS session
+is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
+aws_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
+aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
+aws_region = "us-west-1"
+if is_github_actions:
+    session = boto3.Session(
+        aws_access_key_id=aws_key_id,
+        aws_secret_access_key=aws_secret_key,
+        region_name=aws_region
+    )
+else:
+    session = boto3.Session(profile_name="haekeo", region_name=aws_region)
+s3 = session.resource('s3')
 
 def fetch_roster_data():
     """Fetch roster data from local file or URL"""
@@ -345,7 +366,17 @@ def main():
         json.dump(top_12_stats, f, indent=2, ensure_ascii=False)
     
     logging.info(f"Saved postseason stats for top {len(top_12_stats)} players (by plate appearances) to {json_file}")
-    
+
+    # Upload to S3
+    try:
+        s3.Bucket(s3_bucket).upload_file(series_file, s3_key_series)
+        logging.info(f"Uploaded {series_file} to S3: s3://{s3_bucket}/{s3_key_series}")
+
+        s3.Bucket(s3_bucket).upload_file(json_file, s3_key_stats)
+        logging.info(f"Uploaded {json_file} to S3: s3://{s3_bucket}/{s3_key_stats}")
+    except Exception as e:
+        logging.error(f"Failed to upload to S3: {e}")
+
     # Print summary
     print(f"\n=== {config.TEAM_NAME} 2025 Postseason Journey (as of Oct 13, 2025) ===")
     for journey in playoff_journey:
