@@ -41,11 +41,18 @@ S3_KEY_JSON = f"redsox/data/standings/redsox_standings_{START_YEAR}_present.json
 S3_KEY_PARQUET = f"redsox/data/standings/redsox_standings_{START_YEAR}_present.parquet"
 
 # AWS session
-session = boto3.Session(
-    aws_access_key_id=os.getenv('MY_AWS_ACCESS_KEY_ID'),
-    aws_secret_access_key=os.getenv('MY_AWS_SECRET_ACCESS_KEY'),
-    profile_name=os.getenv('MY_PERSONAL_PROFILE'),
-)
+is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
+aws_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
+aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
+aws_region = "us-west-1"
+if is_github_actions:
+    session = boto3.Session(
+        aws_access_key_id=aws_key_id,
+        aws_secret_access_key=aws_secret_key,
+        region_name=aws_region
+    )
+else:
+    session = boto3.Session(profile_name="haekeo", region_name=aws_region)
 s3 = session.resource('s3')
 
 

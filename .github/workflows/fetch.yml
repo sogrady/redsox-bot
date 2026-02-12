@@ -75,6 +75,7 @@ jobs:
         # These should work in off-season
         python scripts/19_fetch_roster.py
         python scripts/28_fetch_postseason_stats.py
+        python scripts/29_fetch_historical_standings.py
         # python scripts/07_create_toplines_summary.py  # Needs current season data
         # python scripts/08_fetch_process_season_outcomes.py
         # python scripts/10_fetch_process_historic_batting_gamelogs.py
