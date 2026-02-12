@@ -1,0 +1,1222 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.1 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- http-equiv="X-UA-Compatible" content="IE=edge" -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JPCT3BCN6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7JPCT3BCN6');
+</script>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!-- begin _includes/seo.html -->
+<!-- DEBUG: page.path=roster.md, page.url=/roster/, page.permalink=/roster/, page.name=roster.md --><title>Current roster | Boston Red Sox player details - Red Sox Data Bot</title>
+<meta name="description" content="Full Red Sox roster, including active and 40-man players, with photos and details.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Red Sox Data Bot">
+<meta property="og:title" content="Current roster | Boston Red Sox player details">
+<meta property="og:url" content="https://redsoxdata.bot/roster/">
+
+
+  <meta property="og:description" content="Full Red Sox roster, including active and 40-man players, with photos and details.">
+
+
+
+  <meta property="og:image" content="https://redsoxdata.bot/assets/images/meta_card.png">
+
+
+
+  <meta name="twitter:site" content="@sogrady">
+  <meta name="twitter:title" content="Current roster | Boston Red Sox player details">
+  <meta name="twitter:description" content="Full Red Sox roster, including active and 40-man players, with photos and details.">
+  <meta name="twitter:url" content="https://redsoxdata.bot/roster/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://redsoxdata.bot/assets/images/meta_card.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://redsoxdata.bot/roster/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Red Sox Data Bot Feed">
+
+
+<!-- Handheld Friendly -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#BD3039">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#BD3039">
+<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Red Sox Data Bot" href="https://redsoxdata.bot/feed.xml" />
+
+
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<!-- end custom head snippets -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">
+          Red Sox Data Bot
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+                <a
+                  href="/transactions/"
+                  
+                  
+                >Moves</a>
+              </li><li class="masthead__menu-item">
+                <a
+                  href="/about/"
+                  
+                  
+                >About</a>
+              </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <div class="container">
+  <div class="minimal-header">
+    <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Red Sox Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
+    <h1 class="minimal-headline">Who's on the roster?</h1>
+    <p class="minimal-subhead">The team's active roster holds up to 26 players who can take the field in games. The 40-man roster includes those players but also prospects, injured starters or minor leaguers with contracts who are eligible to be called up. The latest breakdown, according to <a href="https://www.mlb.com/redsox/roster">Major League Baseball</a>: </p>
+  </div>
+
+  <div class="tabs" id="roster-tabs">
+    <button class="button-custom" data-tab="active">Active roster</button>
+    <button class="button-custom" data-tab="forty">40-man roster</button>
+  </div>
+
+  <div id="roster-active" class="roster-tab-content">
+    
+    
+    
+    
+      <h2 class="stat-group">Pitchers</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/brayan-bello.png" alt="Brayan Bello" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Brayan Bello</div>
+            <div class="player-details">R/R | 6' 1", 195 lbs</div>
+            <div class="player-jersey">#66</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jake-bennett.png" alt="Jake Bennett" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jake Bennett</div>
+            <div class="player-details">L/L | 6' 6", 234 lbs</div>
+            <div class="player-jersey">#64</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/aroldis-chapman.png" alt="Aroldis Chapman" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Aroldis Chapman</div>
+            <div class="player-details">L/L | 6' 4", 235 lbs</div>
+            <div class="player-jersey">#44</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/kutter-crawford.png" alt="Kutter Crawford" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Kutter Crawford</div>
+            <div class="player-details">R/R | 6' 1", 195 lbs</div>
+            <div class="player-jersey">#50</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/garrett-crochet.png" alt="Garrett Crochet" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Garrett Crochet</div>
+            <div class="player-details">L/L | 6' 6", 245 lbs</div>
+            <div class="player-jersey">#35</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/connelly-early.png" alt="Connelly Early" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Connelly Early</div>
+            <div class="player-details">L/L | 6' 3", 195 lbs</div>
+            <div class="player-jersey">#71</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/sonny-gray.png" alt="Sonny Gray" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Sonny Gray</div>
+            <div class="player-details">R/R | 5' 10", 190 lbs</div>
+            <div class="player-jersey">#54</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/zack-kelly.png" alt="Zack Kelly" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Zack Kelly</div>
+            <div class="player-details">R/R | 6' 3", 231 lbs</div>
+            <div class="player-jersey">#76</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jovani-moran.png" alt="Jovani Morán" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jovani Morán</div>
+            <div class="player-details">L/L | 6' 1", 167 lbs</div>
+            <div class="player-jersey">#47</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/johan-oviedo.png" alt="Johan Oviedo" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Johan Oviedo</div>
+            <div class="player-details">R/R | 6' 6", 275 lbs</div>
+            <div class="player-jersey">#29</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tyler-samaniego.png" alt="Tyler Samaniego" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tyler Samaniego</div>
+            <div class="player-details">R/L | 6' 4", 205 lbs</div>
+            <div class="player-jersey">#78</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/patrick-sandoval.png" alt="Patrick Sandoval" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Patrick Sandoval</div>
+            <div class="player-details">L/L | 6' 3", 190 lbs</div>
+            <div class="player-jersey">#43</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/justin-slaten.png" alt="Justin Slaten" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Justin Slaten</div>
+            <div class="player-details">R/R | 6' 4", 222 lbs</div>
+            <div class="player-jersey">#63</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ranger-suarez.png" alt="Ranger Suárez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ranger Suárez</div>
+            <div class="player-details">L/L | 6' 1", 217 lbs</div>
+            <div class="player-jersey">#55</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/payton-tolle.png" alt="Payton Tolle" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Payton Tolle</div>
+            <div class="player-details">L/L | 6' 6", 250 lbs</div>
+            <div class="player-jersey">#70</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tyler-uberstine.png" alt="Tyler Uberstine" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tyler Uberstine</div>
+            <div class="player-details">R/R | 6' 1", 200 lbs</div>
+            <div class="player-jersey">#79</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ryan-watson.png" alt="Ryan Watson" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ryan Watson</div>
+            <div class="player-details">R/R | 6' 5", 225 lbs</div>
+            <div class="player-jersey">#56</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/greg-weissert.png" alt="Greg Weissert" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Greg Weissert</div>
+            <div class="player-details">R/R | 6' 2", 235 lbs</div>
+            <div class="player-jersey">#57</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/garrett-whitlock.png" alt="Garrett Whitlock" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Garrett Whitlock</div>
+            <div class="player-details">R/R | 6' 5", 222 lbs</div>
+            <div class="player-jersey">#22</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Catchers</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/carlos-narvaez.png" alt="Carlos Narváez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Carlos Narváez</div>
+            <div class="player-details">R/R | 6' 0", 190 lbs</div>
+            <div class="player-jersey">#75</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/connor-wong.png" alt="Connor Wong" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Connor Wong</div>
+            <div class="player-details">R/R | 5' 10", 190 lbs</div>
+            <div class="player-jersey">#12</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Infielders</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/kristian-campbell.png" alt="Kristian Campbell" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Kristian Campbell</div>
+            <div class="player-details">R/R | 6' 3", 191 lbs</div>
+            <div class="player-jersey">#28</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/triston-casas.png" alt="Triston Casas" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Triston Casas</div>
+            <div class="player-details">L/R | 6' 4", 244 lbs</div>
+            <div class="player-jersey">#36</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tsung-che-cheng.png" alt="Tsung-Che Cheng" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tsung-Che Cheng</div>
+            <div class="player-details">L/R | 5' 8", 180 lbs</div>
+            <div class="player-jersey">#39</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/willson-contreras.png" alt="Willson Contreras" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Willson Contreras</div>
+            <div class="player-details">R/R | 6' 1", 240 lbs</div>
+            <div class="player-jersey">#40</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/caleb-durbin.png" alt="Caleb Durbin" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Caleb Durbin</div>
+            <div class="player-details">R/R | 5' 7", 183 lbs</div>
+            <div class="player-jersey">#17</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/nate-eaton.png" alt="Nate Eaton" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Nate Eaton</div>
+            <div class="player-details">R/R | 5' 11", 200 lbs</div>
+            <div class="player-jersey">#18</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/mickey-gasper.png" alt="Mickey Gasper" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Mickey Gasper</div>
+            <div class="player-details">S/R | 5' 10", 205 lbs</div>
+            <div class="player-jersey">#30</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/romy-gonzalez.png" alt="Romy Gonzalez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Romy Gonzalez</div>
+            <div class="player-details">R/R | 6' 0", 215 lbs</div>
+            <div class="player-jersey">#23</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/isiah-kiner-falefa.png" alt="Isiah Kiner-Falefa" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Isiah Kiner-Falefa</div>
+            <div class="player-details">R/R | 5' 10", 195 lbs</div>
+            <div class="player-jersey">#2</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/marcelo-mayer.png" alt="Marcelo Mayer" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Marcelo Mayer</div>
+            <div class="player-details">L/R | 6' 3", 188 lbs</div>
+            <div class="player-jersey">#11</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/andruw-monasterio.png" alt="Andruw Monasterio" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Andruw Monasterio</div>
+            <div class="player-details">R/R | 5' 11", 195 lbs</div>
+            <div class="player-jersey">#32</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/anthony-seigler.png" alt="Anthony Seigler" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Anthony Seigler</div>
+            <div class="player-details">L/S | 5' 10", 192 lbs</div>
+            <div class="player-jersey">#48</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/nick-sogard.png" alt="Nick Sogard" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Nick Sogard</div>
+            <div class="player-details">S/R | 6' 1", 189 lbs</div>
+            <div class="player-jersey">#20</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/trevor-story.png" alt="Trevor Story" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Trevor Story</div>
+            <div class="player-details">R/R | 6' 1", 209 lbs</div>
+            <div class="player-jersey">#10</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Outfielders</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/wilyer-abreu.png" alt="Wilyer Abreu" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Wilyer Abreu</div>
+            <div class="player-details">L/L | 5' 10", 215 lbs</div>
+            <div class="player-jersey">#52</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/roman-anthony.png" alt="Roman Anthony" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Roman Anthony</div>
+            <div class="player-details">L/R | 6' 3", 200 lbs</div>
+            <div class="player-jersey">#19</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jarren-duran.png" alt="Jarren Duran" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jarren Duran</div>
+            <div class="player-details">L/R | 6' 1", 205 lbs</div>
+            <div class="player-jersey">#16</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ceddanne-rafaela.png" alt="Ceddanne Rafaela" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ceddanne Rafaela</div>
+            <div class="player-details">R/R | 5' 10", 165 lbs</div>
+            <div class="player-jersey">#3</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/masataka-yoshida.png" alt="Masataka Yoshida" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Masataka Yoshida</div>
+            <div class="player-details">L/R | 5' 8", 192 lbs</div>
+            <div class="player-jersey">#7</div>
+          </div>
+        
+      </div>
+    
+  </div>
+
+  <div id="roster-forty" class="roster-tab-content" style="display:none;">
+    
+    
+    
+      <h2 class="stat-group">Pitchers</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/brayan-bello.png" alt="Brayan Bello" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Brayan Bello</div>
+            <div class="player-details">R/R | 6' 1", 195 lbs</div>
+            <div class="player-jersey">#66</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jake-bennett.png" alt="Jake Bennett" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jake Bennett</div>
+            <div class="player-details">L/L | 6' 6", 234 lbs</div>
+            <div class="player-jersey">#64</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/aroldis-chapman.png" alt="Aroldis Chapman" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Aroldis Chapman</div>
+            <div class="player-details">L/L | 6' 4", 235 lbs</div>
+            <div class="player-jersey">#44</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/kutter-crawford.png" alt="Kutter Crawford" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Kutter Crawford</div>
+            <div class="player-details">R/R | 6' 1", 195 lbs</div>
+            <div class="player-jersey">#50</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/garrett-crochet.png" alt="Garrett Crochet" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Garrett Crochet</div>
+            <div class="player-details">L/L | 6' 6", 245 lbs</div>
+            <div class="player-jersey">#35</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/connelly-early.png" alt="Connelly Early" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Connelly Early</div>
+            <div class="player-details">L/L | 6' 3", 195 lbs</div>
+            <div class="player-jersey">#71</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/sonny-gray.png" alt="Sonny Gray" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Sonny Gray</div>
+            <div class="player-details">R/R | 5' 10", 190 lbs</div>
+            <div class="player-jersey">#54</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/zack-kelly.png" alt="Zack Kelly" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Zack Kelly</div>
+            <div class="player-details">R/R | 6' 3", 231 lbs</div>
+            <div class="player-jersey">#76</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jovani-moran.png" alt="Jovani Morán" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jovani Morán</div>
+            <div class="player-details">L/L | 6' 1", 167 lbs</div>
+            <div class="player-jersey">#47</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/johan-oviedo.png" alt="Johan Oviedo" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Johan Oviedo</div>
+            <div class="player-details">R/R | 6' 6", 275 lbs</div>
+            <div class="player-jersey">#29</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tyler-samaniego.png" alt="Tyler Samaniego" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tyler Samaniego</div>
+            <div class="player-details">R/L | 6' 4", 205 lbs</div>
+            <div class="player-jersey">#78</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/patrick-sandoval.png" alt="Patrick Sandoval" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Patrick Sandoval</div>
+            <div class="player-details">L/L | 6' 3", 190 lbs</div>
+            <div class="player-jersey">#43</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/justin-slaten.png" alt="Justin Slaten" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Justin Slaten</div>
+            <div class="player-details">R/R | 6' 4", 222 lbs</div>
+            <div class="player-jersey">#63</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ranger-suarez.png" alt="Ranger Suárez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ranger Suárez</div>
+            <div class="player-details">L/L | 6' 1", 217 lbs</div>
+            <div class="player-jersey">#55</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/payton-tolle.png" alt="Payton Tolle" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Payton Tolle</div>
+            <div class="player-details">L/L | 6' 6", 250 lbs</div>
+            <div class="player-jersey">#70</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tyler-uberstine.png" alt="Tyler Uberstine" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tyler Uberstine</div>
+            <div class="player-details">R/R | 6' 1", 200 lbs</div>
+            <div class="player-jersey">#79</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ryan-watson.png" alt="Ryan Watson" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ryan Watson</div>
+            <div class="player-details">R/R | 6' 5", 225 lbs</div>
+            <div class="player-jersey">#56</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/greg-weissert.png" alt="Greg Weissert" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Greg Weissert</div>
+            <div class="player-details">R/R | 6' 2", 235 lbs</div>
+            <div class="player-jersey">#57</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/garrett-whitlock.png" alt="Garrett Whitlock" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Garrett Whitlock</div>
+            <div class="player-details">R/R | 6' 5", 222 lbs</div>
+            <div class="player-jersey">#22</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Catchers</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/carlos-narvaez.png" alt="Carlos Narváez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Carlos Narváez</div>
+            <div class="player-details">R/R | 6' 0", 190 lbs</div>
+            <div class="player-jersey">#75</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/connor-wong.png" alt="Connor Wong" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Connor Wong</div>
+            <div class="player-details">R/R | 5' 10", 190 lbs</div>
+            <div class="player-jersey">#12</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Infielders</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/kristian-campbell.png" alt="Kristian Campbell" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Kristian Campbell</div>
+            <div class="player-details">R/R | 6' 3", 191 lbs</div>
+            <div class="player-jersey">#28</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/triston-casas.png" alt="Triston Casas" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Triston Casas</div>
+            <div class="player-details">L/R | 6' 4", 244 lbs</div>
+            <div class="player-jersey">#36</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/tsung-che-cheng.png" alt="Tsung-Che Cheng" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Tsung-Che Cheng</div>
+            <div class="player-details">L/R | 5' 8", 180 lbs</div>
+            <div class="player-jersey">#39</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/willson-contreras.png" alt="Willson Contreras" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Willson Contreras</div>
+            <div class="player-details">R/R | 6' 1", 240 lbs</div>
+            <div class="player-jersey">#40</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/caleb-durbin.png" alt="Caleb Durbin" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Caleb Durbin</div>
+            <div class="player-details">R/R | 5' 7", 183 lbs</div>
+            <div class="player-jersey">#17</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/nate-eaton.png" alt="Nate Eaton" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Nate Eaton</div>
+            <div class="player-details">R/R | 5' 11", 200 lbs</div>
+            <div class="player-jersey">#18</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/mickey-gasper.png" alt="Mickey Gasper" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Mickey Gasper</div>
+            <div class="player-details">S/R | 5' 10", 205 lbs</div>
+            <div class="player-jersey">#30</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/romy-gonzalez.png" alt="Romy Gonzalez" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Romy Gonzalez</div>
+            <div class="player-details">R/R | 6' 0", 215 lbs</div>
+            <div class="player-jersey">#23</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/isiah-kiner-falefa.png" alt="Isiah Kiner-Falefa" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Isiah Kiner-Falefa</div>
+            <div class="player-details">R/R | 5' 10", 195 lbs</div>
+            <div class="player-jersey">#2</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/marcelo-mayer.png" alt="Marcelo Mayer" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Marcelo Mayer</div>
+            <div class="player-details">L/R | 6' 3", 188 lbs</div>
+            <div class="player-jersey">#11</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/andruw-monasterio.png" alt="Andruw Monasterio" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Andruw Monasterio</div>
+            <div class="player-details">R/R | 5' 11", 195 lbs</div>
+            <div class="player-jersey">#32</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/anthony-seigler.png" alt="Anthony Seigler" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Anthony Seigler</div>
+            <div class="player-details">L/S | 5' 10", 192 lbs</div>
+            <div class="player-jersey">#48</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/nick-sogard.png" alt="Nick Sogard" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Nick Sogard</div>
+            <div class="player-details">S/R | 6' 1", 189 lbs</div>
+            <div class="player-jersey">#20</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/trevor-story.png" alt="Trevor Story" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Trevor Story</div>
+            <div class="player-details">R/R | 6' 1", 209 lbs</div>
+            <div class="player-jersey">#10</div>
+          </div>
+        
+      </div>
+    
+      <h2 class="stat-group">Outfielders</h2>
+      <div class="roster-grid">
+        
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/wilyer-abreu.png" alt="Wilyer Abreu" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Wilyer Abreu</div>
+            <div class="player-details">L/L | 5' 10", 215 lbs</div>
+            <div class="player-jersey">#52</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/roman-anthony.png" alt="Roman Anthony" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Roman Anthony</div>
+            <div class="player-details">L/R | 6' 3", 200 lbs</div>
+            <div class="player-jersey">#19</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/jarren-duran.png" alt="Jarren Duran" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Jarren Duran</div>
+            <div class="player-details">L/R | 6' 1", 205 lbs</div>
+            <div class="player-jersey">#16</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/ceddanne-rafaela.png" alt="Ceddanne Rafaela" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Ceddanne Rafaela</div>
+            <div class="player-details">R/R | 5' 10", 165 lbs</div>
+            <div class="player-jersey">#3</div>
+          </div>
+        
+          
+          <div class="stat-card player-card">
+            
+              <div class="player-flag player-flag-active">ACTIVE</div>
+            
+            <img src="https://redsoxdata.bot/data/roster/avatars/masataka-yoshida.png" alt="Masataka Yoshida" class="player-avatar" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+            <div class="player-name">Masataka Yoshida</div>
+            <div class="player-details">L/R | 5' 8", 192 lbs</div>
+            <div class="player-jersey">#7</div>
+          </div>
+        
+      </div>
+    
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('#roster-tabs button');
+    const tabContents = document.querySelectorAll('.roster-tab-content');
+    const initialTab = tabs[0];
+
+    // Set initial active state on page load
+    if (initialTab) {
+      initialTab.classList.add('active');
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Deactivate all tabs
+        tabs.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tc => tc.style.display = 'none');
+
+        // Activate the clicked tab
+        btn.classList.add('active');
+        const targetContent = document.getElementById('roster-' + btn.dataset.tab);
+        if (targetContent) {
+          targetContent.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
+
+      
+    </div>
+
+
+    <div class="site-footer">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-info">
+        <h3 class="footer-title">Red Sox Data Bot</h3>
+        <p class="footer-description">
+          A dashboard tracking the Boston Red Sox season with real-time stats, standings and performance analysis.
+        </p>
+        <div class="footer-links">
+          <a href="/about/" class="footer-link">About</a>
+          <a href="https://github.com/sogrady/redsox-bot" class="footer-link">Code</a>
+          <a href="https://github.com/sogrady/redsox-bot/tree/main/data" class="footer-link">Data</a>
+        </div>
+        <div class="footer-stats">
+          <div class="footer-meta">Updated: February 11, 2026 at 7 PM</div>
+          <div class="footer-meta">Sources: MLB/Baseball Savant, Baseball Reference</div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="http://github.com/sogrady/redsox-bot" class="footer-social-link"><i class="fa-brands fa-fw fa-github"></i></a>
+        <a href="https://x.com/RedSoxDataBot" class="footer-social-link"><i class="fa-brands fa-fw fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 <a href="https://github.com/sogrady">Red Sox Bot</a>.</p>
+    </div>
+  </div>
+</div>
+
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+  
+    <script src="/assets/js/mobile-nav.js"></script>
+  
+
+
+  </body>
+</html>

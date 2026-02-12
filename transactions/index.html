@@ -1,0 +1,2646 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.1 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- http-equiv="X-UA-Compatible" content="IE=edge" -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JPCT3BCN6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7JPCT3BCN6');
+</script>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!-- begin _includes/seo.html -->
+<!-- DEBUG: page.path=transactions.md, page.url=/transactions/, page.permalink=/transactions/, page.name=transactions.md --><title>Transactions | Boston Red Sox moves &amp; trades - Red Sox Data Bot</title>
+<meta name="description" content="An auto-updating log of recent Red Sox player transactions.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Red Sox Data Bot">
+<meta property="og:title" content="Transactions | Boston Red Sox moves &amp; trades">
+<meta property="og:url" content="https://redsoxdata.bot/transactions/">
+
+
+  <meta property="og:description" content="An auto-updating log of recent Red Sox player transactions.">
+
+
+
+  <meta property="og:image" content="https://redsoxdata.bot/assets/images/meta_card.png">
+
+
+
+  <meta name="twitter:site" content="@sogrady">
+  <meta name="twitter:title" content="Transactions | Boston Red Sox moves &amp; trades">
+  <meta name="twitter:description" content="An auto-updating log of recent Red Sox player transactions.">
+  <meta name="twitter:url" content="https://redsoxdata.bot/transactions/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://redsoxdata.bot/assets/images/meta_card.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://redsoxdata.bot/transactions/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Red Sox Data Bot Feed">
+
+
+<!-- Handheld Friendly -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#BD3039">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#BD3039">
+<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Red Sox Data Bot" href="https://redsoxdata.bot/feed.xml" />
+
+
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<!-- end custom head snippets -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">
+          Red Sox Data Bot
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+                <a
+                  href="/roster/"
+                  
+                  
+                >Team</a>
+              </li><li class="masthead__menu-item">
+                <a
+                  href="/about/"
+                  
+                  
+                >About</a>
+              </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <div class="container">
+  <div class="minimal-header">
+  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Red Sox Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
+    <h1 class="minimal-headline">Recent transactions</h1>
+    <p class="minimal-subhead">A log of the team's last 100 player moves, according to <a href="https://www.mlb.com/redsox/roster/transactions">Major League Baseball</a>: </p>
+  </div>
+
+  
+  
+
+  <div class="transactions-grid">
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 10, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tanner Houck</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tanner Houck" title="Tanner Houck" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox placed RHP Tanner Houck on the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 10, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Isiah Kiner-Falefa</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/isiah-kiner-falefa.png" alt="Isiah Kiner-Falefa" class="player-avatar-transaction" title="Isiah Kiner-Falefa" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Isiah Kiner-Falefa.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 9, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Brendan Rodgers</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Brendan Rodgers" title="Brendan Rodgers" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent 2B Brendan Rodgers to a minor league contract and invited him to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 9, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Kyle Harrison</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Kyle Harrison" title="Kyle Harrison" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Shane Drohan</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Shane Drohan" title="Shane Drohan" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">David Hamilton</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="David Hamilton" title="David Hamilton" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Caleb Durbin</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/caleb-durbin.png" alt="Caleb Durbin" class="player-avatar-transaction" title="Caleb Durbin" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Andruw Monasterio</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/andruw-monasterio.png" alt="Andruw Monasterio" class="player-avatar-transaction" title="Andruw Monasterio" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Anthony Seigler</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/anthony-seigler.png" alt="Anthony Seigler" class="player-avatar-transaction" title="Anthony Seigler" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded LHP Kyle Harrison, LHP Shane Drohan and 2B David Hamilton to Milwaukee Brewers for 3B Caleb Durbin, SS Andruw Monasterio, 2B Anthony Seigler and Future Considerations.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 6, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Radinsson Lopez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Radinsson Lopez" title="Radinsson Lopez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent LHP Radinsson Lopez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 6, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tsung-Che Cheng</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/tsung-che-cheng.png" alt="Tsung-Che Cheng" class="player-avatar-transaction" title="Tsung-Che Cheng" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox claimed SS Tsung-Che Cheng off waivers from Washington Nationals.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 5, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Kyle Keller</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Kyle Keller" title="Kyle Keller" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Kyle Keller to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 5, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Vinny Nittoli</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Vinny Nittoli" title="Vinny Nittoli" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Vinny Nittoli to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 5, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Kyle Keller</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Kyle Keller" title="Kyle Keller" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          RHP Kyle Keller roster status changed by Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 4, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Mickey Gasper</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/mickey-gasper.png" alt="Mickey Gasper" class="player-avatar-transaction" title="Mickey Gasper" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox claimed 2B Mickey Gasper off waivers from Washington Nationals.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 3, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Matt Thaiss</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Matt Thaiss" title="Matt Thaiss" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent C Matt Thaiss to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">February 1, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">David Sandlin</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="David Sandlin" title="David Sandlin" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jordan Hicks</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jordan Hicks" title="Jordan Hicks" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Gage Ziehl</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Gage Ziehl" title="Gage Ziehl" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded RHP David Sandlin, RHP Jordan Hicks, Player To Be Named Later, Player To Be Named Later and cash to Chicago White Sox for RHP Gage Ziehl and Player To Be Named Later.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nate Baez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Nate Baez" title="Nate Baez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster C Nate Baez to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tayron Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tayron Guerrero" title="Tayron Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Tayron Guerrero to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jacob Webb</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jacob Webb" title="Jacob Webb" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Jacob Webb to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Noah Song</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Noah Song" title="Noah Song" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Noah Song to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Max Ferguson</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Max Ferguson" title="Max Ferguson" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster 2B Max Ferguson to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nathan Hickey</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Nathan Hickey" title="Nathan Hickey" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster C Nathan Hickey to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Wyatt Olds</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Wyatt Olds" title="Wyatt Olds" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Wyatt Olds to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Seth Martinez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Seth Martinez" title="Seth Martinez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Seth Martinez to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Allan Castro</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Allan Castro" title="Allan Castro" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster CF Allan Castro to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jeremy Wu-Yelland</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jeremy Wu-Yelland" title="Jeremy Wu-Yelland" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster LHP Jeremy Wu-Yelland to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tyler McDonough</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tyler McDonough" title="Tyler McDonough" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster OF Tyler McDonough to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Ronald Rosario</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Ronald Rosario" title="Ronald Rosario" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster C Ronald Rosario to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Braiden Ward</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Braiden Ward" title="Braiden Ward" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster CF Braiden Ward to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 23, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Mikey Romero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Mikey Romero" title="Mikey Romero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster SS Mikey Romero to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 21, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nate Baez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Nate Baez" title="Nate Baez" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tristan Gray</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tristan Gray" title="Tristan Gray" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Minnesota Twins traded C Nate Baez to Red Sox for 3B Tristan Gray.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 21, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Ranger Suárez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/ranger-suarez.png" alt="Ranger Suárez" class="player-avatar-transaction" title="Ranger Suárez" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent LHP Ranger Suárez.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Garielvin Silverio</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Garielvin Silverio" title="Garielvin Silverio" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent OF Garielvin Silverio to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Joskairo Ramirez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Joskairo Ramirez" title="Joskairo Ramirez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent OF Joskairo Ramirez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Eber Miranda</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Eber Miranda" title="Eber Miranda" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent OF Eber Miranda to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Edgardo Gutierrez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Edgardo Gutierrez" title="Edgardo Gutierrez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent C Edgardo Gutierrez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Claudio Pereira</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Claudio Pereira" title="Claudio Pereira" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Claudio Pereira to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Isaac Brujan</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Isaac Brujan" title="Isaac Brujan" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Isaac Brujan to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Anderber Urbina</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Anderber Urbina" title="Anderber Urbina" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Anderber Urbina to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Dawvris Brito</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Dawvris Brito" title="Dawvris Brito" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Dawvris Brito to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Anderson Gonzalez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Anderson Gonzalez" title="Anderson Gonzalez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Anderson Gonzalez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Freyerso Vasquez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Freyerso Vasquez" title="Freyerso Vasquez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent OF Freyerso Vasquez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Axell Herrera</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Axell Herrera" title="Axell Herrera" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Axell Herrera to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Harry Canedo</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Harry Canedo" title="Harry Canedo" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Harry Canedo to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Yeider Pineda</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Yeider Pineda" title="Yeider Pineda" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Yeider Pineda to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Isaac Velasquez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Isaac Velasquez" title="Isaac Velasquez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Isaac Velasquez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Angel Roa</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Angel Roa" title="Angel Roa" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Angel Roa to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Cayama</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Cayama" title="Luis Cayama" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Luis Cayama to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Wilneyker Bruce</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Wilneyker Bruce" title="Wilneyker Bruce" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Wilneyker Bruce to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 15, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Esterlin Casanova</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Esterlin Casanova" title="Esterlin Casanova" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent SS Esterlin Casanova to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 12, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Patrick Halligan</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Patrick Halligan" title="Patrick Halligan" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Patrick Halligan to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 9, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tayron Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tayron Guerrero" title="Tayron Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Tayron Guerrero to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 8, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Seth Martinez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Seth Martinez" title="Seth Martinez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Seth Martinez to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 6, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Hobie Harris</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Hobie Harris" title="Hobie Harris" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox invited non-roster RHP Hobie Harris to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">January 6, 2026</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">T.J. Sikkema</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="T.J. Sikkema" title="T.J. Sikkema" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent LHP T.J. Sikkema to a minor league contract and invited him to spring training.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 31, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Matt Fraizer</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Matt Fraizer" title="Matt Fraizer" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent CF Matt Fraizer to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 30, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Marcelo Mayer</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/marcelo-mayer.png" alt="Marcelo Mayer" class="player-avatar-transaction" title="Marcelo Mayer" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          3B Marcelo Mayer changed number to 11.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 30, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nate Eaton</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/nate-eaton.png" alt="Nate Eaton" class="player-avatar-transaction" title="Nate Eaton" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          3B Nate Eaton changed number to 18.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 22, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Willson Contreras</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/willson-contreras.png" alt="Willson Contreras" class="player-avatar-transaction" title="Willson Contreras" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated 1B Willson Contreras.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 22, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Hunter Dobbins</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Hunter Dobbins" title="Hunter Dobbins" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Yhoiker Fajardo</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Yhoiker Fajardo" title="Yhoiker Fajardo" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Blake Aita</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Blake Aita" title="Blake Aita" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Willson Contreras</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/willson-contreras.png" alt="Willson Contreras" class="player-avatar-transaction" title="Willson Contreras" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded RHP Hunter Dobbins, RHP Yhoiker Fajardo and RHP Blake Aita to St. Louis Cardinals for 1B Willson Contreras.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Alec Gamboa</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Alec Gamboa" title="Alec Gamboa" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          LHP Alec Gamboa roster status changed by Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Devin Sweet</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Devin Sweet" title="Devin Sweet" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Devin Sweet to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Devin Sweet</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Devin Sweet" title="Devin Sweet" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          RHP Devin Sweet roster status changed by Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Alec Gamboa</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Alec Gamboa" title="Alec Gamboa" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent LHP Alec Gamboa to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 15, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Perales</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Perales" title="Luis Perales" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jake Bennett</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/jake-bennett.png" alt="Jake Bennett" class="player-avatar-transaction" title="Jake Bennett" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded RHP Luis Perales to Washington Nationals for LHP Jake Bennett.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Ryan Watson</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/ryan-watson.png" alt="Ryan Watson" class="player-avatar-transaction" title="Ryan Watson" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Justin Riemer</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Justin Riemer" title="Justin Riemer" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Athletics traded RHP Ryan Watson to Red Sox for 2B Justin Riemer and cash.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Matt Lloyd</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Matt Lloyd" title="Matt Lloyd" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox purchased contract of 3B Matt Lloyd in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Eybersson Polanco</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Eybersson Polanco" title="Eybersson Polanco" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Los Angeles Angels purchased contract of RHP Eybersson Polanco in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Raudelis Martinez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Raudelis Martinez" title="Raudelis Martinez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox purchased contract of C Raudelis Martinez in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jedixson Paez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jedixson Paez" title="Jedixson Paez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Chicago White Sox purchased contract of RHP Jedixson Paez in the Rule 5 Draft.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jonathan Brand</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jonathan Brand" title="Jonathan Brand" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Texas Rangers purchased contract of RHP Jonathan Brand in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Caden Vire</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Caden Vire" title="Caden Vire" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox purchased contract of LHP Caden Vire in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 10, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Alvaro Mejias</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Alvaro Mejias" title="Alvaro Mejias" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Tampa Bay Rays purchased contract of RHP Alvaro Mejias in the Rule 5 Draft, AAA Phase.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 9, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Vaughn Grissom</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Vaughn Grissom" title="Vaughn Grissom" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Isaiah Jackson</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Isaiah Jackson" title="Isaiah Jackson" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded 2B Vaughn Grissom to Los Angeles Angels for OF Isaiah Jackson.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 5, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Cooper Criswell</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Cooper Criswell" title="Cooper Criswell" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          New York Mets claimed RHP Cooper Criswell off waivers from Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 4, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Cooper Criswell</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Cooper Criswell" title="Cooper Criswell" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox designated RHP Cooper Criswell for assignment.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">December 4, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Johan Oviedo</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/johan-oviedo.png" alt="Johan Oviedo" class="player-avatar-transaction" title="Johan Oviedo" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tyler Samaniego</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/tyler-samaniego.png" alt="Tyler Samaniego" class="player-avatar-transaction" title="Tyler Samaniego" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Adonys Guzman</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Adonys Guzman" title="Adonys Guzman" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jhostynxon Garcia</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jhostynxon Garcia" title="Jhostynxon Garcia" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Jesus Travieso</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Jesus Travieso" title="Jesus Travieso" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Pittsburgh Pirates traded RHP Johan Oviedo, LHP Tyler Samaniego and C Adonys Guzman to Red Sox for CF Jhostynxon Garcia and RHP Jesus Travieso.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 26, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Vinny Capra</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Vinny Capra" title="Vinny Capra" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent 3B Vinny Capra to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 25, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Sonny Gray</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/sonny-gray.png" alt="Sonny Gray" class="player-avatar-transaction" title="Sonny Gray" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Richard Fitts</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Richard Fitts" title="Richard Fitts" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Brandon Clarke</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Brandon Clarke" title="Brandon Clarke" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          St. Louis Cardinals traded RHP Sonny Gray and cash to Red Sox for RHP Richard Fitts, LHP Brandon Clarke and Player To Be Named Later.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 21, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nathaniel Lowe</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Nathaniel Lowe" title="Nathaniel Lowe" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          1B Nathaniel Lowe elected free agency.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 21, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Josh Winckowski</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Josh Winckowski" title="Josh Winckowski" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          RHP Josh Winckowski elected free agency.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Chris Murphy</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Chris Murphy" title="Chris Murphy" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Ronny Hernandez</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Ronny Hernandez" title="Ronny Hernandez" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded LHP Chris Murphy to Chicago White Sox for C Ronny Hernandez.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Brennan Bernardino</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Brennan Bernardino" title="Brennan Bernardino" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Braiden Ward</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Braiden Ward" title="Braiden Ward" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded LHP Brennan Bernardino to Colorado Rockies for CF Braiden Ward.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Alex Hoppe</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Alex Hoppe" title="Alex Hoppe" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luke Heyman</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luke Heyman" title="Luke Heyman" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox traded RHP Alex Hoppe to Seattle Mariners for C Luke Heyman.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tristan Gray</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tristan Gray" title="Tristan Gray" class="player-avatar-transaction" />
+                
+              </div>
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Guerrero" title="Luis Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Tampa Bay Rays traded 3B Tristan Gray to Red Sox for RHP Luis Guerrero.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Shane Drohan</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Shane Drohan" title="Shane Drohan" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox selected the contract of LHP Shane Drohan from Worcester Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tyler Uberstine</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/tyler-uberstine.png" alt="Tyler Uberstine" class="player-avatar-transaction" title="Tyler Uberstine" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox selected the contract of RHP Tyler Uberstine from Worcester Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">David Sandlin</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="David Sandlin" title="David Sandlin" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox selected the contract of RHP David Sandlin from Worcester Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Nathaniel Lowe</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Nathaniel Lowe" title="Nathaniel Lowe" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox designated 1B Nathaniel Lowe for assignment.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 18, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Josh Winckowski</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Josh Winckowski" title="Josh Winckowski" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox designated RHP Josh Winckowski for assignment.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 17, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Osvaldo Berrios</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Osvaldo Berrios" title="Osvaldo Berrios" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox signed free agent RHP Osvaldo Berrios to a minor league contract.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 13, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Guerrero" title="Luis Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox sent RHP Luis Guerrero outright to Worcester Red Sox.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Patrick Sandoval</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/patrick-sandoval.png" alt="Patrick Sandoval" class="player-avatar-transaction" title="Patrick Sandoval" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated LHP Patrick Sandoval from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Vaughn Grissom</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Vaughn Grissom" title="Vaughn Grissom" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated 2B Vaughn Grissom from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Guerrero" title="Luis Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox designated RHP Luis Guerrero for assignment.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Josh Winckowski</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Josh Winckowski" title="Josh Winckowski" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated RHP Josh Winckowski from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Luis Guerrero</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Luis Guerrero" title="Luis Guerrero" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated RHP Luis Guerrero.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Tanner Houck</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Tanner Houck" title="Tanner Houck" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated RHP Tanner Houck from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Triston Casas</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/triston-casas.png" alt="Triston Casas" class="player-avatar-transaction" title="Triston Casas" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated 1B Triston Casas from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Kutter Crawford</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/kutter-crawford.png" alt="Kutter Crawford" class="player-avatar-transaction" title="Kutter Crawford" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated RHP Kutter Crawford from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Hunter Dobbins</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Hunter Dobbins" title="Hunter Dobbins" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated RHP Hunter Dobbins from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 6, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Marcelo Mayer</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/marcelo-mayer.png" alt="Marcelo Mayer" class="player-avatar-transaction" title="Marcelo Mayer" onerror="this.onerror=null;this.src='https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png';" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          Red Sox activated 3B Marcelo Mayer from the 60-day injured list.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 4, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Lucas Giolito</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Lucas Giolito" title="Lucas Giolito" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          RHP Lucas Giolito elected free agency.
+        </div>
+      </div>
+    
+      <div class="stat-card transaction-card">
+        <div class="transaction-date">November 4, 2025</div>
+
+        
+          <div class="transaction-players-container">
+            
+              <div class="player-profile-transaction">
+                <div class="player-name-transaction">Liam Hendriks</div>
+                
+                
+                  <img src="https://redsoxdata.bot/data/roster/avatars/placeholder-avatar.png" alt="Liam Hendriks" title="Liam Hendriks" class="player-avatar-transaction" />
+                
+              </div>
+            
+          </div>
+        
+
+        <div class="transaction-description">
+          RHP Liam Hendriks elected free agency.
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+
+    <div class="site-footer">
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-info">
+        <h3 class="footer-title">Red Sox Data Bot</h3>
+        <p class="footer-description">
+          A dashboard tracking the Boston Red Sox season with real-time stats, standings and performance analysis.
+        </p>
+        <div class="footer-links">
+          <a href="/about/" class="footer-link">About</a>
+          <a href="https://github.com/sogrady/redsox-bot" class="footer-link">Code</a>
+          <a href="https://github.com/sogrady/redsox-bot/tree/main/data" class="footer-link">Data</a>
+        </div>
+        <div class="footer-stats">
+          <div class="footer-meta">Updated: February 11, 2026 at 7 PM</div>
+          <div class="footer-meta">Sources: MLB/Baseball Savant, Baseball Reference</div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="http://github.com/sogrady/redsox-bot" class="footer-social-link"><i class="fa-brands fa-fw fa-github"></i></a>
+        <a href="https://x.com/RedSoxDataBot" class="footer-social-link"><i class="fa-brands fa-fw fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 <a href="https://github.com/sogrady">Red Sox Bot</a>.</p>
+    </div>
+  </div>
+</div>
+
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+  
+    <script src="/assets/js/mobile-nav.js"></script>
+  
+
+
+  </body>
+</html>
