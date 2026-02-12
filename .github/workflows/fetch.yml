@@ -97,7 +97,9 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site  # The output folder of Jekyll build
-        publish_branch: gh-pages  
+        publish_branch: gh-pages
+        force_orphan: false  # Preserve git history to avoid conflicts
+        allow_empty_commit: false  
 
     - name: Check for changes
       id: changes
