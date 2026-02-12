@@ -19,13 +19,13 @@ series_file = f"{output_dir}/redsox_postseason_series_2025.json"
 
 def fetch_roster_data():
     """Fetch roster data from local file or URL"""
-    local_file = "data/roster/redsox_roster_current.json"
+    local_file = "_data/roster/redsox_roster_current.json"
     if os.path.exists(local_file):
         with open(local_file, 'r') as f:
             return json.load(f)
     else:
         # Fallback to URL
-        s3_key_json = "https://redsox-data/redsox/data/roster/redsox_roster_current.json"
+        s3_key_json = "https://redsox-data.s3.amazonaws.com/redsox/data/roster/redsox_roster_current.json"
         response = requests.get(s3_key_json)
         return response.json()
 
@@ -181,10 +181,10 @@ def fetch_postseason_series():
                                         logging.info(f"Updated series: {series_name} with more recent data")
             
             if redsox_series:
-                logging.info(f"Successfully found {len(redsox_series)} Dodgers series with URL {i+1}")
+                logging.info(f"Successfully found {len(redsox_series)} Red Sox series with URL {i+1}")
                 return redsox_series
             else:
-                logging.warning(f"No Dodgers series found with URL {i+1}")
+                logging.warning(f"No Red Sox series found with URL {i+1}")
                 
         except Exception as e:
             logging.error(f"Error with API URL {i+1}: {e}")

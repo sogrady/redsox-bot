@@ -4,6 +4,11 @@ _site/
 .jekyll-metadata
 vendor
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
 videos/
 processed_videos/
 

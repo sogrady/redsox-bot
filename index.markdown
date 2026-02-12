@@ -32,12 +32,12 @@ twitter:
 
 <div class="postseason-stats-section">
   <h2 class="stat-group postseason-header">Postseason 2025</h2>
-  
+
   <h3 class="visual-subhead">Playoff journey</h3>
   <div class="playoff-journey" id="playoff-journey">
     <!-- Playoff journey will be populated by JavaScript -->
   </div>
-  
+
   <h3 class="visual-subhead">Team hitting</h3>
   <div class="postseason-grid" id="postseason-grid">
     <!-- Postseason stats will be populated by JavaScript -->
