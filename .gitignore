@@ -35,3 +35,4 @@ data/roster/*
 _data/
 !_data/navigation.yml
 !_data/team.yml
+!_data/season_summary_latest.json
