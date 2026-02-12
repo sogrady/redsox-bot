@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://sogrady.github.io/redsox-bot/about/</loc>
+<loc>https://redsox.bot/about/</loc>
 </url>
 <url>
-<loc>https://sogrady.github.io/redsox-bot/</loc>
+<loc>https://redsox.bot/</loc>
 </url>
 <url>
-<loc>https://sogrady.github.io/redsox-bot/roster/</loc>
+<loc>https://redsox.bot/roster/</loc>
 </url>
 <url>
-<loc>https://sogrady.github.io/redsox-bot/transactions/</loc>
+<loc>https://redsox.bot/transactions/</loc>
 </url>
 </urlset>

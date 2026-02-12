@@ -1,1 +1,1 @@
-Sitemap: https://sogrady.github.io/redsox-bot/sitemap.xml
+Sitemap: https://redsox.bot/sitemap.xml
