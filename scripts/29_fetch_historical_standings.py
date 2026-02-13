@@ -335,15 +335,15 @@ def fetch_year_data(year):
         return None
 
 
-def fetch_all_historical_data(start_year=START_YEAR, end_year=CURRENT_YEAR, delay=1.0):
+def fetch_all_historical_data(start_year=START_YEAR, end_year=CURRENT_YEAR, delay=3.0):
     """
     Fetch game-by-game data for all years from start_year to end_year.
-    
+
     Args:
         start_year (int): First year to fetch (default: 1925)
         end_year (int): Last year to fetch (default: current year)
-        delay (float): Delay between requests in seconds (default: 1.0)
-        
+        delay (float): Delay between requests in seconds (default: 3.0)
+
     Returns:
         pandas.DataFrame: Combined data for all years
     """
@@ -467,10 +467,10 @@ def parse_arguments():
         help="Test mode: fetch data for a single year only"
     )
     parser.add_argument(
-        "--delay", 
-        type=float, 
-        default=1.0,
-        help="Delay between requests in seconds (default: 1.0)"
+        "--delay",
+        type=float,
+        default=3.0,
+        help="Delay between requests in seconds (default: 3.0)"
     )
     
     return parser.parse_args()
