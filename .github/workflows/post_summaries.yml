@@ -1,9 +1,9 @@
-name: Post Daily Summaries
+name: Post Daily Summaries to Bluesky
 
 on:
-  # schedule:
+  schedule:
     # Runs every 2 hours during daytime hours PT (converted to UTC)
-#    - cron: '0 15,17,19,21,23 * * *'  # 11 AM, 1 PM, 3 PM, 5 PM, 7 PM ET
+    - cron: '0 15,17,19,21,23 * * *'  # 8 AM, 10 AM, 12 PM, 2 PM, 4 PM PT (during season)
   workflow_dispatch:
     inputs:
       summary_type:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   post_summary:
-    name: Post Daily Summary Updates
+    name: Post Daily Summary Updates to Bluesky
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -36,10 +36,9 @@ jobs:
 
       - name: Run Post Summary Script
         env:
-          TEAM_TWITTER_API_KEY: ${{ secrets.TEAM_TWITTER_API_KEY }}
-          TEAM_TWITTER_API_SECRET: ${{ secrets.TEAM_TWITTER_API_SECRET }}
-          TEAM_TWITTER_TOKEN: ${{ secrets.TEAM_TWITTER_TOKEN }}
-          TEAM_TWITTER_TOKEN_SECRET: ${{ secrets.TEAM_TWITTER_TOKEN_SECRET }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           if [ "${{ github.event.inputs.summary_type }}" = "" ]; then
             python scripts/23_post_daily_summaries.py --type auto

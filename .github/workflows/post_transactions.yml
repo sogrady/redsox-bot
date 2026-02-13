@@ -1,9 +1,9 @@
-name: Post Transaction Updates
+name: Post Transaction Updates to Bluesky
 
 on:
-  # schedule:
+  schedule:
     # Runs every 2 hours during daytime hours PT (converted to UTC)
-#    - cron: '0 14,16,18,20,22,0,2 * * *'  # 10 AM, 12 PM, 2 PM, 4 PM, 6 PM, 8 PM, 10 PM ET
+    - cron: '0 14,16,18,20,22,0,2 * * *'  # 7 AM, 9 AM, 11 AM, 1 PM, 3 PM, 5 PM, 7 PM PT (during season)
   workflow_dispatch:
     inputs:
       force:
@@ -38,15 +38,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run transaction fetch and tweet
+      - name: Run transaction fetch and post to Bluesky
         env:
-          TEAM_TWITTER_API_KEY: ${{ secrets.TEAM_TWITTER_API_KEY }}
-          TEAM_TWITTER_API_SECRET: ${{ secrets.TEAM_TWITTER_API_SECRET }}
-          TEAM_TWITTER_TOKEN: ${{ secrets.TEAM_TWITTER_TOKEN }}
-          TEAM_TWITTER_TOKEN_SECRET: ${{ secrets.TEAM_TWITTER_TOKEN_SECRET }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            python scripts/26_post_transactions.py --post-tweet --force
+            python scripts/26_post_transactions.py --post --force
           else
-            python scripts/26_post_transactions.py --post-tweet
-          fi 
+            python scripts/26_post_transactions.py --post
+          fi

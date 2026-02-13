@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-Fetches daily team summary data and posts updates to Twitter.
+Fetches daily team summary data and posts updates to Bluesky.
 """
 
 import os
@@ -12,7 +12,7 @@ import argparse
 import logging
 from datetime import datetime
 import requests
-import tweepy
+from atproto import Client
 import boto3
 from botocore.exceptions import ClientError
 from zoneinfo import ZoneInfo
@@ -37,66 +37,60 @@ else:
 
 s3_resource = session.resource("s3")
 
-# --- Twitter & S3 Functions ---
-def get_last_tweet_date(tweet_type):
-    """Reads the last tweet date for a given type from S3."""
-    s3_key = f"redsox/data/tweets/last_tweet_date_{tweet_type}.txt"
+# --- Bluesky & S3 Functions ---
+def get_last_post_date(post_type):
+    """Reads the last post date for a given type from S3."""
+    s3_key = f"redsox/data/bluesky/last_post_date_{post_type}.txt"
     try:
         obj = s3_resource.Object(s3_bucket_name, s3_key)
         last_date_str = obj.get()['Body'].read().decode('utf-8').strip()
-        logging.info(f"Last tweet date for '{tweet_type}' found in S3: {last_date_str}")
+        logging.info(f"Last post date for '{post_type}' found in S3: {last_date_str}")
         return last_date_str
     except ClientError as e:
         if e.response['Error']['Code'] == 'NoSuchKey':
             logging.info(f"{s3_key} not found. This is expected for the first run of the day.")
             return None
         else:
-            logging.error(f"An unexpected S3 error occurred in get_last_tweet_date: {e}")
+            logging.error(f"An unexpected S3 error occurred in get_last_post_date: {e}")
             raise
 
-def set_last_tweet_date(date_str, tweet_type):
-    """Writes the last tweet date for a given type to S3."""
-    s3_key = f"redsox/data/tweets/last_tweet_date_{tweet_type}.txt"
+def set_last_post_date(date_str, post_type):
+    """Writes the last post date for a given type to S3."""
+    s3_key = f"redsox/data/bluesky/last_post_date_{post_type}.txt"
     try:
         obj = s3_resource.Object(s3_bucket_name, s3_key)
         obj.put(Body=date_str)
-        logging.info(f"Successfully updated last tweet date in S3 for '{tweet_type}' to: {date_str}")
+        logging.info(f"Successfully updated last post date in S3 for '{post_type}' to: {date_str}")
     except Exception as e:
-        logging.error(f"Failed to write last tweet date to S3: {e}")
+        logging.error(f"Failed to write last post date to S3: {e}")
 
-def post_tweet(tweet_text, tweet_type):
-    """Posts a tweet and updates the last tweet date on success."""
-    TEAM_TWITTER_API_KEY = os.environ.get("TEAM_TWITTER_API_KEY")
-    TEAM_TWITTER_API_SECRET = os.environ.get("TEAM_TWITTER_API_SECRET")
-    TEAM_TWITTER_TOKEN = os.environ.get("TEAM_TWITTER_TOKEN")
-    TEAM_TWITTER_TOKEN_SECRET = os.environ.get("TEAM_TWITTER_TOKEN_SECRET")
+def post_to_bluesky(post_text, post_type):
+    """Posts to Bluesky and updates the last post date on success."""
+    BLUESKY_HANDLE = os.environ.get("BLUESKY_HANDLE")
+    BLUESKY_APP_PASSWORD = os.environ.get("BLUESKY_APP_PASSWORD")
 
-    if not all([TEAM_TWITTER_API_KEY, TEAM_TWITTER_API_SECRET, TEAM_TWITTER_TOKEN, TEAM_TWITTER_TOKEN_SECRET]):
-        logging.error("Twitter API credentials are not fully set. Cannot post tweet.")
+    if not all([BLUESKY_HANDLE, BLUESKY_APP_PASSWORD]):
+        logging.error("Bluesky credentials are not fully set. Cannot post.")
         return
 
     try:
-        client = tweepy.Client(
-            consumer_key=TEAM_TWITTER_API_KEY,
-            consumer_secret=TEAM_TWITTER_API_SECRET,
-            access_token=TEAM_TWITTER_TOKEN,
-            access_token_secret=TEAM_TWITTER_TOKEN_SECRET
-        )
-        response = client.create_tweet(text=tweet_text)
-        logging.info(f"Tweet posted successfully: {response.data['id']}")
-        # Use timezone-aware date for setting last tweet
+        client = Client()
+        client.login(BLUESKY_HANDLE, BLUESKY_APP_PASSWORD)
+        response = client.send_post(text=post_text)
+        logging.info(f"Post published successfully to Bluesky: {response.uri}")
+        # Use timezone-aware date for setting last post
         team_tz = ZoneInfo(config.TEAM_TIMEZONE)
         today_str = datetime.now(team_tz).strftime('%Y-%m-%d')
-        set_last_tweet_date(today_str, tweet_type)
+        set_last_post_date(today_str, post_type)
     except Exception as e:
-        logging.error(f"Failed to post tweet: {e}")
+        logging.error(f"Failed to post to Bluesky: {e}")
 
 # --- Main Logic ---
 def determine_summary_type():
     """Determines which type of summary to post based on current time in Team Timezone."""
     team_tz = ZoneInfo(config.TEAM_TIMEZONE)
     current_hour = datetime.now(team_tz).hour
-    
+
     if 8 <= current_hour < 11:
         return 'summary'
     elif 11 <= current_hour < 14:
@@ -106,20 +100,20 @@ def determine_summary_type():
     else:
         # Outside prime hours, check what hasn't been posted today
         today_str = datetime.now(team_tz).strftime('%Y-%m-%d')
-        
+
         # Check in order of priority: summary, batting, pitching
-        for tweet_type in ['summary', 'batting', 'pitching']:
-            last_tweet_date = get_last_tweet_date(tweet_type)
-            if last_tweet_date != today_str:
-                logging.info(f"Outside prime hours, posting {tweet_type} (not yet posted today)")
-                return tweet_type
-        
+        for post_type in ['summary', 'batting', 'pitching']:
+            last_post_date = get_last_post_date(post_type)
+            if last_post_date != today_str:
+                logging.info(f"Outside prime hours, posting {post_type} (not yet posted today)")
+                return post_type
+
         # All have been posted today
         logging.info("All summary types have been posted today")
         return None
 
 def main():
-    parser = argparse.ArgumentParser(description="Post daily Red Sox summary updates to Twitter.")
+    parser = argparse.ArgumentParser(description="Post daily Red Sox summary updates to Bluesky.")
     parser.add_argument("--type", type=str, required=True, choices=['auto', 'summary', 'batting', 'pitching'], help="The type of update to post. Use 'auto' to determine based on time.")
     args = parser.parse_args()
 
@@ -137,16 +131,16 @@ def main():
     else:
         summary_type = args.type
 
-    # Check if we've already tweeted this type of update today
-    last_tweet_date = get_last_tweet_date(summary_type)
-    if last_tweet_date == today_str:
+    # Check if we've already posted this type of update today
+    last_post_date = get_last_post_date(summary_type)
+    if last_post_date == today_str:
         logging.info(f"An update of type '{summary_type}' has already been posted today. Skipping.")
         return
 
     logging.info(f"Proceeding to post summary of type: {summary_type}")
 
     # Fetch data
-    url = "https://redsox-data/redsox/data/standings/season_summary_latest.json"
+    url = "https://redsox-data.s3.amazonaws.com/redsox/data/standings/season_summary_latest.json"
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -157,12 +151,12 @@ def main():
 
     # Process data into a dictionary for easy access
     stats = {item['stat']: item for item in data}
-    tweet_text = ""
+    post_text = ""
 
-    # Format tweet based on type
+    # Format post based on type
     if summary_type == 'summary':
         summary_html = stats.get('summary', {}).get('value', 'No summary available.')
-        
+
         # Extract date from summary to ensure we're not posting about a future game
         date_match = re.search(r"\((\w+\s\d+)\)", summary_html)
         if date_match:
@@ -170,13 +164,13 @@ def main():
             # Get current year since it's not in the string
             current_year = today_date.year
             game_date = datetime.strptime(f"{game_date_str} {current_year}", "%B %d %Y").date()
-            
+
             if game_date != today_date:
-                logging.info(f"Game date ({game_date}) is not today. Halting tweet.")
+                logging.info(f"Game date ({game_date}) is not today. Halting post.")
                 return
 
         summary_text = re.sub('<[^<]+?>', '', summary_html).replace('\\/','/')
-        tweet_text = f"⚾️ {config.TEAM_NAME_SIMPLE} daily summary ⚾️\n\n{summary_text}"
+        post_text = f"⚾️ {config.TEAM_NAME_SIMPLE} daily summary ⚾️\n\n{summary_text}"
 
     elif summary_type == 'batting':
         ba = stats.get('batting_average', {}).get('value', 'N/A')
@@ -187,13 +181,13 @@ def main():
         sb = stats.get('stolen_bases', {})
         sb_val = sb.get('value', 'N/A')
         sb_rank = sb.get('context_value', 'N/A')
-        tweet_text = (
-            f" {config.TEAM_NAME_SIMPLE} batting report ⚾️\n\n"
+        post_text = (
+            f"⚾️ {config.TEAM_NAME_SIMPLE} batting report ⚾️\n\n"
             f"• BA: {ba}\n"
             f"• OBP: {obp}\n"
             f"• Home Runs: {hr_val} ({hr_rank} in MLB)\n"
             f"• Stolen Bases: {sb_val} ({sb_rank} in MLB)\n\n"
-            f"More: https://RedSoxData.bot"
+            f"More: https://redsox.bot"
         )
 
     elif summary_type == 'pitching':
@@ -206,19 +200,19 @@ def main():
         walks = stats.get('walks', {})
         walks_val = walks.get('value', 'N/A')
         walks_rank = walks.get('context_value', 'N/A')
-        tweet_text = (
-            f" {config.TEAM_NAME_SIMPLE} pitching report ⚾️\n\n"
+        post_text = (
+            f"⚾️ {config.TEAM_NAME_SIMPLE} pitching report ⚾️\n\n"
             f"• ERA: {era_val} ({era_rank} in MLB)\n"
             f"• Strikeouts: {so_val} ({so_rank} in MLB)\n"
             f"• Walks: {walks_val} ({walks_rank} in MLB)\n\n"
-            f"More: https://RedSoxData.bot"
+            f"More: https://redsox.bot"
         )
 
-    if tweet_text:
-        logging.info(f"Generated tweet for type '{summary_type}':\n{tweet_text}")
-        post_tweet(tweet_text, summary_type)
+    if post_text:
+        logging.info(f"Generated post for type '{summary_type}':\n{post_text}")
+        post_to_bluesky(post_text, summary_type)
     else:
-        logging.error("Failed to generate tweet text.")
+        logging.error("Failed to generate post text.")
 
 if __name__ == "__main__":
-    main() 
+    main()
