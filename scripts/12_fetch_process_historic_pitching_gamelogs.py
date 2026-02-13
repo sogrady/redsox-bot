@@ -53,7 +53,7 @@ data_dir = os.path.join(base_dir, 'data', 'pitching')
 
 profile_name = os.environ.get("AWS_PERSONAL_PROFILE")
 today = datetime.date.today()
-year = pd.to_datetime("now").strftime("%Y")
+year = int(pd.to_datetime("now").strftime("%Y"))
 
 
 # Headers to mimic a browser request
@@ -68,11 +68,17 @@ headers = {
 # archive_df = pd.read_parquet(archive_url)
 
 
-# Fetch Current game logs
-# Fetch Current game logs
+# Fetch Current game logs - try current year first, fall back to previous year if off-season
 current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=p&year={year}"
-# Use index [0] for the main table and assign year
-current_src = pd.read_html(current_url)[0].assign(year=year)
+try:
+    # Use index [0] for the main table and assign year
+    current_src = pd.read_html(current_url)[0].assign(year=year)
+except (ValueError, IndexError) as e:
+    # No data for current year yet (off-season), use previous year
+    logging.warning(f"No data available for {year}, falling back to {year-1}")
+    year = year - 1
+    current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=p&year={year}"
+    current_src = pd.read_html(current_url)[0].assign(year=year)
 # Drop the top level of the MultiIndex columns
 current_src.columns = current_src.columns.droplevel(0)
 # Lowercase column names
@@ -115,11 +121,11 @@ MERGE
 """
 
 # Normalize dtypes before merge to avoid mixed object types in Parquet
-archive_df = archive_df.copy()
-try:
-    archive_df['year'] = archive_df['year'].astype(int)
-except Exception:
-    archive_df['year'] = pd.to_numeric(archive_df['year'], errors='coerce').fillna(0).astype(int)
+# archive_df = archive_df.copy()
+# try:
+#     archive_df['year'] = archive_df['year'].astype(int)
+# except Exception:
+#     archive_df['year'] = pd.to_numeric(archive_df['year'], errors='coerce').fillna(0).astype(int)
 
 current_df['year'] = pd.to_numeric(current_df['year'], errors='coerce').fillna(0).astype(int)
 current_df['gtm'] = pd.to_numeric(current_df['gtm'], errors='coerce').fillna(0).astype(int)

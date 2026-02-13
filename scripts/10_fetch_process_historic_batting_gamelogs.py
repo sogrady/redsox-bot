@@ -57,9 +57,16 @@ headers = {
 # archive_url = "https://redsox-data/dodgers/data/batting/archive/dodgers_team_cumulative_batting_logs_1958_2024.parquet"
 # archive_df = pd.read_parquet(archive_url)
 
-# Fetch Current game logs
+# Fetch Current game logs - try current year first, fall back to previous year if off-season
 current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=b&year={year}"
-current_df = pd.read_html(current_url)[0].assign(year=year)
+try:
+    current_df = pd.read_html(current_url)[0].assign(year=year)
+except (ValueError, IndexError) as e:
+    # No data for current year yet (off-season), use previous year
+    logging.warning(f"No data available for {year}, falling back to {year-1}")
+    year = year - 1
+    current_url = f"https://www.baseball-reference.com/teams/tgl.cgi?team={config.TEAM_ID_BBREF}&t=b&year={year}"
+    current_df = pd.read_html(current_url)[0].assign(year=year)
 # Drop the top level of the MultiIndex columns
 current_df.columns = current_df.columns.droplevel(0)
 # Restore column lowercasing
