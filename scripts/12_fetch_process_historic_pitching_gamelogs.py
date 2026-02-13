@@ -176,8 +176,8 @@ def save_to_s3(df, base_path, s3_bucket, formats):
             logging.error(f"Failed to upload {fmt} to S3: {e}")
 
 # Saving files locally and to S3
-file_path = os.path.join(data_dir, 'redsox_historic_pitching_gamelogs_1958-present')
+file_path = os.path.join(data_dir, 'redsox_historic_pitching_gamelogs_1901-present')
 formats = ["csv", "json", "parquet"]
 # save_dataframe(optimized_df, file_path, formats)
-save_to_s3(optimized_df, "redsox/data/pitching/redsox_historic_pitching_gamelogs_1958-present", "redsox-data", formats)
+save_to_s3(optimized_df, "redsox/data/pitching/redsox_historic_pitching_gamelogs_1901-present", "redsox-data", formats)
 
