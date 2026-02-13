@@ -41,7 +41,7 @@ jobs:
     - name: Create necessary directories
       run: |
         mkdir -p data/pitching
-        mkdir -p data/batting
+        mkdir -p data/batting/archive
         mkdir -p data/pitches
         mkdir -p data/postseason
 

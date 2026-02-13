@@ -178,6 +178,22 @@ def save_to_s3(df, base_path, s3_bucket, formats):
 # Saving files locally and to S3
 file_path = os.path.join(data_dir, 'redsox_historic_pitching_gamelogs_1901-present')
 formats = ["csv", "json", "parquet"]
-# save_dataframe(optimized_df, file_path, formats)
+
+# First define save_dataframe function if it doesn't exist
+def save_dataframe(df, path_without_extension, formats):
+    for file_format in formats:
+        try:
+            full_path = f"{path_without_extension}.{file_format}"
+            if file_format == "csv":
+                df.to_csv(full_path, index=False)
+            elif file_format == "json":
+                df.to_json(full_path, indent=4, orient="records", lines=False)
+            elif file_format == "parquet":
+                df.to_parquet(full_path, index=False)
+            logging.info(f"Saved {file_format} format to {full_path}")
+        except Exception as e:
+            logging.error(f"Failed to save {file_format}: {e}")
+
+save_dataframe(optimized_df, file_path, formats)
 save_to_s3(optimized_df, "redsox/data/pitching/redsox_historic_pitching_gamelogs_1901-present", "redsox-data", formats)
 
