@@ -157,17 +157,26 @@ def main():
     if summary_type == 'summary':
         summary_html = stats.get('summary', {}).get('value', 'No summary available.')
 
-        # Extract date from summary to ensure we're not posting about a future game
+        # Extract date from summary to ensure we're not posting about a future/off-season game
         date_match = re.search(r"\((\w+\s\d+)\)", summary_html)
         if date_match:
             game_date_str = date_match.group(1)
+            # Check if this is a month+year (off-season) or month+day (game day)
+            # If it's 4 digits, it's a year (e.g., "February 2026"), skip posting
+            if re.search(r'\d{4}', game_date_str):
+                logging.info(f"Off-season summary detected ({game_date_str}). Skipping post.")
+                return
+
             # Get current year since it's not in the string
             current_year = today_date.year
-            game_date = datetime.strptime(f"{game_date_str} {current_year}", "%B %d %Y").date()
-
-            if game_date != today_date:
-                logging.info(f"Game date ({game_date}) is not today. Halting post.")
-                return
+            try:
+                game_date = datetime.strptime(f"{game_date_str} {current_year}", "%B %d %Y").date()
+                if game_date != today_date:
+                    logging.info(f"Game date ({game_date}) is not today. Halting post.")
+                    return
+            except ValueError:
+                logging.warning(f"Could not parse date from summary: {game_date_str}. Skipping date check.")
+                # Continue anyway - might be a valid off-season or special summary
 
         summary_text = re.sub('<[^<]+?>', '', summary_html).replace('\\/','/')
         post_text = f"⚾️ {config.TEAM_NAME_SIMPLE} daily summary ⚾️\n\n{summary_text}"
