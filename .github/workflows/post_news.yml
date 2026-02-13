@@ -1,9 +1,9 @@
-name: Post News Roundup
+name: Post News Roundup to Bluesky
 
 on:
-  # schedule:
-  #   # Runs every 3 hours during daytime hours PT (converted to UTC)
-  #   - cron: '0 15,18,21,0 * * *'  # 11 AM, 2 PM, 5 PM, 8 PM ET
+  schedule:
+    # Runs every 3 hours during daytime hours PT (converted to UTC)
+    - cron: '0 15,18,21,0 * * *'  # 8 AM, 11 AM, 2 PM, 5 PM PT (during season)
   workflow_dispatch:
     inputs:
       force:
@@ -38,15 +38,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run news fetch and tweet
+      - name: Run news fetch and post to Bluesky
         env:
-          TEAM_TWITTER_API_KEY: ${{ secrets.TEAM_TWITTER_API_KEY }}
-          TEAM_TWITTER_API_SECRET: ${{ secrets.TEAM_TWITTER_API_SECRET }}
-          TEAM_TWITTER_TOKEN: ${{ secrets.TEAM_TWITTER_TOKEN }}
-          TEAM_TWITTER_TOKEN_SECRET: ${{ secrets.TEAM_TWITTER_TOKEN_SECRET }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            python scripts/24_fetch_news.py --post-tweet --force
+            python scripts/24_fetch_news.py --post --force
           else
-            python scripts/24_fetch_news.py --post-tweet
-          fi 
+            python scripts/24_fetch_news.py --post
+          fi

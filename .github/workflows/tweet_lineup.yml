@@ -1,16 +1,16 @@
-name: Tweet Lineup
+name: Post Lineup to Bluesky
 
 on:
-  # schedule:
-    # Runs hourly, but the job will only proceed between 10am and 6pm PT.
-#    - cron: '0 17-23,0-2 * * *'
+  schedule:
+    # Runs hourly, but the job will only proceed between 8am and 6pm ET.
+    - cron: '0 12-23 * * *'  # Every hour from 5 AM to 4 PM PT (during season)
   workflow_dispatch:
 
 jobs:
-  tweet_lineup:
+  post_lineup:
     runs-on: ubuntu-latest
     steps:
-    - name: Check Time in Los Angeles
+    - name: Check Time in Team Timezone
       id: time_check
       run: |
         if [[ $(TZ="America/New_York" date +'%H') -ge 8 && $(TZ="America/New_York" date +'%H') -lt 18 ]]; then
@@ -21,18 +21,18 @@ jobs:
           echo "proceed=false" >> $GITHUB_OUTPUT
         fi
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       if: steps.time_check.outputs.proceed == 'true'
 
     - name: Set up Python
       if: steps.time_check.outputs.proceed == 'true'
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
 
     - name: Set up AWS Credentials
       if: steps.time_check.outputs.proceed == 'true'
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -44,11 +44,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run lineup check and tweet
+    - name: Fetch lineup and post to Bluesky
       if: steps.time_check.outputs.proceed == 'true'
       env:
-          TEAM_TWITTER_API_KEY: ${{ secrets.TEAM_TWITTER_API_KEY }}
-          TEAM_TWITTER_API_SECRET: ${{ secrets.TEAM_TWITTER_API_SECRET }}
-          TEAM_TWITTER_TOKEN: ${{ secrets.TEAM_TWITTER_TOKEN }}
-          TEAM_TWITTER_TOKEN_SECRET: ${{ secrets.TEAM_TWITTER_TOKEN_SECRET }}
-      run: python scripts/17_fetch_lineup.py --post-tweet 
+        BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+        BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        PYTHONPATH: ${{ github.workspace }}
+      run: python scripts/17_fetch_lineup.py --post

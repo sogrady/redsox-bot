@@ -16,7 +16,7 @@ import logging
 from datetime import datetime, date
 import re
 import argparse
-import tweepy
+from atproto import Client
 from botocore.exceptions import ClientError
 from zoneinfo import ZoneInfo
 from scripts import config
@@ -43,30 +43,30 @@ else:
 
 s3_resource = session.resource("s3")
 
-def get_last_tweet_date():
-    """Reads the last tweet date from S3."""
+def get_last_post_date():
+    """Reads the last post date from S3."""
     try:
-        obj = s3_resource.Object(s3_bucket_name, "redsox/data/lineups/last_tweet_date.txt")
+        obj = s3_resource.Object(s3_bucket_name, "redsox/data/bluesky/last_lineup_post_date.txt")
         last_date_str = obj.get()['Body'].read().decode('utf-8').strip()
-        logging.info(f"Last tweet date found in S3: {last_date_str}")
+        logging.info(f"Last post date found in S3: {last_date_str}")
         return last_date_str
     except ClientError as e:
         if e.response['Error']['Code'] == 'NoSuchKey':
-            logging.info("last_tweet_date.txt not found. This is expected for the first run of the day.")
+            logging.info("last_lineup_post_date.txt not found. This is expected for the first run of the day.")
             return None
         else:
             # For other S3-related errors, we should know about them.
-            logging.error(f"An unexpected S3 error occurred in get_last_tweet_date: {e}")
+            logging.error(f"An unexpected S3 error occurred in get_last_post_date: {e}")
             raise
 
-def set_last_tweet_date(date_str):
-    """Writes the last tweet date to S3."""
+def set_last_post_date(date_str):
+    """Writes the last post date to S3."""
     try:
-        obj = s3_resource.Object(s3_bucket_name, "redsox/data/lineups/last_tweet_date.txt")
+        obj = s3_resource.Object(s3_bucket_name, "redsox/data/bluesky/last_lineup_post_date.txt")
         obj.put(Body=date_str)
-        logging.info(f"Successfully updated last tweet date in S3 to: {date_str}")
+        logging.info(f"Successfully updated last post date in S3 to: {date_str}")
     except Exception as e:
-        logging.error(f"Failed to write last tweet date to S3: {e}")
+        logging.error(f"Failed to write last post date to S3: {e}")
 
 def get_player_details(player_element_text):
     """
@@ -286,31 +286,25 @@ def save_to_s3(df, base_s3_path, formats=["csv", "json"]):
         except Exception as e:
             logging.error(f"Failed to upload {fmt} to S3 for {base_s3_path}: {e}")
 
-def post_tweet(tweet_text, current_date_str):
+def post_to_bluesky(post_text, current_date_str):
     """
-    Posts a tweet to the authenticated Twitter account.
+    Posts to the authenticated Bluesky account.
     """
-    TEAM_TWITTER_API_KEY = os.environ.get("TEAM_TWITTER_API_KEY")
-    TEAM_TWITTER_API_SECRET = os.environ.get("TEAM_TWITTER_API_SECRET")
-    TEAM_TWITTER_TOKEN = os.environ.get("TEAM_TWITTER_TOKEN")
-    TEAM_TWITTER_TOKEN_SECRET = os.environ.get("TEAM_TWITTER_TOKEN_SECRET")
+    BLUESKY_HANDLE = os.environ.get("BLUESKY_HANDLE")
+    BLUESKY_APP_PASSWORD = os.environ.get("BLUESKY_APP_PASSWORD")
 
-    if not all([TEAM_TWITTER_API_KEY, TEAM_TWITTER_API_SECRET, TEAM_TWITTER_TOKEN, TEAM_TWITTER_TOKEN_SECRET]):
-        logging.error("Twitter API credentials are not fully set in environment variables. Cannot post tweet.")
+    if not all([BLUESKY_HANDLE, BLUESKY_APP_PASSWORD]):
+        logging.error("Bluesky credentials are not fully set in environment variables. Cannot post.")
         return
 
     try:
-        client = tweepy.Client(
-            consumer_key=TEAM_TWITTER_API_KEY,
-            consumer_secret=TEAM_TWITTER_API_SECRET,
-            access_token=TEAM_TWITTER_TOKEN,
-            access_token_secret=TEAM_TWITTER_TOKEN_SECRET
-        )
-        response = client.create_tweet(text=tweet_text)
-        logging.info(f"Tweet posted successfully: {response.data['id']}")
-        set_last_tweet_date(current_date_str)
+        client = Client()
+        client.login(BLUESKY_HANDLE, BLUESKY_APP_PASSWORD)
+        response = client.send_post(text=post_text)
+        logging.info(f"Post published successfully to Bluesky: {response.uri}")
+        set_last_post_date(current_date_str)
     except Exception as e:
-        logging.error(f"Failed to post tweet: {e}")
+        logging.error(f"Failed to post to Bluesky: {e}")
 
 def fetch_schedule_data(target_date_iso: str):
     """
@@ -357,9 +351,9 @@ def fetch_schedule_data(target_date_iso: str):
         return None
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch Red Sox lineup and optionally post pitching matchup to Twitter.")
-    parser.add_argument("--post-tweet", action="store_true", help="Post the pitching matchup to Twitter if available.")
-    parser.add_argument("--force", action="store_true", help="Post even if today's tweet was already recorded.")
+    parser = argparse.ArgumentParser(description="Fetch Red Sox lineup and optionally post pitching matchup to Bluesky.")
+    parser.add_argument("--post", action="store_true", help="Post the pitching matchup to Bluesky if available.")
+    parser.add_argument("--force", action="store_true", help="Post even if today's post was already recorded.")
     args = parser.parse_args()
 
     # Get current date in Team timezone to handle UTC on server
@@ -421,7 +415,7 @@ def main():
         # Upload to S3
         save_to_s3(lineup_df, s3_base_path, formats=["csv", "json"])
 
-        # Twitter logic
+        # Bluesky posting logic
         pitchers_df = lineup_df[lineup_df['role'] == 'Pitcher'].copy()
         if len(pitchers_df) == 2:
             team_pitcher = pitchers_df[pitchers_df['team_tricode'] == config.TEAM_ABBR]
@@ -443,24 +437,24 @@ def main():
                 # Add game start time if available
                 if next_game and next_game.get('game_start'):
                     line3 = f"First pitch: {next_game['game_start']} (Local)."
-                    line4 = f"More: https://RedSoxData.bot"
+                    line4 = f"More: https://redsox.bot"
                     tweet_text = f"{line1}\n\n{line2}\n\n{line3}"
                 else:
-                    line3 = f"More: https://RedSoxData.bot"
+                    line3 = f"More: https://redsox.bot"
                     tweet_text = f"{line1}\n\n{line2}"
 
-                logging.info("Generated tweet text:")
+                logging.info("Generated post text:")
                 print(tweet_text)
 
-                if args.post_tweet:
-                    last_tweet_date = get_last_tweet_date()
-                    if last_tweet_date == current_date_str and not args.force:
-                        logging.info(f"Already tweeted for {current_date_str}. Skipping (use --force to override).")
+                if args.post:
+                    last_post_date = get_last_post_date()
+                    if last_post_date == current_date_str and not args.force:
+                        logging.info(f"Already posted for {current_date_str}. Skipping (use --force to override).")
                     else:
-                        logging.info("Attempting to post tweet...")
-                        post_tweet(tweet_text, current_date_str)
+                        logging.info("Attempting to post to Bluesky...")
+                        post_to_bluesky(tweet_text, current_date_str)
                 else:
-                    logging.info("Dry run: --post-tweet flag not provided. Not posting to Twitter.")
+                    logging.info("Dry run: --post flag not provided. Not posting to Bluesky.")
             else:
                 logging.warning("Could not identify both Red Sox and opponent pitcher.")
         else:
