@@ -30,8 +30,8 @@ baseurl: ""
 url: "https://redsox.bot"
 
 # SEO and social settings
-logo: "/assets/images/meta_card.png"
-og_image: "/assets/images/meta_card.png"
+logo: ""
+og_image: ""
 twitter_username: sogrady
 github_username:  sogrady
 
