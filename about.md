@@ -16,7 +16,7 @@ twitter:
     <div class="text-container">
         <h2 class="about-subhead">What's going on here?</h2>
 
-        <p>Red Sox Data Bot is a Red Sox version of [Dodgers Data Bot](https://dodgersdata.bot/), built by [Matt Stiles](https://mattstiles.me/). His site is an auto-updating dashboard that tracks how the Los Angeles are doing — today and in the context of franchise history - this one does the same thing, but for the Boston Red Sox instead.</p>
+        <p>Red Sox Data Bot is a Red Sox version of <a href="https://dodgersdata.bot/">Dodgers Data Bot</a>, built by <a href="https://mattstiles.me/">Matt Stiles</a>. His site is an auto-updating dashboard that tracks how the Los Angeles Dodgers are doing — today and in the context of franchise history - this one does the same thing, but for the Boston Red Sox instead.</p>
 
         <p>Every day during the season, the bot pulls fresh stats from <a href="https://baseballsavant.mlb.com/">Baseball Savant</a> and <a href="https://www.baseball-reference.com/">Baseball Reference</a> — standings, batting averages, and more — then turns them into clean, readable charts and tables that capture the story of the season.</p>
 
@@ -24,7 +24,7 @@ twitter:
 
         <h2 class="about-subhead">Why it exists</h2>
 
-        <p>As mentioned above, Matt Stiles created the original dashboard and was kind enough to release [the code](https://github.com/stiles/dodgers) under an open source license. As someone who likes the Red Sox like he likes the Dodgers, I've wanted an equivalent for a while. In my day job as an analyst, then, my standard project for evaluating new code assist tools was the Dodgers Data Bot. They all had pluses and minuses, but it was ultimately Claude Code that got me over the hump and brought the Red Sox Data Bot to life.  
+        <p>As mentioned above, Matt Stiles created the original dashboard and was kind enough to release <a href="https://github.com/stiles/dodgers">the code</a> under an open source license. As someone who likes the Red Sox like he likes the Dodgers, I've wanted an equivalent for a while. In my day job as an analyst, then, my standard project for evaluating new code assist tools was the Dodgers Data Bot. They all had pluses and minuses, but it was ultimately Claude Code that got me over the hump and brought the Red Sox Data Bot to life.</p>  
         
         <h2 class="about-subhead">Thanks</h2>
 
