@@ -959,4 +959,4 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json"]):
         s3_resource.Bucket(s3_bucket).put_object(Key=file_path, Body=buffer, ContentType=content_type)
         logging.info(f"Uploaded {fmt} to {s3_bucket}/{file_path}")
 
-save_to_s3(summary_df, "dodgers/data/standings/season_summary_latest", "redsox-data")
+save_to_s3(summary_df, "redsox/data/standings/season_summary_latest", "redsox-data")
