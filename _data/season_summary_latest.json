@@ -2,42 +2,42 @@
     {
         "stat_label":"Wins",
         "stat":"wins",
-        "value":93,
+        "value":89,
         "category":"standings",
-        "context_value":98,
-        "context_value_label":"This point last season"
+        "context_value":"2025",
+        "context_value_label":"Final season record"
     },
     {
         "stat_label":"Losses",
         "stat":"losses",
-        "value":69,
+        "value":73,
         "category":"standings",
-        "context_value":64,
-        "context_value_label":"This point last season"
+        "context_value":"2025",
+        "context_value_label":"Final season record"
     },
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"93-69",
+        "value":"89-73",
         "category":"standings",
-        "context_value":"98-64",
-        "context_value_label":"This point last season"
+        "context_value":"Wild Card",
+        "context_value_label":"Made playoffs"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"56%",
+        "value":"55%",
         "category":"standings",
-        "context_value":"60%",
-        "context_value_label":"This point last season"
+        "context_value":"3rd in AL East",
+        "context_value_label":"Division finish"
     },
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":3,
+        "value":"-6",
         "category":"standings",
-        "context_value":"1st",
-        "context_value_label":"Division rank"
+        "context_value":"3rd",
+        "context_value_label":"Division finish"
     },
     {
         "stat_label":"Avg. home attendance",
