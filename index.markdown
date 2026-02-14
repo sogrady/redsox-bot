@@ -88,10 +88,9 @@ twitter:
 {% comment %} Try to load current year's data using the dynamic filename key {% endcomment %}
 {% assign standings_data = site.data.standings[dynamic_filename_key] %}
 
-{% comment %} Fallback to 2024 data if current year's data is not found.
-    This also covers the case where the dynamic key was for 2024 but didn't load. {% endcomment %}
+{% comment %} Fallback to 2025 data if current year's data is not found (off-season handling). {% endcomment %}
 {% if standings_data == nil %}
-  {% assign standings_data = site.data.standings.all_teams_standings_metrics_2024 %}
+  {% assign standings_data = site.data.standings.all_teams_standings_metrics_2025 %}
 {% endif %}
 
 {% comment %} If all potential data sources are nil, default to an empty array to prevent errors. {% endcomment %}
