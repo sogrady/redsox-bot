@@ -667,7 +667,6 @@ document.addEventListener('DOMContentLoaded', function() {
           .style('stroke', '#ccc')
           .style('stroke-width', 0.5);
 
-        const currentYear = getEffectiveCurrentYear(data);
         const lineCurrentYear = Array.from(data.entries()).filter((d) => d[0] === currentYear);
         if (lineCurrentYear.length > 0) {
           svg
@@ -845,7 +844,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .style('stroke', '#ccc')
       .style('stroke-width', 0.5);
 
-    const currentYear = getEffectiveCurrentYear(data);
     const lineCurrentYear = Array.from(data.entries()).filter((d) => d[0] === currentYear);
     if (lineCurrentYear.length > 0) {
       svg
@@ -1015,7 +1013,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .style('stroke', '#ccc')
       .style('stroke-width', 0.5);
 
-    const currentYear = getEffectiveCurrentYear(data);
     const lineCurrentYear = data.get(currentYear);
 
     if (lineCurrentYear) {
