@@ -265,8 +265,8 @@ python scripts/update_season_year.py --old-year 2025 --new-year 2026
 ```
 
 **What it updates:**
-- ✓ Postseason section headers (2025 → 2026)
-- ✓ Postseason data file references in JavaScript
+- ✓ **Comments out** the Postseason section (uncomment when playoffs begin in October)
+- ✓ Postseason data file references in JavaScript (2025 → 2026)
 - ✓ Year-over-year comparison charts (2024 vs 2025 → 2025 vs 2026)
 - ✓ Jekyll data fallbacks
 - ✓ Pitch data download links
@@ -291,9 +291,10 @@ See [`SEASON_TRANSITION.md`](./SEASON_TRANSITION.md) for the full guide, includi
   - Daily monitoring tips
   - How to manually fix failed workflows
 
-- **Post-season tasks**
-  - Archive 2026 data
-  - Update postseason files
+- **Post-season tasks** (when playoffs begin)
+  - Uncomment the postseason section in index.markdown
+  - Copy postseason data files to assets directory
+  - Archive season data
 
 ### Quick Transition Steps
 
