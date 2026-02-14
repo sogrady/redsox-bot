@@ -1,5 +1,20 @@
 // Games back line chart
 
+// Helper function to get the effective current year (handles off-season)
+function getEffectiveCurrentYear(data) {
+  const actualCurrentYear = new Date().getFullYear().toString();
+  const currentYearData = data.get(actualCurrentYear);
+
+  // If current year has data, use it
+  if (currentYearData && currentYearData.length > 0) {
+    return actualCurrentYear;
+  }
+
+  // Otherwise, use the most recent year with data
+  const years = Array.from(data.keys()).sort((a, b) => parseInt(b) - parseInt(a));
+  return years[0] || actualCurrentYear;
+}
+
 async function fetchData() {
   try {
     const response = await d3.json(
@@ -14,8 +29,8 @@ async function fetchData() {
 }
 
 function renderChart(data) {
-  // Dynamically get the current year as a string
-  const currentYear = new Date().getFullYear().toString();
+  // Get the effective current year (handles off-season by using most recent data)
+  const currentYear = getEffectiveCurrentYear(data);
   const isMobile = window.innerWidth <= 767; // Example breakpoint for mobile devices
   const margin = isMobile 
     ? { top: 30, right: 20, bottom: 70, left: 70 }  // Smaller margins for mobile
@@ -329,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function populateYearSelect(years) {
       const yearSelect = document.getElementById('year-select');
-      const currentYear = new Date().getFullYear().toString(); // Get the current year as a string
+      const currentYear = getEffectiveCurrentYear(groupedByYear); // Use effective current year
       years
           .filter(year => year !== currentYear) // Exclude the current year
           .forEach(year => {
@@ -346,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function drawLines(svg, data) {
-    const currentYear = new Date().getFullYear().toString();
+    const currentYear = getEffectiveCurrentYear(groupedByYear);
   
     // Create the line generator with fallback conversion for wins and gm.
     const line = d3.line()
@@ -634,9 +649,10 @@ document.addEventListener('DOMContentLoaded', function() {
           .x((d) => xScale(d.gtm))
           .y((d) => yScale(d[config.dataField]))
           .curve(d3.curveMonotoneX);
-    
+
+        const currentYear = getEffectiveCurrentYear(data);
         const allLinesExceptCurrentYear = Array.from(data.entries()).filter(
-          (d) => d[0] !== new Date().getFullYear().toString()
+          (d) => d[0] !== currentYear
         );
         svg
           .selectAll('.line')
@@ -650,8 +666,8 @@ document.addEventListener('DOMContentLoaded', function() {
           .style('fill', 'none')
           .style('stroke', '#ccc')
           .style('stroke-width', 0.5);
-    
-        const currentYear = new Date().getFullYear().toString();
+
+        const currentYear = getEffectiveCurrentYear(data);
         const lineCurrentYear = Array.from(data.entries()).filter((d) => d[0] === currentYear);
         if (lineCurrentYear.length > 0) {
           svg
@@ -665,13 +681,13 @@ document.addEventListener('DOMContentLoaded', function() {
             .style('stroke', '#0C2340')
             .style('stroke-width', 2);
         }
-    
+
         svg
           .append('text')
           .attr('x', isMobile ? xScale(90) : xScale(90))
           .attr('y', yScale(100))
           .attr('class', 'anno')
-          .text(`Past: 1901-${currentYear - 1}`)
+          .text(`Past: 1901-${parseInt(currentYear) - 1}`)
           .attr('text-anchor', 'start')
           .style('stroke', '#fff')
           .style('stroke-width', '4px')
@@ -814,8 +830,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .y((d) => yScale(d[config.dataField]))
       .curve(d3.curveMonotoneX);
 
+    const currentYear = getEffectiveCurrentYear(data);
     const allLinesExceptCurrentYear = Array.from(data.entries()).filter(
-      (d) => d[0] !== new Date().getFullYear().toString()
+      (d) => d[0] !== currentYear
     );
     svg
       .selectAll('.line')
@@ -828,7 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .style('stroke', '#ccc')
       .style('stroke-width', 0.5);
 
-    const currentYear = new Date().getFullYear().toString();
+    const currentYear = getEffectiveCurrentYear(data);
     const lineCurrentYear = Array.from(data.entries()).filter((d) => d[0] === currentYear);
     if (lineCurrentYear.length > 0) {
       svg
@@ -848,7 +865,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr('x', isMobile ? xScale(110) : xScale(110))
       .attr('y', yScale(600))
       .attr('class', 'anno')
-      .text(`Past: 1901-${currentYear - 1}`)
+      .text(`Past: 1901-${parseInt(currentYear) - 1}`)
       .attr('text-anchor', 'start')
       .style('stroke', '#fff')
       .style('stroke-width', '4px')
@@ -982,8 +999,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .curve(d3.curveMonotoneX); // Smooth the line
 
     // Draw all lines except the current year first
+    const currentYear = getEffectiveCurrentYear(data);
     const allLinesExceptCurrentYear = Array.from(data.entries()).filter(
-      (d) => d[0] !== new Date().getFullYear().toString()
+      (d) => d[0] !== currentYear
     );
 
     svg
@@ -997,7 +1015,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .style('stroke', '#ccc')
       .style('stroke-width', 0.5);
 
-    const currentYear = new Date().getFullYear().toString();
+    const currentYear = getEffectiveCurrentYear(data);
     const lineCurrentYear = data.get(currentYear);
 
     if (lineCurrentYear) {
@@ -3670,27 +3688,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Playoff Bracket Functions
 async function fetchPlayoffBracketData() {
-  try {
-    const currentYear = new Date().getFullYear();
-    const response = await fetch(`https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_${currentYear}.json`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  let currentYear = new Date().getFullYear();
+
+  // Try current year first, fall back to previous year if not found (off-season)
+  for (let yearOffset = 0; yearOffset <= 1; yearOffset++) {
+    try {
+      const yearToFetch = currentYear - yearOffset;
+      const response = await fetch(`https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_${yearToFetch}.json`);
+
+      if (!response.ok) {
+        if (yearOffset === 0) {
+          // Try previous year
+          continue;
+        }
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Handle both old format (array) and new format (object with metadata)
+      if (Array.isArray(data)) {
+        return { teams: data, last_updated: null };
+      } else if (data.teams) {
+        return data;
+      } else {
+        console.error('Unexpected data format:', data);
+        return null;
+      }
+    } catch (error) {
+      if (yearOffset === 1) {
+        console.error('Error fetching playoff bracket data:', error);
+        return null;
+      }
+      // Continue to try previous year
     }
-    const data = await response.json();
-    
-    // Handle both old format (array) and new format (object with metadata)
-    if (Array.isArray(data)) {
-      return { teams: data, last_updated: null };
-    } else if (data.teams) {
-      return data;
-    } else {
-      console.error('Unexpected data format:', data);
-      return null;
-    }
-  } catch (error) {
-    console.error('Error fetching playoff bracket data:', error);
-    return null;
   }
+
+  return null;
 }
 
 function calculatePlayoffSeeds(standings) {
