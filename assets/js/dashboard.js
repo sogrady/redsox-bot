@@ -580,7 +580,7 @@ document.addEventListener('DOMContentLoaded', function() {
       async function fetchData() {
         try {
           const response = await d3.json(
-            'data/batting/archive/redsox_historic_batting_gamelogs.json'
+            'https://redsox-data.s3.amazonaws.com/redsox/data/batting/archive/redsox_historic_batting_gamelogs.json'
           );
           const groupedData = d3.group(response, (d) => d.year.toString());
           const maxVal = d3.max(response, d => Math.max(d['2b_cum'], d['hr_cum']));
@@ -760,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function fetchData() {
     try {
       const response = await d3.json(
-        'data/pitching/redsox_historic_pitching_gamelogs_1901-present.json'
+        'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_historic_pitching_gamelogs_1901-present.json'
       );
       const groupedData = d3.group(response, (d) => d.year.toString());
       const maxVal = d3.max(response, d => Math.max(d['so_cum'], d['h_cum']));
@@ -924,7 +924,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function fetchCumulativeERAData() {
     try {
       const response = await d3.json(
-        'data/pitching/redsox_historic_pitching_gamelogs_1901-present.json'
+        'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_historic_pitching_gamelogs_1901-present.json'
       );
       // Group data by year
       const groupedByYear = d3.group(response, (d) => d.year.toString());
