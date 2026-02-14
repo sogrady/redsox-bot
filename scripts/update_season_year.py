@@ -110,14 +110,47 @@ Examples:
     repo_root = Path.cwd()
     files_updated = 0
 
-    # 1. Update postseason section header in index.markdown
-    print(f"\n{BOLD}1. Postseason Section Header{RESET}")
+    # 1. Comment out postseason section in index.markdown
+    print(f"\n{BOLD}1. Comment Out Postseason Section{RESET}")
+    print(f"{YELLOW}⚠{RESET}  Postseason section will be commented out until {new_year} playoffs begin")
     index_file = repo_root / "index.markdown"
-    if update_file(index_file, [
-        (f'<h2 class="stat-group postseason-header">Postseason {old_year}</h2>',
-         f'<h2 class="stat-group postseason-header">Postseason {new_year}</h2>')
-    ], args.dry_run):
+
+    # Comment out the entire postseason section
+    postseason_section = f'''<div class="postseason-stats-section">
+  <h2 class="stat-group postseason-header">Postseason {old_year}</h2>
+
+  <h3 class="visual-subhead">Playoff journey</h3>
+  <div class="playoff-journey" id="playoff-journey">
+    <!-- Playoff journey will be populated by JavaScript -->
+  </div>
+
+  <h3 class="visual-subhead">Team hitting</h3>
+  <div class="postseason-grid" id="postseason-grid">
+    <!-- Postseason stats will be populated by JavaScript -->
+  </div>
+  <p class="note">Note: Top 12 players in order of plate appearances.</p>
+</div>'''
+
+    commented_section = f'''<!-- Postseason section commented out - uncomment when {new_year} playoffs begin
+<div class="postseason-stats-section">
+  <h2 class="stat-group postseason-header">Postseason {new_year}</h2>
+
+  <h3 class="visual-subhead">Playoff journey</h3>
+  <div class="playoff-journey" id="playoff-journey">
+    <!-- Playoff journey will be populated by JavaScript -->
+  </div>
+
+  <h3 class="visual-subhead">Team hitting</h3>
+  <div class="postseason-grid" id="postseason-grid">
+    <!-- Postseason stats will be populated by JavaScript -->
+  </div>
+  <p class="note">Note: Top 12 players in order of plate appearances.</p>
+</div>
+-->'''
+
+    if update_file(index_file, [(postseason_section, commented_section)], args.dry_run):
         files_updated += 1
+        print(f"  {YELLOW}→{RESET} Uncomment this section in index.markdown when playoffs start")
 
     # 2. Update postseason data file references in dashboard.js
     print(f"\n{BOLD}2. Postseason Data Files{RESET}")
