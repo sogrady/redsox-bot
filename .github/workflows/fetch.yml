@@ -115,8 +115,8 @@ jobs:
     - name: Commit updated files
       if: steps.changes.outputs.changes == 'true'
       run: |
-        git config --global user.name 'Matt Stiles'
-        git config --global user.email 'haekeostiles@gmail.com'
+        git config --global user.name 'Stephen O'\''Grady'
+        git config --global user.email 'sog@redmonk.com'
         git commit -m "Automated update of Red Sox data, visuals"
   
     - name: Push changes
