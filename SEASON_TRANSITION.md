@@ -167,16 +167,43 @@ After the season ends, archive the data:
 python scripts/29_fetch_historical_standings.py
 ```
 
-### 2. Update Postseason Files
+### 2. Enable Postseason Section
 
-When postseason begins, the data will be in:
-- `data/postseason/redsox_postseason_stats_2026.json`
-- `data/postseason/redsox_postseason_series_2026.json`
+When playoffs begin (usually early October), you need to uncomment the postseason section on the homepage:
 
-Copy to assets directory:
+**Step 1: Uncomment the section in index.markdown**
+
+1. Open `index.markdown`
+2. Find the commented postseason section (around line 33):
+   ```html
+   <!-- Postseason section commented out - uncomment when 2026 playoffs begin
+   <div class="postseason-stats-section">
+     <h2 class="stat-group postseason-header">Postseason 2026</h2>
+     ...
+   </div>
+   -->
+   ```
+3. Remove the `<!--` and `-->` comment markers
+4. Save the file
+
+**Step 2: Copy postseason data files**
+
+The automated workflows will generate postseason data files. Copy them to the assets directory:
+
 ```bash
-cp data/postseason/redsox_postseason_*.json assets/data/postseason/
+cp data/postseason/redsox_postseason_stats_2026.json assets/data/postseason/
+cp data/postseason/redsox_postseason_series_2026.json assets/data/postseason/
 ```
+
+**Step 3: Commit and push**
+
+```bash
+git add index.markdown assets/data/postseason/
+git commit -m "Enable postseason section for 2026 playoffs"
+git push
+```
+
+The postseason section will now display on the homepage with playoff journey and team hitting stats.
 
 ## Troubleshooting
 
