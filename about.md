@@ -28,7 +28,7 @@ twitter:
         
         <h2 class="about-subhead">Thanks</h2>
 
-        Many thanks to Matt for coming up with the original idea for Dodgers Data Bot, and for going even further and sharing his hard work so that I could adapt it to bring this site to life. I'd be remiss to not thank Claude Code and its designers, meanwhile, because I would not have had the time to make this happen without its assistance.</p>
+        <p>Many thanks to Matt for coming up with the original idea for Dodgers Data Bot, and for going even further and sharing his hard work so that I could adapt it to bring this site to life. I'd be remiss to not thank Claude Code and its designers, meanwhile, because I would not have had the time to make this happen without its assistance.</p>
 
         <h2 class="about-subhead">Join the conversation</h2>
 
