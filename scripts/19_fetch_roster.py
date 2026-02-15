@@ -35,15 +35,23 @@ is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
 aws_key_id = os.environ.get("AWS_ACCESS_KEY_ID")
 aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
 aws_region = "us-west-1"
-if is_github_actions:
-    session = boto3.Session(
-        aws_access_key_id=aws_key_id,
-        aws_secret_access_key=aws_secret_key,
-        region_name=aws_region
-    )
-else:
-    session = boto3.Session(profile_name="haekeo", region_name=aws_region)
-s3 = session.resource('s3')
+s3 = None
+
+try:
+    if is_github_actions:
+        session = boto3.Session(
+            aws_access_key_id=aws_key_id,
+            aws_secret_access_key=aws_secret_key,
+            region_name=aws_region
+        )
+    else:
+        profile_name = os.environ.get("AWS_PERSONAL_PROFILE", "haekeo")
+        session = boto3.Session(profile_name=profile_name, region_name=aws_region)
+    s3 = session.resource('s3')
+    logging.info("AWS S3 session initialized successfully")
+except Exception as e:
+    logging.warning(f"Could not initialize AWS session: {e}. S3 uploads will be skipped.")
+    s3 = None
 
 def sluggify(name):
     # Remove accents, lowercase, replace spaces with hyphens, remove non-alphanum except hyphens
@@ -192,7 +200,8 @@ def fetch_transactions():
     with open(transactions_archive_json_file, 'w', encoding='utf-8') as f:
         combined_df.to_json(f, indent=2, orient="records", force_ascii=False)
     logging.info(f"Full transaction archive saved to {transactions_archive_json_file}")
-    s3.Bucket(s3_bucket).upload_file(transactions_archive_json_file, s3_key_transactions_archive_json)
+    if s3:
+        s3.Bucket(s3_bucket).upload_file(transactions_archive_json_file, s3_key_transactions_archive_json)
 
     # Save current view (top 100)
     current_df = combined_df.head(100)
@@ -203,13 +212,52 @@ def fetch_transactions():
     shutil.copy(transactions_json_file, jekyll_data_dir)
     logging.info(f"Top 100 transactions copied to {jekyll_data_dir}")
 
-    s3.Bucket(s3_bucket).upload_file(transactions_csv_file, s3_key_transactions_csv)
-    s3.Bucket(s3_bucket).upload_file(transactions_json_file, s3_key_transactions_json)
+    if s3:
+        s3.Bucket(s3_bucket).upload_file(transactions_csv_file, s3_key_transactions_csv)
+        s3.Bucket(s3_bucket).upload_file(transactions_json_file, s3_key_transactions_json)
     logging.info("Current transactions data written and uploaded to S3.")
+
+def download_player_headshot(player_id, slug, team_id=111):
+    """
+    Download player headshot from MLB's image CDN.
+    Uses team_id to get headshot with team cap (111 = Red Sox).
+    """
+    if not player_id or not slug:
+        return False
+
+    avatars_dir = f"{output_dir}/avatars"
+    os.makedirs(avatars_dir, exist_ok=True)
+    output_path = f"{avatars_dir}/{slug}.png"
+
+    # MLB headshot URL with team context
+    # Format: https://img.mlb.com/mlb/images/players/head_shot/{player_id}.jpg
+    headshot_url = f"https://img.mlb.com/mlb/images/players/head_shot/{player_id}.jpg"
+
+    try:
+        response = requests.get(headshot_url, timeout=10)
+        if response.status_code == 200:
+            with open(output_path, 'wb') as f:
+                f.write(response.content)
+            logging.info(f"Downloaded headshot for {slug}")
+            return True
+        else:
+            logging.warning(f"Could not download headshot for {slug}: HTTP {response.status_code}")
+            return False
+    except Exception as e:
+        logging.warning(f"Error downloading headshot for {slug}: {e}")
+        return False
 
 def main():
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(jekyll_data_dir, exist_ok=True)
+
+    # Clear old avatar images
+    avatars_dir = f"{output_dir}/avatars"
+    if os.path.exists(avatars_dir):
+        shutil.rmtree(avatars_dir)
+        logging.info("Cleared old avatar images")
+    os.makedirs(avatars_dir, exist_ok=True)
+
     url = f"https://www.mlb.com/{config.TEAM_NAME.lower().replace(' ', '')}/roster"  # Active roster instead of 40-man
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -230,6 +278,9 @@ def main():
             name = player.get('name')
             if name:
                 player['slug'] = sluggify(name)
+                # Download player headshot
+                if player.get('player_id'):
+                    download_player_headshot(player['player_id'], player['slug'], config.TEAM_ID)
             all_players.append(player)
 
     df = pd.DataFrame(all_players)
@@ -242,9 +293,12 @@ def main():
     logging.info(f"Roster data copied to {jekyll_data_dir}")
 
     # Upload to S3
-    s3.Bucket(s3_bucket).upload_file(csv_file, s3_key_csv)
-    s3.Bucket(s3_bucket).upload_file(json_file, s3_key_json)
-    logging.info("Roster data written and uploaded to S3.")
+    if s3:
+        s3.Bucket(s3_bucket).upload_file(csv_file, s3_key_csv)
+        s3.Bucket(s3_bucket).upload_file(json_file, s3_key_json)
+        logging.info("Roster data written and uploaded to S3.")
+    else:
+        logging.info("Roster data written locally. S3 upload skipped (no AWS credentials).")
 
     fetch_transactions()
 
