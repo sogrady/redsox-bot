@@ -229,9 +229,9 @@ def download_player_headshot(player_id, slug, team_id=111):
     os.makedirs(avatars_dir, exist_ok=True)
     output_path = f"{avatars_dir}/{slug}.png"
 
-    # MLB headshot URL with team context
-    # Format: https://img.mlb.com/mlb/images/players/head_shot/{player_id}.jpg
-    headshot_url = f"https://img.mlb.com/mlb/images/players/head_shot/{player_id}.jpg"
+    # MLB headshot URL - using mlbstatic.com for better reliability in CI/CD
+    # Format: https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/{player_id}/headshot/67/current
+    headshot_url = f"https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/{player_id}/headshot/67/current"
 
     try:
         response = requests.get(headshot_url, timeout=10)
