@@ -217,46 +217,9 @@ def fetch_transactions():
         s3.Bucket(s3_bucket).upload_file(transactions_json_file, s3_key_transactions_json)
     logging.info("Current transactions data written and uploaded to S3.")
 
-def download_player_headshot(player_id, slug, team_id=111):
-    """
-    Download player headshot from MLB's image CDN.
-    Uses team_id to get headshot with team cap (111 = Red Sox).
-    """
-    if not player_id or not slug:
-        return False
-
-    avatars_dir = f"{output_dir}/avatars"
-    os.makedirs(avatars_dir, exist_ok=True)
-    output_path = f"{avatars_dir}/{slug}.png"
-
-    # MLB headshot URL - using mlbstatic.com for better reliability in CI/CD
-    # Format: https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/{player_id}/headshot/67/current
-    headshot_url = f"https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/{player_id}/headshot/67/current"
-
-    try:
-        response = requests.get(headshot_url, timeout=10)
-        if response.status_code == 200:
-            with open(output_path, 'wb') as f:
-                f.write(response.content)
-            logging.info(f"Downloaded headshot for {slug}")
-            return True
-        else:
-            logging.warning(f"Could not download headshot for {slug}: HTTP {response.status_code}")
-            return False
-    except Exception as e:
-        logging.warning(f"Error downloading headshot for {slug}: {e}")
-        return False
-
 def main():
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(jekyll_data_dir, exist_ok=True)
-
-    # Clear old avatar images
-    avatars_dir = f"{output_dir}/avatars"
-    if os.path.exists(avatars_dir):
-        shutil.rmtree(avatars_dir)
-        logging.info("Cleared old avatar images")
-    os.makedirs(avatars_dir, exist_ok=True)
 
     url = f"https://www.mlb.com/{config.TEAM_NAME.lower().replace(' ', '')}/roster"  # Active roster instead of 40-man
     response = requests.get(url)
@@ -278,9 +241,6 @@ def main():
             name = player.get('name')
             if name:
                 player['slug'] = sluggify(name)
-                # Download player headshot
-                if player.get('player_id'):
-                    download_player_headshot(player['player_id'], player['slug'], config.TEAM_ID)
             all_players.append(player)
 
     df = pd.DataFrame(all_players)
