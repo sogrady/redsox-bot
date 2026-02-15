@@ -12,7 +12,6 @@ twitter:
 
 <div class="container">
   <div class="minimal-header">
-  <img src="{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}" alt="Red Sox Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
     <h1 class="minimal-headline">Recent transactions</h1>
     <p class="minimal-subhead">A log of the team's last 100 player moves, according to <a href="https://www.mlb.com/redsox/roster/transactions">Major League Baseball</a>: </p>
   </div>

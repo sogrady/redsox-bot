@@ -12,7 +12,6 @@ twitter:
 
 <div class="container">
   <div class="minimal-header">
-    <img src="{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}" alt="Red Sox Player" style="width: 50px; height: 50px; display: block; margin: 0 auto 20px auto; border-radius: 50%;" />
     <h1 class="minimal-headline">Who's on the roster?</h1>
     <p class="minimal-subhead">The team's active roster holds up to 26 players who can take the field in games. The 40-man roster includes those players but also prospects, injured starters or minor leaguers with contracts who are eligible to be called up. The latest breakdown, according to <a href="https://www.mlb.com/redsox/roster">Major League Baseball</a>: </p>
   </div>
