@@ -31,9 +31,9 @@ twitter:
                 <div class="player-name-transaction">{{ player_name }}</div>
                 {% assign player_data = players_roster | where: "name", player_name | first %}
                 {% if player_data.slug %}
-                  <img src="{{ '/data/roster/avatars/' | append: player_data.slug | append: '.png' | absolute_url }}" alt="{{ player_name }}" class="player-avatar-transaction" title="{{ player_name }}" onerror="this.onerror=null;this.src='{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}';" />
+                  <img src="{{ '/data/roster/avatars/' | append: player_data.slug | append: '.png' | absolute_url }}" alt="{{ player_name }}" class="player-avatar-transaction" title="{{ player_name }}" onerror="this.onerror=null;this.src='{{ '/assets/images/placeholder-avatar.png' | absolute_url }}';" />
                 {% else %}
-                  <img src="{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}" alt="{{ player_name }}" title="{{ player_name }}" class="player-avatar-transaction" />
+                  <img src="{{ '/assets/images/placeholder-avatar.png' | absolute_url }}" alt="{{ player_name }}" title="{{ player_name }}" class="player-avatar-transaction" />
                 {% endif %}
               </div>
             {% endfor %}

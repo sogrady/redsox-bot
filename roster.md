@@ -39,7 +39,7 @@ twitter:
             {% elsif player.is_minors %}
               <div class="player-flag player-flag-minors">MINORS</div>
             {% endif %}
-            <img src="{{ '/data/roster/avatars/' | append: player.slug | append: '.png' | absolute_url }}" alt="{{ player.name }}" class="player-avatar" onerror="this.onerror=null;this.src='{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}';" />
+            <img src="{{ '/data/roster/avatars/' | append: player.slug | append: '.png' | absolute_url }}" alt="{{ player.name }}" class="player-avatar" onerror="this.onerror=null;this.src='{{ '/assets/images/placeholder-avatar.png' | absolute_url }}';" />
             <div class="player-name">{{ player.name }}</div>
             <div class="player-details">{{ player.bat_throw }} | {{ player.height }}, {{ player.weight }} lbs</div>
             <div class="player-jersey">#{{ player.jersey }}</div>
@@ -66,7 +66,7 @@ twitter:
             {% elsif player.is_minors %}
               <div class="player-flag player-flag-minors">MINORS</div>
             {% endif %}
-            <img src="{{ '/data/roster/avatars/' | append: player.slug | append: '.png' | absolute_url }}" alt="{{ player.name }}" class="player-avatar" onerror="this.onerror=null;this.src='{{ '/data/roster/avatars/placeholder-avatar.png' | absolute_url }}';" />
+            <img src="{{ '/data/roster/avatars/' | append: player.slug | append: '.png' | absolute_url }}" alt="{{ player.name }}" class="player-avatar" onerror="this.onerror=null;this.src='{{ '/assets/images/placeholder-avatar.png' | absolute_url }}';" />
             <div class="player-name">{{ player.name }}</div>
             <div class="player-details">{{ player.bat_throw }} | {{ player.height }}, {{ player.weight }} lbs</div>
             <div class="player-jersey">#{{ player.jersey }}</div>
