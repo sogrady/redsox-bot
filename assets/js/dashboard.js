@@ -1134,11 +1134,19 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(url);
           const data = await response.json();
-          const limitedData = data.slice(0, 10); // Limit to the first 10 objects
-          // const limitedData = data; // Limit to the first 10 objects
 
-          renderTable(limitedData, 'table-1', ['player', 'postion', 'avg', 'obp', 'slg'], getColorScaleBlue);
-          renderTable(limitedData, 'table-2', ['player', 'plateAppearances', 'bbper', 'hrper', 'soper'], getColorScale);
+          // Calculate percentage stats for each player
+          const dataWithPercentages = data.map(player => ({
+              ...player,
+              bbper: player.pa > 0 ? (player.bb / player.pa) * 100 : 0,
+              hrper: player.pa > 0 ? (player.hr / player.pa) * 100 : 0,
+              soper: player.pa > 0 ? (player.so / player.pa) * 100 : 0
+          }));
+
+          const limitedData = dataWithPercentages.slice(0, 10); // Limit to the first 10 objects
+
+          renderTable(limitedData, 'table-1', ['name', 'pos', 'ba', 'obp', 'slg'], getColorScaleBlue);
+          renderTable(limitedData, 'table-2', ['name', 'pa', 'bbper', 'hrper', 'soper'], getColorScale);
       } catch (error) {
           console.error('Failed to fetch data:', error);
       }
@@ -1162,10 +1170,21 @@ document.addEventListener('DOMContentLoaded', function () {
           const row = document.createElement('tr');
           fields.forEach(field => {
               const cell = document.createElement('td');
-              cell.textContent = player[field];
 
-              // Apply conditional coloring
-              if (field !== 'player' && field !== 'postion' && field !== 'plateAppearances') {
+              // Format values appropriately
+              if (field === 'name' || field === 'pos') {
+                  cell.textContent = player[field];
+              } else if (field === 'pa') {
+                  cell.textContent = player[field];
+              } else if (field === 'bbper' || field === 'hrper' || field === 'soper') {
+                  cell.textContent = player[field].toFixed(1) + '%';
+              } else {
+                  // ba, obp, slg - show as 3 decimal places
+                  cell.textContent = parseFloat(player[field]).toFixed(3);
+              }
+
+              // Apply conditional coloring (skip name, pos, and pa)
+              if (field !== 'name' && field !== 'pos' && field !== 'pa') {
                   const value = parseFloat(player[field]);
                   const scale = scales[field];
                   cell.style.backgroundColor = getColorScale(field, value, scale.min, scale.max);
@@ -1373,11 +1392,19 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(url);
           const data = await response.json();
-          const limitedData = data.slice(0, 10); // Limit to the first 10 objects
-          // const limitedData = data; // Limit to the first 10 objects
 
-          renderTable(limitedData, 'table-1', ['player', 'postion', 'avg', 'obp', 'slg'], getColorScaleBlue);
-          renderTable(limitedData, 'table-2', ['player', 'plateAppearances', 'bbper', 'hrper', 'soper'], getColorScale);
+          // Calculate percentage stats for each player
+          const dataWithPercentages = data.map(player => ({
+              ...player,
+              bbper: player.pa > 0 ? (player.bb / player.pa) * 100 : 0,
+              hrper: player.pa > 0 ? (player.hr / player.pa) * 100 : 0,
+              soper: player.pa > 0 ? (player.so / player.pa) * 100 : 0
+          }));
+
+          const limitedData = dataWithPercentages.slice(0, 10); // Limit to the first 10 objects
+
+          renderTable(limitedData, 'table-1', ['name', 'pos', 'ba', 'obp', 'slg'], getColorScaleBlue);
+          renderTable(limitedData, 'table-2', ['name', 'pa', 'bbper', 'hrper', 'soper'], getColorScale);
       } catch (error) {
           console.error('Failed to fetch data:', error);
       }
@@ -1401,10 +1428,21 @@ document.addEventListener('DOMContentLoaded', function () {
           const row = document.createElement('tr');
           fields.forEach(field => {
               const cell = document.createElement('td');
-              cell.textContent = player[field];
 
-              // Apply conditional coloring
-              if (field !== 'player' && field !== 'postion' && field !== 'plateAppearances') {
+              // Format values appropriately
+              if (field === 'name' || field === 'pos') {
+                  cell.textContent = player[field];
+              } else if (field === 'pa') {
+                  cell.textContent = player[field];
+              } else if (field === 'bbper' || field === 'hrper' || field === 'soper') {
+                  cell.textContent = player[field].toFixed(1) + '%';
+              } else {
+                  // ba, obp, slg - show as 3 decimal places
+                  cell.textContent = parseFloat(player[field]).toFixed(3);
+              }
+
+              // Apply conditional coloring (skip name, pos, and pa)
+              if (field !== 'name' && field !== 'pos' && field !== 'pa') {
                   const value = parseFloat(player[field]);
                   const scale = scales[field];
                   cell.style.backgroundColor = getColorScale(field, value, scale.min, scale.max);
@@ -1612,11 +1650,19 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(url);
           const data = await response.json();
-          const limitedData = data.slice(0, 10); // Limit to the first 10 objects
-          // const limitedData = data; // Limit to the first 10 objects
 
-          renderTable(limitedData, 'table-1', ['player', 'postion', 'avg', 'obp', 'slg'], getColorScaleBlue);
-          renderTable(limitedData, 'table-2', ['player', 'plateAppearances', 'bbper', 'hrper', 'soper'], getColorScale);
+          // Calculate percentage stats for each player
+          const dataWithPercentages = data.map(player => ({
+              ...player,
+              bbper: player.pa > 0 ? (player.bb / player.pa) * 100 : 0,
+              hrper: player.pa > 0 ? (player.hr / player.pa) * 100 : 0,
+              soper: player.pa > 0 ? (player.so / player.pa) * 100 : 0
+          }));
+
+          const limitedData = dataWithPercentages.slice(0, 10); // Limit to the first 10 objects
+
+          renderTable(limitedData, 'table-1', ['name', 'pos', 'ba', 'obp', 'slg'], getColorScaleBlue);
+          renderTable(limitedData, 'table-2', ['name', 'pa', 'bbper', 'hrper', 'soper'], getColorScale);
       } catch (error) {
           console.error('Failed to fetch data:', error);
       }
@@ -1640,10 +1686,21 @@ document.addEventListener('DOMContentLoaded', function () {
           const row = document.createElement('tr');
           fields.forEach(field => {
               const cell = document.createElement('td');
-              cell.textContent = player[field];
 
-              // Apply conditional coloring
-              if (field !== 'player' && field !== 'postion' && field !== 'plateAppearances') {
+              // Format values appropriately
+              if (field === 'name' || field === 'pos') {
+                  cell.textContent = player[field];
+              } else if (field === 'pa') {
+                  cell.textContent = player[field];
+              } else if (field === 'bbper' || field === 'hrper' || field === 'soper') {
+                  cell.textContent = player[field].toFixed(1) + '%';
+              } else {
+                  // ba, obp, slg - show as 3 decimal places
+                  cell.textContent = parseFloat(player[field]).toFixed(3);
+              }
+
+              // Apply conditional coloring (skip name, pos, and pa)
+              if (field !== 'name' && field !== 'pos' && field !== 'pa') {
                   const value = parseFloat(player[field]);
                   const scale = scales[field];
                   cell.style.backgroundColor = getColorScale(field, value, scale.min, scale.max);
@@ -1851,11 +1908,19 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(url);
           const data = await response.json();
-          const limitedData = data.slice(0, 10); // Limit to the first 10 objects
-          // const limitedData = data; // Limit to the first 10 objects
 
-          renderTable(limitedData, 'table-1', ['player', 'postion', 'avg', 'obp', 'slg'], getColorScaleBlue);
-          renderTable(limitedData, 'table-2', ['player', 'plateAppearances', 'bbper', 'hrper', 'soper'], getColorScale);
+          // Calculate percentage stats for each player
+          const dataWithPercentages = data.map(player => ({
+              ...player,
+              bbper: player.pa > 0 ? (player.bb / player.pa) * 100 : 0,
+              hrper: player.pa > 0 ? (player.hr / player.pa) * 100 : 0,
+              soper: player.pa > 0 ? (player.so / player.pa) * 100 : 0
+          }));
+
+          const limitedData = dataWithPercentages.slice(0, 10); // Limit to the first 10 objects
+
+          renderTable(limitedData, 'table-1', ['name', 'pos', 'ba', 'obp', 'slg'], getColorScaleBlue);
+          renderTable(limitedData, 'table-2', ['name', 'pa', 'bbper', 'hrper', 'soper'], getColorScale);
       } catch (error) {
           console.error('Failed to fetch data:', error);
       }
@@ -1879,10 +1944,21 @@ document.addEventListener('DOMContentLoaded', function () {
           const row = document.createElement('tr');
           fields.forEach(field => {
               const cell = document.createElement('td');
-              cell.textContent = player[field];
 
-              // Apply conditional coloring
-              if (field !== 'player' && field !== 'postion' && field !== 'plateAppearances') {
+              // Format values appropriately
+              if (field === 'name' || field === 'pos') {
+                  cell.textContent = player[field];
+              } else if (field === 'pa') {
+                  cell.textContent = player[field];
+              } else if (field === 'bbper' || field === 'hrper' || field === 'soper') {
+                  cell.textContent = player[field].toFixed(1) + '%';
+              } else {
+                  // ba, obp, slg - show as 3 decimal places
+                  cell.textContent = parseFloat(player[field]).toFixed(3);
+              }
+
+              // Apply conditional coloring (skip name, pos, and pa)
+              if (field !== 'name' && field !== 'pos' && field !== 'pa') {
                   const value = parseFloat(player[field]);
                   const scale = scales[field];
                   cell.style.backgroundColor = getColorScale(field, value, scale.min, scale.max);
@@ -2090,11 +2166,19 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(url);
           const data = await response.json();
-          const limitedData = data.slice(0, 10); // Limit to the first 10 objects
-          // const limitedData = data; // Limit to the first 10 objects
 
-          renderTable(limitedData, 'table-1', ['player', 'postion', 'avg', 'obp', 'slg'], getColorScaleBlue);
-          renderTable(limitedData, 'table-2', ['player', 'plateAppearances', 'bbper', 'hrper', 'soper'], getColorScale);
+          // Calculate percentage stats for each player
+          const dataWithPercentages = data.map(player => ({
+              ...player,
+              bbper: player.pa > 0 ? (player.bb / player.pa) * 100 : 0,
+              hrper: player.pa > 0 ? (player.hr / player.pa) * 100 : 0,
+              soper: player.pa > 0 ? (player.so / player.pa) * 100 : 0
+          }));
+
+          const limitedData = dataWithPercentages.slice(0, 10); // Limit to the first 10 objects
+
+          renderTable(limitedData, 'table-1', ['name', 'pos', 'ba', 'obp', 'slg'], getColorScaleBlue);
+          renderTable(limitedData, 'table-2', ['name', 'pa', 'bbper', 'hrper', 'soper'], getColorScale);
       } catch (error) {
           console.error('Failed to fetch data:', error);
       }
@@ -2118,10 +2202,21 @@ document.addEventListener('DOMContentLoaded', function () {
           const row = document.createElement('tr');
           fields.forEach(field => {
               const cell = document.createElement('td');
-              cell.textContent = player[field];
 
-              // Apply conditional coloring
-              if (field !== 'player' && field !== 'postion' && field !== 'plateAppearances') {
+              // Format values appropriately
+              if (field === 'name' || field === 'pos') {
+                  cell.textContent = player[field];
+              } else if (field === 'pa') {
+                  cell.textContent = player[field];
+              } else if (field === 'bbper' || field === 'hrper' || field === 'soper') {
+                  cell.textContent = player[field].toFixed(1) + '%';
+              } else {
+                  // ba, obp, slg - show as 3 decimal places
+                  cell.textContent = parseFloat(player[field]).toFixed(3);
+              }
+
+              // Apply conditional coloring (skip name, pos, and pa)
+              if (field !== 'name' && field !== 'pos' && field !== 'pa') {
                   const value = parseFloat(player[field]);
                   const scale = scales[field];
                   cell.style.backgroundColor = getColorScale(field, value, scale.min, scale.max);
@@ -4255,7 +4350,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Red color scale for pitching stats - darker red is better
       // FIP: lower is better (reverse scale)
       if (field === 'fip') {
-          return getColorFromScale(value, min, max, '#BD3039', '#FFE5E7', true);
+          return getColorFromScale(value, min, max, '#FFE5E7', '#BD3039', true);
       }
       // ERA+, SO/BB: higher is better (normal scale)
       return getColorFromScale(value, min, max, '#FFE5E7', '#BD3039', false);

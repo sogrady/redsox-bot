@@ -1,6 +1,6 @@
 # Red Sox Team Tracker
 
-This repository — a growing work in progress — feeds [Red Sox Data Bot](https://redsoxdata.bot), a statistical dashboard about the Boston Red Sox's performance.
+This repository — a growing work in progress — feeds [Red Sox Data Bot](https://redsoxdata.bot), a statistical dashboard about the Boston Red Sox's performance. It is a fork of [Matt Stiles](https://mattstiles.me/)' incredible [Dodgers Data Bot](https://dodgersdata.bot/). 
 
 The code executes an automated workflow to fetch, process and store the team's current standings along with historical game-by-game records dating back to 1901. It also collects batting and pitching data, among other statistics, for the same period. These records are processed and used to bake out the site using the Jekyll static site generator, in concert with Github Pages, and D3.js for charts. 
 
@@ -605,7 +605,7 @@ The processed datasets are uploaded to an AWS S3 bucket.
 
 ## Notes
 
-This project, which started as a few scrapers, has grown into a detailed project. If you have questions, [please let me know](mailto:mattstiles@gmail.com). 
+This project, which started as a mere fork of the Dodgers Data Bot, will hopefully be adding some new and different features. If you have questions, [drop a line](mailto:sogrady@gmail.com). 
 
 ## Contributions
 
