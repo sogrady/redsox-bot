@@ -18,8 +18,8 @@ aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
 from scripts import config
 
 # Fetch
-
-year = pd.to_datetime("now").strftime("%Y")
+# Temporarily using 2025 for testing until 2026 season starts
+year = "2025"  # pd.to_datetime("now").strftime("%Y")
 
 url = f"https://www.baseball-reference.com/teams/{config.TEAM_ID_BBREF}/{year}-batting.shtml"
 
