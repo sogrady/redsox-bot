@@ -61,8 +61,8 @@ players_df.columns = players_df.columns.str.lower()
 players = (
     players_df
     .query('rk.notna() and rk != "Rk"')
-    .query('name != "Team Totals"')
-    .query('~name.str.contains("Rank in", na=False)')
+    .query('player != "Team Totals"')
+    .query('~player.str.contains("Rank in", na=False)')
     .copy()
 )
 
@@ -79,8 +79,8 @@ if 'ip' in players.columns:
     top_pitchers = (
         players[players['ip'] >= 10]
         .nlargest(10, 'so/w')
-        [['name', 'pos', 'era+', 'fip', 'so/w']]
-        .rename(columns={'so/w': 'so_bb'})
+        [['player', 'pos', 'era+', 'fip', 'so/w']]
+        .rename(columns={'so/w': 'so_bb', 'player': 'name'})
         .reset_index(drop=True)
     )
 else:
@@ -88,8 +88,8 @@ else:
     top_pitchers = (
         players
         .nlargest(10, 'so/w')
-        [['name', 'pos', 'era+', 'fip', 'so/w']]
-        .rename(columns={'so/w': 'so_bb'})
+        [['player', 'pos', 'era+', 'fip', 'so/w']]
+        .rename(columns={'so/w': 'so_bb', 'player': 'name'})
         .reset_index(drop=True)
     )
 
