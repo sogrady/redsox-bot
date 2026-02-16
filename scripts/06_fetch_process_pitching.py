@@ -67,31 +67,36 @@ players = (
 )
 
 # Convert numeric columns
-numeric_cols = ['era+', 'fip', 'so/w']
+numeric_cols = ['era+', 'fip', 'so', 'bb', 'ip']
 for col in numeric_cols:
     if col in players.columns:
         players[col] = pd.to_numeric(players[col], errors='coerce')
 
-# Top 10 pitchers by SO/BB (SO/W in Baseball Reference)
+# Calculate SO/BB ratio (K/BB)
+# If BB is 0, set ratio to SO (to avoid division by zero)
+if 'so' in players.columns and 'bb' in players.columns:
+    players['so_bb'] = players.apply(
+        lambda row: row['so'] / row['bb'] if row['bb'] > 0 else row['so'],
+        axis=1
+    )
+else:
+    # Fallback: some tables might have pre-calculated so/w
+    if 'so/w' in players.columns:
+        players['so_bb'] = pd.to_numeric(players['so/w'], errors='coerce')
+
+# Top 10 pitchers by SO/BB
 # Filter for pitchers with meaningful stats (at least 10 IP)
-if 'ip' in players.columns:
-    players['ip'] = pd.to_numeric(players['ip'], errors='coerce')
+if 'ip' in players.columns and 'so_bb' in players.columns:
     top_pitchers = (
         players[players['ip'] >= 10]
-        .nlargest(10, 'so/w')
-        [['player', 'pos', 'era+', 'fip', 'so/w']]
-        .rename(columns={'so/w': 'so_bb', 'player': 'name'})
+        .nlargest(10, 'so_bb')
+        [['player', 'pos', 'era+', 'fip', 'so_bb']]
+        .rename(columns={'player': 'name'})
         .reset_index(drop=True)
     )
 else:
     # Fallback if IP column not found
-    top_pitchers = (
-        players
-        .nlargest(10, 'so/w')
-        [['player', 'pos', 'era+', 'fip', 'so/w']]
-        .rename(columns={'so/w': 'so_bb', 'player': 'name'})
-        .reset_index(drop=True)
-    )
+    top_pitchers = pd.DataFrame(columns=['name', 'pos', 'era+', 'fip', 'so_bb'])
 
 """
 Export
