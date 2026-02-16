@@ -23,7 +23,8 @@ import unicodedata
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Get current year dynamically
-CURRENT_YEAR = datetime.now().year
+# Temporarily using 2025 for testing until 2026 season starts
+CURRENT_YEAR = 2025  # datetime.now().year
 
 from scripts import config
 

@@ -81,13 +81,13 @@ jobs:
         python scripts/29_fetch_historical_standings.py
         python scripts/10_fetch_process_historic_batting_gamelogs.py
         python scripts/12_fetch_process_historic_pitching_gamelogs.py
+        python scripts/15_fetch_xwoba.py
         # python scripts/07_create_toplines_summary.py  # Needs current season data
         # python scripts/08_fetch_process_season_outcomes.py
         # python scripts/10_fetch_process_historic_batting_gamelogs.py
         # python scripts/11_fetch_process_attendance.py
         # python scripts/12_fetch_process_historic_pitching_gamelogs.py
         # python scripts/14_fetch_process_batting_mlb.py
-        # python scripts/15_fetch_xwoba.py
         # python scripts/20_fetch_game_pitches.py
         # python scripts/21_summarize_pitch_data.py
         # python scripts/27_collect_umpires.py
