@@ -4192,7 +4192,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const response = await fetch(url);
           const data = await response.json();
           
-          renderPitchingTable(data, 'pitching-kbb-table', ['name', 'pos', 'era+', 'fip', 'so_bb'], getColorScaleRed);
+          renderPitchingTable(data, 'pitching-kbb-table', ['name', 'era+', 'fip', 'so_bb'], getColorScaleRed);
       } catch (error) {
           console.error('Failed to fetch pitching data:', error);
       }
@@ -4222,15 +4222,20 @@ document.addEventListener('DOMContentLoaded', function () {
               const cell = document.createElement('td');
               const value = pitcher[field];
               
-              // Format numeric values to 2 decimal places
-              if (field !== 'name' && field !== 'pos' && !isNaN(parseFloat(value))) {
-                  cell.textContent = parseFloat(value).toFixed(2);
+              // Format numeric values
+              if (field !== 'name' && !isNaN(parseFloat(value))) {
+                  // ERA+ should have no decimals, others get 2 decimals
+                  if (field === 'era+') {
+                      cell.textContent = Math.round(parseFloat(value));
+                  } else {
+                      cell.textContent = parseFloat(value).toFixed(2);
+                  }
               } else {
                   cell.textContent = value;
               }
 
               // Apply conditional coloring for numeric fields
-              if (field !== 'name' && field !== 'pos') {
+              if (field !== 'name') {
                   const numValue = parseFloat(value);
                   if (!isNaN(numValue)) {
                       const scale = scales[field];
