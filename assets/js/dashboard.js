@@ -4182,3 +4182,119 @@ async function initPlayoffJourney() {
   }
 }
 
+
+// Pitching K/BB table
+document.addEventListener('DOMContentLoaded', function () {
+  const url = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_top_kbb.json';
+
+  const fetchDataAndRenderPitchingTable = async () => {
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          
+          renderPitchingTable(data, 'pitching-kbb-table', ['name', 'pos', 'era+', 'fip', 'so_bb'], getColorScaleRed);
+      } catch (error) {
+          console.error('Failed to fetch pitching data:', error);
+      }
+  };
+
+  const renderPitchingTable = (data, tableId, fields, getColorScale) => {
+      const tableBody = document.querySelector(`#${tableId} tbody`);
+      if (!tableBody) {
+          console.error(`Table body not found for ${tableId}`);
+          return;
+      }
+      tableBody.innerHTML = '';
+
+      // Calculate the min and max values for each column to set the color scale
+      const scales = fields.reduce((acc, field) => {
+          const values = data.map(item => parseFloat(item[field]));
+          acc[field] = {
+              min: Math.min(...values.filter(v => !isNaN(v))),
+              max: Math.max(...values.filter(v => !isNaN(v)))
+          };
+          return acc;
+      }, {});
+
+      data.forEach(pitcher => {
+          const row = document.createElement('tr');
+          fields.forEach(field => {
+              const cell = document.createElement('td');
+              const value = pitcher[field];
+              
+              // Format numeric values to 2 decimal places
+              if (field !== 'name' && field !== 'pos' && !isNaN(parseFloat(value))) {
+                  cell.textContent = parseFloat(value).toFixed(2);
+              } else {
+                  cell.textContent = value;
+              }
+
+              // Apply conditional coloring for numeric fields
+              if (field !== 'name' && field !== 'pos') {
+                  const numValue = parseFloat(value);
+                  if (!isNaN(numValue)) {
+                      const scale = scales[field];
+                      const bgColor = getColorScale(field, numValue, scale.min, scale.max);
+                      cell.style.backgroundColor = bgColor;
+                      cell.style.color = getContrastYIQ(bgColor);
+                  }
+              }
+
+              row.appendChild(cell);
+          });
+          tableBody.appendChild(row);
+      });
+  };
+
+  const getColorScaleRed = (field, value, min, max) => {
+      // Red color scale for pitching stats - darker red is better
+      // FIP: lower is better (reverse scale)
+      if (field === 'fip') {
+          return getColorFromScale(value, min, max, '#BD3039', '#FFE5E7', true);
+      }
+      // ERA+, SO/BB: higher is better (normal scale)
+      return getColorFromScale(value, min, max, '#FFE5E7', '#BD3039', false);
+  };
+
+  const getColorFromScale = (value, min, max, lightColor, darkColor, reverse = false) => {
+      const ratio = (value - min) / (max - min);
+      const adjustedRatio = reverse ? 1 - ratio : ratio;
+      
+      const light = {
+          r: parseInt(lightColor.slice(1, 3), 16),
+          g: parseInt(lightColor.slice(3, 5), 16),
+          b: parseInt(lightColor.slice(5, 7), 16)
+      };
+      const dark = {
+          r: parseInt(darkColor.slice(1, 3), 16),
+          g: parseInt(darkColor.slice(3, 5), 16),
+          b: parseInt(darkColor.slice(5, 7), 16)
+      };
+      
+      const r = Math.round(light.r + (dark.r - light.r) * adjustedRatio);
+      const g = Math.round(light.g + (dark.g - light.g) * adjustedRatio);
+      const b = Math.round(light.b + (dark.b - light.b) * adjustedRatio);
+      
+      return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  const getContrastYIQ = (hexcolor) => {
+      // If hexcolor starts with 'rgb', convert it to hex
+      if (hexcolor.startsWith('rgb')) {
+          const rgb = hexcolor.match(/\d+/g);
+          const r = parseInt(rgb[0]);
+          const g = parseInt(rgb[1]);
+          const b = parseInt(rgb[2]);
+          const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+          return (yiq >= 128) ? '#000' : '#fff';
+      }
+      
+      const r = parseInt(hexcolor.slice(1, 3), 16);
+      const g = parseInt(hexcolor.slice(3, 5), 16);
+      const b = parseInt(hexcolor.slice(5, 7), 16);
+      const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+      return (yiq >= 128) ? '#000' : '#fff';
+  };
+
+  fetchDataAndRenderPitchingTable();
+});
