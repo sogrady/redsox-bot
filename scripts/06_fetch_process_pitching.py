@@ -52,6 +52,46 @@ totals = (
     .copy()
 )
 
+# Individual players - get full table
+players_df = pd.read_html(url)[0]
+players_df.columns = players_df.columns.str.lower()
+
+# Filter to actual players (exclude team totals, ranks, header rows)
+players = (
+    players_df
+    .query('rk.notna() and rk != "Rk"')
+    .query('name != "Team Totals"')
+    .query('~name.str.contains("Rank in", na=False)')
+    .copy()
+)
+
+# Convert numeric columns
+numeric_cols = ['era+', 'fip', 'so/w']
+for col in numeric_cols:
+    if col in players.columns:
+        players[col] = pd.to_numeric(players[col], errors='coerce')
+
+# Top 10 pitchers by SO/BB (SO/W in Baseball Reference)
+# Filter for pitchers with meaningful stats (at least 10 IP)
+if 'ip' in players.columns:
+    players['ip'] = pd.to_numeric(players['ip'], errors='coerce')
+    top_pitchers = (
+        players[players['ip'] >= 10]
+        .nlargest(10, 'so/w')
+        [['name', 'pos', 'era+', 'fip', 'so/w']]
+        .rename(columns={'so/w': 'so_bb'})
+        .reset_index(drop=True)
+    )
+else:
+    # Fallback if IP column not found
+    top_pitchers = (
+        players
+        .nlargest(10, 'so/w')
+        [['name', 'pos', 'era+', 'fip', 'so/w']]
+        .rename(columns={'so/w': 'so_bb'})
+        .reset_index(drop=True)
+    )
+
 """
 Export
 """
@@ -97,6 +137,7 @@ def save_dataframe(df, path_without_extension, formats):
 formats = ["csv", "json", "parquet"]
 save_dataframe(totals, f"data/pitching/redsox_pitching_totals_current", formats)
 save_dataframe(ranks, f"data/pitching/redsox_pitching_ranks_current", formats)
+save_dataframe(top_pitchers, f"data/pitching/redsox_pitching_top_kbb", formats)
 
 
 def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"], profile_name=None):
@@ -148,5 +189,10 @@ save_to_s3(
 save_to_s3(
     ranks,
     "redsox/data/pitching/redsox_pitching_ranks_current",
+    "redsox-data",
+)
+save_to_s3(
+    top_pitchers,
+    "redsox/data/pitching/redsox_pitching_top_kbb",
     "redsox-data",
 )
