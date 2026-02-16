@@ -160,7 +160,7 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"], pro
             df.to_csv(buffer, index=False)
             content_type = "text/csv"
         elif fmt == "json":
-            df.to_json(buffer, orient="records", lines=True)
+            df.to_json(buffer, orient="records", indent=2)
             content_type = "application/json"
         elif fmt == "parquet":
             df.to_parquet(buffer, index=False)
