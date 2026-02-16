@@ -195,7 +195,7 @@ def save_dataframe(df, path_without_extension, formats):
         if file_format == "csv":
             df.to_csv(file_path, index=False)
         elif file_format == "json":
-            df.to_json(file_path, orient="records", lines=True)
+            df.to_json(file_path, orient="records", indent=2)
         elif file_format == "parquet":
             df.to_parquet(file_path, index=False)
 
@@ -218,6 +218,14 @@ try:
     )
 except Exception as e:
     print(f"An error occurred: {e}")
+
+# Create current table for display (current season only)
+player_current_table_df = player_totals_df.copy()
+save_dataframe(
+    player_current_table_df,
+    f"../data/batting/redsox_player_batting_current_table",
+    formats,
+)
 
 def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"]):
     """
@@ -243,7 +251,7 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"]):
             df.to_csv(buffer, index=False)
             content_type = "text/csv"
         elif fmt == "json":
-            df.to_json(buffer, orient="records", lines=True)
+            df.to_json(buffer, orient="records", indent=2)
             content_type = "application/json"
         elif fmt == "parquet":
             df.to_parquet(buffer, index=False)
@@ -270,5 +278,10 @@ save_to_s3(
 save_to_s3(
     team_ranks_full_df,
     "redsox/data/batting/redsox_team_batting_ranks_1958_present",
+    "redsox-data",
+)
+save_to_s3(
+    player_current_table_df,
+    "redsox/data/batting/redsox_player_batting_current_table",
     "redsox-data",
 )
