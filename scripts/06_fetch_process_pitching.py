@@ -79,14 +79,14 @@ if 'ip' in players.columns and 'so/bb' in players.columns:
     top_pitchers = (
         players[players['ip'] >= 10]
         .nlargest(10, 'so/bb')
-        [['player', 'pos', 'era+', 'fip', 'so/bb']]
+        [['player', 'era+', 'fip', 'so/bb']]
         .rename(columns={'player': 'name', 'so/bb': 'so_bb'})
         .reset_index(drop=True)
     )
 else:
     # Fallback if columns not found
     print(f"Available columns: {players.columns.tolist()}")
-    top_pitchers = pd.DataFrame(columns=['name', 'pos', 'era+', 'fip', 'so_bb'])
+    top_pitchers = pd.DataFrame(columns=['name', 'era+', 'fip', 'so_bb'])
 
 """
 Export
