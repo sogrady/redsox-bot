@@ -1,0 +1,72 @@
+[
+    {
+        "name":"Connelly Early*",
+        "pos":null,
+        "era+":179.0,
+        "fip":0.91,
+        "so_bb":7.25
+    },
+    {
+        "name":"Steven Matz*",
+        "pos":null,
+        "era+":201.0,
+        "fip":4.84,
+        "so_bb":6.0
+    },
+    {
+        "name":"Aroldis Chapman*",
+        "pos":"CL",
+        "era+":351.0,
+        "fip":1.73,
+        "so_bb":5.6666666667
+    },
+    {
+        "name":"Garrett Crochet*",
+        "pos":"SP",
+        "era+":159.0,
+        "fip":2.89,
+        "so_bb":5.5434782609
+    },
+    {
+        "name":"Garrett Whitlock",
+        "pos":"RP",
+        "era+":183.0,
+        "fip":2.18,
+        "so_bb":3.7916666667
+    },
+    {
+        "name":"Zack Kelly",
+        "pos":null,
+        "era+":90.0,
+        "fip":3.53,
+        "so_bb":2.9166666667
+    },
+    {
+        "name":"Justin Wilson*",
+        "pos":"RP",
+        "era+":123.0,
+        "fip":2.95,
+        "so_bb":2.85
+    },
+    {
+        "name":"Greg Weissert",
+        "pos":"RP",
+        "era+":146.0,
+        "fip":3.67,
+        "so_bb":2.7142857143
+    },
+    {
+        "name":"Hunter Dobbins",
+        "pos":"SP",
+        "era+":100.0,
+        "fip":3.87,
+        "so_bb":2.6470588235
+    },
+    {
+        "name":"Kyle Harrison*",
+        "pos":null,
+        "era+":141.0,
+        "fip":2.47,
+        "so_bb":2.6
+    }
+]
