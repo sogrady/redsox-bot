@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Connelly Early*",
+        "era+":179.0,
+        "fip":0.91,
+        "so_bb":7.25
+    },
+    {
+        "name":"Steven Matz*",
+        "era+":201.0,
+        "fip":4.84,
+        "so_bb":6.0
+    },
+    {
+        "name":"Aroldis Chapman*",
+        "era+":351.0,
+        "fip":1.73,
+        "so_bb":5.67
+    },
+    {
+        "name":"Garrett Whitlock",
+        "era+":183.0,
+        "fip":2.18,
+        "so_bb":3.79
+    },
+    {
+        "name":"Zack Kelly",
+        "era+":90.0,
+        "fip":3.53,
+        "so_bb":2.92
+    }
+]

@@ -4278,16 +4278,22 @@ async function initPlayoffJourney() {
 }
 
 
-// Pitching K/BB table
+// Pitching K/BB tables
 document.addEventListener('DOMContentLoaded', function () {
-  const url = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_top_kbb.json';
+  const startersUrl = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_top_kbb_starters.json';
+  const relieversUrl = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_top_kbb_relievers.json';
 
   const fetchDataAndRenderPitchingTable = async () => {
       try {
-          const response = await fetch(url);
-          const data = await response.json();
-          
-          renderPitchingTable(data, 'pitching-kbb-table', ['name', 'era+', 'fip', 'so_bb'], getColorScaleRed);
+          const [startersRes, relieversRes] = await Promise.all([
+              fetch(startersUrl),
+              fetch(relieversUrl)
+          ]);
+          const starters = await startersRes.json();
+          const relievers = await relieversRes.json();
+
+          renderPitchingTable(starters, 'pitching-kbb-starters-table', ['name', 'era+', 'fip', 'so_bb'], getColorScaleRed);
+          renderPitchingTable(relievers, 'pitching-kbb-relievers-table', ['name', 'era+', 'fip', 'so_bb'], getColorScaleRed);
       } catch (error) {
           console.error('Failed to fetch pitching data:', error);
       }
