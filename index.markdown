@@ -513,33 +513,35 @@ twitter:
 
 <h3 class="visual-subhead">Top pitchers by strikeout-to-walk ratio</h3>
 <p class="chart-chatter">Darker shades of <span class="win">red</span> represent better performance.</p>
-<h4 class="table-subhead">Starting pitchers</h4>
-<div class="table-wrapper">
-    <table id="pitching-kbb-starters-table" class="data-table pitching-table">
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th class="table-value">ERA+</th>
-                <th class="table-value">FIP</th>
-                <th class="table-value">SO/BB</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
-<h4 class="table-subhead">Relievers</h4>
-<div class="table-wrapper">
-    <table id="pitching-kbb-relievers-table" class="data-table pitching-table">
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th class="table-value">ERA+</th>
-                <th class="table-value">FIP</th>
-                <th class="table-value">SO/BB</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+<div class="tables-container">
+    <div class="table-wrapper">
+        <h4 class="table-subhead">Starting pitchers</h4>
+        <table id="pitching-kbb-starters-table" class="data-table pitching-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th class="table-value">ERA+</th>
+                    <th class="table-value">FIP</th>
+                    <th class="table-value">SO/BB</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="table-wrapper">
+        <h4 class="table-subhead">Relievers</h4>
+        <table id="pitching-kbb-relievers-table" class="data-table pitching-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th class="table-value">ERA+</th>
+                    <th class="table-value">FIP</th>
+                    <th class="table-value">SO/BB</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </div>
 <p class="note">Top 5 starters (minimum 30 IP) and relievers (minimum 10 IP), sorted by strikeout-to-walk ratio.</p>
 
