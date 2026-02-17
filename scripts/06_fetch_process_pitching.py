@@ -72,21 +72,29 @@ for col in numeric_cols:
     if col in players.columns:
         players[col] = pd.to_numeric(players[col], errors='coerce')
 
-# Use Baseball Reference's SO/BB column directly
-# Top 10 pitchers by SO/BB
-# Filter for pitchers with meaningful stats (at least 10 IP)
-if 'ip' in players.columns and 'so/bb' in players.columns:
-    top_pitchers = (
-        players[players['ip'] >= 10]
-        .nlargest(10, 'so/bb')
+# Split into starters (pos == 'SP') and relievers (pos != 'SP')
+if 'pos' in players.columns and 'ip' in players.columns and 'so/bb' in players.columns:
+    starters = players[players['pos'] == 'SP']
+    relievers = players[players['pos'] != 'SP']
+
+    top_starters = (
+        starters[starters['ip'] >= 30]
+        .nlargest(5, 'so/bb')
+        [['player', 'era+', 'fip', 'so/bb']]
+        .rename(columns={'player': 'name', 'so/bb': 'so_bb'})
+        .reset_index(drop=True)
+    )
+    top_relievers = (
+        relievers[relievers['ip'] >= 10]
+        .nlargest(5, 'so/bb')
         [['player', 'era+', 'fip', 'so/bb']]
         .rename(columns={'player': 'name', 'so/bb': 'so_bb'})
         .reset_index(drop=True)
     )
 else:
-    # Fallback if columns not found
     print(f"Available columns: {players.columns.tolist()}")
-    top_pitchers = pd.DataFrame(columns=['name', 'era+', 'fip', 'so_bb'])
+    top_starters = pd.DataFrame(columns=['name', 'era+', 'fip', 'so_bb'])
+    top_relievers = pd.DataFrame(columns=['name', 'era+', 'fip', 'so_bb'])
 
 """
 Export
@@ -127,13 +135,11 @@ def save_dataframe(df, path_without_extension, formats):
 
 
 # Save local files
-
-
-# Save local files
 formats = ["csv", "json", "parquet"]
 save_dataframe(totals, f"data/pitching/redsox_pitching_totals_current", formats)
 save_dataframe(ranks, f"data/pitching/redsox_pitching_ranks_current", formats)
-save_dataframe(top_pitchers, f"data/pitching/redsox_pitching_top_kbb", formats)
+save_dataframe(top_starters, f"data/pitching/redsox_pitching_top_kbb_starters", formats)
+save_dataframe(top_relievers, f"data/pitching/redsox_pitching_top_kbb_relievers", formats)
 
 
 def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json", "parquet"], profile_name=None):
@@ -188,7 +194,12 @@ save_to_s3(
     "redsox-data",
 )
 save_to_s3(
-    top_pitchers,
-    "redsox/data/pitching/redsox_pitching_top_kbb",
+    top_starters,
+    "redsox/data/pitching/redsox_pitching_top_kbb_starters",
+    "redsox-data",
+)
+save_to_s3(
+    top_relievers,
+    "redsox/data/pitching/redsox_pitching_top_kbb_relievers",
     "redsox-data",
 )

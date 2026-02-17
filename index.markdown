@@ -513,8 +513,9 @@ twitter:
 
 <h3 class="visual-subhead">Top pitchers by strikeout-to-walk ratio</h3>
 <p class="chart-chatter">Darker shades of <span class="win">red</span> represent better performance.</p>
+<h4 class="table-subhead">Starting pitchers</h4>
 <div class="table-wrapper">
-    <table id="pitching-kbb-table" class="data-table pitching-table">
+    <table id="pitching-kbb-starters-table" class="data-table pitching-table">
         <thead>
             <tr>
                 <th>Player</th>
@@ -526,7 +527,21 @@ twitter:
         <tbody></tbody>
     </table>
 </div>
-<p class="note">Note: Top 10 pitchers sorted by strikeout-to-walk ratio (minimum 10 IP).</p>
+<h4 class="table-subhead">Relievers</h4>
+<div class="table-wrapper">
+    <table id="pitching-kbb-relievers-table" class="data-table pitching-table">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th class="table-value">ERA+</th>
+                <th class="table-value">FIP</th>
+                <th class="table-value">SO/BB</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<p class="note">Top 5 starters (minimum 30 IP) and relievers (minimum 10 IP), sorted by strikeout-to-walk ratio.</p>
 
 <div class="large-chart-container">
 <h3 class="visual-subhead">Team <span class="win">ERA</span> over season: Then and now</h3>
