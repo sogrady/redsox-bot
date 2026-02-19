@@ -71,7 +71,7 @@ def fetch_year(year):
     df = src[available].copy()
 
     int_cols = [c for c in ["gtm", "h", "hr", "er", "so"] if c in df.columns]
-    df[int_cols] = df[int_cols].astype(int)
+    df[int_cols] = df[int_cols].fillna(0).astype(int)
     if 'era' in df.columns:
         df['era'] = pd.to_numeric(df['era'], errors='coerce')
     df['era_cum'] = df['era']

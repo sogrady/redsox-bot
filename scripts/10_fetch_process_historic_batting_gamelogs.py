@@ -75,7 +75,7 @@ def fetch_year(year):
     df = df.drop(cols_to_drop, axis=1)
 
     existing_val_cols = [c for c in val_cols if c in df.columns]
-    df[existing_val_cols] = df[existing_val_cols].astype(int)
+    df[existing_val_cols] = df[existing_val_cols].fillna(0).astype(int)
 
     for col in existing_val_cols:
         df[f"{col}_cum"] = df.groupby("year")[col].cumsum()
