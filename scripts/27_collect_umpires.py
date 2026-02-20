@@ -8,8 +8,8 @@ Data source:
 - MLB StatsAPI live feed: https://statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live
 
 Output:
-- data/pitches/dodgers_umpires_{year}.json
-- s3://redsox-data/dodgers/data/pitches/dodgers_umpires_{year}.json
+- data/pitches/redsox_umpires_{year}.json
+- s3://redsox-data/redsox/data/pitches/redsox_umpires_{year}.json
 
 Idempotent: Reuses existing output and appends only missing game_pks.
 Also reuses local Savant gamefeeds (data/gamefeeds/*.json) to seed game_pks.
@@ -27,7 +27,7 @@ import boto3
 from scripts import config
 
 
-DODGERS_TEAM_ID = config.TEAM_ID
+TEAM_ID = config.TEAM_ID
 SCHEDULE_URL = "https://statsapi.mlb.com/api/v1/schedule"
 LIVE_FEED_URL_TMPL = "https://statsapi.mlb.com/api/v1.1/game/{game_pk}/feed/live"
 
@@ -35,7 +35,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_GAMEFEEDS_DIR = os.path.join(BASE_DIR, "data", "gamefeeds")
 LOCAL_OUT_DIR = os.path.join(BASE_DIR, "data", "pitches")
 
-YEAR = pd.Timestamp.now().year
+# Use 2025 for now (last completed season) - update to current year once 2026 season starts
+YEAR = 2025  # pd.Timestamp.now().year
 LOCAL_OUT_PATH = os.path.join(LOCAL_OUT_DIR, f"redsox_umpires_{YEAR}.json")
 
 S3_BUCKET = "redsox-data"
@@ -74,7 +75,7 @@ def fetch_season_schedule_gamepks(year: int) -> List[Tuple[int, str]]:
     """Return list of (gamePk, date_iso) for all Red Sox games in the given year."""
     params = {
         "sportId": 1,
-        "teamId": DODGERS_TEAM_ID,
+        "teamId": TEAM_ID,
         "startDate": f"{year}-03-01",
         "endDate": f"{year}-11-30",
     }

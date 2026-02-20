@@ -80,6 +80,7 @@ jobs:
         python scripts/28_fetch_postseason_stats.py
         python scripts/29_fetch_historical_standings.py
         python scripts/15_fetch_xwoba.py
+        python scripts/27_collect_umpires.py
         # Historical gamelogs (~15 min each) run in fetch_historical.yml instead
         # python scripts/07_create_toplines_summary.py  # Needs current season data
         # python scripts/08_fetch_process_season_outcomes.py
@@ -89,7 +90,6 @@ jobs:
         # python scripts/14_fetch_process_batting_mlb.py
         # python scripts/20_fetch_game_pitches.py
         # python scripts/21_summarize_pitch_data.py
-        # python scripts/27_collect_umpires.py
 
     - name: Build Jekyll site
       run: bundle exec jekyll build
