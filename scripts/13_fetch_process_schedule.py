@@ -145,14 +145,7 @@ def convert_time_to_local_manual(time_str):
 src = fetch_clean_current_schedule(url, year)
 
 if src is None:
-    logging.warning(f"Schedule not available yet for {year}. Creating empty schedule.")
-    # Create empty schedule DataFrame
-    schedule_df = pd.DataFrame(columns=['date', 'opp_name', 'home_away', 'result', 'placement', 'game_start'])
-    # Save empty schedule and exit
-    file_path = os.path.join(data_dir, 'redsox_schedule')
-    formats = ["csv", "json"]
-    save_to_s3(schedule_df, "redsox/data/standings/redsox_schedule", "redsox-data", formats)
-    logging.info("Empty schedule saved. Exiting.")
+    logging.warning(f"Schedule not available yet for {year}. Exiting without saving.")
     exit(0)
 
 # Create a more robust indicator for completed games
