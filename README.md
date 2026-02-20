@@ -248,78 +248,148 @@ from dotenv import load_dotenv
 load_dotenv()
 ```
 
-## Season Transition
+## Season Transition: Off-Season to In-Season Mode
 
-When transitioning to a new baseball season (e.g., from 2025 to 2026), several hardcoded year references need updating.
+When transitioning from off-season (showing 2025 data) to in-season mode (showing live 2026 data), follow this checklist. **Recommended timing: 1-2 weeks before Opening Day (late March).**
 
-### Automated Update Script
+### Step-by-Step Transition Checklist
 
-Use the `update_season_year.py` script to automatically update most year references:
+#### 1. Update Central Year Configuration
 
-```bash
-# Preview changes (recommended first)
-python scripts/update_season_year.py --old-year 2025 --new-year 2026 --dry-run
+**File:** `scripts/config.py`
 
-# Apply changes
-python scripts/update_season_year.py --old-year 2025 --new-year 2026
+Change line 14 from:
+```python
+CURRENT_YEAR = 2025  # Update to 2026 when 2026 season starts
 ```
 
-**What it updates:**
-- ✓ **Comments out** the Postseason section (uncomment when playoffs begin in October)
-- ✓ Postseason data file references in JavaScript (2025 → 2026)
-- ✓ Year-over-year comparison charts (2024 vs 2025 → 2025 vs 2026)
-- ✓ Jekyll data fallbacks
-- ✓ Pitch data download links
+To:
+```python
+CURRENT_YEAR = 2026  # Update to 2026 when 2026 season starts
+```
 
-### Complete Transition Checklist
+**What this updates automatically:**
+- ✅ Batting statistics (script 05)
+- ✅ Pitching statistics (script 06)
+- ✅ xwOBA data (script 15)
+- ✅ Umpire name collection (script 27)
 
-See [`SEASON_TRANSITION.md`](./SEASON_TRANSITION.md) for the full guide, including:
+#### 2. Enable In-Season Scripts in Workflow
 
-- **Pre-season setup** (2 weeks before Opening Day)
-  - Run the update script
-  - Verify Bluesky credentials
-  - Test data generation scripts
-  - Review workflow schedules
+**File:** `.github/workflows/fetch.yml`
 
-- **Opening Day tasks**
-  - Monitor first automated data run
-  - Verify 2026 data files are created
-  - Test the live site
-  - Confirm Bluesky posts work
+Uncomment these scripts (around lines 67-92):
 
-- **During-season maintenance**
-  - Daily monitoring tips
-  - How to manually fix failed workflows
+```yaml
+# Change FROM (off-season):
+# python scripts/00_fetch_league_standings.py
+# python scripts/02_update_boxscores_archive.py
+# python scripts/03_scrape_league_ranks.py
+# python scripts/04_fetch_process_standings.py
 
-- **Post-season tasks** (when playoffs begin)
-  - Uncomment the postseason section in index.markdown
-  - Copy postseason data files to assets directory
-  - Archive season data
+# TO (in-season):
+python scripts/00_fetch_league_standings.py
+python scripts/02_update_boxscores_archive.py
+python scripts/03_scrape_league_ranks.py
+python scripts/04_fetch_process_standings.py
+```
 
-### Quick Transition Steps
+Also uncomment:
+```yaml
+python scripts/09_build_wins_losses_from_boxscores.py
+python scripts/18_generate_projection.py
+python scripts/20_fetch_game_pitches.py      # Pitch-by-pitch data
+python scripts/21_summarize_pitch_data.py    # Umpire scorecards
+```
 
-1. **Update year references:**
-   ```bash
-   python scripts/update_season_year.py --old-year 2025 --new-year 2026
-   git add -A
-   git commit -m "Update to 2026 season"
-   git push
-   ```
+**Note:** The schedule script (13) should already be enabled for spring training.
 
-2. **Wait for season to start** - The site will automatically switch from showing 2025 to 2026 as the "current year" once 2026 game data is available
+#### 3. Update Workflow Schedule (Optional)
 
-3. **Monitor first data runs** - Watch GitHub Actions to ensure workflows run successfully
+**File:** `.github/workflows/fetch.yml`
 
-4. **Verify Bluesky posts** - Check that automated posts work correctly
+During the season, you may want to run more frequently. Update the cron schedule (line 5):
+
+```yaml
+# Off-season (4x/day):
+- cron: '0 8,12,15,23 * 3-10 *'
+
+# In-season (6x/day for more frequent updates):
+- cron: '0 6,10,14,18,22,2 * 3-10 *'
+```
+
+#### 4. Commit and Push Changes
+
+```bash
+git add scripts/config.py .github/workflows/fetch.yml
+git commit -m "Switch to 2026 in-season mode
+
+- Update CURRENT_YEAR to 2026
+- Enable in-season scripts (standings, boxscores, projections)
+- Enable pitch analysis and umpire scorecards
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+git push
+```
+
+#### 5. Monitor First Workflow Run
+
+After Opening Day:
+1. Go to **Actions** tab in GitHub
+2. Wait for next scheduled run (or trigger manually via "Run workflow")
+3. Check that all scripts complete successfully
+4. Verify 2026 data files appear on S3:
+   - `redsox_standings_1901_present.json`
+   - `redsox_player_batting_current_table.json`
+   - `redsox_pitching_top_kbb_starters.json`
+   - `redsox_umpires_2026.json`
+
+#### 6. Verify Website Updates
+
+Check your site (redsoxdata.bot):
+- ✅ Current standings show 2026 season
+- ✅ Batting/pitching tables show 2026 stats
+- ✅ Schedule shows upcoming 2026 games
+- ✅ Historical charts include 2026 line (after first few games)
+- ✅ Umpire scorecards populate (after ~5-10 games)
+
+### What Happens Incrementally
+
+These features build up automatically as the season progresses:
+
+- **Umpire scorecards** - Start appearing after first 5-10 games (scripts 20 & 21 need pitch data)
+- **Win/loss projections** - Become more accurate after ~20-30 games
+- **Historical comparison lines** - 2026 line appears on charts after first game
+- **League rankings** - Update daily as standings change
+
+### Post-Season Transition (October)
+
+When playoffs begin:
+
+1. **Uncomment postseason section** in `index.markdown` (around line 450)
+2. **Enable postseason script** (28) if not already running
+3. **Archive regular season data** (optional, for backup)
 
 ### What Updates Automatically
 
-These components will automatically adapt to the new season without manual changes:
+These components adapt without manual changes:
 
-- ✅ Main standings visualization (uses `getEffectiveCurrentYear()` function)
-- ✅ Most data fetching workflows (pull current year dynamically)
-- ✅ Cumulative stats charts (load from historical files)
+- ✅ Most data fetching scripts (use `config.CURRENT_YEAR`)
+- ✅ Cumulative stats charts (append to historical data)
 - ✅ Jekyll site generation
+- ✅ GitHub Pages deployment
+
+### Troubleshooting First Run
+
+**If workflows fail:**
+- Check that Baseball Reference has 2026 data published
+- Spring training games may appear before regular season
+- Some stats (league ranks, projections) may not work until ~5 games played
+
+**If data doesn't appear:**
+- Verify S3 bucket has 2026 files (check AWS Console or logs)
+- Check browser console for JavaScript errors
+- Ensure CURRENT_YEAR is set correctly in config.py
 
 ## Operations & Maintenance
 
