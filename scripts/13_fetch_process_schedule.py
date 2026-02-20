@@ -95,8 +95,16 @@ s3_bucket = "redsox-data"
 
 def fetch_clean_current_schedule(url, year):
     response = requests.get(url)
+    if response.status_code != 200:
+        logging.warning(f"Schedule page returned status {response.status_code}")
+        return None
+
     html_content = BeautifulSoup(response.content, 'html.parser')
-    raw_df = pd.read_html(StringIO(str(html_content)))[0].rename(columns={"Gm#": "game_no", "Unnamed: 4": "home_away", 'W/L': 'result'}).assign(season=year)
+    try:
+        raw_df = pd.read_html(StringIO(str(html_content)))[0].rename(columns={"Gm#": "game_no", "Unnamed: 4": "home_away", 'W/L': 'result'}).assign(season=year)
+    except (ValueError, IndexError) as e:
+        logging.warning(f"No schedule table found on page: {e}")
+        return None
     df = raw_df.query("Tm !='Tm'").copy()
     df.columns = df.columns.str.lower()
     print(df.columns)
@@ -135,6 +143,17 @@ def convert_time_to_local_manual(time_str):
         return time_str
 
 src = fetch_clean_current_schedule(url, year)
+
+if src is None:
+    logging.warning(f"Schedule not available yet for {year}. Creating empty schedule.")
+    # Create empty schedule DataFrame
+    schedule_df = pd.DataFrame(columns=['date', 'opp_name', 'home_away', 'result', 'placement', 'game_start'])
+    # Save empty schedule and exit
+    file_path = os.path.join(data_dir, 'redsox_schedule')
+    formats = ["csv", "json"]
+    save_to_s3(schedule_df, "redsox/data/standings/redsox_schedule", "redsox-data", formats)
+    logging.info("Empty schedule saved. Exiting.")
+    exit(0)
 
 # Create a more robust indicator for completed games
 # A game is completed if either cli is not null OR result is 'win' or 'loss'
