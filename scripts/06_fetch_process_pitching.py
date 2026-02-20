@@ -19,8 +19,8 @@ Fetch
 from scripts import config
 
 # Pitching table url for the current season
-# Temporarily using 2025 for testing until 2026 season starts
-year = "2025"  # pd.to_datetime("now").strftime("%Y")
+# Using config.CURRENT_YEAR - set to 2025 for off-season, update to 2026 when season starts
+year = str(config.CURRENT_YEAR)
 url = f"https://www.baseball-reference.com/teams/{config.TEAM_ID_BBREF}/{year}-pitching.shtml#all_team_pitching"
 
 

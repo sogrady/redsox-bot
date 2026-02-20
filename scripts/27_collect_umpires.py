@@ -35,8 +35,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_GAMEFEEDS_DIR = os.path.join(BASE_DIR, "data", "gamefeeds")
 LOCAL_OUT_DIR = os.path.join(BASE_DIR, "data", "pitches")
 
-# Use 2025 for now (last completed season) - update to current year once 2026 season starts
-YEAR = 2025  # pd.Timestamp.now().year
+# Using config.CURRENT_YEAR - set to 2025 for off-season, update to 2026 when season starts
+YEAR = config.CURRENT_YEAR
 LOCAL_OUT_PATH = os.path.join(LOCAL_OUT_DIR, f"redsox_umpires_{YEAR}.json")
 
 S3_BUCKET = "redsox-data"

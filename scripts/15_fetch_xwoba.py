@@ -22,11 +22,10 @@ import unicodedata
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Get current year dynamically
-# Temporarily using 2025 for testing until 2026 season starts
-CURRENT_YEAR = 2025  # datetime.now().year
-
 from scripts import config
+
+# Using config.CURRENT_YEAR - set to 2025 for off-season, update to 2026 when season starts
+CURRENT_YEAR = config.CURRENT_YEAR
 
 # Configuration
 output_dir = "data/batting"
