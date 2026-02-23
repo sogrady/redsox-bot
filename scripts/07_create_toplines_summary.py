@@ -56,10 +56,16 @@ def get_pacific_date():
 update_date = get_pacific_date()
 
 def read_parquet_s3(url, sort_by=None):
-    """Read a Parquet file from the S3 URL.
+    """Read a Parquet file from the S3 URL or local fallback.
     Only sort the dataframe if a sort column is provided.
     Batting doesn't have game dates because it's annual totals."""
-    df = pd.read_parquet(url)
+    try:
+        df = pd.read_parquet(url)
+    except Exception as e:
+        # Try local file as fallback
+        local_path = url.replace('https://redsox-data.s3.amazonaws.com/', '../')
+        logging.info(f"Could not read from S3, trying local path: {local_path}")
+        df = pd.read_parquet(local_path)
     if sort_by and sort_by in df.columns:
         df.sort_values(sort_by, ascending=False, inplace=True)
     return df
@@ -97,8 +103,8 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
     Falls back to 0 when values are unavailable.
     """
     try:
-        lad_row = live_df.query("team_name == @team_name").iloc[0]
-        division = lad_row.get('division_name')
+        team_row = live_df.query("team_name == @team_name").iloc[0]
+        division = team_row.get('division_name')
         division_df = live_df.query("division_name == @division").copy()
         if division_df.empty:
             return 0
@@ -106,9 +112,9 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
         division_df['__gb_num'] = division_df['games_back'].apply(parse_games_back)
         division_df['__rank_num'] = pd.to_numeric(division_df['division_rank'], errors='coerce')
         division_df = division_df.sort_values(['__rank_num', '__gb_num']).reset_index(drop=True)
-        lad_rank = int(lad_row.get('division_rank')) if pd.notna(lad_row.get('division_rank')) else 99
-        
-        if lad_rank == 1:
+        team_rank = int(team_row.get('division_rank')) if pd.notna(team_row.get('division_rank')) else 99
+
+        if team_rank == 1:
             # Check if there are any teams tied for first (GB = 0)
             tied_teams = division_df[division_df['__gb_num'] == 0]
             if len(tied_teams) > 1:
@@ -121,17 +127,16 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
                     return int(second_place_gb) if float(second_place_gb).is_integer() else second_place_gb
                 return 0
         else:
-            gb = parse_games_back(lad_row.get('games_back'))
+            gb = parse_games_back(team_row.get('games_back'))
             return int(gb) if isinstance(gb, (int, float)) and float(gb).is_integer() else gb
     except Exception:
         return None
 
 # URLs for data
-# URLs for data
-standings_live_url = f"https://redsox-data/redsox/data/standings/all_teams_standings_metrics_2025.json"
-standings_url = f"https://redsox-data/redsox/data/standings/redsox_standings_1958_present.parquet"
-batting_url = f"https://redsox-data/redsox/data/batting/redsox_team_batting_1958_present.parquet"
-pitching_url = 'https://redsox-data/redsox/data/pitching/redsox_pitching_totals_current.parquet'
+standings_live_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_2025.json"
+standings_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/redsox_standings_1958_present.parquet"
+batting_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/batting/redsox_team_batting_1958_present.parquet"
+pitching_url = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_totals_current.parquet'
 # pitching_ranks_url = 'https://redsox-data/dodgers/data/pitching/dodgers_pitching_ranks_current.parquet' # Removed
 # batting_ranks_url = 'https://redsox-data/dodgers/data/batting/dodgers_team_batting_ranks_1958_present.parquet' # Removed
 
@@ -170,8 +175,8 @@ mlb_teams = {
 
 # Load the data
 now = pd.to_datetime("now")
-year = now.strftime("%Y")  # current year
-last_year = (now - pd.DateOffset(years=1)).strftime("%Y")  # subtract one year
+year = str(config.CURRENT_YEAR)  # Use config year for off-season compatibility
+last_year = str(config.CURRENT_YEAR - 1)  # Previous year
 
 # Load league ranks data from JSON
 league_ranks_data = {}
@@ -223,14 +228,14 @@ except Exception:
     else:
         standings_live = pd.DataFrame(data)
         
-standings_live_lad = standings_live.query(f"team_name == '{config.TEAM_NAME}'")
-print(standings_live_lad.iloc[0])
+standings_live_team = standings_live.query(f"team_name == '{config.TEAM_NAME}'")
+print(standings_live_team.iloc[0])
 
 # Derive last game result from live standings (streak_type)
 last_game_result_live = None
 try:
-    if not standings_live_lad.empty:
-        streak_type_val = standings_live_lad.iloc[0].get('streak_type', None)
+    if not standings_live_team.empty:
+        streak_type_val = standings_live_team.iloc[0].get('streak_type', None)
 #if streak type is 'wins' then the most recent game was a win, else a loss
         if isinstance(streak_type_val, str):
             last_game_result_live = 'win' if streak_type_val.lower() == 'wins' else 'loss'
@@ -241,9 +246,9 @@ game_number = standings_now['gm'].iloc[0]
 standings_last = standings_past.query(f"gm == {game_number}").head(1).reset_index(drop=True).copy()
 standings_last_season = standings_past.query(f"gm <= {game_number} and year=='{last_year}'").reset_index(drop=True).copy()
 standings["rank_ordinal"] = standings["rank"].map(to_ordinal)
-# Use live standings for division rank to match NL tables
+# Use live standings for division rank to match AL tables
 try:
-    live_division_rank = int(standings_live_lad.iloc[0].get('division_rank'))
+    live_division_rank = int(standings_live_team.iloc[0].get('division_rank'))
     standings_division_rank = live_division_rank
     standings_division_rank_ordinal = to_ordinal(live_division_rank)
 except Exception:
@@ -427,19 +432,19 @@ def get_live_last_game_summary():
                 if game_status == 'Final':
                     teams = game['teams']
                     
-                    # Check if LAD is either away or home team
+                    # Check if team is either away or home team
                     away_abbr = teams.get('away', {}).get('team', {}).get('abbreviation')
                     home_abbr = teams.get('home', {}).get('team', {}).get('abbreviation')
                     logging.info(f"Processing final game: {away_abbr} @ {home_abbr}")
-                    
+
                     if away_abbr == config.TEAM_ABBR:
                         home_away = "away"
                         result_clean = "win" if teams['away'].get('isWinner') else "loss"
                         r = teams['away'].get('score', 'N/A')
                         ra = teams['home'].get('score', 'N/A')
                         opp_name = teams.get('home', {}).get('team', {}).get('name', 'N/A')
-                        
-                        logging.info(f"Found LAD away game: {r}-{ra} {result_clean} vs {opp_name}")
+
+                        logging.info(f"Found {config.TEAM_ABBR} away game: {r}-{ra} {result_clean} vs {opp_name}")
                         return (
                             f"The last game was a <span class='highlight'>{r}-{ra}</span> "
                             f"{home_away} <span class='highlight'>{result_clean}</span>."
@@ -463,7 +468,7 @@ def get_live_last_game_summary():
 
 
 def get_live_last_game_result():
-    """Returns 'win' or 'loss' for the most recent completed Dodgers game using MLB Stats API.
+    """Returns 'win' or 'loss' for the most recent completed team game using MLB Stats API.
     Returns None if it cannot be determined."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
@@ -479,7 +484,7 @@ def get_live_last_game_result():
             for game in reversed(day.get('games', [])):
                 if game['status']['abstractGameState'] == 'Final':
                     teams = game['teams']
-                    # Determine result for LAD
+                    # Determine result for team
                     if teams.get('away', {}).get('team', {}).get('abbreviation') == config.TEAM_ABBR:
                         return 'win' if teams['away'].get('isWinner') else 'loss'
                     else:
@@ -489,7 +494,7 @@ def get_live_last_game_result():
         return None
 
 def get_next_game_info():
-    """Fetches the next scheduled Dodgers game and returns formatted info."""
+    """Fetches the next scheduled team game and returns formatted info."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
     }
@@ -523,12 +528,12 @@ def get_next_game_info():
                     # Get venue info and highlight it
                     venue_name = game.get('venue', {}).get('name', '')
                     highlighted_venue = f"<span class='highlight'>{venue_name}</span>" if venue_name else ""
-                    
+
                     # Determine if home or away
                     home_team_id = game.get('teams', {}).get('home', {}).get('team', {}).get('id')
-                    is_dodgers_home = home_team_id == config.TEAM_ID
-                    
-                    location_text = f"at {highlighted_venue}" if not is_dodgers_home else f"at {highlighted_venue}"
+                    is_team_home = home_team_id == config.TEAM_ID
+
+                    location_text = f"at {highlighted_venue}" if not is_team_home else f"at {highlighted_venue}"
                     
                     return f"The next game is {day_name} at {time_str} {location_text}"
         
@@ -613,15 +618,15 @@ def generate_postseason_summary():
         return {"text": "The team won the American League East division and is off to the postseason!"}
 
 def generate_summary(
-    update_date_str, standings_live_lad=None
+    update_date_str, standings_live_team=None
 ):
     """Generates a narrative summary of the team's current status using live data."""
     current_year = datetime.now().year
-    
+
     # Use existing standings data if provided, otherwise fall back to API call
-    if standings_live_lad is not None and not standings_live_lad.empty:
+    if standings_live_team is not None and not standings_live_team.empty:
         logging.info("Using existing standings data for summary generation")
-        row = standings_live_lad.iloc[0]
+        row = standings_live_team.iloc[0]
         
         # Parse variables from existing standings data
         games_played = row["games_played"]
@@ -671,9 +676,9 @@ def generate_summary(
                 row = df.query(f'teamAbbreviation == "{config.TEAM_ABBR}"').iloc[0]
             else:
                 # Fallback: find by team name
-                lad_rows = df[df.astype(str).apply(lambda x: x.str.contains(f'{config.TEAM_NAME}|{config.TEAM_ABBR}', na=False)).any(axis=1)]
-                if len(lad_rows) > 0:
-                    row = lad_rows.iloc[0]
+                team_rows = df[df.astype(str).apply(lambda x: x.str.contains(f'{config.TEAM_NAME}|{config.TEAM_ABBR}', na=False)).any(axis=1)]
+                if len(team_rows) > 0:
+                    row = team_rows.iloc[0]
                 else:
                     raise ValueError(f"Could not find {config.TEAM_ABBR} team in standings data")
 
@@ -826,8 +831,8 @@ def generate_summary(
                     logging.warning(f"Could not clean redundant series context: {e}")
             
             summary = (
-                f"<span class='highlight'>LOS ANGELES</span> <span class='updated'>({current_date})</span> — "
-                f"The Dodgers compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+                f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
+                f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
                 f"{competing_text} "
                 f"{clean_last_game} "
                 f"{series_status}{next_game_text}."
@@ -840,8 +845,8 @@ def generate_summary(
         ending_punctuation = "." if not (postseason_text.endswith('.') or postseason_text.endswith('!') or postseason_text.endswith('?')) else ""
         
         summary = (
-            f"<span class='highlight'>LOS ANGELES</span> <span class='updated'>({current_date})</span> — "
-            f"The Dodgers compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+            f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
+            f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
             f"{postseason_text} "
             f"{last_game_summary_fragment}{next_game_text}{ending_punctuation}"
         )
@@ -866,7 +871,7 @@ if not standings_now.empty:
     last_game_data = standings_now.iloc[0]
 
 summary = generate_summary(
-    update_date, standings_live_lad
+    update_date, standings_live_team
 )
 
 summary_data = [
@@ -959,4 +964,7 @@ def save_to_s3(df, base_path, s3_bucket, formats=["csv", "json"]):
         s3_resource.Bucket(s3_bucket).put_object(Key=file_path, Body=buffer, ContentType=content_type)
         logging.info(f"Uploaded {fmt} to {s3_bucket}/{file_path}")
 
-save_to_s3(summary_df, "redsox/data/standings/season_summary_latest", "redsox-data")
+try:
+    save_to_s3(summary_df, "redsox/data/standings/season_summary_latest", "redsox-data")
+except Exception as e:
+    logging.warning(f"Could not upload to S3: {e}. Local file saved successfully.")

@@ -40,21 +40,25 @@ aws_region = "us-west-1"
 s3_bucket_name = "redsox-data" # Consistent with other scripts
 
 # Conditional AWS session creation based on the environment
-if is_github_actions:
-    session = boto3.Session(
-        aws_access_key_id=aws_key_id,
-        aws_secret_access_key=aws_secret_key,
-        region_name=aws_region
-    )
-    logging.info("Running in GitHub Actions environment. Using environment variables for AWS credentials.")
-else:
-    profile_name = os.environ.get("AWS_PERSONAL_PROFILE", "haekeo")
-    session = boto3.Session(profile_name=profile_name, region_name=aws_region)
-    logging.info(f"Running locally. Using AWS profile: {profile_name}")
+s3_resource = None
+try:
+    if is_github_actions:
+        session = boto3.Session(
+            aws_access_key_id=aws_key_id,
+            aws_secret_access_key=aws_secret_key,
+            region_name=aws_region
+        )
+        logging.info("Running in GitHub Actions environment. Using environment variables for AWS credentials.")
+        s3_resource = session.resource("s3")
+    else:
+        profile_name = os.environ.get("AWS_PERSONAL_PROFILE", "haekeo")
+        session = boto3.Session(profile_name=profile_name, region_name=aws_region)
+        logging.info(f"Running locally. Using AWS profile: {profile_name}")
+        s3_resource = session.resource("s3")
+except Exception as e:
+    logging.warning(f"Could not initialize S3 connection: {e}. Will save locally only.")
 
-s3_resource = session.resource("s3")
-
-CURRENT_YEAR = datetime.now().year
+CURRENT_YEAR = config.CURRENT_YEAR
 
 # runs, stolen bases, homeruns, strikeouts, walks, ERA
 HITTING_STATS = ['runs', 'stolenBases', 'homeRuns', 'battingAverage', 'onBasePlusSlugging', 'sluggingPercentage', 'onBasePercentage']
@@ -105,27 +109,27 @@ def main():
     """
     Main function to fetch Red Sox league ranks for specified stats.
     """
-    dodgers_ranks = {}
+    team_ranks = {}
     team_to_find = config.TEAM_FULL_NAME
 
     logging.info(f"Fetching hitting stats for {team_to_find} for {CURRENT_YEAR}...")
     for stat in HITTING_STATS:
         rank = get_team_rank_for_stat(stat_name=stat, stat_group="hitting", team_name_query=team_to_find)
         if rank is not None:
-            dodgers_ranks[f'hitting_{stat}'] = rank
+            team_ranks[f'hitting_{stat}'] = rank
         else:
-            dodgers_ranks[f'hitting_{stat}'] = 'Not found'
+            team_ranks[f'hitting_{stat}'] = 'Not found'
 
     logging.info(f"Fetching pitching stats for {team_to_find} for {CURRENT_YEAR}...")
     for stat in PITCHING_STATS:
         rank = get_team_rank_for_stat(stat_name=stat, stat_group="pitching", team_name_query=team_to_find)
         if rank is not None:
-            dodgers_ranks[f'pitching_{stat}'] = rank
+            team_ranks[f'pitching_{stat}'] = rank
         else:
-            dodgers_ranks[f'pitching_{stat}'] = 'Not found'
-    
+            team_ranks[f'pitching_{stat}'] = 'Not found'
+
     logging.info("Red Sox League Ranks:")
-    for stat, rank in dodgers_ranks.items():
+    for stat, rank in team_ranks.items():
         logging.info(f"  {stat.replace('_', ' ').title()}: {rank}")
 
     # Define file paths
@@ -145,13 +149,13 @@ def main():
     # Save locally
     try:
         with open(local_file_path, 'w') as f:
-            json.dump(dodgers_ranks, f, indent=4)
+            json.dump(team_ranks, f, indent=4)
         logging.info(f"Successfully saved ranks to {local_file_path}")
     except IOError as e:
         logging.error(f"Failed to save ranks locally to {local_file_path}: {e}")
 
     # Upload to S3
-    if os.path.exists(local_file_path): # Only upload if file was created successfully
+    if s3_resource is not None and os.path.exists(local_file_path): # Only upload if S3 is available and file was created successfully
         try:
             s3_resource.Bucket(s3_bucket_name).upload_file(local_file_path, s3_key)
             logging.info(f"Successfully uploaded {local_filename} to S3 bucket '{s3_bucket_name}' at '{s3_key}'")
@@ -159,6 +163,8 @@ def main():
             logging.error(f"Failed to upload {local_filename} to S3: {e}")
         except Exception as e: # Catch other potential boto3/AWS errors (e.g., NoCredentialsError)
             logging.error(f"An unexpected error occurred during S3 upload of {local_filename}: {e}")
+    elif s3_resource is None:
+        logging.warning("S3 connection not available. Skipping S3 upload.")
     else:
         logging.warning(f"Local file {local_file_path} not found. Skipping S3 upload.")
 
