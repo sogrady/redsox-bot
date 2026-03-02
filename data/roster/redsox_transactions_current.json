@@ -1,5 +1,12 @@
 [
   {
+    "date":"2026-03-02",
+    "transaction":"SS Franklin Arias assigned to Red Sox.",
+    "players":[
+      "Franklin Arias"
+    ]
+  },
+  {
     "date":"2026-03-01",
     "transaction":"RF Natanael Yuten assigned to Red Sox.",
     "players":[
@@ -29,16 +36,16 @@
   },
   {
     "date":"2026-02-26",
-    "transaction":"RHP Wuilliams Rodriguez assigned to Red Sox.",
+    "transaction":"OF Nelly Taylor assigned to Red Sox.",
     "players":[
-      "Wuilliams Rodriguez"
+      "Nelly Taylor"
     ]
   },
   {
     "date":"2026-02-26",
-    "transaction":"OF Nelly Taylor assigned to Red Sox.",
+    "transaction":"RHP Wuilliams Rodriguez assigned to Red Sox.",
     "players":[
-      "Nelly Taylor"
+      "Wuilliams Rodriguez"
     ]
   },
   {
@@ -71,13 +78,6 @@
   },
   {
     "date":"2026-02-23",
-    "transaction":"SS Yoeilin Cespedes assigned to Red Sox.",
-    "players":[
-      "Yoeilin Cespedes"
-    ]
-  },
-  {
-    "date":"2026-02-23",
     "transaction":"RHP Cade Feeney assigned to Red Sox.",
     "players":[
       "Cade Feeney"
@@ -88,6 +88,13 @@
     "transaction":"OF Frederik Jimenez assigned to Red Sox.",
     "players":[
       "Frederik Jimenez"
+    ]
+  },
+  {
+    "date":"2026-02-23",
+    "transaction":"SS Yoeilin Cespedes assigned to Red Sox.",
+    "players":[
+      "Yoeilin Cespedes"
     ]
   },
   {
@@ -113,16 +120,9 @@
   },
   {
     "date":"2026-02-21",
-    "transaction":"CF Skylar King assigned to Red Sox.",
+    "transaction":"SS Mason White assigned to Red Sox.",
     "players":[
-      "Skylar King"
-    ]
-  },
-  {
-    "date":"2026-02-21",
-    "transaction":"RHP Cooper Adams assigned to Red Sox.",
-    "players":[
-      "Cooper Adams"
+      "Mason White"
     ]
   },
   {
@@ -141,72 +141,16 @@
   },
   {
     "date":"2026-02-21",
-    "transaction":"SS Mason White assigned to Red Sox.",
+    "transaction":"CF Skylar King assigned to Red Sox.",
     "players":[
-      "Mason White"
+      "Skylar King"
     ]
   },
   {
-    "date":"2026-02-20",
-    "transaction":"RHP Max Carlson assigned to Red Sox.",
+    "date":"2026-02-21",
+    "transaction":"RHP Cooper Adams assigned to Red Sox.",
     "players":[
-      "Max Carlson"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"C Juan Montero assigned to Red Sox.",
-    "players":[
-      "Juan Montero"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"3B Nazzan Zanetello assigned to Red Sox.",
-    "players":[
-      "Nazzan Zanetello"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"LHP Michael Sansone assigned to Red Sox.",
-    "players":[
-      "Michael Sansone"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"CF Phillip Sikes assigned to Red Sox.",
-    "players":[
-      "Phillip Sikes"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RF Corey Rosier assigned to Red Sox.",
-    "players":[
-      "Corey Rosier"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RHP Reidis Sena assigned to Red Sox.",
-    "players":[
-      "Reidis Sena"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RHP Jack Anderson assigned to Red Sox.",
-    "players":[
-      "Jack Anderson"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"OF Caden Rose assigned to Red Sox.",
-    "players":[
-      "Caden Rose"
+      "Cooper Adams"
     ]
   },
   {
@@ -218,9 +162,51 @@
   },
   {
     "date":"2026-02-20",
-    "transaction":"SS Marvin Alcantara assigned to Red Sox.",
+    "transaction":"RF Corey Rosier assigned to Red Sox.",
     "players":[
-      "Marvin Alcantara"
+      "Corey Rosier"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"OF Caden Rose assigned to Red Sox.",
+    "players":[
+      "Caden Rose"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Max Carlson assigned to Red Sox.",
+    "players":[
+      "Max Carlson"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Jay Allmer assigned to Red Sox.",
+    "players":[
+      "Jay Allmer"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Reidis Sena assigned to Red Sox.",
+    "players":[
+      "Reidis Sena"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"C Juan Montero assigned to Red Sox.",
+    "players":[
+      "Juan Montero"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Jack Anderson assigned to Red Sox.",
+    "players":[
+      "Jack Anderson"
     ]
   },
   {
@@ -232,9 +218,30 @@
   },
   {
     "date":"2026-02-20",
-    "transaction":"RHP Jay Allmer assigned to Red Sox.",
+    "transaction":"LHP Michael Sansone assigned to Red Sox.",
     "players":[
-      "Jay Allmer"
+      "Michael Sansone"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"SS Marvin Alcantara assigned to Red Sox.",
+    "players":[
+      "Marvin Alcantara"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"CF Phillip Sikes assigned to Red Sox.",
+    "players":[
+      "Phillip Sikes"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"3B Nazzan Zanetello assigned to Red Sox.",
+    "players":[
+      "Nazzan Zanetello"
     ]
   },
   {
@@ -260,16 +267,16 @@
   },
   {
     "date":"2026-02-10",
-    "transaction":"Red Sox signed free agent SS Isiah Kiner-Falefa.",
+    "transaction":"Red Sox placed RHP Tanner Houck on the 60-day injured list.",
     "players":[
-      "Isiah Kiner-Falefa"
+      "Tanner Houck"
     ]
   },
   {
     "date":"2026-02-10",
-    "transaction":"Red Sox placed RHP Tanner Houck on the 60-day injured list.",
+    "transaction":"Red Sox signed free agent SS Isiah Kiner-Falefa.",
     "players":[
-      "Tanner Houck"
+      "Isiah Kiner-Falefa"
     ]
   },
   {
@@ -314,14 +321,14 @@
   },
   {
     "date":"2026-02-05",
-    "transaction":"Red Sox signed free agent RHP Kyle Keller to a minor league contract.",
+    "transaction":"RHP Kyle Keller roster status changed by Red Sox.",
     "players":[
       "Kyle Keller"
     ]
   },
   {
     "date":"2026-02-05",
-    "transaction":"RHP Kyle Keller roster status changed by Red Sox.",
+    "transaction":"Red Sox signed free agent RHP Kyle Keller to a minor league contract.",
     "players":[
       "Kyle Keller"
     ]
@@ -351,44 +358,9 @@
   },
   {
     "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster OF Tyler McDonough to spring training.",
-    "players":[
-      "Tyler McDonough"
-    ]
-  },
-  {
-    "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster RHP Noah Song to spring training.",
-    "players":[
-      "Noah Song"
-    ]
-  },
-  {
-    "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster SS Mikey Romero to spring training.",
-    "players":[
-      "Mikey Romero"
-    ]
-  },
-  {
-    "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster RHP Wyatt Olds to spring training.",
-    "players":[
-      "Wyatt Olds"
-    ]
-  },
-  {
-    "date":"2026-01-23",
     "transaction":"Red Sox invited non-roster RHP Jacob Webb to spring training.",
     "players":[
       "Jacob Webb"
-    ]
-  },
-  {
-    "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster C Ronald Rosario to spring training.",
-    "players":[
-      "Ronald Rosario"
     ]
   },
   {
@@ -414,6 +386,27 @@
   },
   {
     "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster 2B Max Ferguson to spring training.",
+    "players":[
+      "Max Ferguson"
+    ]
+  },
+  {
+    "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster C Ronald Rosario to spring training.",
+    "players":[
+      "Ronald Rosario"
+    ]
+  },
+  {
+    "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster RHP Noah Song to spring training.",
+    "players":[
+      "Noah Song"
+    ]
+  },
+  {
+    "date":"2026-01-23",
     "transaction":"Red Sox invited non-roster RHP Tayron Guerrero to spring training.",
     "players":[
       "Tayron Guerrero"
@@ -428,9 +421,16 @@
   },
   {
     "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster CF Allan Castro to spring training.",
+    "transaction":"Red Sox invited non-roster SS Mikey Romero to spring training.",
     "players":[
-      "Allan Castro"
+      "Mikey Romero"
+    ]
+  },
+  {
+    "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster RHP Wyatt Olds to spring training.",
+    "players":[
+      "Wyatt Olds"
     ]
   },
   {
@@ -442,9 +442,16 @@
   },
   {
     "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster 2B Max Ferguson to spring training.",
+    "transaction":"Red Sox invited non-roster OF Tyler McDonough to spring training.",
     "players":[
-      "Max Ferguson"
+      "Tyler McDonough"
+    ]
+  },
+  {
+    "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster CF Allan Castro to spring training.",
+    "players":[
+      "Allan Castro"
     ]
   },
   {
@@ -464,100 +471,9 @@
   },
   {
     "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent OF Eber Miranda to a minor league contract.",
-    "players":[
-      "Eber Miranda"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent RHP Isaac Brujan to a minor league contract.",
-    "players":[
-      "Isaac Brujan"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent RHP Claudio Pereira to a minor league contract.",
-    "players":[
-      "Claudio Pereira"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Dawvris Brito to a minor league contract.",
-    "players":[
-      "Dawvris Brito"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Anderson Gonzalez to a minor league contract.",
-    "players":[
-      "Anderson Gonzalez"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent OF Joskairo Ramirez to a minor league contract.",
-    "players":[
-      "Joskairo Ramirez"
-    ]
-  },
-  {
-    "date":"2026-01-15",
     "transaction":"Red Sox signed free agent SS Wilneyker Bruce to a minor league contract.",
     "players":[
       "Wilneyker Bruce"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent RHP Angel Roa to a minor league contract.",
-    "players":[
-      "Angel Roa"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Esterlin Casanova to a minor league contract.",
-    "players":[
-      "Esterlin Casanova"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent RHP Luis Cayama to a minor league contract.",
-    "players":[
-      "Luis Cayama"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Anderber Urbina to a minor league contract.",
-    "players":[
-      "Anderber Urbina"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent C Edgardo Gutierrez to a minor league contract.",
-    "players":[
-      "Edgardo Gutierrez"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Isaac Velasquez to a minor league contract.",
-    "players":[
-      "Isaac Velasquez"
-    ]
-  },
-  {
-    "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent OF Garielvin Silverio to a minor league contract.",
-    "players":[
-      "Garielvin Silverio"
     ]
   },
   {
@@ -569,9 +485,30 @@
   },
   {
     "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent SS Axell Herrera to a minor league contract.",
+    "transaction":"Red Sox signed free agent OF Freyerso Vasquez to a minor league contract.",
     "players":[
-      "Axell Herrera"
+      "Freyerso Vasquez"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent RHP Luis Cayama to a minor league contract.",
+    "players":[
+      "Luis Cayama"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent C Edgardo Gutierrez to a minor league contract.",
+    "players":[
+      "Edgardo Gutierrez"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent SS Anderber Urbina to a minor league contract.",
+    "players":[
+      "Anderber Urbina"
     ]
   },
   {
@@ -583,9 +520,79 @@
   },
   {
     "date":"2026-01-15",
-    "transaction":"Red Sox signed free agent OF Freyerso Vasquez to a minor league contract.",
+    "transaction":"Red Sox signed free agent SS Anderson Gonzalez to a minor league contract.",
     "players":[
-      "Freyerso Vasquez"
+      "Anderson Gonzalez"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent SS Axell Herrera to a minor league contract.",
+    "players":[
+      "Axell Herrera"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent OF Garielvin Silverio to a minor league contract.",
+    "players":[
+      "Garielvin Silverio"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent SS Esterlin Casanova to a minor league contract.",
+    "players":[
+      "Esterlin Casanova"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent SS Dawvris Brito to a minor league contract.",
+    "players":[
+      "Dawvris Brito"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent SS Isaac Velasquez to a minor league contract.",
+    "players":[
+      "Isaac Velasquez"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent RHP Isaac Brujan to a minor league contract.",
+    "players":[
+      "Isaac Brujan"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent OF Eber Miranda to a minor league contract.",
+    "players":[
+      "Eber Miranda"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent RHP Angel Roa to a minor league contract.",
+    "players":[
+      "Angel Roa"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent RHP Claudio Pereira to a minor league contract.",
+    "players":[
+      "Claudio Pereira"
+    ]
+  },
+  {
+    "date":"2026-01-15",
+    "transaction":"Red Sox signed free agent OF Joskairo Ramirez to a minor league contract.",
+    "players":[
+      "Joskairo Ramirez"
     ]
   },
   {
@@ -611,16 +618,16 @@
   },
   {
     "date":"2026-01-06",
-    "transaction":"Red Sox invited non-roster RHP Hobie Harris to spring training.",
+    "transaction":"Red Sox signed free agent LHP T.J. Sikkema to a minor league contract and invited him to spring training.",
     "players":[
-      "Hobie Harris"
+      "T.J. Sikkema"
     ]
   },
   {
     "date":"2026-01-06",
-    "transaction":"Red Sox signed free agent LHP T.J. Sikkema to a minor league contract and invited him to spring training.",
+    "transaction":"Red Sox invited non-roster RHP Hobie Harris to spring training.",
     "players":[
-      "T.J. Sikkema"
+      "Hobie Harris"
     ]
   },
   {
@@ -632,16 +639,16 @@
   },
   {
     "date":"2025-12-30",
-    "transaction":"3B Marcelo Mayer changed number to 11.",
+    "transaction":"3B Nate Eaton changed number to 18.",
     "players":[
-      "Marcelo Mayer"
+      "Nate Eaton"
     ]
   },
   {
     "date":"2025-12-30",
-    "transaction":"3B Nate Eaton changed number to 18.",
+    "transaction":"3B Marcelo Mayer changed number to 11.",
     "players":[
-      "Nate Eaton"
+      "Marcelo Mayer"
     ]
   },
   {
@@ -677,14 +684,14 @@
   },
   {
     "date":"2025-12-18",
-    "transaction":"RHP Devin Sweet roster status changed by Red Sox.",
+    "transaction":"Red Sox signed free agent RHP Devin Sweet to a minor league contract.",
     "players":[
       "Devin Sweet"
     ]
   },
   {
     "date":"2025-12-18",
-    "transaction":"Red Sox signed free agent RHP Devin Sweet to a minor league contract.",
+    "transaction":"RHP Devin Sweet roster status changed by Red Sox.",
     "players":[
       "Devin Sweet"
     ]
@@ -695,13 +702,6 @@
     "players":[
       "Luis Perales",
       "Jake Bennett"
-    ]
-  },
-  {
-    "date":"2025-12-13",
-    "transaction":"Red Sox signed free agent RHP Albert Pena to a minor league contract.",
-    "players":[
-      "Albert Pena"
     ]
   },
   {
