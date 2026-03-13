@@ -36,6 +36,24 @@
     "slug":"aroldis-chapman"
   },
   {
+    "player_id":"543056",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/543056\/headshot\/silo\/current",
+    "name":"Danny Coulombe",
+    "player_url":"\/player\/543056",
+    "jersey":"64",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"5' 10\"",
+    "weight":"190",
+    "dob":"10\/26\/1989",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"danny-coulombe"
+  },
+  {
     "player_id":"676710",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676710\/headshot\/silo\/current",
     "name":"Kutter Crawford",
@@ -484,24 +502,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"mickey-gasper"
-  },
-  {
-    "player_id":"663853",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
-    "name":"Romy Gonzalez",
-    "player_url":"\/player\/663853",
-    "jersey":"23",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"215",
-    "dob":"09\/06\/1996",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"romy-gonzalez"
   },
   {
     "player_id":"643396",
