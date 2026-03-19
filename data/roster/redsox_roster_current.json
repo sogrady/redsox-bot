@@ -414,24 +414,6 @@
     "slug":"triston-casas"
   },
   {
-    "player_id":"691907",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691907\/headshot\/silo\/current",
-    "name":"Tsung-Che Cheng",
-    "player_url":"\/player\/691907",
-    "jersey":"39",
-    "position_group":"Infielders",
-    "bat_throw":"L\/R",
-    "height":"5' 8\"",
-    "weight":"180",
-    "dob":"07\/26\/2001",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"tsung-che-cheng"
-  },
-  {
     "player_id":"575929",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
     "name":"Willson Contreras",
@@ -574,24 +556,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"anthony-seigler"
-  },
-  {
-    "player_id":"686765",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686765\/headshot\/silo\/current",
-    "name":"Nick Sogard",
-    "player_url":"\/player\/686765",
-    "jersey":"20",
-    "position_group":"Infielders",
-    "bat_throw":"S\/R",
-    "height":"6' 1\"",
-    "weight":"189",
-    "dob":"09\/09\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"nick-sogard"
   },
   {
     "player_id":"596115",
