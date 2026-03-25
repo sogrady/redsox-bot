@@ -1,6 +1,13 @@
 [
   {
     "date":"2026-03-23",
+    "transaction":"SS Ilan Fernandez assigned to Red Sox.",
+    "players":[
+      "Ilan Fernandez"
+    ]
+  },
+  {
+    "date":"2026-03-23",
     "transaction":"SS Jhorman Bravo assigned to Red Sox.",
     "players":[
       "Jhorman Bravo"
@@ -8,9 +15,16 @@
   },
   {
     "date":"2026-03-23",
-    "transaction":"SS Ilan Fernandez assigned to Red Sox.",
+    "transaction":"Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.",
     "players":[
-      "Ilan Fernandez"
+      "Tyler Samaniego"
+    ]
+  },
+  {
+    "date":"2026-03-23",
+    "transaction":"Red Sox optioned RHP Tyler Uberstine to Worcester Red Sox.",
+    "players":[
+      "Tyler Uberstine"
     ]
   },
   {
@@ -25,20 +39,6 @@
     "transaction":"Red Sox optioned 2B Mickey Gasper to Worcester Red Sox.",
     "players":[
       "Mickey Gasper"
-    ]
-  },
-  {
-    "date":"2026-03-23",
-    "transaction":"Red Sox optioned RHP Tyler Uberstine to Worcester Red Sox.",
-    "players":[
-      "Tyler Uberstine"
-    ]
-  },
-  {
-    "date":"2026-03-23",
-    "transaction":"Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.",
-    "players":[
-      "Tyler Samaniego"
     ]
   },
   {
@@ -71,23 +71,16 @@
   },
   {
     "date":"2026-03-20",
-    "transaction":"RHP Blake Wehunt assigned to Red Sox.",
-    "players":[
-      "Blake Wehunt"
-    ]
-  },
-  {
-    "date":"2026-03-20",
     "transaction":"LHP Eduardo Rivera assigned to Red Sox.",
     "players":[
       "Eduardo Rivera"
     ]
   },
   {
-    "date":"2026-03-19",
-    "transaction":"3B Starlyn Nunez assigned to Red Sox.",
+    "date":"2026-03-20",
+    "transaction":"RHP Blake Wehunt assigned to Red Sox.",
     "players":[
-      "Starlyn Nunez"
+      "Blake Wehunt"
     ]
   },
   {
@@ -95,6 +88,13 @@
     "transaction":"Red Sox signed free agent RHP Tommy Kahnle to a minor league contract and invited him to spring training.",
     "players":[
       "Tommy Kahnle"
+    ]
+  },
+  {
+    "date":"2026-03-19",
+    "transaction":"3B Starlyn Nunez assigned to Red Sox.",
+    "players":[
+      "Starlyn Nunez"
     ]
   },
   {
@@ -120,15 +120,15 @@
   },
   {
     "date":"2026-03-18",
+    "transaction":"Red Sox signed free agent Santiago Yanes to a minor league contract.",
+    "players":null
+  },
+  {
+    "date":"2026-03-18",
     "transaction":"Red Sox signed free agent RHP Emanuel Jimenez to a minor league contract.",
     "players":[
       "Emanuel Jimenez"
     ]
-  },
-  {
-    "date":"2026-03-18",
-    "transaction":"Red Sox signed free agent Santiago Yanes to a minor league contract.",
-    "players":null
   },
   {
     "date":"2026-03-17",
@@ -195,9 +195,9 @@
   },
   {
     "date":"2026-03-07",
-    "transaction":"1B Tyler Miller assigned to Red Sox.",
+    "transaction":"3B D'Angelo Ortiz assigned to Red Sox.",
     "players":[
-      "Tyler Miller"
+      "D'Angelo Ortiz"
     ]
   },
   {
@@ -209,23 +209,16 @@
   },
   {
     "date":"2026-03-07",
-    "transaction":"3B D'Angelo Ortiz assigned to Red Sox.",
+    "transaction":"1B Tyler Miller assigned to Red Sox.",
     "players":[
-      "D'Angelo Ortiz"
+      "Tyler Miller"
     ]
   },
   {
     "date":"2026-03-06",
-    "transaction":"2B Ahbram Liendo assigned to Red Sox.",
+    "transaction":"OF Anderson Fermin assigned to Red Sox.",
     "players":[
-      "Ahbram Liendo"
-    ]
-  },
-  {
-    "date":"2026-03-06",
-    "transaction":"RF Juan Chacon assigned to Red Sox.",
-    "players":[
-      "Juan Chacon"
+      "Anderson Fermin"
     ]
   },
   {
@@ -237,6 +230,13 @@
   },
   {
     "date":"2026-03-06",
+    "transaction":"2B Ahbram Liendo assigned to Red Sox.",
+    "players":[
+      "Ahbram Liendo"
+    ]
+  },
+  {
+    "date":"2026-03-06",
     "transaction":"3B Yohander Linarez assigned to Red Sox.",
     "players":[
       "Yohander Linarez"
@@ -244,16 +244,9 @@
   },
   {
     "date":"2026-03-06",
-    "transaction":"OF Anderson Fermin assigned to Red Sox.",
+    "transaction":"RF Juan Chacon assigned to Red Sox.",
     "players":[
-      "Anderson Fermin"
-    ]
-  },
-  {
-    "date":"2026-03-05",
-    "transaction":"C Drew Ehrhard assigned to Red Sox.",
-    "players":[
-      "Drew Ehrhard"
+      "Juan Chacon"
     ]
   },
   {
@@ -278,6 +271,13 @@
     ]
   },
   {
+    "date":"2026-03-05",
+    "transaction":"C Drew Ehrhard assigned to Red Sox.",
+    "players":[
+      "Drew Ehrhard"
+    ]
+  },
+  {
     "date":"2026-03-04",
     "transaction":"OF Will Turner assigned to Red Sox.",
     "players":[
@@ -293,9 +293,9 @@
   },
   {
     "date":"2026-03-02",
-    "transaction":"CF Enddy Azocar assigned to Red Sox.",
+    "transaction":"SS Franklin Arias assigned to Red Sox.",
     "players":[
-      "Enddy Azocar"
+      "Franklin Arias"
     ]
   },
   {
@@ -307,9 +307,9 @@
   },
   {
     "date":"2026-03-02",
-    "transaction":"SS Franklin Arias assigned to Red Sox.",
+    "transaction":"CF Enddy Azocar assigned to Red Sox.",
     "players":[
-      "Franklin Arias"
+      "Enddy Azocar"
     ]
   },
   {
@@ -342,16 +342,16 @@
   },
   {
     "date":"2026-02-26",
-    "transaction":"OF Nelly Taylor assigned to Red Sox.",
+    "transaction":"CF Justin Gonzales assigned to Red Sox.",
     "players":[
-      "Nelly Taylor"
+      "Justin Gonzales"
     ]
   },
   {
     "date":"2026-02-26",
-    "transaction":"CF Justin Gonzales assigned to Red Sox.",
+    "transaction":"OF Nelly Taylor assigned to Red Sox.",
     "players":[
-      "Justin Gonzales"
+      "Nelly Taylor"
     ]
   },
   {
@@ -370,16 +370,30 @@
   },
   {
     "date":"2026-02-24",
+    "transaction":"RHP Steven Brooks assigned to Red Sox.",
+    "players":[
+      "Steven Brooks"
+    ]
+  },
+  {
+    "date":"2026-02-24",
     "transaction":"RHP Griffin Kilander assigned to Red Sox.",
     "players":[
       "Griffin Kilander"
     ]
   },
   {
-    "date":"2026-02-24",
-    "transaction":"RHP Steven Brooks assigned to Red Sox.",
+    "date":"2026-02-23",
+    "transaction":"OF Frederik Jimenez assigned to Red Sox.",
     "players":[
-      "Steven Brooks"
+      "Frederik Jimenez"
+    ]
+  },
+  {
+    "date":"2026-02-23",
+    "transaction":"RHP Cade Feeney assigned to Red Sox.",
+    "players":[
+      "Cade Feeney"
     ]
   },
   {
@@ -394,20 +408,6 @@
     "transaction":"SS Yoeilin Cespedes assigned to Red Sox.",
     "players":[
       "Yoeilin Cespedes"
-    ]
-  },
-  {
-    "date":"2026-02-23",
-    "transaction":"RHP Cade Feeney assigned to Red Sox.",
-    "players":[
-      "Cade Feeney"
-    ]
-  },
-  {
-    "date":"2026-02-23",
-    "transaction":"OF Frederik Jimenez assigned to Red Sox.",
-    "players":[
-      "Frederik Jimenez"
     ]
   },
   {
@@ -426,9 +426,9 @@
   },
   {
     "date":"2026-02-21",
-    "transaction":"LHP P.J. Labriola assigned to Red Sox.",
+    "transaction":"CF Skylar King assigned to Red Sox.",
     "players":[
-      "P.J. Labriola"
+      "Skylar King"
     ]
   },
   {
@@ -447,9 +447,9 @@
   },
   {
     "date":"2026-02-21",
-    "transaction":"CF Skylar King assigned to Red Sox.",
+    "transaction":"LHP P.J. Labriola assigned to Red Sox.",
     "players":[
-      "Skylar King"
+      "P.J. Labriola"
     ]
   },
   {
@@ -461,9 +461,51 @@
   },
   {
     "date":"2026-02-20",
+    "transaction":"3B Jack Winnay assigned to Red Sox.",
+    "players":[
+      "Jack Winnay"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Reidis Sena assigned to Red Sox.",
+    "players":[
+      "Reidis Sena"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Jay Allmer assigned to Red Sox.",
+    "players":[
+      "Jay Allmer"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RHP Max Carlson assigned to Red Sox.",
+    "players":[
+      "Max Carlson"
+    ]
+  },
+  {
+    "date":"2026-02-20",
     "transaction":"RHP Jack Anderson assigned to Red Sox.",
     "players":[
       "Jack Anderson"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"RF Corey Rosier roster status changed by Red Sox.",
+    "players":[
+      "Corey Rosier"
+    ]
+  },
+  {
+    "date":"2026-02-20",
+    "transaction":"CF Phillip Sikes assigned to Red Sox.",
+    "players":[
+      "Phillip Sikes"
     ]
   },
   {
@@ -482,20 +524,6 @@
   },
   {
     "date":"2026-02-20",
-    "transaction":"RF Corey Rosier roster status changed by Red Sox.",
-    "players":[
-      "Corey Rosier"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"3B Jack Winnay roster status changed by Red Sox.",
-    "players":[
-      "Jack Winnay"
-    ]
-  },
-  {
-    "date":"2026-02-20",
     "transaction":"3B Nazzan Zanetello assigned to Red Sox.",
     "players":[
       "Nazzan Zanetello"
@@ -510,16 +538,9 @@
   },
   {
     "date":"2026-02-20",
-    "transaction":"3B Jack Winnay assigned to Red Sox.",
+    "transaction":"RF Corey Rosier assigned to Red Sox.",
     "players":[
-      "Jack Winnay"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RHP Max Carlson assigned to Red Sox.",
-    "players":[
-      "Max Carlson"
+      "Corey Rosier"
     ]
   },
   {
@@ -531,30 +552,9 @@
   },
   {
     "date":"2026-02-20",
-    "transaction":"RHP Jay Allmer assigned to Red Sox.",
+    "transaction":"3B Jack Winnay roster status changed by Red Sox.",
     "players":[
-      "Jay Allmer"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RF Corey Rosier assigned to Red Sox.",
-    "players":[
-      "Corey Rosier"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"CF Phillip Sikes assigned to Red Sox.",
-    "players":[
-      "Phillip Sikes"
-    ]
-  },
-  {
-    "date":"2026-02-20",
-    "transaction":"RHP Reidis Sena assigned to Red Sox.",
-    "players":[
-      "Reidis Sena"
+      "Jack Winnay"
     ]
   },
   {
@@ -678,6 +678,13 @@
   },
   {
     "date":"2026-01-23",
+    "transaction":"Red Sox invited non-roster CF Allan Castro to spring training.",
+    "players":[
+      "Allan Castro"
+    ]
+  },
+  {
+    "date":"2026-01-23",
     "transaction":"Red Sox invited non-roster SS Mikey Romero to spring training.",
     "players":[
       "Mikey Romero"
@@ -685,23 +692,16 @@
   },
   {
     "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster LHP Jeremy Wu-Yelland to spring training.",
+    "transaction":"Red Sox invited non-roster RHP Wyatt Olds to spring training.",
     "players":[
-      "Jeremy Wu-Yelland"
+      "Wyatt Olds"
     ]
   },
   {
     "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster RHP Jacob Webb to spring training.",
+    "transaction":"Red Sox invited non-roster C Nate Baez to spring training.",
     "players":[
-      "Jacob Webb"
-    ]
-  },
-  {
-    "date":"2026-01-23",
-    "transaction":"Red Sox invited non-roster RHP Noah Song to spring training.",
-    "players":[
-      "Noah Song"
+      "Nate Baez"
     ]
   }
 ]
