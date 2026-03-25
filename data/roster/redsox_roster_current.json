@@ -54,24 +54,6 @@
     "slug":"danny-coulombe"
   },
   {
-    "player_id":"676710",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676710\/headshot\/silo\/current",
-    "name":"Kutter Crawford",
-    "player_url":"\/player\/676710",
-    "jersey":"50",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 1\"",
-    "weight":"195",
-    "dob":"04\/01\/1996",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"kutter-crawford"
-  },
-  {
     "player_id":"676979",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676979\/headshot\/silo\/current",
     "name":"Garrett Crochet",
@@ -160,24 +142,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"johan-oviedo"
-  },
-  {
-    "player_id":"663776",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663776\/headshot\/silo\/current",
-    "name":"Patrick Sandoval",
-    "player_url":"\/player\/663776",
-    "jersey":"43",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 3\"",
-    "weight":"190",
-    "dob":"10\/18\/1996",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"patrick-sandoval"
   },
   {
     "player_id":"686580",
@@ -306,24 +270,6 @@
     "slug":"connor-wong"
   },
   {
-    "player_id":"671213",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/671213\/headshot\/silo\/current",
-    "name":"Triston Casas",
-    "player_url":"\/player\/671213",
-    "jersey":"36",
-    "position_group":"Infielders",
-    "bat_throw":"L\/R",
-    "height":"6' 4\"",
-    "weight":"244",
-    "dob":"01\/15\/2000",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"triston-casas"
-  },
-  {
     "player_id":"575929",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
     "name":"Willson Contreras",
@@ -412,24 +358,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"andruw-monasterio"
-  },
-  {
-    "player_id":"678011",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678011\/headshot\/silo\/current",
-    "name":"Anthony Seigler",
-    "player_url":"\/player\/678011",
-    "jersey":"48",
-    "position_group":"Infielders",
-    "bat_throw":"L\/S",
-    "height":"5' 9\"",
-    "weight":"192",
-    "dob":"06\/20\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"anthony-seigler"
   },
   {
     "player_id":"596115",
