@@ -181,7 +181,8 @@ def find_gamelog_table(html: str) -> BeautifulSoup:
         headers = [th.get_text(strip=True) for th in table.select("thead th")]
         if headers and headers[0] == "Game Date":
             return table
-    raise RuntimeError("Could not find game logs table with 'Game Date' header")
+    logging.warning("Could not find game logs table with 'Game Date' header")
+    return None
 
 
 def parse_game_log_rows(table: BeautifulSoup) -> pd.DataFrame:
@@ -393,6 +394,9 @@ def main() -> None:
         return
         
     table = find_gamelog_table(html)
+    if table is None:
+        logging.warning("No gamelog table found yet for this season. Exiting gracefully.")
+        return
     logs_df = parse_game_log_rows(table)
 
     archive_df = load_archive(args.profile)
