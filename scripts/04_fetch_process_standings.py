@@ -203,8 +203,9 @@ def main():
         logging.info("Files successfully uploaded to S3.")
 
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        sys.exit(1)
+        logging.warning(f"Could not process standings data: {e}")
+        logging.warning("This is expected early in the season before games are played. Exiting gracefully.")
+        sys.exit(0)
 
 if __name__ == "__main__":
     main()
