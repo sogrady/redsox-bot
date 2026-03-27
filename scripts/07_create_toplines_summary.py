@@ -133,7 +133,7 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
         return None
 
 # URLs for data
-standings_live_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_{year}.json"
+standings_live_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_{config.CURRENT_YEAR}.json"
 standings_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/redsox_standings_1901_present.parquet"
 batting_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/batting/redsox_team_batting_1958_present.parquet"
 pitching_url = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_totals_current.parquet'
