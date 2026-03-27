@@ -72,6 +72,9 @@ def get_team_game_ids(date_str):
     games = dates[0].get("games", [])
     team_games = []
     for g in games:
+        # Only include regular season games
+        if g.get("gameType") != "R":
+            continue
         home_team = _get_team_name(g, "home")
         away_team = _get_team_name(g, "away")
         game_date = g.get("officialDate")
