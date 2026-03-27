@@ -250,7 +250,7 @@ load_dotenv()
 
 ## Season Transition: Off-Season to In-Season Mode
 
-When transitioning from off-season (showing 2025 data) to in-season mode (showing live 2026 data), follow this checklist. **Recommended timing: 1-2 weeks before Opening Day (late March).**
+When transitioning from off-season (showing 2025 data) to in-season mode (showing live 2026 data), follow this checklist. **Recommended timing: after the first regular season game has been played.** Several scripts scrape Baseball Reference, which typically updates by ~9 AM ET the morning after a game. Switching before games have been played will cause scripts 02 and 04 to fail due to missing data.
 
 ### Step-by-Step Transition Checklist
 
@@ -334,7 +334,7 @@ git push
 
 #### 5. Monitor First Workflow Run
 
-After Opening Day:
+After the first game has been played (data is typically available on Baseball Reference by ~9 AM ET the next morning):
 1. Go to **Actions** tab in GitHub
 2. Wait for next scheduled run (or trigger manually via "Run workflow")
 3. Check that all scripts complete successfully
