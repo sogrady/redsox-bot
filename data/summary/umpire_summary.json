@@ -1,9 +1,9 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 89.1156462585034,
-        "incorrect_strikes_pct": 10.884353741496597,
-        "total_called_strikes": 147,
-        "bad_calls_count": 16
+        "correct_strikes_pct": 84.0,
+        "incorrect_strikes_pct": 16.0,
+        "total_called_strikes": 25,
+        "bad_calls_count": 4
     },
     "last_game_summary": {
         "date": "March 26, 2026",
@@ -15,51 +15,51 @@
     },
     "worst_calls_of_season": [
         {
-            "distance_inches": 3.4998411842,
-            "batter": "Ceddanne Rafaela",
-            "pitcher": "Mick Abel",
+            "distance_inches": 0.9806648394,
+            "batter": "Wilyer Abreu",
+            "pitcher": "Andrew Abbott",
+            "pitch_type": "Curveball",
+            "velocity_mph": 78.7,
+            "date": "2026-03-26",
+            "date_formatted": "March 26, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=bfc95266-06ad-36c4-b3b8-adfd5bb2c01f"
+        },
+        {
+            "distance_inches": 0.4775897721,
+            "batter": "Wilyer Abreu",
+            "pitcher": "Andrew Abbott",
+            "pitch_type": "Curveball",
+            "velocity_mph": 81.0,
+            "date": "2026-03-26",
+            "date_formatted": "March 26, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=5690aee5-1f5b-3c49-82c5-8aed794af48c"
+        },
+        {
+            "distance_inches": 0.3299686463,
+            "batter": "Trevor Story",
+            "pitcher": "Connor Phillips",
+            "pitch_type": "Sweeper",
+            "velocity_mph": 86.4,
+            "date": "2026-03-26",
+            "date_formatted": "March 26, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=70f04c07-de46-3d8e-9ccf-d4e025d35e60"
+        },
+        {
+            "distance_inches": 0.0513859088,
+            "batter": "Trevor Story",
+            "pitcher": "Andrew Abbott",
             "pitch_type": "4-Seam Fastball",
-            "velocity_mph": 96.8,
-            "date": "2026-03-24",
-            "date_formatted": "March 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=ef83db14-b8b0-301a-8790-43b8d40670ad"
-        },
-        {
-            "distance_inches": 3.1382193188,
-            "batter": "Nelly Taylor",
-            "pitcher": "Mick Abel",
-            "pitch_type": "Changeup",
-            "velocity_mph": 87.6,
-            "date": "2026-03-24",
-            "date_formatted": "March 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=00701760-3f81-32c7-b6d8-f9373240edba"
-        },
-        {
-            "distance_inches": 2.7939606594,
-            "batter": "Marcelo Mayer",
-            "pitcher": "Mick Abel",
-            "pitch_type": "Changeup",
-            "velocity_mph": 89.3,
-            "date": "2026-03-24",
-            "date_formatted": "March 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=8c4e24a9-f70f-399d-b172-dc3ce624417f"
-        },
-        {
-            "distance_inches": 1.6588075513,
-            "batter": "Caleb Durbin",
-            "pitcher": "Bailey Ober",
-            "pitch_type": "4-Seam Fastball",
-            "velocity_mph": 90.0,
-            "date": "2026-03-23",
-            "date_formatted": "March 23, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=3b79f9d8-6f30-3ab4-9f78-4f01ae05cac8"
+            "velocity_mph": 92.9,
+            "date": "2026-03-26",
+            "date_formatted": "March 26, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=63203d5d-b805-34e6-b156-f5db7c34a88a"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.15570934256056,
-        "incorrect_balls_pct": 4.844290657439444,
-        "total_called_balls": 289,
-        "bad_calls_count": 14
+        "correct_balls_pct": 95.23809523809523,
+        "incorrect_balls_pct": 4.761904761904773,
+        "total_called_balls": 42,
+        "bad_calls_count": 2
     },
     "pitching_last_game_summary": {
         "date": "March 26, 2026",
@@ -68,26 +68,5 @@
         "total_called_balls": 42,
         "bad_calls_count": 2
     },
-    "pitching_worst_calls_of_season": [
-        {
-            "distance_inches": 5.9801174991,
-            "batter": "Trevor Larnach",
-            "pitcher": "Jovani Mor\u00e1n",
-            "pitch_type": "Cutter",
-            "velocity_mph": 87.3,
-            "date": "2026-03-24",
-            "date_formatted": "March 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=87c7b099-724d-30e8-89bd-a60f5d71784f"
-        },
-        {
-            "distance_inches": 2.0977776491,
-            "batter": "Ryan Jeffers",
-            "pitcher": "Ranger Suarez",
-            "pitch_type": "Cutter",
-            "velocity_mph": 86.3,
-            "date": "2026-03-24",
-            "date_formatted": "March 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=623f4d52-1449-3e17-b47e-da22e70ae7d4"
-        }
-    ]
+    "pitching_worst_calls_of_season": []
 }
