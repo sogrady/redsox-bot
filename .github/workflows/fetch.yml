@@ -87,7 +87,7 @@ jobs:
         # Historical gamelogs (~15 min each) run in fetch_historical.yml instead
         # python scripts/08_fetch_process_season_outcomes.py
         # python scripts/10_fetch_process_historic_batting_gamelogs.py
-        # python scripts/11_fetch_process_attendance.py
+        python scripts/11_fetch_process_attendance.py
         # python scripts/12_fetch_process_historic_pitching_gamelogs.py
         # python scripts/14_fetch_process_batting_mlb.py
         python scripts/20_fetch_game_pitches.py
