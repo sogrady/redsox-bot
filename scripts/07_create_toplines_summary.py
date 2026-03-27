@@ -133,7 +133,7 @@ def compute_games_up_back_from_live(live_df: pd.DataFrame, team_name: str) -> Un
         return None
 
 # URLs for data
-standings_live_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_2025.json"
+standings_live_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/all_teams_standings_metrics_{year}.json"
 standings_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/standings/redsox_standings_1901_present.parquet"
 batting_url = f"https://redsox-data.s3.amazonaws.com/redsox/data/batting/redsox_team_batting_1958_present.parquet"
 pitching_url = 'https://redsox-data.s3.amazonaws.com/redsox/data/pitching/redsox_pitching_totals_current.parquet'
@@ -229,7 +229,10 @@ except Exception:
         standings_live = pd.DataFrame(data)
         
 standings_live_team = standings_live.query(f"team_name == '{config.TEAM_NAME}'")
-print(standings_live_team.iloc[0])
+if standings_live_team.empty:
+    logging.warning(f"Could not find '{config.TEAM_NAME}' in live standings. Available teams: {standings_live['team_name'].tolist() if 'team_name' in standings_live.columns else 'no team_name column'}")
+else:
+    print(standings_live_team.iloc[0])
 
 # Derive last game result from live standings (streak_type)
 last_game_result_live = None
