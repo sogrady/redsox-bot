@@ -73,7 +73,7 @@ for col in numeric_cols:
         players[col] = pd.to_numeric(players[col], errors='coerce')
 
 # Split into starters (pos == 'SP') and relievers (pos != 'SP')
-if 'pos' in players.columns and 'ip' in players.columns and 'so/bb' in players.columns:
+if all(col in players.columns for col in ['pos', 'ip', 'so/bb', 'era+', 'fip']):
     starters = players[players['pos'] == 'SP']
     relievers = players[players['pos'] != 'SP']
 
