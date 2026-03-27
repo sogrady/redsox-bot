@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: fetch-data
+  cancel-in-progress: true
+
 jobs:
   update_and_deploy:
     runs-on: ubuntu-latest
