@@ -228,7 +228,7 @@ except Exception:
     else:
         standings_live = pd.DataFrame(data)
         
-standings_live_team = standings_live.query(f"team_name == '{config.TEAM_NAME}'")
+standings_live_team = standings_live.query(f"team_name == '{config.TEAM_FULL_NAME}'")
 if standings_live_team.empty:
     logging.warning(f"Could not find '{config.TEAM_NAME}' in live standings. Available teams: {standings_live['team_name'].tolist() if 'team_name' in standings_live.columns else 'no team_name column'}")
 else:
@@ -260,7 +260,7 @@ except Exception:
 
 # Prefer live standings to compute a positive 'games up/back' value
 # Prefer live standings to compute a positive 'games up/back' value
-games_up_back_value = compute_games_up_back_from_live(standings_live, config.TEAM_NAME)
+games_up_back_value = compute_games_up_back_from_live(standings_live, config.TEAM_FULL_NAME)
 # If live data couldn't compute, fall back; otherwise keep live (including 0 for ties)
 if games_up_back_value is None:
     games_back_raw = standings['gb'].iloc[0]
@@ -351,13 +351,13 @@ def home_run_stats(batting_now, batting_past):
 
 def batting_and_stolen_base_stats(batting_now, batting_past, games):
     batting_average = batting_now["ba"].iloc[0]
-    batting_average_decade = round(
+    batting_average_decade = str(round(
         batting_past.head(10)["ba"].astype(float).mean(), 3
-    ).astype(str).replace("0.", ".")
+    )).replace("0.", ".")
     on_base_pct = batting_now["obp"].iloc[0]
-    on_base_pct_decade = round(
+    on_base_pct_decade = str(round(
         batting_past.head(10)["obp"].astype(float).mean(), 3
-    ).astype(str).replace("0.", ".")
+    )).replace("0.", ".")
     stolen_bases = int(batting_now["sb"].iloc[0])
     stolen_bases_rank = to_ordinal(league_ranks_data.get('hitting_stolenBases', 'N/A'))
     stolen_bases_game = round(stolen_bases / games, 2) if games > 0 else 0
