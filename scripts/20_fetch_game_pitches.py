@@ -76,9 +76,9 @@ def get_team_game_ids(date_str):
         away_team = _get_team_name(g, "away")
         game_date = g.get("officialDate")
 
-        if home_team == config.TEAM_NAME:
+        if home_team == config.TEAM_FULL_NAME:
             team_games.append({"gamePk": g.get("gamePk"), "team_side": "home_batters", "game_date": game_date})
-        elif away_team == config.TEAM_NAME:
+        elif away_team == config.TEAM_FULL_NAME:
             team_games.append({"gamePk": g.get("gamePk"), "team_side": "away_batters", "game_date": game_date})
     
     return team_games

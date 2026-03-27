@@ -622,11 +622,11 @@ def generate_postseason_summary():
             else:
                 return {"text": "The team is preparing for their postseason run."}
         else:
-            return {"text": "The team won the American League East division and is off to the postseason!"}
-            
+            return {"text": ""}
+
     except Exception as e:
         logging.warning(f"Could not generate postseason summary: {e}")
-        return {"text": "The team won the American League East division and is off to the postseason!"}
+        return {"text": ""}
 
 def generate_summary(
     update_date_str, standings_live_team=None
@@ -799,7 +799,7 @@ def generate_summary(
             # Create the summary with series transition flow
             summary = (
                 f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
-                f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+                f"The {config.TEAM_NAME_SIMPLE} have compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
                 f"{enhanced_last_game} "
                 f"The team is now competing in the <span class='highlight'>{current_series['round']}</span> against the <span class='highlight'>{current_series['opponent']}</span>. "
                 f"The {series_status.lower()}{next_game_text}."
@@ -843,7 +843,7 @@ def generate_summary(
             
             summary = (
                 f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
-                f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+                f"The {config.TEAM_NAME_SIMPLE} have compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
                 f"{competing_text} "
                 f"{clean_last_game} "
                 f"{series_status}{next_game_text}."
@@ -857,7 +857,7 @@ def generate_summary(
         
         summary = (
             f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
-            f"The {config.TEAM_NAME_SIMPLE} compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+            f"The {config.TEAM_NAME_SIMPLE} have compiled a <span class='highlight'>{record}</span> record in the {current_year} regular season, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
             f"{postseason_text} "
             f"{last_game_summary_fragment}{next_game_text}{ending_punctuation}"
         )
