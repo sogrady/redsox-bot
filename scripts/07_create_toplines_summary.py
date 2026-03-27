@@ -293,16 +293,24 @@ pitching = read_parquet_s3(pitching_url)
 def current_season_stats(standings_now, standings_past, pitching, standings_last):
     games = standings_now["gm"].iloc[0]
     wins = standings_now["wins"].iloc[0]
-    wins_last = standings_last["wins"].iloc[0]
     losses = standings_now["losses"].iloc[0]
-    losses_last = standings_last["losses"].iloc[0]
     record = standings_now["record"].iloc[0]
-    record_last = standings_last["record"].iloc[0]
     win_pct = int(standings_now["win_pct"].iloc[0] * 100)
-    win_pct_last = int(standings_last["win_pct"].iloc[0] * 100)
-    win_pct_decade_thispoint = int(
-        standings_past.query(f"gm == {games}").head(10)["win_pct"].mean().round(2) * 100
-    )
+
+    # Last season comparisons (may be empty early in season or if historic data missing)
+    if not standings_last.empty:
+        wins_last = standings_last["wins"].iloc[0]
+        losses_last = standings_last["losses"].iloc[0]
+        record_last = standings_last["record"].iloc[0]
+        win_pct_last = int(standings_last["win_pct"].iloc[0] * 100)
+    else:
+        wins_last = 'N/A'
+        losses_last = 'N/A'
+        record_last = 'N/A'
+        win_pct_last = 'N/A'
+
+    decade_query = standings_past.query(f"gm == {games}").head(10)["win_pct"]
+    win_pct_decade_thispoint = int(decade_query.mean().round(2) * 100) if not decade_query.empty else 'N/A'
     era = pitching['era'].iloc[0]
     era_rank = to_ordinal(league_ranks_data.get('pitching_earnedRunAverage', 'N/A'))
     strikeouts = pitching['so'].iloc[0]

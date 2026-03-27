@@ -64,6 +64,9 @@ jobs:
       env:
         PYTHONPATH: ${{ github.workspace }}
       run: |
+        # Historical data first (needed by later scripts)
+        python scripts/29_fetch_historical_standings.py
+
         # In-season scripts
         python scripts/00_fetch_league_standings.py
         python scripts/02_update_boxscores_archive.py
@@ -79,7 +82,6 @@ jobs:
         # These work year-round
         python scripts/19_fetch_roster.py
         python scripts/28_fetch_postseason_stats.py
-        python scripts/29_fetch_historical_standings.py
         python scripts/15_fetch_xwoba.py
         python scripts/27_collect_umpires.py
         # Historical gamelogs (~15 min each) run in fetch_historical.yml instead
