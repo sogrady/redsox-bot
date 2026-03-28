@@ -18,7 +18,7 @@ function getEffectiveCurrentYear(data) {
 async function fetchData() {
   try {
     const response = await d3.json(
-      '/data/standings/redsox_standings_1901_present_optimized.json'
+      'https://redsox-data.s3.amazonaws.com/redsox/data/standings/redsox_standings_1901_present_optimized.json'
     );
     // Group data by year, converting the year to a string for consistency
     const groupedByYear = d3.group(response, (d) => d.year.toString());
