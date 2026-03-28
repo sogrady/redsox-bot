@@ -9,14 +9,14 @@ Runs,runs,3,standings,18th,League rank
 Runs against,runs_against,0,standings,2,This point last season
 Run differential,run_differential,3,standings,3,This point last season
 Batting average,batting_average,.333,batting,nan,Last decade average
-Home runs,home_runs,0,batting,21st,League rank
+Home runs,home_runs,0,batting,19th,League rank
 Home runs/game,home_runs_game,0.0,batting,N/A,Last decade average
 On-base percentage,on_base_pct,.385,batting,nan,Last decade average
-Stolen bases,stolen_bases,1,batting,4th,League rank
+Stolen bases,stolen_bases,1,batting,5th,League rank
 Stolen bases/game,stolen_bases_game,1.0,batting,N/A,Rate all last season
-Strikeouts,strikeouts,12,pitching,12th,League rank
-Walks,walks,3,pitching,19th,League rank
-ERA,era,0.00,pitching,1st,League rank
-Last updated,update_time,"March 28, 2026, 1:43 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(March 28)</span> — The Red Sox have compiled a <span class='highlight'>1-0</span> record in the 2026 regular season, a <span class='highlight'>100%</span> winning percentage.  The last game was a <span class='highlight'>3-0</span> away <span class='highlight'>win</span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Great American Ball Park</span>.",summary,,
+Strikeouts,strikeouts,12,pitching,13th,League rank
+Walks,walks,3,pitching,20th,League rank
+ERA,era,0.00,pitching,8th,League rank
+Last updated,update_time,"March 28, 2026, 5:23 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(March 28)</span> — The Red Sox have compiled a <span class='highlight'>1-0</span> record in the 2026 regular season, a <span class='highlight'>100%</span> winning percentage.  The last game was a <span class='highlight'>3-0</span> away <span class='highlight'>win</span>. and the next game is Sunday at 1:40 p.m. ET at <span class='highlight'>Great American Ball Park</span>.",summary,,
 Last game result,last_game_result,win,summary,,

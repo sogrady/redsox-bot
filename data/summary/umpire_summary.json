@@ -1,19 +1,39 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 84.0,
-        "incorrect_strikes_pct": 16.0,
-        "total_called_strikes": 25,
-        "bad_calls_count": 4
+        "correct_strikes_pct": 85.0,
+        "incorrect_strikes_pct": 15.0,
+        "total_called_strikes": 40,
+        "bad_calls_count": 6
     },
     "last_game_summary": {
-        "date": "March 26, 2026",
-        "correct_strikes_pct": 84.0,
-        "incorrect_strikes_pct": 16.0,
-        "total_called_strikes": 25,
-        "bad_calls_count": 4,
-        "home_plate_umpire": "Dan Iassogna"
+        "date": "March 28, 2026",
+        "correct_strikes_pct": 86.66666666666667,
+        "incorrect_strikes_pct": 13.333333333333329,
+        "total_called_strikes": 15,
+        "bad_calls_count": 2,
+        "home_plate_umpire": "CB Bucknor"
     },
     "worst_calls_of_season": [
+        {
+            "distance_inches": 3.2319661084,
+            "batter": "Trevor Story",
+            "pitcher": "Brady Singer",
+            "pitch_type": "Sinker",
+            "velocity_mph": 90.8,
+            "date": "2026-03-28",
+            "date_formatted": "March 28, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=9fdf4f1d-7c4a-3d48-92ee-1f80abaa031e"
+        },
+        {
+            "distance_inches": 2.3929450183,
+            "batter": "Marcelo Mayer",
+            "pitcher": "Brady Singer",
+            "pitch_type": "Sweeper",
+            "velocity_mph": 82.1,
+            "date": "2026-03-28",
+            "date_formatted": "March 28, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=7c4b8439-d503-3ce5-9c48-b10f31631217"
+        },
         {
             "distance_inches": 0.9806648394,
             "batter": "Wilyer Abreu",
@@ -33,40 +53,20 @@
             "date": "2026-03-26",
             "date_formatted": "March 26, 2026",
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=5690aee5-1f5b-3c49-82c5-8aed794af48c"
-        },
-        {
-            "distance_inches": 0.3299686463,
-            "batter": "Trevor Story",
-            "pitcher": "Connor Phillips",
-            "pitch_type": "Sweeper",
-            "velocity_mph": 86.4,
-            "date": "2026-03-26",
-            "date_formatted": "March 26, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=70f04c07-de46-3d8e-9ccf-d4e025d35e60"
-        },
-        {
-            "distance_inches": 0.0513859088,
-            "batter": "Trevor Story",
-            "pitcher": "Andrew Abbott",
-            "pitch_type": "4-Seam Fastball",
-            "velocity_mph": 92.9,
-            "date": "2026-03-26",
-            "date_formatted": "March 26, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=63203d5d-b805-34e6-b156-f5db7c34a88a"
         }
     ],
     "pitching_season_summary": {
         "correct_balls_pct": 95.23809523809523,
         "incorrect_balls_pct": 4.761904761904773,
-        "total_called_balls": 42,
-        "bad_calls_count": 2
+        "total_called_balls": 63,
+        "bad_calls_count": 3
     },
     "pitching_last_game_summary": {
-        "date": "March 26, 2026",
+        "date": "March 28, 2026",
         "correct_balls_pct": 95.23809523809523,
         "incorrect_balls_pct": 4.761904761904773,
-        "total_called_balls": 42,
-        "bad_calls_count": 2
+        "total_called_balls": 21,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
