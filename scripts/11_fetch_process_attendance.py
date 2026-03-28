@@ -6,10 +6,8 @@
 
 # ---
 
-#!/usr/bin/env python
-# coding: utf-8
-
 import os
+import sys
 import boto3
 import logging
 import datetime
@@ -47,45 +45,7 @@ base_dir = os.getcwd()
 data_dir = os.path.join(base_dir, 'data', 'standings')
 os.makedirs(data_dir, exist_ok=True)
 
-profile_name = os.environ.get("AWS_PERSONAL_PROFILE")
-today = datetime.date.today()
-year = today.year
-
-"""
-FETCH: MLB ATTENDANCE
-"""
-
-src_dfs = []
-
 year = pd.to_datetime("now").strftime("%Y")
-
-leagues = ['AL', 'NL']
-for league in leagues:
-    url = f'https://www.baseball-reference.com/leagues/{league}/{year}-misc.shtml'
-    src = (pd.read_html(url)[0])[['Tm', 'Attendance', 'Attend/G']].assign(league=league)
-    src_dfs.append(src)
-
-df = pd.concat(src_dfs).rename(columns={'Tm':'team', 'Attendance':'attendance', 'Attend/G':'attend_game'}).sort_values('attend_game', ascending=False).reset_index(drop=True)
-
-"""
-GEOGRAPHY: MLB STADIUMS
-"""
-
-gdf = gpd.read_file('https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Major_League_Baseball_Stadiums/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson')
-gdf.columns = gdf.columns.str.lower()
-
-gdf.loc[gdf["team"] == "Cleveland Indians", "team"] = 'Cleveland Guardians'
-gdf.loc[gdf["league"] == "National", "league"] = 'NL'
-gdf.loc[gdf["league"] == "American", "league"] = 'AL'
-gdf.loc[gdf["team"] == "Houston Astros", "league"] = 'AL'
-gdf.loc[gdf["team"] == "Oakland Athletics", "name"] = 'Oakland Coliseum'
-gdf.loc[gdf["team"] == "Baltimore Orioles", "name"] = 'Camden Yards'
-
-
-"""
-MERGE GEO/VALUES
-"""
-merged = pd.merge(df, gdf.drop(columns=['geometry']), on=['team', 'league'])
 
 
 # Function to save DataFrame to S3 as JSON
@@ -99,6 +59,40 @@ def save_to_s3(df, s3_path, s3_bucket):
     except Exception as e:
         logging.error(f"Failed to upload JSON to S3: {e}")
 
-# Saving DataFrame to S3
-s3_path = "redsox/data/standings/mlb_team_attendance.json"
-save_to_s3(merged, s3_path, "redsox-data")
+
+def main():
+    try:
+        # Fetch MLB attendance
+        src_dfs = []
+        leagues = ['AL', 'NL']
+        for league in leagues:
+            url = f'https://www.baseball-reference.com/leagues/{league}/{year}-misc.shtml'
+            src = (pd.read_html(url)[0])[['Tm', 'Attendance', 'Attend/G']].assign(league=league)
+            src_dfs.append(src)
+
+        df = pd.concat(src_dfs).rename(columns={'Tm':'team', 'Attendance':'attendance', 'Attend/G':'attend_game'}).sort_values('attend_game', ascending=False).reset_index(drop=True)
+
+        # Fetch stadium geography
+        gdf = gpd.read_file('https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Major_League_Baseball_Stadiums/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson')
+        gdf.columns = gdf.columns.str.lower()
+
+        gdf.loc[gdf["team"] == "Cleveland Indians", "team"] = 'Cleveland Guardians'
+        gdf.loc[gdf["league"] == "National", "league"] = 'NL'
+        gdf.loc[gdf["league"] == "American", "league"] = 'AL'
+        gdf.loc[gdf["team"] == "Houston Astros", "league"] = 'AL'
+        gdf.loc[gdf["team"] == "Oakland Athletics", "name"] = 'Oakland Coliseum'
+        gdf.loc[gdf["team"] == "Baltimore Orioles", "name"] = 'Camden Yards'
+
+        # Merge and save
+        merged = pd.merge(df, gdf.drop(columns=['geometry']), on=['team', 'league'])
+        s3_path = "redsox/data/standings/mlb_team_attendance.json"
+        save_to_s3(merged, s3_path, "redsox-data")
+
+    except Exception as e:
+        logging.warning(f"Could not process attendance data: {e}")
+        logging.warning("Exiting gracefully.")
+        sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
