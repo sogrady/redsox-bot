@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 85.0,
-        "incorrect_strikes_pct": 15.0,
-        "total_called_strikes": 40,
-        "bad_calls_count": 6
+        "correct_strikes_pct": 80.95238095238095,
+        "incorrect_strikes_pct": 19.04761904761905,
+        "total_called_strikes": 63,
+        "bad_calls_count": 12
     },
     "last_game_summary": {
         "date": "March 28, 2026",
-        "correct_strikes_pct": 86.66666666666667,
-        "incorrect_strikes_pct": 13.333333333333329,
-        "total_called_strikes": 15,
-        "bad_calls_count": 2,
+        "correct_strikes_pct": 78.94736842105263,
+        "incorrect_strikes_pct": 21.05263157894737,
+        "total_called_strikes": 38,
+        "bad_calls_count": 8,
         "home_plate_umpire": "CB Bucknor"
     },
     "worst_calls_of_season": [
@@ -25,6 +25,16 @@
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=9fdf4f1d-7c4a-3d48-92ee-1f80abaa031e"
         },
         {
+            "distance_inches": 3.102943212,
+            "batter": "Marcelo Mayer",
+            "pitcher": "Tony Santillan",
+            "pitch_type": "Slurve",
+            "velocity_mph": 82.7,
+            "date": "2026-03-28",
+            "date_formatted": "March 28, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=0c9b550c-4b00-3f85-841c-5e6f72a3f5c0"
+        },
+        {
             "distance_inches": 2.3929450183,
             "batter": "Marcelo Mayer",
             "pitcher": "Brady Singer",
@@ -35,38 +45,28 @@
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=7c4b8439-d503-3ce5-9c48-b10f31631217"
         },
         {
-            "distance_inches": 0.9806648394,
-            "batter": "Wilyer Abreu",
-            "pitcher": "Andrew Abbott",
-            "pitch_type": "Curveball",
-            "velocity_mph": 78.7,
-            "date": "2026-03-26",
-            "date_formatted": "March 26, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=bfc95266-06ad-36c4-b3b8-adfd5bb2c01f"
-        },
-        {
-            "distance_inches": 0.4775897721,
-            "batter": "Wilyer Abreu",
-            "pitcher": "Andrew Abbott",
-            "pitch_type": "Curveball",
-            "velocity_mph": 81.0,
-            "date": "2026-03-26",
-            "date_formatted": "March 26, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=5690aee5-1f5b-3c49-82c5-8aed794af48c"
+            "distance_inches": 2.2001609554,
+            "batter": "Jarren Duran",
+            "pitcher": "Emilio Pag\u00e1n",
+            "pitch_type": "Cutter",
+            "velocity_mph": 84.0,
+            "date": "2026-03-28",
+            "date_formatted": "March 28, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=b8792149-cd9e-331f-acf9-91cd2e4d6d8c"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.23809523809523,
-        "incorrect_balls_pct": 4.761904761904773,
-        "total_called_balls": 63,
-        "bad_calls_count": 3
+        "correct_balls_pct": 94.54545454545455,
+        "incorrect_balls_pct": 5.454545454545453,
+        "total_called_balls": 110,
+        "bad_calls_count": 6
     },
     "pitching_last_game_summary": {
         "date": "March 28, 2026",
-        "correct_balls_pct": 95.23809523809523,
-        "incorrect_balls_pct": 4.761904761904773,
-        "total_called_balls": 21,
-        "bad_calls_count": 1
+        "correct_balls_pct": 94.11764705882352,
+        "incorrect_balls_pct": 5.882352941176478,
+        "total_called_balls": 68,
+        "bad_calls_count": 4
     },
     "pitching_worst_calls_of_season": []
 }
