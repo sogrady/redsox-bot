@@ -112,7 +112,7 @@ twitter:
 {% assign al_central = al_teams | where_exp: "item", "item.division_name == 'American League Central'" | sort: "division_rank" %}
 {% assign al_west = al_teams | where_exp: "item", "item.division_name == 'American League West'" | sort: "division_rank" %}
 
-<h2 class="stat-group">Final regular season standings</h2>
+<h2 class="stat-group">Regular season standings</h2>
 
 <h3 class="visual-subhead">American League standings by division</h3>
 <div class="tables-container standings-tables">
