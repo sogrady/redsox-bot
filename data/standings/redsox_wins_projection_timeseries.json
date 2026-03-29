@@ -1,10 +1,16 @@
 {
-    "games_played": 1,
+    "games_played": 2,
     "current_wins": 1,
-    "current_losses": 0,
+    "current_losses": 1,
     "timeseries": [
         {
             "game_number": 1,
+            "mean_projected_wins": 1.0,
+            "lower_ci_wins": 1.0,
+            "upper_ci_wins": 1.0
+        },
+        {
+            "game_number": 2,
             "mean_projected_wins": 1.0,
             "lower_ci_wins": 1.0,
             "upper_ci_wins": 1.0
