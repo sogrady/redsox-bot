@@ -20,6 +20,26 @@
         "win_pct":1.0
     },
     {
+        "gm":2,
+        "game_date":"2026-03-28",
+        "home_away":"boxscore",
+        "opp":"CIN",
+        "result":"L-wo",
+        "r":5,
+        "ra":6,
+        "record":"1-1",
+        "rank":3,
+        "gb":-1.5,
+        "time":"3:32:00",
+        "time_minutes":212.0,
+        "day_night":"D",
+        "attendance":38298.0,
+        "year":"2026",
+        "wins":1,
+        "losses":1,
+        "win_pct":0.5
+    },
+    {
         "gm":1,
         "game_date":"2025-03-27",
         "home_away":"boxscore",
