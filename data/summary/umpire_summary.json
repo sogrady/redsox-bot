@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 80.95238095238095,
-        "incorrect_strikes_pct": 19.04761904761905,
-        "total_called_strikes": 63,
+        "correct_strikes_pct": 86.20689655172413,
+        "incorrect_strikes_pct": 13.793103448275872,
+        "total_called_strikes": 87,
         "bad_calls_count": 12
     },
     "last_game_summary": {
-        "date": "March 28, 2026",
-        "correct_strikes_pct": 78.94736842105263,
-        "incorrect_strikes_pct": 21.05263157894737,
-        "total_called_strikes": 38,
-        "bad_calls_count": 8,
-        "home_plate_umpire": "CB Bucknor"
+        "date": "March 29, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 24,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Adam Beck"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 94.69026548672566,
-        "incorrect_balls_pct": 5.309734513274336,
-        "total_called_balls": 113,
-        "bad_calls_count": 6
+        "correct_balls_pct": 94.9367088607595,
+        "incorrect_balls_pct": 5.063291139240505,
+        "total_called_balls": 158,
+        "bad_calls_count": 8
     },
     "pitching_last_game_summary": {
-        "date": "March 28, 2026",
-        "correct_balls_pct": 94.36619718309859,
-        "incorrect_balls_pct": 5.633802816901408,
-        "total_called_balls": 71,
-        "bad_calls_count": 4
+        "date": "March 29, 2026",
+        "correct_balls_pct": 95.55555555555556,
+        "incorrect_balls_pct": 4.444444444444443,
+        "total_called_balls": 45,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
