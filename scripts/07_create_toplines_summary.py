@@ -365,6 +365,21 @@ def batting_and_stolen_base_stats(batting_now, batting_past, games):
     
     return batting_average, batting_average_decade, stolen_bases, stolen_bases_rank, stolen_bases_game, stolen_bases_last_rate, on_base_pct, on_base_pct_decade
 
+def fetch_batting_avg_risp():
+    """Fetches the team's batting average with runners in scoring position from the MLB Stats API."""
+    try:
+        url = f"https://statsapi.mlb.com/api/v1/teams/{config.TEAM_ID}/stats?stats=statSplits&group=hitting&season={config.CURRENT_YEAR}&sitCodes=risp"
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+        data = response.json()
+        splits = data.get('stats', [{}])[0].get('splits', [])
+        if splits:
+            return splits[0].get('stat', {}).get('avg', 'N/A')
+        return 'N/A'
+    except Exception as e:
+        logging.warning(f"Could not fetch RISP data: {e}")
+        return 'N/A'
+
 def calculate_projected_wins(current_wins, games_played_so_far, total_season_games=162):
     """Calculates the projected number of wins for a full season based on current performance."""
     if games_played_so_far == 0:
@@ -874,6 +889,7 @@ games, wins, losses, record, win_pct, win_pct_decade_thispoint, era, era_rank, s
 runs, runs_last, runs_rank, runs_against, runs_against_last, run_diff, run_diff_last, mean_attendance, formatted_mean_attendance, home_games_count = run_differential(standings)
 home_runs, home_runs_rank, home_runs_game, home_runs_game_last, home_runs_game_decade = home_run_stats(batting_now, batting_past)
 batting_average, batting_average_decade, stolen_bases, stolen_bases_rank, stolen_bases_game, stolen_bases_last_rate, on_base_pct, on_base_pct_decade = batting_and_stolen_base_stats(batting_now, batting_past, games)
+batting_avg_risp = fetch_batting_avg_risp()
 win_count_trend, loss_count_trend, win_loss_trend = recent_trend(standings.iloc[:10])
 
 # Prepare last_game_info, handling empty standings_now for very early season
@@ -906,7 +922,7 @@ summary_data = [
     
     {"stat_label": "On-base percentage", "stat": "on_base_pct", "value": on_base_pct, "category": "batting", "context_value": on_base_pct_decade, "context_value_label": "Last decade average"},
     {"stat_label": "Stolen bases", "stat": "stolen_bases", "value": stolen_bases, "category": "batting", "context_value": stolen_bases_rank, "context_value_label": "League rank"},
-    {"stat_label": "Stolen bases/game", "stat": "stolen_bases_game", "value": stolen_bases_game, "category": "batting", "context_value": stolen_bases_last_rate, "context_value_label": "Rate all last season"},
+    {"stat_label": "BA w/ RISP", "stat": "batting_avg_risp", "value": batting_avg_risp, "category": "batting", "context_value": batting_average, "context_value_label": "Overall BA"},
     
     # Pitching
     {"stat_label": "Strikeouts", "stat": "strikeouts", "value": format_int_with_commas(strikeouts), "category": "pitching", "context_value": strikeouts_rank, "context_value_label": "League rank"},
