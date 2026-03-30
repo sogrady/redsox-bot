@@ -10,25 +10,25 @@
     {
         "stat_label":"Losses",
         "stat":"losses",
-        "value":1,
+        "value":2,
         "category":"standings",
-        "context_value":1,
+        "context_value":2,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"1-1",
+        "value":"1-2",
         "category":"standings",
-        "context_value":"1-1",
+        "context_value":"1-2",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"50%",
+        "value":"33%",
         "category":"standings",
-        "context_value":"50%",
+        "context_value":"33%",
         "context_value_label":"This point last season"
     },
     {
@@ -50,7 +50,7 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":8,
+        "value":10,
         "category":"standings",
         "context_value":"22nd",
         "context_value_label":"League rank"
@@ -58,23 +58,23 @@
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":6,
+        "value":9,
         "category":"standings",
-        "context_value":6,
+        "context_value":10,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":2,
+        "value":1,
         "category":"standings",
-        "context_value":0,
+        "context_value":-1,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".263",
+        "value":".250",
         "category":"batting",
         "context_value":"nan",
         "context_value_label":"Last decade average"
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":2,
+        "value":3,
         "category":"batting",
         "context_value":"15th",
         "context_value_label":"League rank"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".349",
+        "value":".347",
         "category":"batting",
         "context_value":"nan",
         "context_value_label":"Last decade average"
@@ -114,7 +114,7 @@
     {
         "stat_label":"Stolen bases\/game",
         "stat":"stolen_bases_game",
-        "value":1.0,
+        "value":0.67,
         "category":"batting",
         "context_value":"N\/A",
         "context_value_label":"Rate all last season"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"24",
+        "value":"33",
         "category":"pitching",
-        "context_value":"8th",
+        "context_value":"9th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"10",
+        "value":"14",
         "category":"pitching",
         "context_value":"8th",
         "context_value_label":"League rank"
@@ -138,7 +138,7 @@
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"1.86",
+        "value":"2.30",
         "category":"pitching",
         "context_value":"5th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 29, 2026, 7:23 PM ET",
+        "value":"March 30, 2026, 4:51 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -154,7 +154,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(March 29)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>1-2<\/span> record in the 2026 regular season, a <span class='highlight'>33%<\/span> winning percentage.  The last game was a <span class='highlight'>2-3<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 8:10 p.m. ET at <span class='highlight'>Daikin Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(March 30)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>1-2<\/span> record in the 2026 regular season, a <span class='highlight'>33%<\/span> winning percentage.  The last game was a <span class='highlight'>2-3<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 8:10 p.m. ET at <span class='highlight'>Daikin Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
