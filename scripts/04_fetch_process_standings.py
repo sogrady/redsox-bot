@@ -152,10 +152,10 @@ def fetch_current_year_data(url, year):
 def load_historic_data(filepath):
     logging.info("Loading historic data.")
     historic_df = pd.read_parquet(filepath)
-    historic_df["gm"] = historic_df["gm"].astype(int)
-    historic_df[["r", "ra", "attendance", "gm", "rank"]] = historic_df[
-        ["r", "ra", "attendance", "gm", "rank"]
-    ].astype(int)
+    int_cols = ["r", "ra", "attendance", "gm", "rank"]
+    for col in int_cols:
+        if col in historic_df.columns:
+            historic_df[col] = pd.to_numeric(historic_df[col], errors='coerce').fillna(0).astype(int)
 
     historic_df[['wins', 'losses']] = historic_df['record'].str.split('-', expand=True).astype(int)
     historic_df['win_pct'] = (historic_df['wins'] / historic_df['gm']).round(2)
