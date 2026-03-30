@@ -159,7 +159,15 @@ try:
     franchise_df = franchise_df.rename(columns={'year': 'season'})
     franchise_df['season'] = franchise_df['season'].astype(str)
     franchise_df = franchise_df[franchise_df['season'] != year]
-    # Keep columns that match script 07 needs
+    # Convert numeric columns so parquet serialization works
+    numeric_cols = ['g', 'pa', 'ab', 'r', 'h', '2b', '3b', 'hr', 'rbi', 'sb', 'cs', 'bb', 'so']
+    for col in numeric_cols:
+        if col in franchise_df.columns:
+            franchise_df[col] = pd.to_numeric(franchise_df[col], errors='coerce')
+    float_cols = ['ba', 'obp', 'slg', 'ops']
+    for col in float_cols:
+        if col in franchise_df.columns:
+            franchise_df[col] = pd.to_numeric(franchise_df[col], errors='coerce')
     team_totals_archive_df = franchise_df
     team_full_df = (
         pd.concat([team_totals_df, team_totals_archive_df])
