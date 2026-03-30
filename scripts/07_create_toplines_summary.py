@@ -393,6 +393,27 @@ def fetch_batting_avg_risp():
         logging.warning(f"Could not fetch RISP data: {e}")
     return team_avg, league_avg
 
+def fetch_league_k_bb_ratio():
+    """Fetches the league average K/BB ratio from the MLB Stats API."""
+    try:
+        url = f"https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season={config.CURRENT_YEAR}&sportId=1"
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+        data = response.json()
+        splits = data.get('stats', [{}])[0].get('splits', [])
+        if splits:
+            ratios = []
+            for s in splits:
+                so = int(s['stat'].get('strikeOuts', 0))
+                bb = int(s['stat'].get('baseOnBalls', 0))
+                if bb > 0:
+                    ratios.append(so / bb)
+            if ratios:
+                return round(sum(ratios) / len(ratios), 2)
+    except Exception as e:
+        logging.warning(f"Could not fetch league K/BB ratio: {e}")
+    return 'N/A'
+
 def calculate_projected_wins(current_wins, games_played_so_far, total_season_games=162):
     """Calculates the projected number of wins for a full season based on current performance."""
     if games_played_so_far == 0:
@@ -903,6 +924,7 @@ runs, runs_last, runs_rank, runs_against, runs_against_last, run_diff, run_diff_
 home_runs, home_runs_rank, home_runs_game, home_runs_game_last, home_runs_game_decade = home_run_stats(batting_now, batting_past)
 batting_average, batting_average_decade, stolen_bases, stolen_bases_rank, stolen_bases_game, stolen_bases_last_rate, on_base_pct, on_base_pct_decade = batting_and_stolen_base_stats(batting_now, batting_past, games)
 batting_avg_risp, league_avg_risp = fetch_batting_avg_risp()
+league_k_bb_ratio = fetch_league_k_bb_ratio()
 win_count_trend, loss_count_trend, win_loss_trend = recent_trend(standings.iloc[:10])
 
 # Prepare last_game_info, handling empty standings_now for very early season
@@ -942,6 +964,7 @@ summary_data = [
     {"stat_label": "Walks", "stat": "walks", "value": walks, "category": "pitching", "context_value": walks_rank, "context_value_label": "League rank"},
     # {"stat_label": "Home runs allowed", "stat": "home_runs_allowed", "value": home_runs_allowed, "category": "pitching", "context_value": home_runs_allowed_rank, "context_value_label": "League rank"}, # Rank not available in current JSON
     {"stat_label": "ERA", "stat": "era", "value": era, "category": "pitching", "context_value": era_rank, "context_value_label": "League rank"},
+    {"stat_label": "K/BB ratio", "stat": "k_bb_ratio", "value": round(int(strikeouts) / int(walks), 2) if int(walks) > 0 else 'N/A', "category": "pitching", "context_value": league_k_bb_ratio, "context_value_label": "League average"},
     
     # Summary
     {"stat_label": "Last updated", "stat": "update_time", "value": update_time, "category": "summary", "context_value": "", "context_value_label": ''}, 
