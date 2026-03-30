@@ -393,8 +393,10 @@ def fetch_batting_avg_risp():
         logging.warning(f"Could not fetch RISP data: {e}")
     return team_avg, league_avg
 
-def fetch_league_k_bb_ratio():
-    """Fetches the league average K/BB ratio from the MLB Stats API."""
+def fetch_league_pitching_averages():
+    """Fetches league average K/BB ratio and HR/9 from the MLB Stats API."""
+    league_k_bb = 'N/A'
+    league_hr9 = 'N/A'
     try:
         url = f"https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season={config.CURRENT_YEAR}&sportId=1"
         response = requests.get(url, timeout=15)
@@ -403,16 +405,21 @@ def fetch_league_k_bb_ratio():
         splits = data.get('stats', [{}])[0].get('splits', [])
         if splits:
             ratios = []
+            hr9s = []
             for s in splits:
                 so = int(s['stat'].get('strikeOuts', 0))
                 bb = int(s['stat'].get('baseOnBalls', 0))
+                hr9 = float(s['stat'].get('homeRunsPer9', 0))
                 if bb > 0:
                     ratios.append(so / bb)
+                hr9s.append(hr9)
             if ratios:
-                return round(sum(ratios) / len(ratios), 2)
+                league_k_bb = round(sum(ratios) / len(ratios), 2)
+            if hr9s:
+                league_hr9 = round(sum(hr9s) / len(hr9s), 2)
     except Exception as e:
-        logging.warning(f"Could not fetch league K/BB ratio: {e}")
-    return 'N/A'
+        logging.warning(f"Could not fetch league pitching averages: {e}")
+    return league_k_bb, league_hr9
 
 def calculate_projected_wins(current_wins, games_played_so_far, total_season_games=162):
     """Calculates the projected number of wins for a full season based on current performance."""
@@ -924,7 +931,7 @@ runs, runs_last, runs_rank, runs_against, runs_against_last, run_diff, run_diff_
 home_runs, home_runs_rank, home_runs_game, home_runs_game_last, home_runs_game_decade = home_run_stats(batting_now, batting_past)
 batting_average, batting_average_decade, stolen_bases, stolen_bases_rank, stolen_bases_game, stolen_bases_last_rate, on_base_pct, on_base_pct_decade = batting_and_stolen_base_stats(batting_now, batting_past, games)
 batting_avg_risp, league_avg_risp = fetch_batting_avg_risp()
-league_k_bb_ratio = fetch_league_k_bb_ratio()
+league_k_bb_ratio, league_hr9 = fetch_league_pitching_averages()
 win_count_trend, loss_count_trend, win_loss_trend = recent_trend(standings.iloc[:10])
 
 # Prepare last_game_info, handling empty standings_now for very early season
@@ -965,7 +972,9 @@ summary_data = [
     # {"stat_label": "Home runs allowed", "stat": "home_runs_allowed", "value": home_runs_allowed, "category": "pitching", "context_value": home_runs_allowed_rank, "context_value_label": "League rank"}, # Rank not available in current JSON
     {"stat_label": "ERA", "stat": "era", "value": era, "category": "pitching", "context_value": era_rank, "context_value_label": "League rank"},
     {"stat_label": "K/BB ratio", "stat": "k_bb_ratio", "value": round(int(strikeouts) / int(walks), 2) if int(walks) > 0 else 'N/A', "category": "pitching", "context_value": league_k_bb_ratio, "context_value_label": "League average"},
-    
+    {"stat_label": "HR/9", "stat": "hr9", "value": pitching['hr9'].iloc[0] if 'hr9' in pitching.columns else 'N/A', "category": "pitching", "context_value": league_hr9, "context_value_label": "League average"},
+    {"stat_label": "BABIP", "stat": "babip", "value": str(round((int(pitching['h'].iloc[0]) - int(pitching['hr'].iloc[0])) / (int(pitching['bf'].iloc[0]) - int(pitching['so'].iloc[0]) - int(pitching['hr'].iloc[0]) - int(pitching['bb'].iloc[0])), 3)).replace("0.", ".") if 'bf' in pitching.columns and (int(pitching['bf'].iloc[0]) - int(pitching['so'].iloc[0]) - int(pitching['hr'].iloc[0]) - int(pitching['bb'].iloc[0])) > 0 else 'N/A', "category": "pitching", "context_value": ".300", "context_value_label": "League norm"},
+
     # Summary
     {"stat_label": "Last updated", "stat": "update_time", "value": update_time, "category": "summary", "context_value": "", "context_value_label": ''}, 
     {"stat_label": "Team summary", "stat": "summary", "value": summary, "category": "summary", "context_value": "", "context_value_label": ''},
