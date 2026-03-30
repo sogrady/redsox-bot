@@ -146,43 +146,31 @@ team_totals_df = summary_df[summary_df['name'] == "Team Totals"].dropna(axis=1)
 # Team ranks
 team_ranks_df = summary_df.query('name.str.contains("Rank")').dropna(axis=1)
 
-# Combine
-# Concatenate current season player totals with historical player archive
-
-# player_totals_archive_df = pd.read_parquet(
-#     "https://redsox-data/dodgers/data/batting/archive/dodgers_player_batting_statistics_1958_2024.parquet"
-# )
-
-# players_full_df = (
-#     pd.concat([player_totals_df, player_totals_archive_df])
-#     .sort_values("season", ascending=False)
-#     .reset_index(drop=True)
-# )
+# Combine current season with historical franchise batting data
 players_full_df = player_totals_df.sort_values("season", ascending=False).reset_index(drop=True)
 
-# team_totals_archive_df = pd.read_parquet(
-#     "https://redsox-data/dodgers/data/batting/archive/dodgers_team_batting_statistics_1958_2024.parquet"
-# )
+# Fetch historical team batting totals from Baseball Reference franchise page
+franchise_url = f"https://www.baseball-reference.com/teams/{config.TEAM_ID_BBREF}/batteam.shtml"
+try:
+    franchise_df = pd.read_html(franchise_url)[0]
+    franchise_df.columns = franchise_df.columns.str.lower().str.replace("+", "_plus")
+    # Filter to valid year rows only, exclude current year (already in team_totals_df)
+    franchise_df = franchise_df[franchise_df['year'].apply(lambda x: str(x).isdigit())].copy()
+    franchise_df = franchise_df.rename(columns={'year': 'season'})
+    franchise_df['season'] = franchise_df['season'].astype(str)
+    franchise_df = franchise_df[franchise_df['season'] != year]
+    # Keep columns that match script 07 needs
+    team_totals_archive_df = franchise_df
+    team_full_df = (
+        pd.concat([team_totals_df, team_totals_archive_df])
+        .sort_values("season", ascending=False)
+        .reset_index(drop=True)
+    )
+    print(f"Loaded {len(team_totals_archive_df)} historical seasons from franchise batting page")
+except Exception as e:
+    print(f"Could not load franchise batting history: {e}")
+    team_full_df = team_totals_df.sort_values("season", ascending=False).reset_index(drop=True)
 
-
-# team_full_df = (
-#     pd.concat([team_totals_df, team_totals_archive_df])
-#     .sort_values("season", ascending=False)
-#     .reset_index(drop=True)
-# )
-team_full_df = team_totals_df.sort_values("season", ascending=False).reset_index(drop=True)
-
-
-# team_ranks_archive_df = pd.read_parquet(
-#     "https://redsox-data/dodgers/data/batting/archive/dodgers_team_batting_rankings_1958_2024.parquet"
-# )
-
-
-# team_ranks_full_df = (
-#     pd.concat([team_ranks_df, team_ranks_archive_df])
-#     .sort_values("season", ascending=False)
-#     .reset_index(drop=True)
-# )
 team_ranks_full_df = team_ranks_df.sort_values("season", ascending=False).reset_index(drop=True)
 
 # Export
@@ -209,7 +197,7 @@ try:
         formats,
     )
     save_dataframe(
-        team_full_df, f"../data/batting/redsox_team_batting_1958_present", formats
+        team_full_df, f"../data/batting/redsox_team_batting_1901_present", formats
     )
     save_dataframe(
         team_ranks_full_df,
@@ -272,7 +260,7 @@ save_to_s3(
 )
 save_to_s3(
     team_full_df,
-    "redsox/data/batting/redsox_team_batting_1958_present",
+    "redsox/data/batting/redsox_team_batting_1901_present",
     "redsox-data",
 )
 save_to_s3(
