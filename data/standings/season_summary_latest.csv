@@ -8,15 +8,16 @@ Avg. home attendance,mean_attendance,nan,standings,0,Home games this season
 Runs,runs,10,standings,22nd,League rank
 Runs against,runs_against,9,standings,10,This point last season
 Run differential,run_differential,1,standings,-1,This point last season
-Batting average,batting_average,.250,batting,nan,Last decade average
+Batting average,batting_average,0.25,batting,.262,Last decade average
 Home runs,home_runs,3,batting,15th,League rank
-Home runs/game,home_runs_game,1.0,batting,N/A,Last decade average
-On-base percentage,on_base_pct,.347,batting,nan,Last decade average
+Home runs/game,home_runs_game,1.0,batting,1.22,Last decade average
+On-base percentage,on_base_pct,0.347,batting,.33,Last decade average
 Stolen bases,stolen_bases,2,batting,12th,League rank
-BA w/ RISP,batting_avg_risp,.172,batting,.250,Overall BA
+BA w/ RISP,batting_avg_risp,.172,batting,.259,League average
 Strikeouts,strikeouts,33,pitching,9th,League rank
 Walks,walks,14,pitching,8th,League rank
 ERA,era,2.30,pitching,5th,League rank
-Last updated,update_time,"March 30, 2026, 1:35 PM ET",summary,,
+K/BB ratio,k_bb_ratio,2.36,pitching,2.84,League average
+Last updated,update_time,"March 30, 2026, 4:16 PM ET",summary,,
 Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(March 30)</span> — The Red Sox have compiled a <span class='highlight'>1-2</span> record in the 2026 regular season, a <span class='highlight'>33%</span> winning percentage.  The last game was a <span class='highlight'>2-3</span> away <span class='highlight'>loss</span>. and the next game is Monday at 8:10 p.m. ET at <span class='highlight'>Daikin Park</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
