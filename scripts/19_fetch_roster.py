@@ -217,31 +217,55 @@ def fetch_transactions():
         s3.Bucket(s3_bucket).upload_file(transactions_json_file, s3_key_transactions_json)
     logging.info("Current transactions data written and uploaded to S3.")
 
-def main():
-    os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(jekyll_data_dir, exist_ok=True)
-
-    url = f"https://www.mlb.com/{config.TEAM_NAME.lower().replace(' ', '')}/roster"  # Active roster instead of 40-man
+def scrape_roster_page(url):
+    """Scrape all players from an MLB roster page."""
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     tables = soup.find_all('table', class_='roster__table')
-
-    all_players = []
+    players = []
     for table in tables:
-        # Get position group from thead
         thead = table.find('thead')
         if not thead:
             continue
         header_td = thead.find('td')
         position_group = header_td.text.strip().capitalize().replace("Two-way players", "Unicorns") if header_td else "Unknown"
-        # Parse all rows
         tbody = table.find('tbody')
         for row in tbody.find_all('tr'):
             player = parse_player_row(row, position_group)
             name = player.get('name')
             if name:
                 player['slug'] = sluggify(name)
-            all_players.append(player)
+            players.append(player)
+    return players
+
+def main():
+    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(jekyll_data_dir, exist_ok=True)
+
+    team_slug = config.TEAM_NAME.lower().replace(' ', '')
+
+    # Fetch active roster
+    active_url = f"https://www.mlb.com/{team_slug}/roster"
+    active_players = scrape_roster_page(active_url)
+    active_names = {p['name'] for p in active_players if p.get('name')}
+
+    # Fetch 40-man roster
+    forty_man_url = f"https://www.mlb.com/{team_slug}/roster/40-man"
+    forty_man_players = scrape_roster_page(forty_man_url)
+
+    # Mark active roster status: players on the active page are active,
+    # additional 40-man players are not
+    for p in active_players:
+        p['is_active_roster'] = True
+        p['is_40_man'] = True
+
+    # Add 40-man players not already on the active roster
+    all_players = list(active_players)
+    for p in forty_man_players:
+        if p.get('name') not in active_names:
+            p['is_active_roster'] = False
+            p['is_40_man'] = True
+            all_players.append(p)
 
     df = pd.DataFrame(all_players)
     df.to_csv(csv_file, index=False)
