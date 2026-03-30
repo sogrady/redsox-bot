@@ -174,6 +174,10 @@ try:
         .sort_values("season", ascending=False)
         .reset_index(drop=True)
     )
+    # Ensure consistent types across merged dataframe
+    for col in numeric_cols + float_cols:
+        if col in team_full_df.columns:
+            team_full_df[col] = pd.to_numeric(team_full_df[col], errors='coerce')
     print(f"Loaded {len(team_totals_archive_df)} historical seasons from franchise batting page")
 except Exception as e:
     print(f"Could not load franchise batting history: {e}")
