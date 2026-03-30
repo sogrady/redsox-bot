@@ -190,10 +190,12 @@ def main():
         sb = stats.get('stolen_bases', {})
         sb_val = sb.get('value', 'N/A')
         sb_rank = sb.get('context_value', 'N/A')
+        risp = stats.get('batting_avg_risp', {}).get('value', 'N/A')
         post_text = (
             f"⚾️ {config.TEAM_NAME_SIMPLE} batting report ⚾️\n\n"
             f"• BA: {ba}\n"
             f"• OBP: {obp}\n"
+            f"• BA w/ RISP: {risp}\n"
             f"• Home Runs: {hr_val} ({hr_rank} in MLB)\n"
             f"• Stolen Bases: {sb_val} ({sb_rank} in MLB)\n\n"
             f"More: https://redsox.bot"
