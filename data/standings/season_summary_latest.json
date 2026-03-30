@@ -152,9 +152,25 @@
         "context_value_label":"League average"
     },
     {
+        "stat_label":"HR\/9",
+        "stat":"hr9",
+        "value":"1.0",
+        "category":"pitching",
+        "context_value":1.11,
+        "context_value_label":"League average"
+    },
+    {
+        "stat_label":"BABIP",
+        "stat":"babip",
+        "value":".269",
+        "category":"pitching",
+        "context_value":".300",
+        "context_value_label":"League norm"
+    },
+    {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 30, 2026, 4:46 PM ET",
+        "value":"March 30, 2026, 5:04 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
