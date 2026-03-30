@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":10,
         "category":"standings",
-        "context_value":"22nd",
+        "context_value":"23rd",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":3,
         "category":"batting",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".172",
         "category":"batting",
-        "context_value":".259",
+        "context_value":".258",
         "context_value_label":"League average"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"33",
         "category":"pitching",
-        "context_value":"9th",
+        "context_value":"11th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"14",
         "category":"pitching",
-        "context_value":"9th",
+        "context_value":"11th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"2.30",
         "category":"pitching",
-        "context_value":"5th",
+        "context_value":"4th",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.36,
         "category":"pitching",
-        "context_value":2.82,
+        "context_value":2.84,
         "context_value_label":"League average"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.0",
         "category":"pitching",
-        "context_value":1.1,
+        "context_value":1.09,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 30, 2026, 5:32 PM ET",
+        "value":"March 30, 2026, 7:26 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
