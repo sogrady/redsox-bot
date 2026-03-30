@@ -112,12 +112,12 @@
         "context_value_label":"League rank"
     },
     {
-        "stat_label":"Stolen bases\/game",
-        "stat":"stolen_bases_game",
-        "value":0.67,
+        "stat_label":"BA w\/ RISP",
+        "stat":"batting_avg_risp",
+        "value":".172",
         "category":"batting",
-        "context_value":"N\/A",
-        "context_value_label":"Rate all last season"
+        "context_value":".250",
+        "context_value_label":"Overall BA"
     },
     {
         "stat_label":"Strikeouts",
@@ -146,7 +146,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 30, 2026, 11:46 AM ET",
+        "value":"March 30, 2026, 1:35 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
