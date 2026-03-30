@@ -74,9 +74,9 @@
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".250",
+        "value":0.25,
         "category":"batting",
-        "context_value":"nan",
+        "context_value":".262",
         "context_value_label":"Last decade average"
     },
     {
@@ -92,15 +92,15 @@
         "stat":"home_runs_game",
         "value":1.0,
         "category":"batting",
-        "context_value":"N\/A",
+        "context_value":1.22,
         "context_value_label":"Last decade average"
     },
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".347",
+        "value":0.347,
         "category":"batting",
-        "context_value":"nan",
+        "context_value":".33",
         "context_value_label":"Last decade average"
     },
     {
@@ -116,8 +116,8 @@
         "stat":"batting_avg_risp",
         "value":".172",
         "category":"batting",
-        "context_value":".250",
-        "context_value_label":"Overall BA"
+        "context_value":".259",
+        "context_value_label":"League average"
     },
     {
         "stat_label":"Strikeouts",
@@ -144,9 +144,17 @@
         "context_value_label":"League rank"
     },
     {
+        "stat_label":"K\/BB ratio",
+        "stat":"k_bb_ratio",
+        "value":2.36,
+        "category":"pitching",
+        "context_value":2.84,
+        "context_value_label":"League average"
+    },
+    {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 30, 2026, 1:35 PM ET",
+        "value":"March 30, 2026, 4:16 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
