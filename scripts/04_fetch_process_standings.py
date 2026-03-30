@@ -178,8 +178,9 @@ def main():
         # For now, if historic file doesn't exist, just use current year or empty
         if os.path.exists(historic_file):
              historic_df = load_historic_data(historic_file)
-             if historic_df['game_date'].dtype != 'datetime64[ns]':
-                historic_df['game_date'] = pd.to_datetime(historic_df['game_date'])
+             # Ensure game_date is datetime in both dataframes before concat
+             src_df['game_date'] = pd.to_datetime(src_df['game_date'])
+             historic_df['game_date'] = pd.to_datetime(historic_df['game_date'])
              df = pd.concat([src_df, historic_df]).sort_values("game_date", ascending=False).drop_duplicates(subset=['gm', 'year']).reset_index(drop=True)
         else:
              logging.warning(f"Historic file {historic_file} not found. Using only current year data.")
