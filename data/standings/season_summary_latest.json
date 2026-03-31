@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":3,
         "category":"batting",
-        "context_value":"19th",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"16",
         "category":"pitching",
-        "context_value":"11th",
+        "context_value":"12th",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.44,
         "category":"pitching",
-        "context_value":2.79,
+        "context_value":2.85,
         "context_value_label":"League average"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.8",
         "category":"pitching",
-        "context_value":1.07,
+        "context_value":1.08,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"March 31, 2026, 11:43 AM ET",
+        "value":"March 31, 2026, 7:24 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
