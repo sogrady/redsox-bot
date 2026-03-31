@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 86.73469387755102,
-        "incorrect_strikes_pct": 13.265306122448976,
-        "total_called_strikes": 98,
+        "correct_strikes_pct": 88.07339449541286,
+        "incorrect_strikes_pct": 11.926605504587144,
+        "total_called_strikes": 109,
         "bad_calls_count": 13
     },
     "last_game_summary": {
         "date": "March 30, 2026",
-        "correct_strikes_pct": 90.9090909090909,
-        "incorrect_strikes_pct": 9.090909090909093,
-        "total_called_strikes": 11,
+        "correct_strikes_pct": 95.45454545454545,
+        "incorrect_strikes_pct": 4.545454545454547,
+        "total_called_strikes": 22,
         "bad_calls_count": 1,
         "home_plate_umpire": "Nate Tomlinson"
     },
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.8974358974359,
-        "incorrect_balls_pct": 4.102564102564102,
-        "total_called_balls": 195,
+        "correct_balls_pct": 96.22641509433963,
+        "incorrect_balls_pct": 3.773584905660371,
+        "total_called_balls": 212,
         "bad_calls_count": 8
     },
     "pitching_last_game_summary": {
         "date": "March 30, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 37,
+        "total_called_balls": 54,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
