@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 88.07339449541286,
-        "incorrect_strikes_pct": 11.926605504587144,
+        "correct_strikes_pct": 88.9908256880734,
+        "incorrect_strikes_pct": 11.0091743119266,
         "total_called_strikes": 109,
-        "bad_calls_count": 13
+        "bad_calls_count": 12
     },
     "last_game_summary": {
         "date": "March 30, 2026",
-        "correct_strikes_pct": 95.45454545454545,
-        "incorrect_strikes_pct": 4.545454545454547,
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
         "total_called_strikes": 22,
-        "bad_calls_count": 1,
+        "bad_calls_count": 0,
         "home_plate_umpire": "Nate Tomlinson"
     },
     "worst_calls_of_season": [
