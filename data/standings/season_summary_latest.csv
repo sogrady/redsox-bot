@@ -1,25 +1,25 @@
 stat_label,stat,value,category,context_value,context_value_label
-Wins,wins,1,standings,1,This point last season
-Losses,losses,4,standings,4,This point last season
-Record,record,1-4,standings,1-4,This point last season
-Win percentage,win_pct,20%,standings,20%,This point last season
+Wins,wins,1,standings,2,This point last season
+Losses,losses,5,standings,4,This point last season
+Record,record,1-5,standings,2-4,This point last season
+Win percentage,win_pct,17%,standings,33%,This point last season
 Games up/back,games_up_back,4,standings,5th,Division rank
 Avg. home attendance,mean_attendance,nan,standings,0,Home games this season
-Runs,runs,13,standings,25th,League rank
-Runs against,runs_against,26,standings,21,This point last season
-Run differential,run_differential,-13,standings,-5,This point last season
+Runs,runs,17,standings,27th,League rank
+Runs against,runs_against,32,standings,21,This point last season
+Run differential,run_differential,-15,standings,-2,This point last season
 Batting average,batting_average,.208,batting,.263,Last decade average
-Home runs,home_runs,4,batting,13th,League rank
-Home runs/game,home_runs_game,0.8,batting,1.22,Last decade average
-On-base percentage,on_base_pct,.296,batting,.330,Last decade average
+Home runs,home_runs,6,batting,14th,League rank
+Home runs/game,home_runs_game,1.0,batting,1.22,Last decade average
+On-base percentage,on_base_pct,.295,batting,.330,Last decade average
 Stolen bases,stolen_bases,2,batting,21st,League rank
-BA w/ RISP,batting_avg_risp,.171,batting,.254,League average
-Strikeouts,strikeouts,45,pitching,18th,League rank
-Walks,walks,21,pitching,10th,League rank
-ERA,era,4.78,pitching,27th,League rank
-K/BB ratio,k_bb_ratio,2.14,pitching,2.85,League average
-HR/9,hr9,1.9,pitching,1.05,League average
-BABIP,babip,.300,pitching,.300,League norm
-Last updated,update_time,"April 1, 2026, 7:27 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 1)</span> — The Red Sox have compiled a <span class='highlight'>1-5</span> record in the 2026 regular season, a <span class='highlight'>17%</span> winning percentage.  The last game was a <span class='highlight'>4-6</span> away <span class='highlight'>loss</span>. and the next game is Friday at 2:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+BA w/ RISP,batting_avg_risp,.171,batting,.258,League average
+Strikeouts,strikeouts,54,pitching,18th,League rank
+Walks,walks,23,pitching,10th,League rank
+ERA,era,4.91,pitching,26th,League rank
+K/BB ratio,k_bb_ratio,2.35,pitching,2.81,League average
+HR/9,hr9,1.9,pitching,1.06,League average
+BABIP,babip,.294,pitching,.300,League norm
+Last updated,update_time,"April 2, 2026, 4:40 AM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 2)</span> — The Red Sox have compiled a <span class='highlight'>1-5</span> record in the 2026 regular season, a <span class='highlight'>17%</span> winning percentage.  The last game was a <span class='highlight'>4-6</span> away <span class='highlight'>loss</span>. and the next game is Friday at 2:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
