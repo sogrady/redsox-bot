@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":6,
         "category":"batting",
-        "context_value":"14th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".171",
         "category":"batting",
-        "context_value":".259",
+        "context_value":".258",
         "context_value_label":"League average"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"4.91",
         "category":"pitching",
-        "context_value":"26th",
+        "context_value":"27th",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.35,
         "category":"pitching",
-        "context_value":2.81,
+        "context_value":2.82,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 2, 2026, 11:38 AM ET",
+        "value":"April 2, 2026, 7:25 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
