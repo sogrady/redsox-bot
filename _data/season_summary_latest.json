@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".171",
         "category":"batting",
-        "context_value":".258",
+        "context_value":".259",
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 2, 2026, 8:39 AM ET",
+        "value":"April 2, 2026, 11:38 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
