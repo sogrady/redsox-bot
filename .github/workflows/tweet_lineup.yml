@@ -5,6 +5,11 @@ on:
     # Runs hourly, but the job will only proceed between 8am and 6pm ET.
     - cron: '0 12-23 * * *'  # Every hour from 5 AM to 4 PM PT (during season)
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force post even if already posted today'
+        required: false
+        default: 'false'
 
 jobs:
   post_lineup:
@@ -50,4 +55,4 @@ jobs:
         BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
         BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         PYTHONPATH: ${{ github.workspace }}
-      run: python scripts/17_fetch_lineup.py --post
+      run: python scripts/17_fetch_lineup.py --post ${{ github.event.inputs.force == 'true' && '--force' || '' }}
