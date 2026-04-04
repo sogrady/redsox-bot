@@ -286,9 +286,10 @@ def save_to_s3(df, base_s3_path, formats=["csv", "json"]):
         except Exception as e:
             logging.error(f"Failed to upload {fmt} to S3 for {base_s3_path}: {e}")
 
-def post_to_bluesky(post_text, current_date_str):
+def post_to_bluesky(post_texts, current_date_str):
     """
-    Posts to the authenticated Bluesky account.
+    Posts one or more texts to the authenticated Bluesky account.
+    Accepts a single string or a list of strings.
     """
     BLUESKY_HANDLE = os.environ.get("BLUESKY_HANDLE")
     BLUESKY_APP_PASSWORD = os.environ.get("BLUESKY_APP_PASSWORD")
@@ -297,11 +298,15 @@ def post_to_bluesky(post_text, current_date_str):
         logging.error("Bluesky credentials are not fully set in environment variables. Cannot post.")
         return
 
+    if isinstance(post_texts, str):
+        post_texts = [post_texts]
+
     try:
         client = Client()
         client.login(BLUESKY_HANDLE, BLUESKY_APP_PASSWORD)
-        response = client.send_post(text=post_text)
-        logging.info(f"Post published successfully to Bluesky: {response.uri}")
+        for post_text in post_texts:
+            response = client.send_post(text=post_text)
+            logging.info(f"Post published successfully to Bluesky: {response.uri}")
         set_last_post_date(current_date_str)
     except Exception as e:
         logging.error(f"Failed to post to Bluesky: {e}")
@@ -415,7 +420,7 @@ def main():
         # Upload to S3
         save_to_s3(lineup_df, s3_base_path, formats=["csv", "json"])
 
-        # Bluesky posting logic — post Red Sox lineup
+        # Bluesky posting logic — two posts: lineup + pitching matchup
         team_batters = lineup_df[(lineup_df['role'] == 'Batter') & (lineup_df['team_tricode'] == config.TEAM_ABBR)].sort_values('lineup_order')
         team_pitcher = lineup_df[(lineup_df['role'] == 'Pitcher') & (lineup_df['team_tricode'] == config.TEAM_ABBR)]
         opponent_pitcher = lineup_df[(lineup_df['role'] == 'Pitcher') & (lineup_df['team_tricode'] != config.TEAM_ABBR)]
@@ -423,19 +428,7 @@ def main():
         if not team_batters.empty and not team_pitcher.empty:
             tp = team_pitcher.iloc[0]
             game_date = datetime.strptime(tp['game_date'], '%Y-%m-%d').strftime('%B %-d')
-
-            # Build lineup lines
-            lineup_lines = []
-            for _, batter in team_batters.iterrows():
-                pos = batter['position'] or ''
-                lineup_lines.append(f"{int(batter['lineup_order'])}. {batter['player_name']} - {pos}")
-
-            # Opponent info
             opp_name = opponent_pitcher.iloc[0]['team_name'] if not opponent_pitcher.empty else "TBD"
-
-            header = f"⚾️ {config.TEAM_NAME_SIMPLE} lineup for {game_date} vs {opp_name} ⚾️\n\n"
-            lineup_str = "\n".join(lineup_lines)
-            sp_line = f"\n\nSP: {tp['player_name']} ({tp['throwing_hand']})"
 
             # Fetch schedule data for game start time
             next_game = fetch_schedule_data(current_date_str)
@@ -443,10 +436,32 @@ def main():
             if next_game and next_game.get('game_start'):
                 time_line = f"\nFirst pitch: {next_game['game_start']}"
 
-            tweet_text = f"{header}{lineup_str}{sp_line}{time_line}"
+            # Post 1: Batting lineup
+            lineup_lines = []
+            for _, batter in team_batters.iterrows():
+                pos = batter['position'] or ''
+                lineup_lines.append(f"{int(batter['lineup_order'])}. {batter['player_name']} - {pos}")
+            lineup_text = f"⚾️ {config.TEAM_NAME_SIMPLE} lineup for {game_date} vs {opp_name} ⚾️\n\n" + "\n".join(lineup_lines)
 
-            logging.info("Generated post text:")
-            print(tweet_text)
+            # Post 2: Pitching matchup
+            op = opponent_pitcher.iloc[0] if not opponent_pitcher.empty else None
+            if op is not None:
+                matchup_text = (
+                    f"🌟 Pitching matchup for {game_date} 🌟\n\n"
+                    f"{tp['throwing_hand']} {tp['player_name']} ({tp['team_tricode']}) vs "
+                    f"{op['throwing_hand']} {op['player_name']} ({op['team_tricode']})"
+                    f"{time_line}"
+                )
+            else:
+                matchup_text = (
+                    f"🌟 Pitching matchup for {game_date} 🌟\n\n"
+                    f"SP: {tp['player_name']} ({tp['throwing_hand']})"
+                    f"{time_line}"
+                )
+
+            posts = [lineup_text, matchup_text]
+            for i, post in enumerate(posts, 1):
+                logging.info(f"Generated post {i}:\n{post}")
 
             if args.post:
                 last_post_date = get_last_post_date()
@@ -454,7 +469,7 @@ def main():
                     logging.info(f"Already posted for {current_date_str}. Skipping (use --force to override).")
                 else:
                     logging.info("Attempting to post to Bluesky...")
-                    post_to_bluesky(tweet_text, current_date_str)
+                    post_to_bluesky(posts, current_date_str)
             else:
                 logging.info("Dry run: --post flag not provided. Not posting to Bluesky.")
         else:
