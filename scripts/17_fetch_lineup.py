@@ -311,7 +311,7 @@ def fetch_schedule_data(target_date_iso: str):
     Fetch the Red Sox schedule and return the row matching the provided ISO date (YYYY-MM-DD)
     with placement == 'next'. Only returns the row if game_start looks like a real time.
     """
-    schedule_url = "https://redsox-data/redsox/data/standings/redsox_schedule.json"
+    schedule_url = "https://redsox-data.s3.amazonaws.com/redsox/data/standings/redsox_schedule.json"
     logging.info(f"Fetching schedule from: {schedule_url}")
 
     # Convert ISO date to the schedule's 'date' format, e.g. 'Aug 26'
@@ -415,50 +415,50 @@ def main():
         # Upload to S3
         save_to_s3(lineup_df, s3_base_path, formats=["csv", "json"])
 
-        # Bluesky posting logic
-        pitchers_df = lineup_df[lineup_df['role'] == 'Pitcher'].copy()
-        if len(pitchers_df) == 2:
-            team_pitcher = pitchers_df[pitchers_df['team_tricode'] == config.TEAM_ABBR]
-            opponent_pitcher = pitchers_df[pitchers_df['team_tricode'] != config.TEAM_ABBR]
+        # Bluesky posting logic — post Red Sox lineup
+        team_batters = lineup_df[(lineup_df['role'] == 'Batter') & (lineup_df['team_tricode'] == config.TEAM_ABBR)].sort_values('lineup_order')
+        team_pitcher = lineup_df[(lineup_df['role'] == 'Pitcher') & (lineup_df['team_tricode'] == config.TEAM_ABBR)]
+        opponent_pitcher = lineup_df[(lineup_df['role'] == 'Pitcher') & (lineup_df['team_tricode'] != config.TEAM_ABBR)]
 
-            if not team_pitcher.empty and not opponent_pitcher.empty:
-                team_pitcher = team_pitcher.iloc[0]
-                opponent_pitcher = opponent_pitcher.iloc[0]
+        if not team_batters.empty and not team_pitcher.empty:
+            tp = team_pitcher.iloc[0]
+            game_date = datetime.strptime(tp['game_date'], '%Y-%m-%d').strftime('%B %-d')
 
-                # Fetch schedule data to get game start time for this exact date
-                next_game = fetch_schedule_data(current_date_str)
+            # Build lineup lines
+            lineup_lines = []
+            for _, batter in team_batters.iterrows():
+                pos = batter['position'] or ''
+                lineup_lines.append(f"{int(batter['lineup_order'])}. {batter['player_name']} - {pos}")
 
-                # Format date for the tweet
-                game_date = datetime.strptime(team_pitcher['game_date'], '%Y-%m-%d').strftime('%B %-d')
+            # Opponent info
+            opp_name = opponent_pitcher.iloc[0]['team_name'] if not opponent_pitcher.empty else "TBD"
 
-                line1 = f"The pitching matchup for {game_date} is set! 🌟"
-                line2 = f"{team_pitcher['throwing_hand']} {team_pitcher['player_name']} ({team_pitcher['team_tricode']}) takes the mound against {opponent_pitcher['throwing_hand']} {opponent_pitcher['player_name']} ({opponent_pitcher['team_tricode']}). ⚾️🔥"
-                
-                # Add game start time if available
-                if next_game and next_game.get('game_start'):
-                    line3 = f"First pitch: {next_game['game_start']} (Local)."
-                    line4 = f"More: https://redsox.bot"
-                    tweet_text = f"{line1}\n\n{line2}\n\n{line3}"
+            header = f"⚾️ {config.TEAM_NAME_SIMPLE} lineup for {game_date} vs {opp_name} ⚾️\n\n"
+            lineup_str = "\n".join(lineup_lines)
+            sp_line = f"\n\nSP: {tp['player_name']} ({tp['throwing_hand']})"
+
+            # Fetch schedule data for game start time
+            next_game = fetch_schedule_data(current_date_str)
+            time_line = ""
+            if next_game and next_game.get('game_start'):
+                time_line = f"\nFirst pitch: {next_game['game_start']}"
+
+            tweet_text = f"{header}{lineup_str}{sp_line}{time_line}"
+
+            logging.info("Generated post text:")
+            print(tweet_text)
+
+            if args.post:
+                last_post_date = get_last_post_date()
+                if last_post_date == current_date_str and not args.force:
+                    logging.info(f"Already posted for {current_date_str}. Skipping (use --force to override).")
                 else:
-                    line3 = f"More: https://redsox.bot"
-                    tweet_text = f"{line1}\n\n{line2}"
-
-                logging.info("Generated post text:")
-                print(tweet_text)
-
-                if args.post:
-                    last_post_date = get_last_post_date()
-                    if last_post_date == current_date_str and not args.force:
-                        logging.info(f"Already posted for {current_date_str}. Skipping (use --force to override).")
-                    else:
-                        logging.info("Attempting to post to Bluesky...")
-                        post_to_bluesky(tweet_text, current_date_str)
-                else:
-                    logging.info("Dry run: --post flag not provided. Not posting to Bluesky.")
+                    logging.info("Attempting to post to Bluesky...")
+                    post_to_bluesky(tweet_text, current_date_str)
             else:
-                logging.warning("Could not identify both Red Sox and opponent pitcher.")
+                logging.info("Dry run: --post flag not provided. Not posting to Bluesky.")
         else:
-            logging.info("Not enough pitcher data to generate a tweet.")
+            logging.info("Not enough lineup data to generate a post.")
     else:
         logging.info(f"No lineup data processed for {current_date_str}. No files will be saved or uploaded.")
 
