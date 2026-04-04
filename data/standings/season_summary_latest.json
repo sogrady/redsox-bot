@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".184",
         "category":"batting",
-        "context_value":".254",
+        "context_value":".256",
         "context_value_label":"League average"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.9",
         "category":"pitching",
-        "context_value":1.09,
+        "context_value":1.1,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 3, 2026, 7:25 PM ET",
+        "value":"April 3, 2026, 9:09 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
