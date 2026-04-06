@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.55793991416309,
-        "incorrect_strikes_pct": 9.442060085836914,
-        "total_called_strikes": 233,
+        "correct_strikes_pct": 90.71729957805907,
+        "incorrect_strikes_pct": 9.28270042194093,
+        "total_called_strikes": 237,
         "bad_calls_count": 22
     },
     "last_game_summary": {
-        "date": "April 5, 2026",
-        "correct_strikes_pct": 96.29629629629629,
-        "incorrect_strikes_pct": 3.7037037037037095,
-        "total_called_strikes": 27,
-        "bad_calls_count": 1,
-        "home_plate_umpire": "Laz Diaz"
+        "date": "April 6, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 4,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Chris Conroy"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 97.21030042918454,
-        "incorrect_balls_pct": 2.7896995708154577,
-        "total_called_balls": 466,
-        "bad_calls_count": 13
+        "correct_balls_pct": 97.0893970893971,
+        "incorrect_balls_pct": 2.910602910602904,
+        "total_called_balls": 481,
+        "bad_calls_count": 14
     },
     "pitching_last_game_summary": {
-        "date": "April 5, 2026",
-        "correct_balls_pct": 98.0,
-        "incorrect_balls_pct": 2.0,
-        "total_called_balls": 50,
+        "date": "April 6, 2026",
+        "correct_balls_pct": 93.33333333333333,
+        "incorrect_balls_pct": 6.666666666666671,
+        "total_called_balls": 15,
         "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []

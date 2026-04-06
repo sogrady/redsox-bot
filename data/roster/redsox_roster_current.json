@@ -180,24 +180,6 @@
     "slug":"ranger-suarez"
   },
   {
-    "player_id":"700413",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700413\/headshot\/silo\/current",
-    "name":"Tyler Uberstine",
-    "player_url":"\/player\/700413",
-    "jersey":"79",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 1\"",
-    "weight":"200",
-    "dob":"06\/01\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"tyler-uberstine"
-  },
-  {
     "player_id":"670245",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670245\/headshot\/silo\/current",
     "name":"Ryan Watson",
@@ -232,6 +214,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"greg-weissert"
+  },
+  {
+    "player_id":"676477",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
+    "name":"Garrett Whitlock",
+    "player_url":"\/player\/676477",
+    "jersey":"22",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 5\"",
+    "weight":"222",
+    "dob":"06\/11\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"garrett-whitlock"
   },
   {
     "player_id":"665966",
@@ -594,22 +594,22 @@
     "slug":"payton-tolle"
   },
   {
-    "player_id":"676477",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
-    "name":"Garrett Whitlock",
-    "player_url":"\/player\/676477",
-    "jersey":"22",
+    "player_id":"700413",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700413\/headshot\/silo\/current",
+    "name":"Tyler Uberstine",
+    "player_url":"\/player\/700413",
+    "jersey":"79",
     "position_group":"Pitchers",
     "bat_throw":"R\/R",
-    "height":"6' 5\"",
-    "weight":"222",
-    "dob":"06\/11\/1996",
-    "status":"ACTIVE",
-    "is_minors":false,
+    "height":"6' 1\"",
+    "weight":"200",
+    "dob":"06\/01\/1999",
+    "status":"MINORS",
+    "is_minors":true,
     "is_il":false,
     "is_active_roster":false,
     "is_40_man":true,
-    "slug":"garrett-whitlock"
+    "slug":"tyler-uberstine"
   },
   {
     "player_id":"692225",
