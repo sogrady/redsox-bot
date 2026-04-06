@@ -1,9 +1,9 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.12875536480686,
-        "incorrect_strikes_pct": 9.871244635193136,
+        "correct_strikes_pct": 90.55793991416309,
+        "incorrect_strikes_pct": 9.442060085836914,
         "total_called_strikes": 233,
-        "bad_calls_count": 23
+        "bad_calls_count": 22
     },
     "last_game_summary": {
         "date": "April 5, 2026",
