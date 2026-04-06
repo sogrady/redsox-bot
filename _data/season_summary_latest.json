@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":8,
         "category":"batting",
-        "context_value":"20th",
+        "context_value":"21st",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"32",
         "category":"pitching",
-        "context_value":"19th",
+        "context_value":"17th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"4.71",
         "category":"pitching",
-        "context_value":"23rd",
+        "context_value":"22nd",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 6, 2026, 11:33 AM ET",
+        "value":"April 6, 2026, 7:27 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>2-7<\/span> record in the 2026 regular season, a <span class='highlight'>22%<\/span> winning percentage.  The last game was a <span class='highlight'>6-8<\/span> home <span class='highlight'>loss<\/span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>2-7<\/span> record in the 2026 regular season, a <span class='highlight'>22%<\/span> winning percentage.  The last game was a <span class='highlight'>6-8<\/span> home <span class='highlight'>loss<\/span>. and the next game is Tuesday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
