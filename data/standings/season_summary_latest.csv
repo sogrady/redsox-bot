@@ -5,7 +5,7 @@ Record,record,4-8,standings,6-6,This point last season
 Win percentage,win_pct,33%,standings,50%,This point last season
 Games up/back,games_up_back,4,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"33,129",standings,5,Home games this season
-Runs,runs,44,standings,23rd,League rank
+Runs,runs,44,standings,24th,League rank
 Runs against,runs_against,55,standings,57,This point last season
 Run differential,run_differential,-11,standings,9,This point last season
 Batting average,batting_average,.226,batting,.263,Last decade average
@@ -13,13 +13,13 @@ Home runs,home_runs,9,batting,25th,League rank
 Home runs/game,home_runs_game,0.75,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.310,batting,.330,Last decade average
 Stolen bases,stolen_bases,4,batting,28th,League rank
-BA w/ RISP,batting_avg_risp,.225,batting,.253,League average
-Strikeouts,strikeouts,102,pitching,21st,League rank
+BA w/ RISP,batting_avg_risp,.225,batting,.252,League average
+Strikeouts,strikeouts,102,pitching,23rd,League rank
 Walks,walks,46,pitching,17th,League rank
-ERA,era,4.19,pitching,20th,League rank
-K/BB ratio,k_bb_ratio,2.22,pitching,2.52,League average
-HR/9,hr9,1.1,pitching,0.93,League average
+ERA,era,4.19,pitching,21st,League rank
+K/BB ratio,k_bb_ratio,2.22,pitching,2.51,League average
+HR/9,hr9,1.1,pitching,0.92,League average
 BABIP,babip,.281,pitching,.300,League norm
-Last updated,update_time,"April 10, 2026, 11:33 AM ET",summary,,
+Last updated,update_time,"April 10, 2026, 7:27 PM ET",summary,,
 Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 10)</span> — The Red Sox have compiled a <span class='highlight'>4-8</span> record in the 2026 regular season, a <span class='highlight'>33%</span> winning percentage.  The last game was a <span class='highlight'>5-0</span> home <span class='highlight'>win</span>. and the next game is Friday at 8:15 p.m. ET at <span class='highlight'>Busch Stadium</span>.",summary,,
 Last game result,last_game_result,win,summary,,
