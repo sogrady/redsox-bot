@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":4.5,
+        "value":4,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":9,
         "category":"batting",
-        "context_value":"24th",
+        "context_value":"25th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".225",
         "category":"batting",
-        "context_value":".256",
+        "context_value":".253",
         "context_value_label":"League average"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"102",
         "category":"pitching",
-        "context_value":"19th",
+        "context_value":"21st",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.22,
         "category":"pitching",
-        "context_value":2.51,
+        "context_value":2.52,
         "context_value_label":"League average"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.1",
         "category":"pitching",
-        "context_value":0.94,
+        "context_value":0.93,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 9, 2026, 11:49 AM ET",
+        "value":"April 10, 2026, 11:33 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 9)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>4-8<\/span> record in the 2026 regular season, a <span class='highlight'>33%<\/span> winning percentage.  The last game was a <span class='highlight'>5-0<\/span> home <span class='highlight'>win<\/span>. and the next game is Friday at 8:15 p.m. ET at <span class='highlight'>Busch Stadium<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 10)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>4-8<\/span> record in the 2026 regular season, a <span class='highlight'>33%<\/span> winning percentage.  The last game was a <span class='highlight'>5-0<\/span> home <span class='highlight'>win<\/span>. and the next game is Friday at 8:15 p.m. ET at <span class='highlight'>Busch Stadium<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
