@@ -730,9 +730,9 @@
     "height":"5' 9\"",
     "weight":"192",
     "dob":"06\/20\/1999",
-    "status":"IL-10",
-    "is_minors":false,
-    "is_il":true,
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"anthony-seigler"
