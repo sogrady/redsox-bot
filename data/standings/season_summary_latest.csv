@@ -9,17 +9,17 @@ Runs,runs,62,standings,20th,League rank
 Runs against,runs_against,62,standings,73,This point last season
 Run differential,run_differential,0,standings,-1,This point last season
 Batting average,batting_average,.233,batting,.263,Last decade average
-Home runs,home_runs,10,batting,28th,League rank
+Home runs,home_runs,10,batting,29th,League rank
 Home runs/game,home_runs_game,0.67,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.317,batting,.330,Last decade average
 Stolen bases,stolen_bases,6,batting,27th,League rank
 BA w/ RISP,batting_avg_risp,.256,batting,.248,League average
-Strikeouts,strikeouts,123,pitching,23rd,League rank
+Strikeouts,strikeouts,123,pitching,24th,League rank
 Walks,walks,57,pitching,16th,League rank
 ERA,era,3.84,pitching,13th,League rank
 K/BB ratio,k_bb_ratio,2.16,pitching,2.43,League average
-HR/9,hr9,1.1,pitching,0.97,League average
+HR/9,hr9,1.1,pitching,0.98,League average
 BABIP,babip,.270,pitching,.300,League norm
-Last updated,update_time,"April 13, 2026, 11:47 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 13)</span> — The Red Sox have compiled a <span class='highlight'>6-9</span> record in the 2026 regular season, a <span class='highlight'>40%</span> winning percentage.  The last game was a <span class='highlight'>9-3</span> away <span class='highlight'>win</span>. and the next game is Monday at 7:40 p.m. ET at <span class='highlight'>Target Field</span>.",summary,,
+Last updated,update_time,"April 13, 2026, 7:32 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 13)</span> — The Red Sox have compiled a <span class='highlight'>6-9</span> record in the 2026 regular season, a <span class='highlight'>40%</span> winning percentage.  The last game was a <span class='highlight'>9-3</span> away <span class='highlight'>win</span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Target Field</span>.",summary,,
 Last game result,last_game_result,win,summary,,
