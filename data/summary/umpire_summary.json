@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.7312661498708,
-        "incorrect_strikes_pct": 8.268733850129195,
-        "total_called_strikes": 387,
+        "correct_strikes_pct": 92.27053140096618,
+        "incorrect_strikes_pct": 7.729468599033822,
+        "total_called_strikes": 414,
         "bad_calls_count": 32
     },
     "last_game_summary": {
-        "date": "April 12, 2026",
-        "correct_strikes_pct": 93.10344827586206,
-        "incorrect_strikes_pct": 6.896551724137936,
-        "total_called_strikes": 29,
-        "bad_calls_count": 2,
-        "home_plate_umpire": "Chad Fairchild"
+        "date": "April 13, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 27,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Willie Traynor"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 97.0360824742268,
-        "incorrect_balls_pct": 2.963917525773198,
-        "total_called_balls": 776,
-        "bad_calls_count": 23
+        "correct_balls_pct": 96.88995215311004,
+        "incorrect_balls_pct": 3.1100478468899553,
+        "total_called_balls": 836,
+        "bad_calls_count": 26
     },
     "pitching_last_game_summary": {
-        "date": "April 12, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 40,
-        "bad_calls_count": 0
+        "date": "April 13, 2026",
+        "correct_balls_pct": 95.0,
+        "incorrect_balls_pct": 5.0,
+        "total_called_balls": 60,
+        "bad_calls_count": 3
     },
     "pitching_worst_calls_of_season": []
 }
