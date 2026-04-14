@@ -5,7 +5,7 @@ Record,record,6-10,standings,7-9,This point last season
 Win percentage,win_pct,38%,standings,44%,This point last season
 Games up/back,games_up_back,3,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"32,822",standings,2,Home games this season
-Runs,runs,68,standings,19th,League rank
+Runs,runs,68,standings,20th,League rank
 Runs against,runs_against,75,standings,76,This point last season
 Run differential,run_differential,-7,standings,-2,This point last season
 Batting average,batting_average,.236,batting,.263,Last decade average
@@ -15,11 +15,11 @@ On-base percentage,on_base_pct,.321,batting,.330,Last decade average
 Stolen bases,stolen_bases,6,batting,28th,League rank
 BA w/ RISP,batting_avg_risp,.273,batting,.253,League average
 Strikeouts,strikeouts,127,pitching,24th,League rank
-Walks,walks,62,pitching,13th,League rank
+Walks,walks,62,pitching,14th,League rank
 ERA,era,4.39,pitching,22nd,League rank
 K/BB ratio,k_bb_ratio,2.05,pitching,2.41,League average
-HR/9,hr9,1.3,pitching,1.01,League average
+HR/9,hr9,1.3,pitching,1.02,League average
 BABIP,babip,.269,pitching,.300,League norm
-Last updated,update_time,"April 14, 2026, 11:43 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 14)</span> — The Red Sox have compiled a <span class='highlight'>6-10</span> record in the 2026 regular season, a <span class='highlight'>38%</span> winning percentage.  The last game was a <span class='highlight'>6-13</span> away <span class='highlight'>loss</span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Target Field</span>.",summary,,
+Last updated,update_time,"April 14, 2026, 7:32 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 14)</span> — The Red Sox have compiled a <span class='highlight'>6-10</span> record in the 2026 regular season, a <span class='highlight'>38%</span> winning percentage.  The last game was a <span class='highlight'>6-13</span> away <span class='highlight'>loss</span>. and the next game is Wednesday at 1:40 p.m. ET at <span class='highlight'>Target Field</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
