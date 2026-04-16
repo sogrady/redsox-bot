@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":3.5,
+        "value":4,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":77,
         "category":"standings",
-        "context_value":"16th",
+        "context_value":"19th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".279",
         "category":"batting",
-        "context_value":".252",
+        "context_value":".254",
         "context_value_label":"League average"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"142",
         "category":"pitching",
-        "context_value":"22nd",
+        "context_value":"26th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"68",
         "category":"pitching",
-        "context_value":"12th",
+        "context_value":"13th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"4.55",
         "category":"pitching",
-        "context_value":"24th",
+        "context_value":"25th",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.09,
         "category":"pitching",
-        "context_value":2.4,
+        "context_value":2.39,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 16, 2026, 11:49 AM ET",
+        "value":"April 16, 2026, 7:30 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
