@@ -2,7 +2,7 @@
     {
         "stat_label":"Wins",
         "stat":"wins",
-        "value":6,
+        "value":7,
         "category":"standings",
         "context_value":8,
         "context_value_label":"This point last season"
@@ -12,23 +12,23 @@
         "stat":"losses",
         "value":11,
         "category":"standings",
-        "context_value":9,
+        "context_value":10,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"6-11",
+        "value":"7-11",
         "category":"standings",
-        "context_value":"8-9",
+        "context_value":"8-10",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"35%",
+        "value":"39%",
         "category":"standings",
-        "context_value":"47%",
+        "context_value":"44%",
         "context_value_label":"This point last season"
     },
     {
@@ -42,15 +42,15 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"33,584",
+        "value":"32,822",
         "category":"standings",
-        "context_value":3,
+        "context_value":2,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":68,
+        "value":77,
         "category":"standings",
         "context_value":"16th",
         "context_value_label":"League rank"
@@ -58,17 +58,17 @@
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":81,
+        "value":86,
         "category":"standings",
-        "context_value":77,
+        "context_value":93,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":-13,
+        "value":-9,
         "category":"standings",
-        "context_value":0,
+        "context_value":-15,
         "context_value_label":"This point last season"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 16, 2026, 4:53 AM ET",
+        "value":"April 16, 2026, 8:45 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
