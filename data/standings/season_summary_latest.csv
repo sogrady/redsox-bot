@@ -1,13 +1,13 @@
 stat_label,stat,value,category,context_value,context_value_label
-Wins,wins,6,standings,8,This point last season
-Losses,losses,11,standings,9,This point last season
-Record,record,6-11,standings,8-9,This point last season
-Win percentage,win_pct,35%,standings,47%,This point last season
+Wins,wins,7,standings,8,This point last season
+Losses,losses,11,standings,10,This point last season
+Record,record,7-11,standings,8-10,This point last season
+Win percentage,win_pct,39%,standings,44%,This point last season
 Games up/back,games_up_back,3.5,standings,5th,Division rank
-Avg. home attendance,mean_attendance,"33,584",standings,3,Home games this season
-Runs,runs,68,standings,16th,League rank
-Runs against,runs_against,81,standings,77,This point last season
-Run differential,run_differential,-13,standings,0,This point last season
+Avg. home attendance,mean_attendance,"32,822",standings,2,Home games this season
+Runs,runs,77,standings,16th,League rank
+Runs against,runs_against,86,standings,93,This point last season
+Run differential,run_differential,-9,standings,-15,This point last season
 Batting average,batting_average,.239,batting,.263,Last decade average
 Home runs,home_runs,12,batting,29th,League rank
 Home runs/game,home_runs_game,0.67,batting,1.22,Last decade average
@@ -20,6 +20,6 @@ ERA,era,4.55,pitching,24th,League rank
 K/BB ratio,k_bb_ratio,2.09,pitching,2.4,League average
 HR/9,hr9,1.4,pitching,1.03,League average
 BABIP,babip,.264,pitching,.300,League norm
-Last updated,update_time,"April 16, 2026, 4:53 AM ET",summary,,
+Last updated,update_time,"April 16, 2026, 8:45 AM ET",summary,,
 Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(April 16)</span> — The Red Sox have compiled a <span class='highlight'>7-11</span> record in the 2026 regular season, a <span class='highlight'>39%</span> winning percentage.  The last game was a <span class='highlight'>9-5</span> away <span class='highlight'>win</span>. and the next game is Friday at 7:15 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,win,summary,,
