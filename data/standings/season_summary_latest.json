@@ -2,9 +2,9 @@
     {
         "stat_label":"Wins",
         "stat":"wins",
-        "value":7,
+        "value":8,
         "category":"standings",
-        "context_value":8,
+        "context_value":9,
         "context_value_label":"This point last season"
     },
     {
@@ -18,41 +18,41 @@
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"7-11",
+        "value":"8-11",
         "category":"standings",
-        "context_value":"8-10",
+        "context_value":"9-10",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"39%",
+        "value":"42%",
         "category":"standings",
-        "context_value":"44%",
+        "context_value":"47%",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":4,
+        "value":3,
         "category":"standings",
-        "context_value":"5th",
+        "context_value":"4th",
         "context_value_label":"Division rank"
     },
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"32,822",
+        "value":"33,760",
         "category":"standings",
-        "context_value":2,
+        "context_value":4,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":77,
+        "value":78,
         "category":"standings",
-        "context_value":"22nd",
+        "context_value":"21st",
         "context_value_label":"League rank"
     },
     {
@@ -60,21 +60,21 @@
         "stat":"runs_against",
         "value":86,
         "category":"standings",
-        "context_value":93,
+        "context_value":97,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":-9,
+        "value":-8,
         "category":"standings",
-        "context_value":-15,
+        "context_value":-12,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".239",
+        "value":".233",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -90,7 +90,7 @@
     {
         "stat_label":"Home runs\/game",
         "stat":"home_runs_game",
-        "value":0.67,
+        "value":0.63,
         "category":"batting",
         "context_value":1.22,
         "context_value_label":"Last decade average"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".322",
+        "value":".317",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":7,
+        "value":8,
         "category":"batting",
         "context_value":"27th",
         "context_value_label":"League rank"
@@ -114,15 +114,15 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".279",
+        "value":".273",
         "category":"batting",
-        "context_value":".255",
+        "context_value":".253",
         "context_value_label":"League average"
     },
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"142",
+        "value":"148",
         "category":"pitching",
         "context_value":"26th",
         "context_value_label":"League rank"
@@ -130,23 +130,23 @@
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"68",
+        "value":"70",
         "category":"pitching",
-        "context_value":"14th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"4.55",
+        "value":"4.27",
         "category":"pitching",
-        "context_value":"25th",
+        "context_value":"22nd",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":2.09,
+        "value":2.11,
         "category":"pitching",
         "context_value":2.38,
         "context_value_label":"League average"
@@ -156,13 +156,13 @@
         "stat":"hr9",
         "value":"1.4",
         "category":"pitching",
-        "context_value":1.02,
+        "context_value":1.03,
         "context_value_label":"League average"
     },
     {
         "stat_label":"BABIP",
         "stat":"babip",
-        "value":".264",
+        "value":".258",
         "category":"pitching",
         "context_value":".300",
         "context_value_label":"League norm"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 17, 2026, 7:29 PM ET",
+        "value":"April 18, 2026, 4:31 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 17)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>7-11<\/span> record in the 2026 regular season, a <span class='highlight'>39%<\/span> winning percentage.  The last game was a <span class='highlight'>9-5<\/span> away <span class='highlight'>win<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 18)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>8-11<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>1-0<\/span> home <span class='highlight'>win<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
