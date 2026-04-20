@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.45454545454545,
-        "incorrect_strikes_pct": 8.545454545454547,
-        "total_called_strikes": 550,
+        "correct_strikes_pct": 91.65186500888099,
+        "incorrect_strikes_pct": 8.34813499111901,
+        "total_called_strikes": 563,
         "bad_calls_count": 47
     },
     "last_game_summary": {
         "date": "April 20, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 9,
+        "total_called_strikes": 22,
         "bad_calls_count": 0,
         "home_plate_umpire": "Will Little"
     },
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.58886894075404,
-        "incorrect_balls_pct": 3.4111310592459603,
-        "total_called_balls": 1114,
-        "bad_calls_count": 38
+        "correct_balls_pct": 96.47160068846816,
+        "incorrect_balls_pct": 3.5283993115318424,
+        "total_called_balls": 1162,
+        "bad_calls_count": 41
     },
     "pitching_last_game_summary": {
         "date": "April 20, 2026",
-        "correct_balls_pct": 83.33333333333334,
-        "incorrect_balls_pct": 16.666666666666657,
-        "total_called_balls": 6,
-        "bad_calls_count": 1
+        "correct_balls_pct": 92.5925925925926,
+        "incorrect_balls_pct": 7.407407407407405,
+        "total_called_balls": 54,
+        "bad_calls_count": 4
     },
     "pitching_worst_calls_of_season": []
 }
