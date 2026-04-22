@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":13,
         "category":"batting",
-        "context_value":"19th",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"85",
         "category":"pitching",
-        "context_value":"16th",
+        "context_value":"17th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 22, 2026, 11:44 AM ET",
+        "value":"April 22, 2026, 7:32 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 22)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>9-14<\/span> record in the 2026 regular season, a <span class='highlight'>39%<\/span> winning percentage.  The last game was a <span class='highlight'>0-4<\/span> home <span class='highlight'>loss<\/span>. and the next game is Wednesday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(April 22)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>9-14<\/span> record in the 2026 regular season, a <span class='highlight'>39%<\/span> winning percentage.  The last game was a <span class='highlight'>0-4<\/span> home <span class='highlight'>loss<\/span>. and the next game is Thursday at 6:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
