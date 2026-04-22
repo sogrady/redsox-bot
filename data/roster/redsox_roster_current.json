@@ -1,23 +1,5 @@
 [
   {
-    "player_id":"681252",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681252\/headshot\/silo\/current",
-    "name":"Jack Anderson",
-    "player_url":"\/player\/681252",
-    "jersey":"77",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 3\"",
-    "weight":"197",
-    "dob":"11\/23\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"jack-anderson"
-  },
-  {
     "player_id":"678394",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678394\/headshot\/silo\/current",
     "name":"Brayan Bello",
@@ -142,6 +124,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"jovani-moran"
+  },
+  {
+    "player_id":"700842",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700842\/headshot\/silo\/current",
+    "name":"Eduardo Rivera",
+    "player_url":"\/player\/700842",
+    "jersey":"99",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 7\"",
+    "weight":"237",
+    "dob":"06\/13\/2003",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"eduardo-rivera"
   },
   {
     "player_id":"701719",
@@ -468,6 +468,24 @@
     "slug":"masataka-yoshida"
   },
   {
+    "player_id":"681252",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681252\/headshot\/silo\/current",
+    "name":"Jack Anderson",
+    "player_url":"\/player\/681252",
+    "jersey":"77",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 3\"",
+    "weight":"197",
+    "dob":"11\/23\/1999",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"jack-anderson"
+  },
+  {
     "player_id":"687562",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687562\/headshot\/silo\/current",
     "name":"Jake Bennett",
@@ -658,7 +676,7 @@
     "height":"6' 4\"",
     "weight":"244",
     "dob":"01\/15\/2000",
-    "status":"IL-10",
+    "status":"IL-60",
     "is_minors":false,
     "is_il":true,
     "is_active_roster":false,

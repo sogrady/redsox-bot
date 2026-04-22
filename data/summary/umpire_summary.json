@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.56829679595279,
-        "incorrect_strikes_pct": 8.43170320404721,
-        "total_called_strikes": 593,
+        "correct_strikes_pct": 91.69435215946844,
+        "incorrect_strikes_pct": 8.305647840531563,
+        "total_called_strikes": 602,
         "bad_calls_count": 50
     },
     "last_game_summary": {
-        "date": "April 21, 2026",
-        "correct_strikes_pct": 90.0,
-        "incorrect_strikes_pct": 10.0,
-        "total_called_strikes": 30,
-        "bad_calls_count": 3,
-        "home_plate_umpire": "Austin Jones"
+        "date": "April 22, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 9,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Todd Tichenor"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.53179190751445,
-        "incorrect_balls_pct": 3.468208092485554,
-        "total_called_balls": 1211,
+        "correct_balls_pct": 96.57142857142857,
+        "incorrect_balls_pct": 3.4285714285714306,
+        "total_called_balls": 1225,
         "bad_calls_count": 42
     },
     "pitching_last_game_summary": {
-        "date": "April 21, 2026",
-        "correct_balls_pct": 97.95918367346938,
-        "incorrect_balls_pct": 2.040816326530617,
-        "total_called_balls": 49,
-        "bad_calls_count": 1
+        "date": "April 22, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 14,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
