@@ -126,24 +126,6 @@
     "slug":"jovani-moran"
   },
   {
-    "player_id":"700842",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700842\/headshot\/silo\/current",
-    "name":"Eduardo Rivera",
-    "player_url":"\/player\/700842",
-    "jersey":"99",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 7\"",
-    "weight":"237",
-    "dob":"06\/13\/2003",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"eduardo-rivera"
-  },
-  {
     "player_id":"701719",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/701719\/headshot\/silo\/current",
     "name":"Tyler Samaniego",
@@ -178,6 +160,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"ranger-suarez"
+  },
+  {
+    "player_id":"801139",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/801139\/headshot\/silo\/current",
+    "name":"Payton Tolle",
+    "player_url":"\/player\/801139",
+    "jersey":"70",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 6\"",
+    "weight":"250",
+    "dob":"11\/01\/2002",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"payton-tolle"
   },
   {
     "player_id":"670245",
@@ -576,6 +576,24 @@
     "slug":"johan-oviedo"
   },
   {
+    "player_id":"700842",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700842\/headshot\/silo\/current",
+    "name":"Eduardo Rivera",
+    "player_url":"\/player\/700842",
+    "jersey":"99",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 7\"",
+    "weight":"237",
+    "dob":"06\/13\/2003",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"eduardo-rivera"
+  },
+  {
     "player_id":"663776",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663776\/headshot\/silo\/current",
     "name":"Patrick Sandoval",
@@ -610,24 +628,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"justin-slaten"
-  },
-  {
-    "player_id":"801139",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/801139\/headshot\/silo\/current",
-    "name":"Payton Tolle",
-    "player_url":"\/player\/801139",
-    "jersey":"70",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 6\"",
-    "weight":"250",
-    "dob":"11\/01\/2002",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"payton-tolle"
   },
   {
     "player_id":"700413",
