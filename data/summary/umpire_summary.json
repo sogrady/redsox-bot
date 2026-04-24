@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.9431279620853,
-        "incorrect_strikes_pct": 8.056872037914701,
-        "total_called_strikes": 633,
+        "correct_strikes_pct": 91.99372056514915,
+        "incorrect_strikes_pct": 8.006279434850853,
+        "total_called_strikes": 637,
         "bad_calls_count": 51
     },
     "last_game_summary": {
-        "date": "April 23, 2026",
+        "date": "April 24, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 16,
+        "total_called_strikes": 4,
         "bad_calls_count": 0,
-        "home_plate_umpire": "John Libka"
+        "home_plate_umpire": "Jansen Visconti"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.62058371735792,
-        "incorrect_balls_pct": 3.379416282642083,
-        "total_called_balls": 1302,
+        "correct_balls_pct": 96.64378337147215,
+        "incorrect_balls_pct": 3.3562166285278465,
+        "total_called_balls": 1311,
         "bad_calls_count": 44
     },
     "pitching_last_game_summary": {
-        "date": "April 23, 2026",
+        "date": "April 24, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 51,
+        "total_called_balls": 9,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
