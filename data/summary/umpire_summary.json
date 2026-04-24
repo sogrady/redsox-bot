@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.86602870813397,
-        "incorrect_strikes_pct": 8.133971291866033,
-        "total_called_strikes": 627,
+        "correct_strikes_pct": 91.9431279620853,
+        "incorrect_strikes_pct": 8.056872037914701,
+        "total_called_strikes": 633,
         "bad_calls_count": 51
     },
     "last_game_summary": {
         "date": "April 23, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 10,
+        "total_called_strikes": 16,
         "bad_calls_count": 0,
         "home_plate_umpire": "John Libka"
     },
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.55442443226312,
-        "incorrect_balls_pct": 3.4455755677368813,
-        "total_called_balls": 1277,
+        "correct_balls_pct": 96.62058371735792,
+        "incorrect_balls_pct": 3.379416282642083,
+        "total_called_balls": 1302,
         "bad_calls_count": 44
     },
     "pitching_last_game_summary": {
         "date": "April 23, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 26,
+        "total_called_balls": 51,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
