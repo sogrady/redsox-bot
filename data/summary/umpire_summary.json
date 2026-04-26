@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.58200290275762,
-        "incorrect_strikes_pct": 8.417997097242377,
-        "total_called_strikes": 689,
+        "correct_strikes_pct": 91.84247538677918,
+        "incorrect_strikes_pct": 8.157524613220815,
+        "total_called_strikes": 711,
         "bad_calls_count": 58
     },
     "last_game_summary": {
-        "date": "April 25, 2026",
-        "correct_strikes_pct": 84.84848484848484,
-        "incorrect_strikes_pct": 15.151515151515156,
-        "total_called_strikes": 33,
-        "bad_calls_count": 5,
-        "home_plate_umpire": "Andy Fletcher"
+        "date": "April 26, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 22,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Alex Tosi"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.71428571428572,
-        "incorrect_balls_pct": 3.2857142857142776,
-        "total_called_balls": 1400,
-        "bad_calls_count": 46
+        "correct_balls_pct": 96.72701949860725,
+        "incorrect_balls_pct": 3.2729805013927518,
+        "total_called_balls": 1436,
+        "bad_calls_count": 47
     },
     "pitching_last_game_summary": {
-        "date": "April 25, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 47,
-        "bad_calls_count": 0
+        "date": "April 26, 2026",
+        "correct_balls_pct": 97.22222222222221,
+        "incorrect_balls_pct": 2.7777777777777857,
+        "total_called_balls": 36,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
