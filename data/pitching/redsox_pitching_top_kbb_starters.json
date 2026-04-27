@@ -2,7 +2,13 @@
     {
         "name":"Garrett Crochet*",
         "era+":67.0,
-        "fip":4.35,
+        "fip":4.33,
         "so_bb":3.36
+    },
+    {
+        "name":"Connelly Early*",
+        "era+":149.0,
+        "fip":4.61,
+        "so_bb":2.0
     }
 ]
