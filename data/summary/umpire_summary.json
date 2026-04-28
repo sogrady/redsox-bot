@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.77126917712691,
-        "incorrect_strikes_pct": 8.22873082287309,
-        "total_called_strikes": 717,
-        "bad_calls_count": 59
+        "correct_strikes_pct": 91.61028416779432,
+        "incorrect_strikes_pct": 8.389715832205681,
+        "total_called_strikes": 739,
+        "bad_calls_count": 62
     },
     "last_game_summary": {
         "date": "April 27, 2026",
-        "correct_strikes_pct": 83.33333333333334,
-        "incorrect_strikes_pct": 16.666666666666657,
-        "total_called_strikes": 6,
-        "bad_calls_count": 1,
+        "correct_strikes_pct": 85.71428571428571,
+        "incorrect_strikes_pct": 14.285714285714292,
+        "total_called_strikes": 28,
+        "bad_calls_count": 4,
         "home_plate_umpire": "Marvin Hudson"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.7519004837595,
-        "incorrect_balls_pct": 3.248099516240501,
-        "total_called_balls": 1447,
-        "bad_calls_count": 47
+        "correct_balls_pct": 96.68470906630581,
+        "incorrect_balls_pct": 3.315290933694186,
+        "total_called_balls": 1478,
+        "bad_calls_count": 49
     },
     "pitching_last_game_summary": {
         "date": "April 27, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 11,
-        "bad_calls_count": 0
+        "correct_balls_pct": 95.23809523809523,
+        "incorrect_balls_pct": 4.761904761904773,
+        "total_called_balls": 42,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
