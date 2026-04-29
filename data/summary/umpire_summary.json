@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.48099606815204,
-        "incorrect_strikes_pct": 8.519003931847962,
-        "total_called_strikes": 763,
-        "bad_calls_count": 65
+        "correct_strikes_pct": 91.34860050890585,
+        "incorrect_strikes_pct": 8.651399491094153,
+        "total_called_strikes": 786,
+        "bad_calls_count": 68
     },
     "last_game_summary": {
-        "date": "April 28, 2026",
-        "correct_strikes_pct": 87.5,
-        "incorrect_strikes_pct": 12.5,
-        "total_called_strikes": 24,
+        "date": "April 29, 2026",
+        "correct_strikes_pct": 86.95652173913044,
+        "incorrect_strikes_pct": 13.043478260869563,
+        "total_called_strikes": 23,
         "bad_calls_count": 3,
-        "home_plate_umpire": "Brennan Miller"
+        "home_plate_umpire": "James Jean"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.70836076366031,
-        "incorrect_balls_pct": 3.291639236339691,
-        "total_called_balls": 1519,
-        "bad_calls_count": 50
+        "correct_balls_pct": 96.73495518565942,
+        "incorrect_balls_pct": 3.265044814340584,
+        "total_called_balls": 1562,
+        "bad_calls_count": 51
     },
     "pitching_last_game_summary": {
-        "date": "April 28, 2026",
-        "correct_balls_pct": 97.5609756097561,
-        "incorrect_balls_pct": 2.439024390243901,
-        "total_called_balls": 41,
+        "date": "April 29, 2026",
+        "correct_balls_pct": 97.67441860465115,
+        "incorrect_balls_pct": 2.3255813953488484,
+        "total_called_balls": 43,
         "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
