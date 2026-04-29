@@ -1,8 +1,14 @@
 [
     {
         "name":"Greg Weissert",
-        "era+":112.0,
-        "fip":4.76,
+        "era+":111.0,
+        "fip":4.75,
+        "so_bb":4.0
+    },
+    {
+        "name":"Zack Kelly",
+        "era+":124.0,
+        "fip":3.42,
         "so_bb":4.0
     },
     {
@@ -13,14 +19,14 @@
     },
     {
         "name":"Jovani Mor\u00e1n*",
-        "era+":190.0,
+        "era+":189.0,
         "fip":4.44,
         "so_bb":1.78
     },
     {
         "name":"Ryan Watson",
-        "era+":58.0,
-        "fip":5.82,
-        "so_bb":1.43
+        "era+":64.0,
+        "fip":5.62,
+        "so_bb":1.57
     }
 ]
