@@ -99435,7 +99435,7 @@
         "pitcher":"Anthony Nunez",
         "pitch_name":"Changeup",
         "pitch_velocity":84.5,
-        "pitch_call":"foul",
+        "pitch_call":"swinging_strike_blocked",
         "pitch_in_zone":false,
         "at_bat_eventual_result":"Walk",
         "at_bat_eventual_desc":"Jarren Duran walks.",
