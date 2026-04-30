@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":123,
         "category":"standings",
-        "context_value":"23rd",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":21,
         "category":"batting",
-        "context_value":"28th",
+        "context_value":"29th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".258",
         "category":"batting",
-        "context_value":".251",
+        "context_value":".252",
         "context_value_label":"League average"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"246",
         "category":"pitching",
-        "context_value":"21st",
+        "context_value":"26th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"103",
         "category":"pitching",
-        "context_value":"18th",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"April 30, 2026, 11:50 AM ET",
+        "value":"April 30, 2026, 7:34 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
