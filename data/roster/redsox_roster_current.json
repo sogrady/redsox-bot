@@ -18,6 +18,24 @@
     "slug":"brayan-bello"
   },
   {
+    "player_id":"687562",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687562\/headshot\/silo\/current",
+    "name":"Jake Bennett",
+    "player_url":"\/player\/687562",
+    "jersey":"64",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 6\"",
+    "weight":"234",
+    "dob":"12\/02\/2000",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"jake-bennett"
+  },
+  {
     "player_id":"547973",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/547973\/headshot\/silo\/current",
     "name":"Aroldis Chapman",
@@ -466,24 +484,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"jack-anderson"
-  },
-  {
-    "player_id":"687562",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687562\/headshot\/silo\/current",
-    "name":"Jake Bennett",
-    "player_url":"\/player\/687562",
-    "jersey":"64",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 6\"",
-    "weight":"234",
-    "dob":"12\/02\/2000",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"jake-bennett"
   },
   {
     "player_id":"676710",
