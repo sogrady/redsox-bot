@@ -1,20 +1,20 @@
 [
     {
+        "name":"Zack Kelly",
+        "era+":137.0,
+        "fip":3.05,
+        "so_bb":5.0
+    },
+    {
         "name":"Greg Weissert",
         "era+":83.0,
         "fip":5.57,
         "so_bb":4.25
     },
     {
-        "name":"Zack Kelly",
-        "era+":122.0,
-        "fip":3.42,
-        "so_bb":4.0
-    },
-    {
         "name":"Garrett Whitlock",
-        "era+":129.0,
-        "fip":4.5,
+        "era+":141.0,
+        "fip":4.39,
         "so_bb":2.6
     },
     {
@@ -26,7 +26,7 @@
     {
         "name":"Ryan Watson",
         "era+":63.0,
-        "fip":5.62,
+        "fip":5.63,
         "so_bb":1.57
     }
 ]
