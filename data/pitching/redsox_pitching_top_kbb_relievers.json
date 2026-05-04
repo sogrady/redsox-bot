@@ -1,32 +1,32 @@
 [
     {
-        "name":"Zack Kelly",
-        "era+":137.0,
-        "fip":3.06,
-        "so_bb":5.0
+        "name":"Greg Weissert",
+        "era+":80.0,
+        "fip":5.2,
+        "so_bb":4.5
     },
     {
-        "name":"Greg Weissert",
-        "era+":83.0,
-        "fip":5.58,
-        "so_bb":4.25
+        "name":"Aroldis Chapman*",
+        "era+":502.0,
+        "fip":1.84,
+        "so_bb":4.33
+    },
+    {
+        "name":"Garrett Whitlock",
+        "era+":156.0,
+        "fip":3.97,
+        "so_bb":3.0
     },
     {
         "name":"Payton Tolle*",
-        "era+":126.0,
+        "era+":125.0,
         "fip":2.96,
         "so_bb":3.0
     },
     {
-        "name":"Garrett Whitlock",
-        "era+":141.0,
-        "fip":4.4,
-        "so_bb":2.6
-    },
-    {
-        "name":"Tyler Samaniego*",
-        "era+":null,
-        "fip":3.05,
-        "so_bb":2.0
+        "name":"Zack Kelly",
+        "era+":99.0,
+        "fip":3.54,
+        "so_bb":2.5
     }
 ]

@@ -119985,7 +119985,7 @@
         "pitcher":"AJ Blubaugh",
         "pitch_name":"Sweeper",
         "pitch_velocity":83.6,
-        "pitch_call":"ball",
+        "pitch_call":"swinging_strike",
         "pitch_in_zone":true,
         "at_bat_eventual_result":"Single",
         "at_bat_eventual_desc":"Marcelo Mayer singles on a line drive to left fielder Dustin Harris.",
