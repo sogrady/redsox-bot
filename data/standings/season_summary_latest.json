@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"4.23",
         "category":"pitching",
-        "context_value":"16th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 4, 2026, 8:56 AM ET",
+        "value":"May 4, 2026, 11:58 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
