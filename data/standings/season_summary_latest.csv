@@ -5,21 +5,21 @@ Record,record,15-21,standings,18-18,This point last season
 Win percentage,win_pct,42%,standings,50%,This point last season
 Games up/back,games_up_back,10,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"35,467",standings,9,Home games this season
-Runs,runs,145,standings,26th,League rank
+Runs,runs,145,standings,24th,League rank
 Runs against,runs_against,156,standings,162,This point last season
 Run differential,run_differential,-11,standings,17,This point last season
 Batting average,batting_average,.240,batting,.263,Last decade average
 Home runs,home_runs,27,batting,27th,League rank
 Home runs/game,home_runs_game,0.75,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.318,batting,.330,Last decade average
-Stolen bases,stolen_bases,26,batting,15th,League rank
+Stolen bases,stolen_bases,26,batting,16th,League rank
 BA w/ RISP,batting_avg_risp,.253,batting,.253,League average
-Strikeouts,strikeouts,291,pitching,20th,League rank
+Strikeouts,strikeouts,291,pitching,22nd,League rank
 Walks,walks,119,pitching,18th,League rank
 ERA,era,4.11,pitching,15th,League rank
 K/BB ratio,k_bb_ratio,2.45,pitching,2.4,League average
 HR/9,hr9,1.3,pitching,1.08,League average
 BABIP,babip,.280,pitching,.300,League norm
-Last updated,update_time,"May 6, 2026, 11:58 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 6)</span> — The Red Sox have compiled a <span class='highlight'>15-21</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>10-3</span> away <span class='highlight'>win</span>. and the next game is Wednesday at 6:40 p.m. ET at <span class='highlight'>Comerica Park</span>.",summary,,
+Last updated,update_time,"May 6, 2026, 7:34 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 6)</span> — The Red Sox have compiled a <span class='highlight'>15-21</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>10-3</span> away <span class='highlight'>win</span>. and the next game is Thursday at 7:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,win,summary,,
