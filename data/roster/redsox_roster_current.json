@@ -234,6 +234,24 @@
     "slug":"garrett-whitlock"
   },
   {
+    "player_id":"681508",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
+    "name":"Mickey Gasper",
+    "player_url":"\/player\/681508",
+    "jersey":"30",
+    "position_group":"Catchers",
+    "bat_throw":"S\/R",
+    "height":"5' 9\"",
+    "weight":"205",
+    "dob":"10\/11\/1995",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"mickey-gasper"
+  },
+  {
     "player_id":"665966",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/665966\/headshot\/silo\/current",
     "name":"Carlos Narváez",
@@ -394,24 +412,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"wilyer-abreu"
-  },
-  {
-    "player_id":"701350",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/701350\/headshot\/silo\/current",
-    "name":"Roman Anthony",
-    "player_url":"\/player\/701350",
-    "jersey":"19",
-    "position_group":"Outfielders",
-    "bat_throw":"L\/R",
-    "height":"6' 3\"",
-    "weight":"200",
-    "dob":"05\/13\/2004",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"roman-anthony"
   },
   {
     "player_id":"680776",
@@ -720,24 +720,6 @@
     "slug":"tsung-che-cheng"
   },
   {
-    "player_id":"681508",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
-    "name":"Mickey Gasper",
-    "player_url":"\/player\/681508",
-    "jersey":"30",
-    "position_group":"Infielders",
-    "bat_throw":"S\/R",
-    "height":"5' 9\"",
-    "weight":"205",
-    "dob":"10\/11\/1995",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"mickey-gasper"
-  },
-  {
     "player_id":"663853",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
     "name":"Romy Gonzalez",
@@ -790,6 +772,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"nick-sogard"
+  },
+  {
+    "player_id":"701350",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/701350\/headshot\/silo\/current",
+    "name":"Roman Anthony",
+    "player_url":"\/player\/701350",
+    "jersey":"19",
+    "position_group":"Outfielders",
+    "bat_throw":"L\/R",
+    "height":"6' 3\"",
+    "weight":"200",
+    "dob":"05\/13\/2004",
+    "status":"IL-10",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"roman-anthony"
   },
   {
     "player_id":"681987",
