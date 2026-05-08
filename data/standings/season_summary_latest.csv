@@ -16,10 +16,10 @@ Stolen bases,stolen_bases,31,batting,9th,League rank
 BA w/ RISP,batting_avg_risp,.252,batting,.254,League average
 Strikeouts,strikeouts,301,pitching,20th,League rank
 Walks,walks,128,pitching,18th,League rank
-ERA,era,4.10,pitching,15th,League rank
+ERA,era,4.10,pitching,14th,League rank
 K/BB ratio,k_bb_ratio,2.35,pitching,2.37,League average
 HR/9,hr9,1.2,pitching,1.08,League average
 BABIP,babip,.280,pitching,.300,League norm
-Last updated,update_time,"May 8, 2026, 11:49 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 8)</span> — The Red Sox have compiled a <span class='highlight'>16-22</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>4-8</span> home <span class='highlight'>loss</span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+Last updated,update_time,"May 8, 2026, 7:35 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 8)</span> — The Red Sox have compiled a <span class='highlight'>16-22</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>4-8</span> home <span class='highlight'>loss</span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,loss,summary,,

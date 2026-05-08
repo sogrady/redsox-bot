@@ -6,12 +6,12 @@
         "bad_calls_count": 88
     },
     "last_game_summary": {
-        "date": "May 7, 2026",
-        "correct_strikes_pct": 91.30434782608695,
-        "incorrect_strikes_pct": 8.695652173913047,
-        "total_called_strikes": 23,
-        "bad_calls_count": 2,
-        "home_plate_umpire": "Tyler Jones"
+        "date": "May 8, 2026",
+        "correct_strikes_pct": 0,
+        "incorrect_strikes_pct": 100,
+        "total_called_strikes": 0,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Steven Jaschinski"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.9809624537282,
-        "incorrect_balls_pct": 4.019037546271804,
-        "total_called_balls": 1891,
+        "correct_balls_pct": 95.9915611814346,
+        "incorrect_balls_pct": 4.008438818565395,
+        "total_called_balls": 1896,
         "bad_calls_count": 76
     },
     "pitching_last_game_summary": {
-        "date": "May 7, 2026",
-        "correct_balls_pct": 94.23076923076923,
-        "incorrect_balls_pct": 5.769230769230774,
-        "total_called_balls": 52,
-        "bad_calls_count": 3
+        "date": "May 8, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 5,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }

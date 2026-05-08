@@ -1,5 +1,23 @@
 [
   {
+    "player_id":"681252",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681252\/headshot\/silo\/current",
+    "name":"Jack Anderson",
+    "player_url":"\/player\/681252",
+    "jersey":"77",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 3\"",
+    "weight":"197",
+    "dob":"11\/23\/1999",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"jack-anderson"
+  },
+  {
     "player_id":"678394",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678394\/headshot\/silo\/current",
     "name":"Brayan Bello",
@@ -16,24 +34,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"brayan-bello"
-  },
-  {
-    "player_id":"687562",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687562\/headshot\/silo\/current",
-    "name":"Jake Bennett",
-    "player_url":"\/player\/687562",
-    "jersey":"64",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 6\"",
-    "weight":"234",
-    "dob":"12\/02\/2000",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"jake-bennett"
   },
   {
     "player_id":"547973",
@@ -468,22 +468,22 @@
     "slug":"masataka-yoshida"
   },
   {
-    "player_id":"681252",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681252\/headshot\/silo\/current",
-    "name":"Jack Anderson",
-    "player_url":"\/player\/681252",
-    "jersey":"77",
+    "player_id":"687562",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687562\/headshot\/silo\/current",
+    "name":"Jake Bennett",
+    "player_url":"\/player\/687562",
+    "jersey":"64",
     "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 3\"",
-    "weight":"197",
-    "dob":"11\/23\/1999",
+    "bat_throw":"L\/L",
+    "height":"6' 6\"",
+    "weight":"234",
+    "dob":"12\/02\/2000",
     "status":"MINORS",
     "is_minors":true,
     "is_il":false,
     "is_active_roster":false,
     "is_40_man":true,
-    "slug":"jack-anderson"
+    "slug":"jake-bennett"
   },
   {
     "player_id":"543056",
