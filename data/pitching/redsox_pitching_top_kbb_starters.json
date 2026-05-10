@@ -1,13 +1,13 @@
 [
     {
         "name":"Garrett Crochet (15-day IL)*",
-        "era+":66.0,
+        "era+":65.0,
         "fip":4.33,
         "so_bb":3.36
     },
     {
         "name":"Ranger Su\u00e1rez*",
-        "era+":149.0,
+        "era+":148.0,
         "fip":3.26,
         "so_bb":3.2
     },
@@ -19,8 +19,8 @@
     },
     {
         "name":"Brayan Bello",
-        "era+":56.0,
-        "fip":6.32,
+        "era+":55.0,
+        "fip":6.31,
         "so_bb":1.5
     }
 ]
