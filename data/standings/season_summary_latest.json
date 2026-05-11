@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.41,
         "category":"pitching",
-        "context_value":2.4,
+        "context_value":2.39,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 11, 2026, 12:13 PM ET",
+        "value":"May 11, 2026, 7:35 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
