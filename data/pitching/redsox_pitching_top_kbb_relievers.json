@@ -1,7 +1,7 @@
 [
     {
         "name":"Aroldis Chapman*",
-        "era+":584.0,
+        "era+":585.0,
         "fip":1.54,
         "so_bb":5.33
     },
@@ -14,7 +14,7 @@
     {
         "name":"Greg Weissert",
         "era+":78.0,
-        "fip":5.33,
+        "fip":5.34,
         "so_bb":3.0
     },
     {
@@ -24,9 +24,9 @@
         "so_bb":1.89
     },
     {
-        "name":"Tyler Samaniego*",
-        "era+":null,
-        "fip":3.05,
-        "so_bb":1.83
+        "name":"Zack Kelly",
+        "era+":115.0,
+        "fip":3.65,
+        "so_bb":1.86
     }
 ]
