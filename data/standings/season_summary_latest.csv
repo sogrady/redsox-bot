@@ -5,21 +5,21 @@ Record,record,18-24,standings,22-20,This point last season
 Win percentage,win_pct,43%,standings,52%,This point last season
 Games up/back,games_up_back,10,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"34,258",standings,16,Home games this season
-Runs,runs,160,standings,28th,League rank
+Runs,runs,160,standings,29th,League rank
 Runs against,runs_against,171,standings,176,This point last season
 Run differential,run_differential,-11,standings,29,This point last season
 Batting average,batting_average,.236,batting,.263,Last decade average
-Home runs,home_runs,31,batting,27th,League rank
+Home runs,home_runs,31,batting,28th,League rank
 Home runs/game,home_runs_game,0.74,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.313,batting,.330,Last decade average
 Stolen bases,stolen_bases,34,batting,12th,League rank
 BA w/ RISP,batting_avg_risp,.243,batting,.252,League average
-Strikeouts,strikeouts,337,pitching,21st,League rank
-Walks,walks,137,pitching,21st,League rank
+Strikeouts,strikeouts,337,pitching,23rd,League rank
+Walks,walks,137,pitching,22nd,League rank
 ERA,era,3.88,pitching,12th,League rank
 K/BB ratio,k_bb_ratio,2.46,pitching,2.4,League average
 HR/9,hr9,1.2,pitching,1.06,League average
 BABIP,babip,.273,pitching,.300,League norm
-Last updated,update_time,"May 14, 2026, 12:03 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 14)</span> — The Red Sox have compiled a <span class='highlight'>18-24</span> record in the 2026 regular season, a <span class='highlight'>43%</span> winning percentage.  The last game was a <span class='highlight'>3-1</span> home <span class='highlight'>win</span>. and the next game is Thursday at 6:45 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+Last updated,update_time,"May 14, 2026, 7:35 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 14)</span> — The Red Sox have compiled a <span class='highlight'>18-24</span> record in the 2026 regular season, a <span class='highlight'>43%</span> winning percentage.  The last game was a <span class='highlight'>3-1</span> home <span class='highlight'>win</span>. and the next game is Friday at 7:15 p.m. ET at <span class='highlight'>Truist Park</span>.",summary,,
 Last game result,last_game_result,win,summary,,
