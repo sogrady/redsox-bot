@@ -1,32 +1,32 @@
 [
     {
+        "name":"Ranger Su\u00e1rez*",
+        "era+":165.0,
+        "fip":2.93,
+        "so_bb":3.64
+    },
+    {
         "name":"Garrett Crochet (15-day IL)*",
-        "era+":65.0,
+        "era+":64.0,
         "fip":4.31,
         "so_bb":3.36
     },
     {
-        "name":"Ranger Su\u00e1rez*",
-        "era+":146.0,
-        "fip":3.23,
-        "so_bb":3.2
-    },
-    {
         "name":"Sonny Gray",
-        "era+":128.0,
-        "fip":4.19,
+        "era+":127.0,
+        "fip":4.2,
         "so_bb":2.63
     },
     {
         "name":"Connelly Early*",
-        "era+":128.0,
+        "era+":127.0,
         "fip":4.35,
         "so_bb":2.17
     },
     {
         "name":"Brayan Bello",
-        "era+":63.0,
-        "fip":5.59,
+        "era+":62.0,
+        "fip":5.6,
         "so_bb":1.71
     }
 ]
