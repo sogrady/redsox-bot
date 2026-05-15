@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.22315592903828,
-        "incorrect_strikes_pct": 8.776844070961715,
-        "total_called_strikes": 1071,
+        "correct_strikes_pct": 91.24767225325886,
+        "incorrect_strikes_pct": 8.752327746741145,
+        "total_called_strikes": 1074,
         "bad_calls_count": 94
     },
     "last_game_summary": {
-        "date": "May 14, 2026",
+        "date": "May 15, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 25,
+        "total_called_strikes": 3,
         "bad_calls_count": 0,
-        "home_plate_umpire": "Mark Ripperger"
+        "home_plate_umpire": "Vic Carapazza"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.0,
-        "incorrect_balls_pct": 4.0,
-        "total_called_balls": 2100,
+        "correct_balls_pct": 96.01328903654485,
+        "incorrect_balls_pct": 3.9867109634551525,
+        "total_called_balls": 2107,
         "bad_calls_count": 84
     },
     "pitching_last_game_summary": {
-        "date": "May 14, 2026",
-        "correct_balls_pct": 97.67441860465115,
-        "incorrect_balls_pct": 2.3255813953488484,
-        "total_called_balls": 43,
-        "bad_calls_count": 1
+        "date": "May 15, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 7,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
