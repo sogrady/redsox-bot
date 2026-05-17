@@ -1,19 +1,19 @@
 [
     {
-        "name":"Aroldis Chapman*",
-        "era+":662.0,
-        "fip":1.46,
-        "so_bb":4.2
-    },
-    {
         "name":"Garrett Whitlock",
         "era+":130.0,
         "fip":3.1,
         "so_bb":3.67
     },
     {
+        "name":"Aroldis Chapman*",
+        "era+":709.0,
+        "fip":1.95,
+        "so_bb":3.0
+    },
+    {
         "name":"Greg Weissert",
-        "era+":83.0,
+        "era+":84.0,
         "fip":5.14,
         "so_bb":3.0
     },
