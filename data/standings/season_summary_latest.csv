@@ -14,12 +14,12 @@ Home runs/game,home_runs_game,0.72,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.310,batting,.330,Last decade average
 Stolen bases,stolen_bases,35,batting,13th,League rank
 BA w/ RISP,batting_avg_risp,.227,batting,.252,League average
-Strikeouts,strikeouts,370,pitching,21st,League rank
+Strikeouts,strikeouts,370,pitching,20th,League rank
 Walks,walks,147,pitching,21st,League rank
 ERA,era,3.81,pitching,9th,League rank
 K/BB ratio,k_bb_ratio,2.52,pitching,2.41,League average
 HR/9,hr9,1.2,pitching,1.07,League average
 BABIP,babip,.268,pitching,.300,League norm
-Last updated,update_time,"May 18, 2026, 12:21 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 18)</span> — The Red Sox have compiled a <span class='highlight'>19-27</span> record in the 2026 regular season, a <span class='highlight'>41%</span> winning percentage.  The last game was a <span class='highlight'>1-8</span> away <span class='highlight'>loss</span>. and the next game is Monday at 7:10 p.m. ET at <span class='highlight'>Kauffman Stadium</span>.",summary,,
+Last updated,update_time,"May 18, 2026, 7:39 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 18)</span> — The Red Sox have compiled a <span class='highlight'>19-27</span> record in the 2026 regular season, a <span class='highlight'>41%</span> winning percentage.  The last game was a <span class='highlight'>1-8</span> away <span class='highlight'>loss</span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Kauffman Stadium</span>.",summary,,
 Last game result,last_game_result,loss,summary,,

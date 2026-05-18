@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"370",
         "category":"pitching",
-        "context_value":"21st",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 18, 2026, 12:21 PM ET",
+        "value":"May 18, 2026, 7:39 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 18)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>19-27<\/span> record in the 2026 regular season, a <span class='highlight'>41%<\/span> winning percentage.  The last game was a <span class='highlight'>1-8<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 7:10 p.m. ET at <span class='highlight'>Kauffman Stadium<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 18)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>19-27<\/span> record in the 2026 regular season, a <span class='highlight'>41%<\/span> winning percentage.  The last game was a <span class='highlight'>1-8<\/span> away <span class='highlight'>loss<\/span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Kauffman Stadium<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
