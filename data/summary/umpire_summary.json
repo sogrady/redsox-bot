@@ -6,12 +6,12 @@
         "bad_calls_count": 100
     },
     "last_game_summary": {
-        "date": "May 18, 2026",
-        "correct_strikes_pct": 96.29629629629629,
-        "incorrect_strikes_pct": 3.7037037037037095,
-        "total_called_strikes": 27,
-        "bad_calls_count": 1,
-        "home_plate_umpire": "Laz Diaz"
+        "date": "May 19, 2026",
+        "correct_strikes_pct": 0,
+        "incorrect_strikes_pct": 100,
+        "total_called_strikes": 0,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "James Jean"
     },
     "worst_calls_of_season": [
         {
