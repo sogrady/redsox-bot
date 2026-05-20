@@ -2,7 +2,7 @@
     {
         "stat_label":"Wins",
         "stat":"wins",
-        "value":20,
+        "value":21,
         "category":"standings",
         "context_value":23,
         "context_value_label":"This point last season"
@@ -12,23 +12,23 @@
         "stat":"losses",
         "value":27,
         "category":"standings",
-        "context_value":24,
+        "context_value":25,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"20-27",
+        "value":"21-27",
         "category":"standings",
-        "context_value":"23-24",
+        "context_value":"23-25",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"43%",
+        "value":"44%",
         "category":"standings",
-        "context_value":"49%",
+        "context_value":"48%",
         "context_value_label":"This point last season"
     },
     {
@@ -36,21 +36,21 @@
         "stat":"games_up_back",
         "value":11.5,
         "category":"standings",
-        "context_value":"5th",
+        "context_value":"4th",
         "context_value_label":"Division rank"
     },
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,532",
+        "value":"34,553",
         "category":"standings",
-        "context_value":11,
+        "context_value":14,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":170,
+        "value":177,
         "category":"standings",
         "context_value":"29th",
         "context_value_label":"League rank"
@@ -58,23 +58,23 @@
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":188,
+        "value":189,
         "category":"standings",
-        "context_value":216,
+        "context_value":226,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":-18,
+        "value":-12,
         "category":"standings",
-        "context_value":14,
+        "context_value":8,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".235",
+        "value":".239",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":34,
+        "value":35,
         "category":"batting",
         "context_value":"29th",
         "context_value_label":"League rank"
@@ -90,7 +90,7 @@
     {
         "stat_label":"Home runs\/game",
         "stat":"home_runs_game",
-        "value":0.72,
+        "value":0.73,
         "category":"batting",
         "context_value":1.22,
         "context_value_label":"Last decade average"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".310",
+        "value":".313",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":35,
+        "value":37,
         "category":"batting",
         "context_value":"13th",
         "context_value_label":"League rank"
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".227",
+        "value":".234",
         "category":"batting",
         "context_value":".252",
         "context_value_label":"League average"
@@ -122,23 +122,23 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"383",
+        "value":"393",
         "category":"pitching",
-        "context_value":"20th",
+        "context_value":"18th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"148",
+        "value":"151",
         "category":"pitching",
-        "context_value":"22nd",
+        "context_value":"23rd",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"3.75",
+        "value":"3.69",
         "category":"pitching",
         "context_value":"8th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":2.59,
+        "value":2.6,
         "category":"pitching",
         "context_value":2.4,
         "context_value_label":"League average"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 19, 2026, 7:40 PM ET",
+        "value":"May 20, 2026, 5:29 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 19)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>20-27<\/span> record in the 2026 regular season, a <span class='highlight'>43%<\/span> winning percentage.  The last game was a <span class='highlight'>3-1<\/span> away <span class='highlight'>win<\/span>. and the next game is Wednesday at 7:40 p.m. ET at <span class='highlight'>Kauffman Stadium<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 20)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>21-27<\/span> record in the 2026 regular season, a <span class='highlight'>44%<\/span> winning percentage.  The last game was a <span class='highlight'>7-1<\/span> away <span class='highlight'>win<\/span>. and the next game is Wednesday at 7:40 p.m. ET at <span class='highlight'>Kauffman Stadium<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
