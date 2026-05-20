@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.59663865546219,
-        "incorrect_strikes_pct": 8.403361344537814,
-        "total_called_strikes": 1190,
+        "correct_strikes_pct": 91.61777032690695,
+        "incorrect_strikes_pct": 8.38222967309305,
+        "total_called_strikes": 1193,
         "bad_calls_count": 100
     },
     "last_game_summary": {
-        "date": "May 19, 2026",
+        "date": "May 20, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 26,
+        "total_called_strikes": 3,
         "bad_calls_count": 0,
-        "home_plate_umpire": "James Jean"
+        "home_plate_umpire": "Erich Bacchus"
     },
     "worst_calls_of_season": [
         {
