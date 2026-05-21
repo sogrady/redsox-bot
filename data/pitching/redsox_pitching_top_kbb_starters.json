@@ -1,7 +1,7 @@
 [
     {
         "name":"Payton Tolle*",
-        "era+":197.0,
+        "era+":196.0,
         "fip":3.21,
         "so_bb":4.29
     },
@@ -13,8 +13,8 @@
     },
     {
         "name":"Sonny Gray",
-        "era+":138.0,
-        "fip":3.74,
+        "era+":137.0,
+        "fip":3.73,
         "so_bb":3.33
     },
     {
@@ -25,8 +25,8 @@
     },
     {
         "name":"Connelly Early*",
-        "era+":125.0,
-        "fip":4.58,
-        "so_bb":2.5
+        "era+":120.0,
+        "fip":4.76,
+        "so_bb":2.63
     }
 ]
