@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"401",
         "category":"pitching",
-        "context_value":"20th",
+        "context_value":"21st",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.68",
         "category":"pitching",
-        "context_value":"8th",
+        "context_value":"9th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 21, 2026, 12:17 PM ET",
+        "value":"May 21, 2026, 7:38 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
