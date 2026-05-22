@@ -1,32 +1,32 @@
 [
     {
         "name":"Garrett Whitlock",
-        "era+":145.0,
+        "era+":144.0,
         "fip":2.9,
         "so_bb":4.0
     },
     {
         "name":"Aroldis Chapman*",
-        "era+":797.0,
+        "era+":793.0,
         "fip":1.86,
         "so_bb":3.29
     },
     {
         "name":"Greg Weissert",
         "era+":90.0,
-        "fip":4.89,
+        "fip":4.88,
         "so_bb":3.17
     },
     {
         "name":"Jovani Mor\u00e1n*",
-        "era+":144.0,
-        "fip":4.63,
+        "era+":143.0,
+        "fip":4.62,
         "so_bb":2.07
     },
     {
         "name":"Zack Kelly",
-        "era+":123.0,
-        "fip":3.66,
+        "era+":122.0,
+        "fip":3.65,
         "so_bb":2.0
     }
 ]
