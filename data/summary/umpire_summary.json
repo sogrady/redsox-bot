@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.59802306425041,
-        "incorrect_strikes_pct": 8.401976935749587,
-        "total_called_strikes": 1214,
+        "correct_strikes_pct": 91.62561576354679,
+        "incorrect_strikes_pct": 8.37438423645321,
+        "total_called_strikes": 1218,
         "bad_calls_count": 102
     },
     "last_game_summary": {
-        "date": "May 20, 2026",
-        "correct_strikes_pct": 91.66666666666666,
-        "incorrect_strikes_pct": 8.333333333333343,
-        "total_called_strikes": 24,
-        "bad_calls_count": 2,
-        "home_plate_umpire": "Erich Bacchus"
+        "date": "May 22, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 4,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Ryan Wills"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.19982920580699,
-        "incorrect_balls_pct": 3.800170794193008,
-        "total_called_balls": 2342,
-        "bad_calls_count": 89
+        "correct_balls_pct": 96.18158676283412,
+        "incorrect_balls_pct": 3.8184132371658848,
+        "total_called_balls": 2357,
+        "bad_calls_count": 90
     },
     "pitching_last_game_summary": {
-        "date": "May 20, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 39,
-        "bad_calls_count": 0
+        "date": "May 22, 2026",
+        "correct_balls_pct": 93.33333333333333,
+        "incorrect_balls_pct": 6.666666666666671,
+        "total_called_balls": 15,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
