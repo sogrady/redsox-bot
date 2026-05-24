@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.32492113564669,
-        "incorrect_strikes_pct": 8.67507886435331,
-        "total_called_strikes": 1268,
-        "bad_calls_count": 110
+        "correct_strikes_pct": 91.30434782608695,
+        "incorrect_strikes_pct": 8.695652173913047,
+        "total_called_strikes": 1288,
+        "bad_calls_count": 112
     },
     "last_game_summary": {
-        "date": "May 23, 2026",
-        "correct_strikes_pct": 81.48148148148148,
-        "incorrect_strikes_pct": 18.51851851851852,
-        "total_called_strikes": 27,
-        "bad_calls_count": 5,
-        "home_plate_umpire": "Jen Pawol"
+        "date": "May 24, 2026",
+        "correct_strikes_pct": 90.0,
+        "incorrect_strikes_pct": 10.0,
+        "total_called_strikes": 20,
+        "bad_calls_count": 2,
+        "home_plate_umpire": "Will Little"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.18539786710419,
-        "incorrect_balls_pct": 3.814602132895814,
-        "total_called_balls": 2438,
-        "bad_calls_count": 93
+        "correct_balls_pct": 96.23849539815926,
+        "incorrect_balls_pct": 3.761504601840741,
+        "total_called_balls": 2499,
+        "bad_calls_count": 94
     },
     "pitching_last_game_summary": {
-        "date": "May 23, 2026",
-        "correct_balls_pct": 95.1219512195122,
-        "incorrect_balls_pct": 4.878048780487802,
-        "total_called_balls": 41,
-        "bad_calls_count": 2
+        "date": "May 24, 2026",
+        "correct_balls_pct": 98.36065573770492,
+        "incorrect_balls_pct": 1.639344262295083,
+        "total_called_balls": 61,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
