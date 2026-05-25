@@ -3,7 +3,7 @@ Wins,wins,22,standings,26,This point last season
 Losses,losses,30,standings,26,This point last season
 Record,record,22-30,standings,26-26,This point last season
 Win percentage,win_pct,42%,standings,50%,This point last season
-Games up/back,games_up_back,13,standings,5th,Division rank
+Games up/back,games_up_back,12.5,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"34,371",standings,17,Home games this season
 Runs,runs,194,standings,30th,League rank
 Runs against,runs_against,210,standings,237,This point last season
@@ -12,14 +12,14 @@ Batting average,batting_average,.240,batting,.263,Last decade average
 Home runs,home_runs,38,batting,29th,League rank
 Home runs/game,home_runs_game,0.73,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.315,batting,.330,Last decade average
-Stolen bases,stolen_bases,37,batting,15th,League rank
+Stolen bases,stolen_bases,37,batting,16th,League rank
 BA w/ RISP,batting_avg_risp,.232,batting,.25,League average
-Strikeouts,strikeouts,433,pitching,18th,League rank
-Walks,walks,162,pitching,24th,League rank
+Strikeouts,strikeouts,433,pitching,21st,League rank
+Walks,walks,162,pitching,25th,League rank
 ERA,era,3.75,pitching,9th,League rank
 K/BB ratio,k_bb_ratio,2.67,pitching,2.42,League average
-HR/9,hr9,1.2,pitching,1.05,League average
+HR/9,hr9,1.2,pitching,1.06,League average
 BABIP,babip,.276,pitching,.300,League norm
-Last updated,update_time,"May 25, 2026, 12:09 PM ET",summary,,
+Last updated,update_time,"May 25, 2026, 7:40 PM ET",summary,,
 Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(May 25)</span> — The Red Sox have compiled a <span class='highlight'>22-30</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>5-6</span> home <span class='highlight'>loss</span>. and the next game is Tuesday at 6:45 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
