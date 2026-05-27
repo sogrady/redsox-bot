@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"443",
         "category":"pitching",
-        "context_value":"20th",
+        "context_value":"19th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"165",
         "category":"pitching",
-        "context_value":"25th",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.81",
         "category":"pitching",
-        "context_value":"10th",
+        "context_value":"11th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 27, 2026, 12:30 PM ET",
+        "value":"May 27, 2026, 7:42 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 27)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>22-31<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>6-7<\/span> home <span class='highlight'>loss<\/span>. and the next game is Wednesday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 27)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>22-31<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>6-7<\/span> home <span class='highlight'>loss<\/span>. and the next game is Thursday at 4:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
