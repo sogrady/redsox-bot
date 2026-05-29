@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"461",
         "category":"pitching",
-        "context_value":"17th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.86",
         "category":"pitching",
-        "context_value":"12th",
+        "context_value":"13th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"May 29, 2026, 9:31 AM ET",
+        "value":"May 29, 2026, 7:44 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 29)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>23-32<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>2-10<\/span> home <span class='highlight'>loss<\/span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Progressive Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(May 29)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>23-32<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>2-10<\/span> home <span class='highlight'>loss<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Progressive Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
