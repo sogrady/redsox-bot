@@ -1,32 +1,32 @@
 [
     {
-        "name":"Garrett Whitlock",
+        "name":"Garrett Whitlock (15-day IL)",
         "era+":126.0,
         "fip":2.76,
         "so_bb":4.17
     },
     {
         "name":"Aroldis Chapman*",
-        "era+":797.0,
+        "era+":796.0,
         "fip":1.82,
         "so_bb":3.29
     },
     {
         "name":"Greg Weissert",
-        "era+":106.0,
-        "fip":4.66,
-        "so_bb":3.0
+        "era+":91.0,
+        "fip":5.3,
+        "so_bb":2.63
     },
     {
         "name":"Jovani Mor\u00e1n*",
-        "era+":124.0,
-        "fip":4.26,
-        "so_bb":2.29
+        "era+":120.0,
+        "fip":4.48,
+        "so_bb":2.43
     },
     {
         "name":"Ryan Watson",
-        "era+":81.0,
-        "fip":4.81,
-        "so_bb":2.0
+        "era+":75.0,
+        "fip":5.09,
+        "so_bb":2.07
     }
 ]
