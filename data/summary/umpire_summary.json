@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.14850036576445,
-        "incorrect_strikes_pct": 8.851499634235552,
-        "total_called_strikes": 1367,
-        "bad_calls_count": 121
+        "correct_strikes_pct": 91.1976911976912,
+        "incorrect_strikes_pct": 8.8023088023088,
+        "total_called_strikes": 1386,
+        "bad_calls_count": 122
     },
     "last_game_summary": {
         "date": "May 29, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 5,
-        "bad_calls_count": 0,
+        "correct_strikes_pct": 95.83333333333334,
+        "incorrect_strikes_pct": 4.166666666666657,
+        "total_called_strikes": 24,
+        "bad_calls_count": 1,
         "home_plate_umpire": "John Tumpane"
     },
     "worst_calls_of_season": [
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.12781954887218,
-        "incorrect_balls_pct": 3.872180451127818,
-        "total_called_balls": 2660,
+        "correct_balls_pct": 96.14809274495138,
+        "incorrect_balls_pct": 3.8519072550486158,
+        "total_called_balls": 2674,
         "bad_calls_count": 103
     },
     "pitching_last_game_summary": {
         "date": "May 29, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 12,
+        "total_called_balls": 26,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
