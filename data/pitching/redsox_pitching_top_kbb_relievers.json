@@ -1,13 +1,19 @@
 [
     {
         "name":"Garrett Whitlock (15-day IL)",
-        "era+":126.0,
+        "era+":127.0,
         "fip":2.76,
         "so_bb":4.17
     },
     {
+        "name":"Justin Slaten",
+        "era+":115.0,
+        "fip":4.06,
+        "so_bb":3.5
+    },
+    {
         "name":"Aroldis Chapman*",
-        "era+":797.0,
+        "era+":800.0,
         "fip":1.82,
         "so_bb":3.29
     },
@@ -22,11 +28,5 @@
         "era+":121.0,
         "fip":4.48,
         "so_bb":2.43
-    },
-    {
-        "name":"Tyler Samaniego*",
-        "era+":138.0,
-        "fip":3.61,
-        "so_bb":2.14
     }
 ]
