@@ -108,6 +108,24 @@
     "slug":"tyron-guerrero"
   },
   {
+    "player_id":"592454",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/592454\/headshot\/silo\/current",
+    "name":"Tommy Kahnle",
+    "player_url":"\/player\/592454",
+    "jersey":"46",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 1\"",
+    "weight":"230",
+    "dob":"08\/07\/1989",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"tommy-kahnle"
+  },
+  {
     "player_id":"663558",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663558\/headshot\/silo\/current",
     "name":"Jovani Morán",
@@ -124,24 +142,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"jovani-moran"
-  },
-  {
-    "player_id":"701719",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/701719\/headshot\/silo\/current",
-    "name":"Tyler Samaniego",
-    "player_url":"\/player\/701719",
-    "jersey":"78",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/L",
-    "height":"6' 4\"",
-    "weight":"205",
-    "dob":"01\/30\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"tyler-samaniego"
   },
   {
     "player_id":"686580",
@@ -576,24 +576,6 @@
     "slug":"tanner-houck"
   },
   {
-    "player_id":"592454",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/592454\/headshot\/silo\/current",
-    "name":"Tommy Kahnle",
-    "player_url":"\/player\/592454",
-    "jersey":"46",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 1\"",
-    "weight":"230",
-    "dob":"08\/07\/1989",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"tommy-kahnle"
-  },
-  {
     "player_id":"677161",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/677161\/headshot\/silo\/current",
     "name":"Zack Kelly",
@@ -646,6 +628,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"eduardo-rivera"
+  },
+  {
+    "player_id":"701719",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/701719\/headshot\/silo\/current",
+    "name":"Tyler Samaniego",
+    "player_url":"\/player\/701719",
+    "jersey":"78",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/L",
+    "height":"6' 4\"",
+    "weight":"205",
+    "dob":"01\/30\/1999",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"tyler-samaniego"
   },
   {
     "player_id":"663776",
@@ -802,7 +802,7 @@
     "height":"6' 1\"",
     "weight":"209",
     "dob":"11\/15\/1992",
-    "status":"IL-10",
+    "status":"IL-60",
     "is_minors":false,
     "is_il":true,
     "is_active_roster":false,
