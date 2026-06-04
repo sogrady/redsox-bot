@@ -7,26 +7,26 @@
     },
     {
         "name":"Aroldis Chapman*",
-        "era+":843.0,
-        "fip":1.7,
+        "era+":845.0,
+        "fip":1.71,
         "so_bb":3.57
     },
     {
         "name":"Justin Slaten",
         "era+":115.0,
-        "fip":4.09,
+        "fip":4.1,
         "so_bb":3.5
     },
     {
         "name":"Greg Weissert",
         "era+":102.0,
-        "fip":4.77,
+        "fip":4.78,
         "so_bb":3.13
     },
     {
         "name":"Jovani Mor\u00e1n*",
-        "era+":126.0,
-        "fip":4.38,
+        "era+":127.0,
+        "fip":4.39,
         "so_bb":2.5
     }
 ]
