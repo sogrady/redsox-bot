@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":11,
+        "value":10.5,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":44,
         "category":"batting",
-        "context_value":"14th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"525",
         "category":"pitching",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 6, 2026, 11:43 AM ET",
+        "value":"June 6, 2026, 7:38 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
