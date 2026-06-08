@@ -7,26 +7,26 @@
     },
     {
         "name":"Justin Slaten",
-        "era+":126.0,
-        "fip":4.01,
-        "so_bb":3.5
+        "era+":67.0,
+        "fip":4.99,
+        "so_bb":3.2
     },
     {
         "name":"Greg Weissert",
-        "era+":102.0,
-        "fip":4.78,
+        "era+":103.0,
+        "fip":4.79,
         "so_bb":3.13
     },
     {
         "name":"Aroldis Chapman*",
-        "era+":890.0,
-        "fip":1.98,
+        "era+":891.0,
+        "fip":1.99,
         "so_bb":2.89
     },
     {
         "name":"Jovani Mor\u00e1n (15-day IL)*",
         "era+":135.0,
-        "fip":4.22,
+        "fip":4.23,
         "so_bb":2.53
     }
 ]
