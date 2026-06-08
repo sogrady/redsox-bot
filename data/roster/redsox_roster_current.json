@@ -126,24 +126,6 @@
     "slug":"tommy-kahnle"
   },
   {
-    "player_id":"686747",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686747\/headshot\/silo\/current",
-    "name":"Joe La Sorsa",
-    "player_url":"\/player\/686747",
-    "jersey":"60",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 5\"",
-    "weight":"224",
-    "dob":"04\/29\/1998",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"joe-la-sorsa"
-  },
-  {
     "player_id":"686580",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686580\/headshot\/silo\/current",
     "name":"Justin Slaten",
@@ -432,6 +414,24 @@
     "slug":"jarren-duran"
   },
   {
+    "player_id":"681987",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681987\/headshot\/silo\/current",
+    "name":"Nate Eaton",
+    "player_url":"\/player\/681987",
+    "jersey":"18",
+    "position_group":"Outfielders",
+    "bat_throw":"R\/R",
+    "height":"5' 11\"",
+    "weight":"200",
+    "dob":"12\/22\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"nate-eaton"
+  },
+  {
     "player_id":"678882",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678882\/headshot\/silo\/current",
     "name":"Ceddanne Rafaela",
@@ -592,6 +592,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"zack-kelly"
+  },
+  {
+    "player_id":"686747",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686747\/headshot\/silo\/current",
+    "name":"Joe La Sorsa",
+    "player_url":"\/player\/686747",
+    "jersey":"60",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 5\"",
+    "weight":"224",
+    "dob":"04\/29\/1998",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"joe-la-sorsa"
   },
   {
     "player_id":"663558",
@@ -844,23 +862,5 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"roman-anthony"
-  },
-  {
-    "player_id":"681987",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681987\/headshot\/silo\/current",
-    "name":"Nate Eaton",
-    "player_url":"\/player\/681987",
-    "jersey":"18",
-    "position_group":"Outfielders",
-    "bat_throw":"R\/R",
-    "height":"5' 11\"",
-    "weight":"200",
-    "dob":"12\/22\/1996",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"nate-eaton"
   }
 ]

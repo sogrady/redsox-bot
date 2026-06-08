@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.03896103896105,
-        "incorrect_strikes_pct": 8.961038961038952,
-        "total_called_strikes": 1540,
-        "bad_calls_count": 138
+        "correct_strikes_pct": 91.04381443298969,
+        "incorrect_strikes_pct": 8.956185567010309,
+        "total_called_strikes": 1552,
+        "bad_calls_count": 139
     },
     "last_game_summary": {
-        "date": "June 7, 2026",
-        "correct_strikes_pct": 85.71428571428571,
-        "incorrect_strikes_pct": 14.285714285714292,
-        "total_called_strikes": 21,
-        "bad_calls_count": 3,
-        "home_plate_umpire": "D.J. Reyburn"
+        "date": "June 8, 2026",
+        "correct_strikes_pct": 91.66666666666666,
+        "incorrect_strikes_pct": 8.333333333333343,
+        "total_called_strikes": 12,
+        "bad_calls_count": 1,
+        "home_plate_umpire": "Alan Porter"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.23584277148568,
-        "incorrect_balls_pct": 3.764157228514321,
-        "total_called_balls": 3002,
+        "correct_balls_pct": 96.26693095474067,
+        "incorrect_balls_pct": 3.7330690452593274,
+        "total_called_balls": 3027,
         "bad_calls_count": 113
     },
     "pitching_last_game_summary": {
-        "date": "June 7, 2026",
+        "date": "June 8, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 45,
+        "total_called_balls": 25,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
