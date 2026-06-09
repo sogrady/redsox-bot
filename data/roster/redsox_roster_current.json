@@ -216,6 +216,24 @@
     "slug":"greg-weissert"
   },
   {
+    "player_id":"676477",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
+    "name":"Garrett Whitlock",
+    "player_url":"\/player\/676477",
+    "jersey":"22",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 5\"",
+    "weight":"222",
+    "dob":"06\/11\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"garrett-whitlock"
+  },
+  {
     "player_id":"681508",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
     "name":"Mickey Gasper",
@@ -358,24 +376,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"andruw-monasterio"
-  },
-  {
-    "player_id":"678011",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678011\/headshot\/silo\/current",
-    "name":"Anthony Seigler",
-    "player_url":"\/player\/678011",
-    "jersey":"48",
-    "position_group":"Infielders",
-    "bat_throw":"L\/S",
-    "height":"5' 9\"",
-    "weight":"192",
-    "dob":"06\/20\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"anthony-seigler"
   },
   {
     "player_id":"677800",
@@ -720,24 +720,6 @@
     "slug":"tyler-uberstine"
   },
   {
-    "player_id":"676477",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
-    "name":"Garrett Whitlock",
-    "player_url":"\/player\/676477",
-    "jersey":"22",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 5\"",
-    "weight":"222",
-    "dob":"06\/11\/1996",
-    "status":"IL-15",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"garrett-whitlock"
-  },
-  {
     "player_id":"692225",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/692225\/headshot\/silo\/current",
     "name":"Kristian Campbell",
@@ -808,6 +790,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"romy-gonzalez"
+  },
+  {
+    "player_id":"678011",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678011\/headshot\/silo\/current",
+    "name":"Anthony Seigler",
+    "player_url":"\/player\/678011",
+    "jersey":"48",
+    "position_group":"Infielders",
+    "bat_throw":"L\/S",
+    "height":"5' 9\"",
+    "weight":"192",
+    "dob":"06\/20\/1999",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"anthony-seigler"
   },
   {
     "player_id":"686765",
