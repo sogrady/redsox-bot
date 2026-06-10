@@ -1,20 +1,20 @@
 [
     {
         "name":"Payton Tolle*",
-        "era+":179.0,
-        "fip":2.66,
-        "so_bb":3.92
+        "era+":151.0,
+        "fip":2.71,
+        "so_bb":3.86
     },
     {
         "name":"Garrett Crochet (60-day IL)*",
         "era+":65.0,
-        "fip":4.31,
+        "fip":4.3,
         "so_bb":3.36
     },
     {
         "name":"Ranger Su\u00e1rez*",
         "era+":128.0,
-        "fip":2.94,
+        "fip":2.93,
         "so_bb":3.32
     },
     {
@@ -26,7 +26,7 @@
     {
         "name":"Connelly Early*",
         "era+":123.0,
-        "fip":4.76,
+        "fip":4.75,
         "so_bb":2.56
     }
 ]
