@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"206",
         "category":"pitching",
-        "context_value":"23rd",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.69,
         "category":"pitching",
-        "context_value":2.45,
+        "context_value":2.46,
         "context_value_label":"League average"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.1",
         "category":"pitching",
-        "context_value":1.11,
+        "context_value":1.12,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 11, 2026, 12:35 PM ET",
+        "value":"June 11, 2026, 7:47 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
