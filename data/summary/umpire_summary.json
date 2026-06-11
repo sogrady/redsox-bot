@@ -1,9 +1,9 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.0,
-        "incorrect_strikes_pct": 10.0,
-        "total_called_strikes": 480,
-        "bad_calls_count": 48
+        "correct_strikes_pct": 91.1875,
+        "incorrect_strikes_pct": 8.8125,
+        "total_called_strikes": 1600,
+        "bad_calls_count": 141
     },
     "last_game_summary": {
         "date": "June 10, 2026",
@@ -15,6 +15,36 @@
     },
     "worst_calls_of_season": [
         {
+            "distance_inches": 3.6276632636,
+            "batter": "Carlos Narv\u00e1ez",
+            "pitcher": "Kyle Finnegan",
+            "pitch_type": "4-Seam Fastball",
+            "velocity_mph": 96.3,
+            "date": "2026-04-19",
+            "date_formatted": "April 19, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=05425754-82e8-349c-9801-5e827617c6ed"
+        },
+        {
+            "distance_inches": 3.5188584432,
+            "batter": "Nick Sogard",
+            "pitcher": "Eric Orze",
+            "pitch_type": "Splitter",
+            "velocity_mph": 83.7,
+            "date": "2026-05-22",
+            "date_formatted": "May 22, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=88fac134-ee94-3116-a2b2-fb8dc8752b1c"
+        },
+        {
+            "distance_inches": 3.2319661084,
+            "batter": "Trevor Story",
+            "pitcher": "Brady Singer",
+            "pitch_type": "Sinker",
+            "velocity_mph": 90.8,
+            "date": "2026-03-28",
+            "date_formatted": "March 28, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=9fdf4f1d-7c4a-3d48-92ee-1f80abaa031e"
+        },
+        {
             "distance_inches": 3.1646478677,
             "batter": "Mickey Gasper",
             "pitcher": "Reynaldo L\u00f3pez",
@@ -23,43 +53,13 @@
             "date": "2026-05-17",
             "date_formatted": "May 17, 2026",
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=47e7b448-d9b1-3f3b-921f-7abfc692492e"
-        },
-        {
-            "distance_inches": 2.7258520571,
-            "batter": "Andruw Monasterio",
-            "pitcher": "AJ Blubaugh",
-            "pitch_type": "Sweeper",
-            "velocity_mph": 81.2,
-            "date": "2026-05-03",
-            "date_formatted": "May 3, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=886d4d59-dd8a-3cd8-a5d5-a98b2e31b367"
-        },
-        {
-            "distance_inches": 2.565699861,
-            "batter": "Ceddanne Rafaela",
-            "pitcher": "Cody Bolton",
-            "pitch_type": "4-Seam Fastball",
-            "velocity_mph": 93.5,
-            "date": "2026-05-03",
-            "date_formatted": "May 3, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=5cdeaf03-222e-381d-9c24-a1990fdd34b4"
-        },
-        {
-            "distance_inches": 2.2479359123,
-            "batter": "Willson Contreras",
-            "pitcher": "Bailey Ober",
-            "pitch_type": "Slider",
-            "velocity_mph": 81.8,
-            "date": "2026-05-24",
-            "date_formatted": "May 24, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=283f99c7-18fc-3781-94ac-e40225db7dea"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 97.34513274336283,
-        "incorrect_balls_pct": 2.654867256637175,
-        "total_called_balls": 1017,
-        "bad_calls_count": 27
+        "correct_balls_pct": 96.32822477650063,
+        "incorrect_balls_pct": 3.671775223499367,
+        "total_called_balls": 3132,
+        "bad_calls_count": 115
     },
     "pitching_last_game_summary": {
         "date": "June 10, 2026",
