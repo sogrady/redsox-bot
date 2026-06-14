@@ -1,27 +1,27 @@
 [
     {
         "name":"Garrett Whitlock",
-        "era+":135.0,
-        "fip":2.72,
-        "so_bb":4.33
+        "era+":142.0,
+        "fip":2.64,
+        "so_bb":4.5
     },
     {
         "name":"Justin Slaten",
-        "era+":57.0,
-        "fip":5.95,
-        "so_bb":3.2
+        "era+":62.0,
+        "fip":5.58,
+        "so_bb":3.4
+    },
+    {
+        "name":"Aroldis Chapman*",
+        "era+":950.0,
+        "fip":1.85,
+        "so_bb":3.11
     },
     {
         "name":"Greg Weissert",
         "era+":107.0,
-        "fip":4.71,
+        "fip":4.7,
         "so_bb":3.0
-    },
-    {
-        "name":"Aroldis Chapman*",
-        "era+":903.0,
-        "fip":1.99,
-        "so_bb":2.89
     },
     {
         "name":"Jovani Mor\u00e1n (15-day IL)*",
