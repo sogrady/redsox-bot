@@ -1,5 +1,12 @@
 [
   {
+    "date":"2026-06-17",
+    "transaction":"Red Sox sent LHP Patrick Sandoval on a rehab assignment to Portland Sea Dogs.",
+    "players":[
+      "Patrick Sandoval"
+    ]
+  },
+  {
     "date":"2026-06-16",
     "transaction":"Red Sox sent 1B Romy Gonzalez on a rehab assignment to Portland Sea Dogs.",
     "players":[
@@ -36,6 +43,13 @@
   },
   {
     "date":"2026-06-08",
+    "transaction":"Red Sox optioned LHP Joe La Sorsa to Worcester Red Sox.",
+    "players":[
+      "Joe La Sorsa"
+    ]
+  },
+  {
+    "date":"2026-06-08",
     "transaction":"Red Sox recalled OF Nate Eaton from Worcester Red Sox.",
     "players":[
       "Nate Eaton"
@@ -49,10 +63,10 @@
     ]
   },
   {
-    "date":"2026-06-08",
-    "transaction":"Red Sox optioned LHP Joe La Sorsa to Worcester Red Sox.",
+    "date":"2026-06-06",
+    "transaction":"Red Sox placed LHP Jovani Morán on the 15-day injured list retroactive to June 5, 2026. Left elbow inflammation.",
     "players":[
-      "Joe La Sorsa"
+      "Jovani Morán"
     ]
   },
   {
@@ -60,13 +74,6 @@
     "transaction":"Red Sox sent RHP Garrett Whitlock on a rehab assignment to Worcester Red Sox.",
     "players":[
       "Garrett Whitlock"
-    ]
-  },
-  {
-    "date":"2026-06-06",
-    "transaction":"Red Sox placed LHP Jovani Morán on the 15-day injured list retroactive to June 5, 2026. Left elbow inflammation.",
-    "players":[
-      "Jovani Morán"
     ]
   },
   {
@@ -92,16 +99,16 @@
   },
   {
     "date":"2026-06-05",
-    "transaction":"Red Sox transferred LHP Garrett Crochet from the 15-day injured list to the 60-day injured list. Left shoulder inflammation.",
+    "transaction":"Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.",
     "players":[
-      "Garrett Crochet"
+      "Patrick Sandoval"
     ]
   },
   {
     "date":"2026-06-05",
-    "transaction":"Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.",
+    "transaction":"Red Sox transferred LHP Garrett Crochet from the 15-day injured list to the 60-day injured list. Left shoulder inflammation.",
     "players":[
-      "Patrick Sandoval"
+      "Garrett Crochet"
     ]
   },
   {
@@ -120,23 +127,16 @@
   },
   {
     "date":"2026-06-04",
-    "transaction":"Pittsburgh Pirates traded LHP Joe La Sorsa to Red Sox.",
-    "players":[
-      "Joe La Sorsa"
-    ]
-  },
-  {
-    "date":"2026-06-04",
     "transaction":"Red Sox selected the contract of RHP Tommy Kahnle from Worcester Red Sox.",
     "players":[
       "Tommy Kahnle"
     ]
   },
   {
-    "date":"2026-06-03",
-    "transaction":"Red Sox placed 3B Nick Sogard on the 10-day injured list retroactive to May 31, 2026. Right oblique strain.",
+    "date":"2026-06-04",
+    "transaction":"Pittsburgh Pirates traded LHP Joe La Sorsa to Red Sox.",
     "players":[
-      "Nick Sogard"
+      "Joe La Sorsa"
     ]
   },
   {
@@ -144,6 +144,13 @@
     "transaction":"Red Sox signed free agent LHP Victor Aracena to a minor league contract.",
     "players":[
       "Victor Aracena"
+    ]
+  },
+  {
+    "date":"2026-06-03",
+    "transaction":"Red Sox placed 3B Nick Sogard on the 10-day injured list retroactive to May 31, 2026. Right oblique strain.",
+    "players":[
+      "Nick Sogard"
     ]
   },
   {
@@ -183,16 +190,16 @@
   },
   {
     "date":"2026-05-22",
-    "transaction":"Red Sox selected the contract of RHP Tayron Guerrero from Worcester Red Sox.",
+    "transaction":"Red Sox optioned RHP Zack Kelly to Worcester Red Sox.",
     "players":[
-      "Tayron Guerrero"
+      "Zack Kelly"
     ]
   },
   {
     "date":"2026-05-22",
-    "transaction":"Red Sox optioned RHP Zack Kelly to Worcester Red Sox.",
+    "transaction":"Red Sox selected the contract of RHP Tayron Guerrero from Worcester Red Sox.",
     "players":[
-      "Zack Kelly"
+      "Tayron Guerrero"
     ]
   },
   {
@@ -225,6 +232,13 @@
   },
   {
     "date":"2026-05-09",
+    "transaction":"Red Sox activated RHP Justin Slaten from the 15-day injured list.",
+    "players":[
+      "Justin Slaten"
+    ]
+  },
+  {
+    "date":"2026-05-09",
     "transaction":"Red Sox signed free agent RHP Leonel Figuera to a minor league contract.",
     "players":[
       "Leonel Figuera"
@@ -235,13 +249,6 @@
     "transaction":"Red Sox signed free agent RHP Juan Verdus to a minor league contract.",
     "players":[
       "Juan Verdus"
-    ]
-  },
-  {
-    "date":"2026-05-09",
-    "transaction":"Red Sox activated RHP Justin Slaten from the 15-day injured list.",
-    "players":[
-      "Justin Slaten"
     ]
   },
   {
@@ -267,13 +274,6 @@
   },
   {
     "date":"2026-05-07",
-    "transaction":"Red Sox recalled C Mickey Gasper from Worcester Red Sox.",
-    "players":[
-      "Mickey Gasper"
-    ]
-  },
-  {
-    "date":"2026-05-07",
     "transaction":"Red Sox placed LF Roman Anthony on the 10-day injured list retroactive to May 5, 2026. Right wrist sprain.",
     "players":[
       "Roman Anthony"
@@ -284,6 +284,13 @@
     "transaction":"Red Sox signed free agent LHP Raymond Burgos to a minor league contract.",
     "players":[
       "Raymond Burgos"
+    ]
+  },
+  {
+    "date":"2026-05-07",
+    "transaction":"Red Sox recalled C Mickey Gasper from Worcester Red Sox.",
+    "players":[
+      "Mickey Gasper"
     ]
   },
   {
@@ -309,16 +316,16 @@
   },
   {
     "date":"2026-05-04",
-    "transaction":"Red Sox placed LHP Danny Coulombe on the 15-day injured list retroactive to May 2, 2026. Cervical spasms.",
+    "transaction":"Red Sox placed LHP Patrick Sandoval on the 60-day injured list. Left UCL surgery recovery.",
     "players":[
-      "Danny Coulombe"
+      "Patrick Sandoval"
     ]
   },
   {
     "date":"2026-05-04",
-    "transaction":"Red Sox placed LHP Patrick Sandoval on the 60-day injured list. Left UCL surgery recovery.",
+    "transaction":"Red Sox placed LHP Danny Coulombe on the 15-day injured list retroactive to May 2, 2026. Cervical spasms.",
     "players":[
-      "Patrick Sandoval"
+      "Danny Coulombe"
     ]
   },
   {
@@ -351,23 +358,16 @@
   },
   {
     "date":"2026-04-29",
-    "transaction":"Red Sox recalled OF Nate Eaton from Worcester Red Sox.",
-    "players":[
-      "Nate Eaton"
-    ]
-  },
-  {
-    "date":"2026-04-29",
     "transaction":"Red Sox placed LHP Garrett Crochet on the 15-day injured list retroactive to April 26, 2026. Left shoulder inflammation.",
     "players":[
       "Garrett Crochet"
     ]
   },
   {
-    "date":"2026-04-23",
-    "transaction":"Red Sox optioned LHP Eduardo Rivera to Worcester Red Sox.",
+    "date":"2026-04-29",
+    "transaction":"Red Sox recalled OF Nate Eaton from Worcester Red Sox.",
     "players":[
-      "Eduardo Rivera"
+      "Nate Eaton"
     ]
   },
   {
@@ -375,6 +375,13 @@
     "transaction":"Red Sox recalled LHP Payton Tolle from Worcester Red Sox.",
     "players":[
       "Payton Tolle"
+    ]
+  },
+  {
+    "date":"2026-04-23",
+    "transaction":"Red Sox optioned LHP Eduardo Rivera to Worcester Red Sox.",
+    "players":[
+      "Eduardo Rivera"
     ]
   },
   {
@@ -414,23 +421,23 @@
   },
   {
     "date":"2026-04-18",
-    "transaction":"Red Sox signed free agent RHP Pedro Meza to a minor league contract.",
-    "players":[
-      "Pedro Meza"
-    ]
-  },
-  {
-    "date":"2026-04-18",
     "transaction":"Red Sox signed free agent LHP Rinangel Mayora to a minor league contract.",
     "players":[
       "Rinangel Mayora"
     ]
   },
   {
-    "date":"2026-04-16",
-    "transaction":"1B Willson Contreras changed number to 40.",
+    "date":"2026-04-18",
+    "transaction":"Red Sox signed free agent RHP Pedro Meza to a minor league contract.",
     "players":[
-      "Willson Contreras"
+      "Pedro Meza"
+    ]
+  },
+  {
+    "date":"2026-04-16",
+    "transaction":"LHP Danny Coulombe changed number to 67.",
+    "players":[
+      "Danny Coulombe"
     ]
   },
   {
@@ -438,6 +445,13 @@
     "transaction":"LF Masataka Yoshida changed number to 7.",
     "players":[
       "Masataka Yoshida"
+    ]
+  },
+  {
+    "date":"2026-04-16",
+    "transaction":"RHP Sonny Gray changed number to 54.",
+    "players":[
+      "Sonny Gray"
     ]
   },
   {
@@ -456,16 +470,16 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"LHP Danny Coulombe changed number to 67.",
+    "transaction":"RF Wilyer Abreu changed number to 52.",
     "players":[
-      "Danny Coulombe"
+      "Wilyer Abreu"
     ]
   },
   {
     "date":"2026-04-16",
-    "transaction":"RF Wilyer Abreu changed number to 52.",
+    "transaction":"1B Willson Contreras changed number to 40.",
     "players":[
-      "Wilyer Abreu"
+      "Willson Contreras"
     ]
   },
   {
@@ -491,9 +505,9 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"LHP Connelly Early changed number to 71.",
+    "transaction":"RHP Garrett Whitlock changed number to 22.",
     "players":[
-      "Connelly Early"
+      "Garrett Whitlock"
     ]
   },
   {
@@ -505,51 +519,9 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"3B Caleb Durbin changed number to 5.",
-    "players":[
-      "Caleb Durbin"
-    ]
-  },
-  {
-    "date":"2026-04-16",
     "transaction":"C Connor Wong changed number to 12.",
     "players":[
       "Connor Wong"
-    ]
-  },
-  {
-    "date":"2026-04-16",
-    "transaction":"3B Marcelo Mayer changed number to 11.",
-    "players":[
-      "Marcelo Mayer"
-    ]
-  },
-  {
-    "date":"2026-04-16",
-    "transaction":"LHP Ranger Suarez changed number to 55.",
-    "players":[
-      "Ranger Suarez"
-    ]
-  },
-  {
-    "date":"2026-04-16",
-    "transaction":"RHP Zack Kelly changed number to 76.",
-    "players":[
-      "Zack Kelly"
-    ]
-  },
-  {
-    "date":"2026-04-16",
-    "transaction":"RHP Sonny Gray changed number to 54.",
-    "players":[
-      "Sonny Gray"
-    ]
-  },
-  {
-    "date":"2026-04-16",
-    "transaction":"RHP Garrett Whitlock changed number to 22.",
-    "players":[
-      "Garrett Whitlock"
     ]
   },
   {
@@ -561,9 +533,9 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"RHP Greg Weissert changed number to 57.",
+    "transaction":"SS Andruw Monasterio changed number to 32.",
     "players":[
-      "Greg Weissert"
+      "Andruw Monasterio"
     ]
   },
   {
@@ -575,16 +547,23 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"C Carlos Narváez changed number to 75.",
+    "transaction":"LHP Connelly Early changed number to 71.",
     "players":[
-      "Carlos Narváez"
+      "Connelly Early"
     ]
   },
   {
     "date":"2026-04-16",
-    "transaction":"CF Ceddanne Rafaela changed number to 3.",
+    "transaction":"LHP Ranger Suarez changed number to 55.",
     "players":[
-      "Ceddanne Rafaela"
+      "Ranger Suarez"
+    ]
+  },
+  {
+    "date":"2026-04-16",
+    "transaction":"C Carlos Narváez changed number to 75.",
+    "players":[
+      "Carlos Narváez"
     ]
   },
   {
@@ -596,9 +575,9 @@
   },
   {
     "date":"2026-04-16",
-    "transaction":"SS Andruw Monasterio changed number to 32.",
+    "transaction":"CF Ceddanne Rafaela changed number to 3.",
     "players":[
-      "Andruw Monasterio"
+      "Ceddanne Rafaela"
     ]
   },
   {
@@ -609,45 +588,31 @@
     ]
   },
   {
-    "date":"2026-04-15",
-    "transaction":"C Connor Wong changed number to 42.",
+    "date":"2026-04-16",
+    "transaction":"RHP Zack Kelly changed number to 76.",
     "players":[
-      "Connor Wong"
+      "Zack Kelly"
     ]
   },
   {
-    "date":"2026-04-15",
-    "transaction":"RHP Garrett Whitlock changed number to 42.",
+    "date":"2026-04-16",
+    "transaction":"3B Marcelo Mayer changed number to 11.",
     "players":[
-      "Garrett Whitlock"
+      "Marcelo Mayer"
     ]
   },
   {
-    "date":"2026-04-15",
-    "transaction":"CF Ceddanne Rafaela changed number to 42.",
+    "date":"2026-04-16",
+    "transaction":"RHP Greg Weissert changed number to 57.",
     "players":[
-      "Ceddanne Rafaela"
+      "Greg Weissert"
     ]
   },
   {
-    "date":"2026-04-15",
-    "transaction":"C Carlos Narváez changed number to 42.",
+    "date":"2026-04-16",
+    "transaction":"3B Caleb Durbin changed number to 5.",
     "players":[
-      "Carlos Narváez"
-    ]
-  },
-  {
-    "date":"2026-04-15",
-    "transaction":"RHP Ryan Watson changed number to 42.",
-    "players":[
-      "Ryan Watson"
-    ]
-  },
-  {
-    "date":"2026-04-15",
-    "transaction":"LHP Connelly Early changed number to 42.",
-    "players":[
-      "Connelly Early"
+      "Caleb Durbin"
     ]
   },
   {
@@ -659,44 +624,79 @@
   },
   {
     "date":"2026-04-15",
-    "transaction":"LHP Garrett Crochet changed number to 42.",
+    "transaction":"LF Jarren Duran changed number to 42.",
     "players":[
-      "Garrett Crochet"
+      "Jarren Duran"
     ]
   },
   {
     "date":"2026-04-15",
-    "transaction":"SS Andruw Monasterio changed number to 42.",
+    "transaction":"RF Roman Anthony changed number to 42.",
     "players":[
-      "Andruw Monasterio"
+      "Roman Anthony"
     ]
   },
   {
     "date":"2026-04-15",
-    "transaction":"LF Masataka Yoshida changed number to 42.",
+    "transaction":"3B Caleb Durbin changed number to 42.",
     "players":[
-      "Masataka Yoshida"
+      "Caleb Durbin"
     ]
   },
   {
     "date":"2026-04-15",
-    "transaction":"SS Isiah Kiner-Falefa changed number to 42.",
+    "transaction":"RHP Greg Weissert changed number to 42.",
     "players":[
-      "Isiah Kiner-Falefa"
+      "Greg Weissert"
     ]
   },
   {
     "date":"2026-04-15",
-    "transaction":"RF Wilyer Abreu changed number to 42.",
+    "transaction":"LHP Aroldis Chapman changed number to 42.",
     "players":[
-      "Wilyer Abreu"
+      "Aroldis Chapman"
     ]
   },
   {
     "date":"2026-04-15",
-    "transaction":"LHP Danny Coulombe changed number to 42.",
+    "transaction":"RHP Sonny Gray changed number to 42.",
     "players":[
-      "Danny Coulombe"
+      "Sonny Gray"
+    ]
+  },
+  {
+    "date":"2026-04-15",
+    "transaction":"LHP Jovani Morán changed number to 42.",
+    "players":[
+      "Jovani Morán"
+    ]
+  },
+  {
+    "date":"2026-04-15",
+    "transaction":"RHP Jack Anderson changed number to 42.",
+    "players":[
+      "Jack Anderson"
+    ]
+  },
+  {
+    "date":"2026-04-15",
+    "transaction":"SS Trevor Story changed number to 42.",
+    "players":[
+      "Trevor Story"
+    ]
+  },
+  {
+    "date":"2026-04-15",
+    "transaction":"1B Willson Contreras changed number to 42.",
+    "players":[
+      "Willson Contreras"
+    ]
+  },
+  {
+    "date":"2026-04-15",
+    "transaction":"RHP Brayan Bello changed number to 42.",
+    "players":[
+      "Brayan Bello"
     ]
   }
 ]
