@@ -1,5 +1,11 @@
 [
     {
+        "name":"Tyron Guerrero",
+        "era+":97.0,
+        "fip":3.1,
+        "so_bb":16.0
+    },
+    {
         "name":"Garrett Whitlock",
         "era+":143.0,
         "fip":2.63,
@@ -12,21 +18,15 @@
         "so_bb":3.4
     },
     {
+        "name":"Greg Weissert",
+        "era+":111.0,
+        "fip":4.37,
+        "so_bb":3.22
+    },
+    {
         "name":"Aroldis Chapman*",
-        "era+":954.0,
+        "era+":958.0,
         "fip":1.84,
         "so_bb":3.11
-    },
-    {
-        "name":"Greg Weissert",
-        "era+":117.0,
-        "fip":4.49,
-        "so_bb":3.11
-    },
-    {
-        "name":"Jovani Mor\u00e1n (15-day IL)*",
-        "era+":138.0,
-        "fip":4.22,
-        "so_bb":2.53
     }
 ]
