@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":51,
         "category":"batting",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 19, 2026, 12:13 PM ET",
+        "value":"June 19, 2026, 7:39 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
