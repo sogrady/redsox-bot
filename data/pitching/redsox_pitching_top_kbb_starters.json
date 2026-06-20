@@ -8,25 +8,25 @@
     {
         "name":"Garrett Crochet (60-day IL)*",
         "era+":65.0,
-        "fip":4.29,
+        "fip":4.3,
         "so_bb":3.36
-    },
-    {
-        "name":"Ranger Su\u00e1rez*",
-        "era+":127.0,
-        "fip":2.82,
-        "so_bb":3.33
     },
     {
         "name":"Sonny Gray",
         "era+":131.0,
-        "fip":3.87,
+        "fip":3.88,
         "so_bb":3.24
+    },
+    {
+        "name":"Ranger Su\u00e1rez*",
+        "era+":139.0,
+        "fip":2.84,
+        "so_bb":3.13
     },
     {
         "name":"Connelly Early*",
         "era+":107.0,
-        "fip":4.98,
+        "fip":4.99,
         "so_bb":2.48
     }
 ]
