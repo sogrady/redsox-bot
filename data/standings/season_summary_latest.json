@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":15.5,
+        "value":15,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":288,
         "category":"standings",
-        "context_value":"29th",
+        "context_value":"30th",
         "context_value_label":"League rank"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"612",
         "category":"pitching",
-        "context_value":"17th",
+        "context_value":"18th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 20, 2026, 11:49 AM ET",
+        "value":"June 20, 2026, 7:42 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
