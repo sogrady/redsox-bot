@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.72696050372066,
-        "incorrect_strikes_pct": 9.273039496279338,
-        "total_called_strikes": 1747,
-        "bad_calls_count": 162
+        "correct_strikes_pct": 90.7701019252548,
+        "incorrect_strikes_pct": 9.229898074745194,
+        "total_called_strikes": 1766,
+        "bad_calls_count": 163
     },
     "last_game_summary": {
-        "date": "June 18, 2026",
-        "correct_strikes_pct": 72.72727272727273,
-        "incorrect_strikes_pct": 27.272727272727266,
-        "total_called_strikes": 22,
-        "bad_calls_count": 6,
-        "home_plate_umpire": "Manny Gonzalez"
+        "date": "June 19, 2026",
+        "correct_strikes_pct": 94.73684210526315,
+        "incorrect_strikes_pct": 5.26315789473685,
+        "total_called_strikes": 19,
+        "bad_calls_count": 1,
+        "home_plate_umpire": "Steven Jaschinski"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.38946433856171,
-        "incorrect_balls_pct": 3.6105356614382913,
-        "total_called_balls": 3379,
+        "correct_balls_pct": 96.44211140274133,
+        "incorrect_balls_pct": 3.5578885972586676,
+        "total_called_balls": 3429,
         "bad_calls_count": 122
     },
     "pitching_last_game_summary": {
-        "date": "June 18, 2026",
+        "date": "June 19, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 31,
+        "total_called_balls": 50,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
