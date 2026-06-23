@@ -4,13 +4,13 @@
         "stat":"wins",
         "value":31,
         "category":"standings",
-        "context_value":38,
+        "context_value":39,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Losses",
         "stat":"losses",
-        "value":44,
+        "value":45,
         "category":"standings",
         "context_value":37,
         "context_value_label":"This point last season"
@@ -18,9 +18,9 @@
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"31-44",
+        "value":"31-45",
         "category":"standings",
-        "context_value":"38-37",
+        "context_value":"39-37",
         "context_value_label":"This point last season"
     },
     {
@@ -42,7 +42,7 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,000",
+        "value":"34,062",
         "category":"standings",
         "context_value":17,
         "context_value_label":"Home games this season"
@@ -50,7 +50,7 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":294,
+        "value":296,
         "category":"standings",
         "context_value":"30th",
         "context_value_label":"League rank"
@@ -58,23 +58,23 @@
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":301,
+        "value":304,
         "category":"standings",
-        "context_value":339,
+        "context_value":340,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":-7,
+        "value":-8,
         "category":"standings",
-        "context_value":16,
+        "context_value":18,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".243",
+        "value":".242",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -90,7 +90,7 @@
     {
         "stat_label":"Home runs\/game",
         "stat":"home_runs_game",
-        "value":0.85,
+        "value":0.84,
         "category":"batting",
         "context_value":1.22,
         "context_value_label":"Last decade average"
@@ -122,7 +122,7 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"626",
+        "value":"635",
         "category":"pitching",
         "context_value":"18th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":2.78,
+        "value":2.82,
         "category":"pitching",
         "context_value":2.48,
         "context_value_label":"League average"
@@ -162,7 +162,7 @@
     {
         "stat_label":"BABIP",
         "stat":"babip",
-        "value":".282",
+        "value":".285",
         "category":"pitching",
         "context_value":".300",
         "context_value_label":"League norm"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 23, 2026, 5:29 AM ET",
+        "value":"June 23, 2026, 9:20 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
