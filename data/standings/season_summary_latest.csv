@@ -3,23 +3,23 @@ Wins,wins,32,standings,40,This point last season
 Losses,losses,45,standings,37,This point last season
 Record,record,32-45,standings,40-37,This point last season
 Win percentage,win_pct,42%,standings,52%,This point last season
-Games up/back,games_up_back,14.5,standings,5th,Division rank
+Games up/back,games_up_back,15,standings,5th,Division rank
 Avg. home attendance,mean_attendance,"34,364",standings,21,Home games this season
-Runs,runs,301,standings,30th,League rank
+Runs,runs,301,standings,29th,League rank
 Runs against,runs_against,306,standings,345,This point last season
 Run differential,run_differential,-5,standings,20,This point last season
 Batting average,batting_average,.243,batting,.263,Last decade average
 Home runs,home_runs,65,batting,29th,League rank
 Home runs/game,home_runs_game,0.84,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.312,batting,.330,Last decade average
-Stolen bases,stolen_bases,58,batting,13th,League rank
+Stolen bases,stolen_bases,58,batting,14th,League rank
 BA w/ RISP,batting_avg_risp,.241,batting,.249,League average
-Strikeouts,strikeouts,647,pitching,18th,League rank
+Strikeouts,strikeouts,647,pitching,16th,League rank
 Walks,walks,228,pitching,26th,League rank
 ERA,era,3.82,pitching,7th,League rank
 K/BB ratio,k_bb_ratio,2.84,pitching,2.49,League average
 HR/9,hr9,1.1,pitching,1.15,League average
 BABIP,babip,.285,pitching,.300,League norm
-Last updated,update_time,"June 24, 2026, 9:07 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(June 24)</span> — The Red Sox have compiled a <span class='highlight'>32-45</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>5-2</span> away <span class='highlight'>win</span>. and the next game is Wednesday at 3:10 p.m. ET at <span class='highlight'>Coors Field</span>.",summary,,
-Last game result,last_game_result,win,summary,,
+Last updated,update_time,"June 24, 2026, 7:41 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(June 24)</span> — The Red Sox have compiled a <span class='highlight'>32-46</span> record in the 2026 regular season, a <span class='highlight'>41%</span> winning percentage.  The last game was a <span class='highlight'>6-8</span> away <span class='highlight'>loss</span>. and the next game is Thursday at 7:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+Last game result,last_game_result,loss,summary,,

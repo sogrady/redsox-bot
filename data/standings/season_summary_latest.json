@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":14.5,
+        "value":15,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":301,
         "category":"standings",
-        "context_value":"30th",
+        "context_value":"29th",
         "context_value_label":"League rank"
     },
     {
@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":58,
         "category":"batting",
-        "context_value":"13th",
+        "context_value":"14th",
         "context_value_label":"League rank"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"647",
         "category":"pitching",
-        "context_value":"18th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 24, 2026, 9:07 AM ET",
+        "value":"June 24, 2026, 7:41 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 24)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>32-45<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>5-2<\/span> away <span class='highlight'>win<\/span>. and the next game is Wednesday at 3:10 p.m. ET at <span class='highlight'>Coors Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 24)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>32-46<\/span> record in the 2026 regular season, a <span class='highlight'>41%<\/span> winning percentage.  The last game was a <span class='highlight'>6-8<\/span> away <span class='highlight'>loss<\/span>. and the next game is Thursday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"win",
+        "value":"loss",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
