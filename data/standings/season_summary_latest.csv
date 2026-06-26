@@ -17,9 +17,9 @@ BA w/ RISP,batting_avg_risp,.238,batting,.249,League average
 Strikeouts,strikeouts,668,pitching,16th,League rank
 Walks,walks,232,pitching,26th,League rank
 ERA,era,3.80,pitching,8th,League rank
-K/BB ratio,k_bb_ratio,2.88,pitching,2.49,League average
+K/BB ratio,k_bb_ratio,2.88,pitching,2.5,League average
 HR/9,hr9,1.1,pitching,1.16,League average
 BABIP,babip,.288,pitching,.300,League norm
-Last updated,update_time,"June 26, 2026, 11:59 AM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(June 26)</span> — The Red Sox have compiled a <span class='highlight'>33-46</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>6-3</span> home <span class='highlight'>win</span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+Last updated,update_time,"June 26, 2026, 7:42 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(June 26)</span> — The Red Sox have compiled a <span class='highlight'>33-46</span> record in the 2026 regular season, a <span class='highlight'>42%</span> winning percentage.  The last game was a <span class='highlight'>6-3</span> home <span class='highlight'>win</span>. and the next game is Saturday at 1:10 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,win,summary,,

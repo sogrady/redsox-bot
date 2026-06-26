@@ -288,6 +288,24 @@
     "slug":"connor-wong"
   },
   {
+    "player_id":"691907",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691907\/headshot\/silo\/current",
+    "name":"Tsung-Che Cheng",
+    "player_url":"\/player\/691907",
+    "jersey":"39",
+    "position_group":"Infielders",
+    "bat_throw":"L\/R",
+    "height":"5' 8\"",
+    "weight":"180",
+    "dob":"07\/26\/2001",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"tsung-che-cheng"
+  },
+  {
     "player_id":"575929",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
     "name":"Willson Contreras",
@@ -322,24 +340,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"caleb-durbin"
-  },
-  {
-    "player_id":"691785",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691785\/headshot\/silo\/current",
-    "name":"Marcelo Mayer",
-    "player_url":"\/player\/691785",
-    "jersey":"11",
-    "position_group":"Infielders",
-    "bat_throw":"L\/R",
-    "height":"6' 3\"",
-    "weight":"188",
-    "dob":"12\/12\/2002",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"marcelo-mayer"
   },
   {
     "player_id":"655316",
@@ -756,24 +756,6 @@
     "slug":"triston-casas"
   },
   {
-    "player_id":"691907",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691907\/headshot\/silo\/current",
-    "name":"Tsung-Che Cheng",
-    "player_url":"\/player\/691907",
-    "jersey":"39",
-    "position_group":"Infielders",
-    "bat_throw":"L\/R",
-    "height":"5' 8\"",
-    "weight":"180",
-    "dob":"07\/26\/2001",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"tsung-che-cheng"
-  },
-  {
     "player_id":"663853",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
     "name":"Romy Gonzalez",
@@ -808,6 +790,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"isiah-kiner-falefa"
+  },
+  {
+    "player_id":"691785",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691785\/headshot\/silo\/current",
+    "name":"Marcelo Mayer",
+    "player_url":"\/player\/691785",
+    "jersey":"11",
+    "position_group":"Infielders",
+    "bat_throw":"L\/R",
+    "height":"6' 3\"",
+    "weight":"188",
+    "dob":"12\/12\/2002",
+    "status":"IL-10",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"marcelo-mayer"
   },
   {
     "player_id":"686765",
