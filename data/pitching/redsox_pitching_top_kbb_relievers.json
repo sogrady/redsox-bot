@@ -7,14 +7,14 @@
     },
     {
         "name":"Garrett Whitlock",
-        "era+":142.0,
-        "fip":3.06,
-        "so_bb":4.83
+        "era+":148.0,
+        "fip":2.99,
+        "so_bb":5.0
     },
     {
         "name":"Jake Bennett*",
-        "era+":111.0,
-        "fip":2.61,
+        "era+":112.0,
+        "fip":2.62,
         "so_bb":4.4
     },
     {
@@ -25,8 +25,8 @@
     },
     {
         "name":"Greg Weissert",
-        "era+":115.0,
-        "fip":4.27,
-        "so_bb":3.33
+        "era+":108.0,
+        "fip":4.34,
+        "so_bb":3.0
     }
 ]
