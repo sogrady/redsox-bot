@@ -2,7 +2,7 @@
     {
         "stat_label":"Wins",
         "stat":"wins",
-        "value":32,
+        "value":33,
         "category":"standings",
         "context_value":40,
         "context_value_label":"This point last season"
@@ -12,21 +12,21 @@
         "stat":"losses",
         "value":46,
         "category":"standings",
-        "context_value":38,
+        "context_value":39,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"32-46",
+        "value":"33-46",
         "category":"standings",
-        "context_value":"40-38",
+        "context_value":"40-39",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"41%",
+        "value":"42%",
         "category":"standings",
         "context_value":"51%",
         "context_value_label":"This point last season"
@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":15.5,
+        "value":14.5,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -42,33 +42,33 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,022",
+        "value":"34,194",
         "category":"standings",
-        "context_value":21,
+        "context_value":23,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":307,
+        "value":313,
         "category":"standings",
-        "context_value":"30th",
+        "context_value":"29th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":314,
+        "value":317,
         "category":"standings",
-        "context_value":348,
+        "context_value":357,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":-7,
+        "value":-4,
         "category":"standings",
-        "context_value":19,
+        "context_value":15,
         "context_value_label":"This point last season"
     },
     {
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":67,
+        "value":68,
         "category":"batting",
         "context_value":"29th",
         "context_value_label":"League rank"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".312",
+        "value":".313",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":58,
+        "value":59,
         "category":"batting",
         "context_value":"12th",
         "context_value_label":"League rank"
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".241",
+        "value":".238",
         "category":"batting",
         "context_value":".249",
         "context_value_label":"League average"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"658",
+        "value":"668",
         "category":"pitching",
-        "context_value":"17th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"229",
+        "value":"232",
         "category":"pitching",
         "context_value":"26th",
         "context_value_label":"League rank"
@@ -138,7 +138,7 @@
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"3.81",
+        "value":"3.80",
         "category":"pitching",
         "context_value":"8th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":2.87,
+        "value":2.88,
         "category":"pitching",
         "context_value":2.49,
         "context_value_label":"League average"
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.1",
         "category":"pitching",
-        "context_value":1.15,
+        "context_value":1.16,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 25, 2026, 7:44 PM ET",
+        "value":"June 26, 2026, 5:26 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 25)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>32-46<\/span> record in the 2026 regular season, a <span class='highlight'>41%<\/span> winning percentage.  The last game was a <span class='highlight'>6-8<\/span> away <span class='highlight'>loss<\/span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 26)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>33-46<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>6-3<\/span> home <span class='highlight'>win<\/span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"loss",
+        "value":"win",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
