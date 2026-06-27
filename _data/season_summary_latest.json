@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":13.5,
+        "value":12.5,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":319,
         "category":"standings",
-        "context_value":"29th",
+        "context_value":"28th",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"234",
         "category":"pitching",
-        "context_value":"27th",
+        "context_value":"26th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.77",
         "category":"pitching",
-        "context_value":"7th",
+        "context_value":"6th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"June 27, 2026, 11:42 AM ET",
+        "value":"June 27, 2026, 7:37 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 27)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>34-46<\/span> record in the 2026 regular season, a <span class='highlight'>42%<\/span> winning percentage.  The last game was a <span class='highlight'>6-1<\/span> home <span class='highlight'>win<\/span>. and the next game is Saturday at 1:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(June 27)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>35-46<\/span> record in the 2026 regular season, a <span class='highlight'>43%<\/span> winning percentage.  The last game was a <span class='highlight'>4-1<\/span> home <span class='highlight'>win<\/span>. and the next game is Sunday at 7:20 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
