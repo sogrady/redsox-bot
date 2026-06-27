@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.92827004219409,
-        "incorrect_strikes_pct": 9.071729957805914,
-        "total_called_strikes": 1896,
-        "bad_calls_count": 172
+        "correct_strikes_pct": 90.88050314465409,
+        "incorrect_strikes_pct": 9.119496855345915,
+        "total_called_strikes": 1908,
+        "bad_calls_count": 174
     },
     "last_game_summary": {
         "date": "June 26, 2026",
         "correct_strikes_pct": 83.33333333333334,
         "incorrect_strikes_pct": 16.666666666666657,
-        "total_called_strikes": 6,
-        "bad_calls_count": 1,
+        "total_called_strikes": 18,
+        "bad_calls_count": 3,
         "home_plate_umpire": "Tyler Jones"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.2649945474373,
-        "incorrect_balls_pct": 3.735005452562703,
-        "total_called_balls": 3668,
-        "bad_calls_count": 137
+        "correct_balls_pct": 96.27027027027027,
+        "incorrect_balls_pct": 3.7297297297297263,
+        "total_called_balls": 3700,
+        "bad_calls_count": 138
     },
     "pitching_last_game_summary": {
         "date": "June 26, 2026",
-        "correct_balls_pct": 83.33333333333334,
-        "incorrect_balls_pct": 16.666666666666657,
-        "total_called_balls": 6,
-        "bad_calls_count": 1
+        "correct_balls_pct": 94.73684210526315,
+        "incorrect_balls_pct": 5.26315789473685,
+        "total_called_balls": 38,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
