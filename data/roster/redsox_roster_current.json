@@ -234,24 +234,6 @@
     "slug":"garrett-whitlock"
   },
   {
-    "player_id":"681508",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
-    "name":"Mickey Gasper",
-    "player_url":"\/player\/681508",
-    "jersey":"30",
-    "position_group":"Catchers",
-    "bat_throw":"S\/R",
-    "height":"5' 9\"",
-    "weight":"205",
-    "dob":"10\/11\/1995",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"mickey-gasper"
-  },
-  {
     "player_id":"665966",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/665966\/headshot\/silo\/current",
     "name":"Carlos Narváez",
@@ -340,6 +322,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"caleb-durbin"
+  },
+  {
+    "player_id":"663853",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
+    "name":"Romy Gonzalez",
+    "player_url":"\/player\/663853",
+    "jersey":"23",
+    "position_group":"Infielders",
+    "bat_throw":"R\/R",
+    "height":"6' 0\"",
+    "weight":"215",
+    "dob":"09\/06\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"romy-gonzalez"
   },
   {
     "player_id":"655316",
@@ -720,6 +720,24 @@
     "slug":"tyler-uberstine"
   },
   {
+    "player_id":"681508",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
+    "name":"Mickey Gasper",
+    "player_url":"\/player\/681508",
+    "jersey":"30",
+    "position_group":"Catchers",
+    "bat_throw":"S\/R",
+    "height":"5' 9\"",
+    "weight":"205",
+    "dob":"10\/11\/1995",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"mickey-gasper"
+  },
+  {
     "player_id":"692225",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/692225\/headshot\/silo\/current",
     "name":"Kristian Campbell",
@@ -754,24 +772,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"triston-casas"
-  },
-  {
-    "player_id":"663853",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
-    "name":"Romy Gonzalez",
-    "player_url":"\/player\/663853",
-    "jersey":"23",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"215",
-    "dob":"09\/06\/1996",
-    "status":"IL-60",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"romy-gonzalez"
   },
   {
     "player_id":"643396",
@@ -856,7 +856,7 @@
     "height":"6' 3\"",
     "weight":"200",
     "dob":"05\/13\/2004",
-    "status":"IL-10",
+    "status":"IL-60",
     "is_minors":false,
     "is_il":true,
     "is_active_roster":false,
