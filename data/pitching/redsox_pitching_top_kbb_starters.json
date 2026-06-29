@@ -1,32 +1,32 @@
 [
     {
+        "name":"Sonny Gray",
+        "era+":150.0,
+        "fip":3.56,
+        "so_bb":3.57
+    },
+    {
         "name":"Jake Bennett*",
-        "era+":125.0,
-        "fip":3.11,
+        "era+":124.0,
+        "fip":3.1,
         "so_bb":3.57
     },
     {
         "name":"Payton Tolle*",
         "era+":146.0,
-        "fip":3.19,
+        "fip":3.18,
         "so_bb":3.45
     },
     {
         "name":"Ranger Su\u00e1rez*",
         "era+":143.0,
-        "fip":2.68,
+        "fip":2.67,
         "so_bb":3.36
-    },
-    {
-        "name":"Sonny Gray",
-        "era+":138.0,
-        "fip":3.81,
-        "so_bb":3.3
     },
     {
         "name":"Connelly Early*",
         "era+":113.0,
-        "fip":4.73,
+        "fip":4.72,
         "so_bb":2.75
     }
 ]
