@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.00204498977506,
-        "incorrect_strikes_pct": 8.997955010224942,
-        "total_called_strikes": 1956,
-        "bad_calls_count": 176
+        "correct_strikes_pct": 91.0379746835443,
+        "incorrect_strikes_pct": 8.962025316455694,
+        "total_called_strikes": 1975,
+        "bad_calls_count": 177
     },
     "last_game_summary": {
         "date": "June 30, 2026",
-        "correct_strikes_pct": 50.0,
-        "incorrect_strikes_pct": 50.0,
-        "total_called_strikes": 2,
-        "bad_calls_count": 1,
+        "correct_strikes_pct": 90.47619047619048,
+        "incorrect_strikes_pct": 9.523809523809518,
+        "total_called_strikes": 21,
+        "bad_calls_count": 2,
         "home_plate_umpire": "Nic Lentz"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.23278773707456,
-        "incorrect_balls_pct": 3.7672122629254403,
-        "total_called_balls": 3849,
-        "bad_calls_count": 145
+        "correct_balls_pct": 96.21816310779522,
+        "incorrect_balls_pct": 3.7818368922047796,
+        "total_called_balls": 3887,
+        "bad_calls_count": 147
     },
     "pitching_last_game_summary": {
         "date": "June 30, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 16,
-        "bad_calls_count": 0
+        "correct_balls_pct": 96.29629629629629,
+        "incorrect_balls_pct": 3.7037037037037095,
+        "total_called_balls": 54,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
