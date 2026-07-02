@@ -2,7 +2,7 @@
     {
         "name":"Sonny Gray",
         "era+":151.0,
-        "fip":3.57,
+        "fip":3.58,
         "so_bb":3.57
     },
     {
@@ -19,12 +19,12 @@
     },
     {
         "name":"Payton Tolle*",
-        "era+":146.0,
-        "fip":3.19,
-        "so_bb":3.45
+        "era+":120.0,
+        "fip":3.53,
+        "so_bb":3.22
     },
     {
-        "name":"Connelly Early*",
+        "name":"Connelly Early (15-day IL)*",
         "era+":118.0,
         "fip":4.61,
         "so_bb":2.74
