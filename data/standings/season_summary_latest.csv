@@ -1,25 +1,25 @@
 stat_label,stat,value,category,context_value,context_value_label
-Wins,wins,38,standings,42,This point last season
+Wins,wins,39,standings,43,This point last season
 Losses,losses,48,standings,44,This point last season
-Record,record,38-48,standings,42-44,This point last season
-Win percentage,win_pct,44%,standings,49%,This point last season
-Games up/back,games_up_back,14.5,standings,5th,Division rank
-Avg. home attendance,mean_attendance,"34,525",standings,23,Home games this season
-Runs,runs,342,standings,30th,League rank
-Runs against,runs_against,346,standings,395,This point last season
-Run differential,run_differential,-4,standings,17,This point last season
-Batting average,batting_average,.244,batting,.263,Last decade average
-Home runs,home_runs,74,batting,30th,League rank
-Home runs/game,home_runs_game,0.86,batting,1.22,Last decade average
-On-base percentage,on_base_pct,.311,batting,.330,Last decade average
-Stolen bases,stolen_bases,65,batting,12th,League rank
-BA w/ RISP,batting_avg_risp,.238,batting,.25,League average
-Strikeouts,strikeouts,730,pitching,17th,League rank
-Walks,walks,256,pitching,26th,League rank
-ERA,era,3.79,pitching,9th,League rank
+Record,record,39-48,standings,43-44,This point last season
+Win percentage,win_pct,45%,standings,49%,This point last season
+Games up/back,games_up_back,13.5,standings,5th,Division rank
+Avg. home attendance,mean_attendance,"33,981",standings,16,Home games this season
+Runs,runs,350,standings,29th,League rank
+Runs against,runs_against,347,standings,398,This point last season
+Run differential,run_differential,3,standings,19,This point last season
+Batting average,batting_average,.243,batting,.263,Last decade average
+Home runs,home_runs,76,batting,30th,League rank
+Home runs/game,home_runs_game,0.87,batting,1.22,Last decade average
+On-base percentage,on_base_pct,.312,batting,.330,Last decade average
+Stolen bases,stolen_bases,67,batting,11th,League rank
+BA w/ RISP,batting_avg_risp,.239,batting,.25,League average
+Strikeouts,strikeouts,739,pitching,17th,League rank
+Walks,walks,259,pitching,25th,League rank
+ERA,era,3.76,pitching,6th,League rank
 K/BB ratio,k_bb_ratio,2.85,pitching,2.5,League average
 HR/9,hr9,1.1,pitching,1.17,League average
-BABIP,babip,.285,pitching,.300,League norm
-Last updated,update_time,"July 4, 2026, 7:34 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(July 4)</span> — The Red Sox have compiled a <span class='highlight'>38-48</span> record in the 2026 regular season, a <span class='highlight'>44%</span> winning percentage.  The last game was a <span class='highlight'>5-2</span> away <span class='highlight'>win</span>. and the next game is Saturday at 9:38 p.m. ET at <span class='highlight'>Angel Stadium</span>.",summary,,
+BABIP,babip,.284,pitching,.300,League norm
+Last updated,update_time,"July 5, 2026, 5:18 AM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(July 5)</span> — The Red Sox have compiled a <span class='highlight'>39-48</span> record in the 2026 regular season, a <span class='highlight'>45%</span> winning percentage.  The last game was a <span class='highlight'>8-1</span> away <span class='highlight'>win</span>. and the next game is Sunday at 9:30 p.m. ET at <span class='highlight'>Angel Stadium</span>.",summary,,
 Last game result,last_game_result,win,summary,,
