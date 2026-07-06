@@ -54,24 +54,6 @@
     "slug":"danny-coulombe"
   },
   {
-    "player_id":"687941",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687941\/headshot\/silo\/current",
-    "name":"Alec Gamboa",
-    "player_url":"\/player\/687941",
-    "jersey":"68",
-    "position_group":"Pitchers",
-    "bat_throw":"S\/L",
-    "height":"6' 1\"",
-    "weight":"205",
-    "dob":"01\/17\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"alec-gamboa"
-  },
-  {
     "player_id":"543243",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/543243\/headshot\/silo\/current",
     "name":"Sonny Gray",
@@ -124,6 +106,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"jovani-moran"
+  },
+  {
+    "player_id":"663776",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663776\/headshot\/silo\/current",
+    "name":"Patrick Sandoval",
+    "player_url":"\/player\/663776",
+    "jersey":"43",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 3\"",
+    "weight":"190",
+    "dob":"10\/18\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"patrick-sandoval"
   },
   {
     "player_id":"686580",
@@ -468,24 +468,6 @@
     "slug":"masataka-yoshida"
   },
   {
-    "player_id":"681252",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681252\/headshot\/silo\/current",
-    "name":"Jack Anderson",
-    "player_url":"\/player\/681252",
-    "jersey":"77",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 3\"",
-    "weight":"197",
-    "dob":"11\/23\/1999",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"jack-anderson"
-  },
-  {
     "player_id":"678394",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678394\/headshot\/silo\/current",
     "name":"Brayan Bello",
@@ -556,6 +538,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"connelly-early"
+  },
+  {
+    "player_id":"687941",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687941\/headshot\/silo\/current",
+    "name":"Alec Gamboa",
+    "player_url":"\/player\/687941",
+    "jersey":"68",
+    "position_group":"Pitchers",
+    "bat_throw":"S\/L",
+    "height":"6' 1\"",
+    "weight":"205",
+    "dob":"01\/17\/1997",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"alec-gamboa"
   },
   {
     "player_id":"656557",
@@ -664,24 +664,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"tyler-samaniego"
-  },
-  {
-    "player_id":"663776",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663776\/headshot\/silo\/current",
-    "name":"Patrick Sandoval",
-    "player_url":"\/player\/663776",
-    "jersey":"43",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 3\"",
-    "weight":"190",
-    "dob":"10\/18\/1996",
-    "status":"IL-60",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"patrick-sandoval"
   },
   {
     "player_id":"700413",
