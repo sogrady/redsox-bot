@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.93567251461988,
-        "incorrect_strikes_pct": 9.064327485380119,
-        "total_called_strikes": 2052,
-        "bad_calls_count": 186
+        "correct_strikes_pct": 90.99662975445354,
+        "incorrect_strikes_pct": 9.003370245546463,
+        "total_called_strikes": 2077,
+        "bad_calls_count": 187
     },
     "last_game_summary": {
-        "date": "July 4, 2026",
-        "correct_strikes_pct": 89.65517241379311,
-        "incorrect_strikes_pct": 10.34482758620689,
-        "total_called_strikes": 29,
-        "bad_calls_count": 3,
-        "home_plate_umpire": "Steven Jaschinski"
+        "date": "July 5, 2026",
+        "correct_strikes_pct": 96.0,
+        "incorrect_strikes_pct": 4.0,
+        "total_called_strikes": 25,
+        "bad_calls_count": 1,
+        "home_plate_umpire": "Jeremie Rehak"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.27143922445936,
-        "incorrect_balls_pct": 3.728560775540643,
-        "total_called_balls": 4023,
+        "correct_balls_pct": 96.29995066600888,
+        "incorrect_balls_pct": 3.7000493339911174,
+        "total_called_balls": 4054,
         "bad_calls_count": 150
     },
     "pitching_last_game_summary": {
-        "date": "July 4, 2026",
-        "correct_balls_pct": 96.875,
-        "incorrect_balls_pct": 3.125,
-        "total_called_balls": 32,
-        "bad_calls_count": 1
+        "date": "July 5, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 31,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
