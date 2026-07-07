@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":12.5,
+        "value":12,
         "category":"standings",
         "context_value":"5th",
         "context_value_label":"Division rank"
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".241",
         "category":"batting",
-        "context_value":".25",
+        "context_value":".251",
         "context_value_label":"League average"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"752",
         "category":"pitching",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.1",
         "category":"pitching",
-        "context_value":1.17,
+        "context_value":1.18,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 6, 2026, 7:39 PM ET",
+        "value":"July 7, 2026, 5:24 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>40-48<\/span> record in the 2026 regular season, a <span class='highlight'>46%<\/span> winning percentage.  The last game was a <span class='highlight'>7-5<\/span> away <span class='highlight'>win<\/span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Rate Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 7)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>40-48<\/span> record in the 2026 regular season, a <span class='highlight'>46%<\/span> winning percentage.  The last game was a <span class='highlight'>7-5<\/span> away <span class='highlight'>win<\/span>. and the next game is Tuesday at 7:40 p.m. ET at <span class='highlight'>Rate Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
