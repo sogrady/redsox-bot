@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.99662975445354,
-        "incorrect_strikes_pct": 9.003370245546463,
-        "total_called_strikes": 2077,
+        "correct_strikes_pct": 91.09099571224392,
+        "incorrect_strikes_pct": 8.909004287756076,
+        "total_called_strikes": 2099,
         "bad_calls_count": 187
     },
     "last_game_summary": {
-        "date": "July 5, 2026",
-        "correct_strikes_pct": 96.0,
-        "incorrect_strikes_pct": 4.0,
-        "total_called_strikes": 25,
-        "bad_calls_count": 1,
-        "home_plate_umpire": "Jeremie Rehak"
+        "date": "July 7, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 22,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Charlie Ramos"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.29995066600888,
-        "incorrect_balls_pct": 3.7000493339911174,
-        "total_called_balls": 4054,
-        "bad_calls_count": 150
+        "correct_balls_pct": 96.24664879356568,
+        "incorrect_balls_pct": 3.753351206434317,
+        "total_called_balls": 4103,
+        "bad_calls_count": 154
     },
     "pitching_last_game_summary": {
-        "date": "July 5, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 31,
-        "bad_calls_count": 0
+        "date": "July 7, 2026",
+        "correct_balls_pct": 91.83673469387756,
+        "incorrect_balls_pct": 8.16326530612244,
+        "total_called_balls": 49,
+        "bad_calls_count": 4
     },
     "pitching_worst_calls_of_season": []
 }
