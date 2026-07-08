@@ -324,24 +324,6 @@
     "slug":"caleb-durbin"
   },
   {
-    "player_id":"663853",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
-    "name":"Romy Gonzalez",
-    "player_url":"\/player\/663853",
-    "jersey":"23",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"215",
-    "dob":"09\/06\/1996",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"romy-gonzalez"
-  },
-  {
     "player_id":"655316",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/655316\/headshot\/silo\/current",
     "name":"Andruw Monasterio",
@@ -430,6 +412,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"ceddanne-rafaela"
+  },
+  {
+    "player_id":"663853",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
+    "name":"Romy Gonzalez",
+    "player_url":"\/player\/663853",
+    "jersey":"23",
+    "position_group":"Designated hitter",
+    "bat_throw":"R\/R",
+    "height":"6' 0\"",
+    "weight":"215",
+    "dob":"09\/06\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"romy-gonzalez"
   },
   {
     "player_id":"807799",
