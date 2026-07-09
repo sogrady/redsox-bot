@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.09099571224392,
-        "incorrect_strikes_pct": 8.909004287756076,
-        "total_called_strikes": 2099,
-        "bad_calls_count": 187
+        "correct_strikes_pct": 91.0075329566855,
+        "incorrect_strikes_pct": 8.992467043314505,
+        "total_called_strikes": 2124,
+        "bad_calls_count": 191
     },
     "last_game_summary": {
-        "date": "July 7, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 22,
-        "bad_calls_count": 0,
-        "home_plate_umpire": "Charlie Ramos"
+        "date": "July 8, 2026",
+        "correct_strikes_pct": 84.0,
+        "incorrect_strikes_pct": 16.0,
+        "total_called_strikes": 25,
+        "bad_calls_count": 4,
+        "home_plate_umpire": "David Rackley"
     },
     "worst_calls_of_season": [
         {
@@ -35,6 +35,16 @@
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=88fac134-ee94-3116-a2b2-fb8dc8752b1c"
         },
         {
+            "distance_inches": 3.3886222708,
+            "batter": "Tsung-Che Cheng",
+            "pitcher": "Trevor Richards",
+            "pitch_type": "4-Seam Fastball",
+            "velocity_mph": 92.9,
+            "date": "2026-07-08",
+            "date_formatted": "July 8, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=96a7d3c3-31e6-39e2-b228-523d5adf79d4"
+        },
+        {
             "distance_inches": 3.2371487327,
             "batter": "Caleb Durbin",
             "pitcher": "Juan Mejia",
@@ -43,30 +53,20 @@
             "date": "2026-06-23",
             "date_formatted": "June 23, 2026",
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=b22f5bda-5ecf-3449-b8ed-9902abfc9340"
-        },
-        {
-            "distance_inches": 3.2319661084,
-            "batter": "Trevor Story",
-            "pitcher": "Brady Singer",
-            "pitch_type": "Sinker",
-            "velocity_mph": 90.8,
-            "date": "2026-03-28",
-            "date_formatted": "March 28, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=9fdf4f1d-7c4a-3d48-92ee-1f80abaa031e"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.24664879356568,
-        "incorrect_balls_pct": 3.753351206434317,
-        "total_called_balls": 4103,
-        "bad_calls_count": 154
+        "correct_balls_pct": 96.20497945371042,
+        "incorrect_balls_pct": 3.795020546289578,
+        "total_called_balls": 4137,
+        "bad_calls_count": 157
     },
     "pitching_last_game_summary": {
-        "date": "July 7, 2026",
-        "correct_balls_pct": 91.83673469387756,
-        "incorrect_balls_pct": 8.16326530612244,
-        "total_called_balls": 49,
-        "bad_calls_count": 4
+        "date": "July 8, 2026",
+        "correct_balls_pct": 91.17647058823529,
+        "incorrect_balls_pct": 8.82352941176471,
+        "total_called_balls": 34,
+        "bad_calls_count": 3
     },
     "pitching_worst_calls_of_season": []
 }
