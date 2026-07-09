@@ -144,24 +144,6 @@
     "slug":"justin-slaten"
   },
   {
-    "player_id":"624133",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/624133\/headshot\/silo\/current",
-    "name":"Ranger Suarez",
-    "player_url":"\/player\/624133",
-    "jersey":"55",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 1\"",
-    "weight":"217",
-    "dob":"08\/26\/1995",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"ranger-suarez"
-  },
-  {
     "player_id":"801139",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/801139\/headshot\/silo\/current",
     "name":"Payton Tolle",
@@ -322,6 +304,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"caleb-durbin"
+  },
+  {
+    "player_id":"695391",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/695391\/headshot\/silo\/current",
+    "name":"Brett Harris",
+    "player_url":"\/player\/695391",
+    "jersey":"25",
+    "position_group":"Infielders",
+    "bat_throw":"R\/R",
+    "height":"6' 2\"",
+    "weight":"208",
+    "dob":"06\/24\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"brett-harris"
   },
   {
     "player_id":"655316",
@@ -666,6 +666,24 @@
     "slug":"tyler-samaniego"
   },
   {
+    "player_id":"624133",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/624133\/headshot\/silo\/current",
+    "name":"Ranger Suarez",
+    "player_url":"\/player\/624133",
+    "jersey":"55",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 1\"",
+    "weight":"217",
+    "dob":"08\/26\/1995",
+    "status":"IL-15",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"ranger-suarez"
+  },
+  {
     "player_id":"700413",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700413\/headshot\/silo\/current",
     "name":"Tyler Uberstine",
@@ -736,24 +754,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"triston-casas"
-  },
-  {
-    "player_id":"695391",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/695391\/headshot\/silo\/current",
-    "name":"Brett Harris",
-    "player_url":"\/player\/695391",
-    "jersey":"",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 2\"",
-    "weight":"208",
-    "dob":"06\/24\/1998",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"brett-harris"
   },
   {
     "player_id":"643396",
