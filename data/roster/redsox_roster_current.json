@@ -270,24 +270,6 @@
     "slug":"tsung-che-cheng"
   },
   {
-    "player_id":"575929",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
-    "name":"Willson Contreras",
-    "player_url":"\/player\/575929",
-    "jersey":"40",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"240",
-    "dob":"05\/13\/1992",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"willson-contreras"
-  },
-  {
     "player_id":"702332",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/702332\/headshot\/silo\/current",
     "name":"Caleb Durbin",
@@ -754,6 +736,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"triston-casas"
+  },
+  {
+    "player_id":"575929",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
+    "name":"Willson Contreras",
+    "player_url":"\/player\/575929",
+    "jersey":"40",
+    "position_group":"Infielders",
+    "bat_throw":"R\/R",
+    "height":"6' 0\"",
+    "weight":"240",
+    "dob":"05\/13\/1992",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"willson-contreras"
   },
   {
     "player_id":"643396",
