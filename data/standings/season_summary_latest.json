@@ -36,7 +36,7 @@
         "stat":"games_up_back",
         "value":11,
         "category":"standings",
-        "context_value":"4th",
+        "context_value":"3rd",
         "context_value_label":"Division rank"
     },
     {
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":378,
         "category":"standings",
-        "context_value":"28th",
+        "context_value":"27th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":83,
         "category":"batting",
-        "context_value":"30th",
+        "context_value":"29th",
         "context_value_label":"League rank"
     },
     {
@@ -108,13 +108,13 @@
         "stat":"stolen_bases",
         "value":72,
         "category":"batting",
-        "context_value":"10th",
+        "context_value":"11th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".241",
+        "value":".240",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"265",
         "category":"pitching",
-        "context_value":"28th",
+        "context_value":"26th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.65",
         "category":"pitching",
-        "context_value":"7th",
+        "context_value":"5th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 11, 2026, 11:34 AM ET",
+        "value":"July 11, 2026, 7:31 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 11)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>44-48<\/span> record in the 2026 regular season, a <span class='highlight'>48%<\/span> winning percentage.  The last game was a <span class='highlight'>6-2<\/span> away <span class='highlight'>win<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Citi Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 11)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>45-48<\/span> record in the 2026 regular season, a <span class='highlight'>48%<\/span> winning percentage.  The last game was a <span class='highlight'>4-0<\/span> away <span class='highlight'>win<\/span>. and the next game is Sunday at 1:40 p.m. ET at <span class='highlight'>Citi Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
