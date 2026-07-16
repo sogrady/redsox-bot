@@ -378,24 +378,6 @@
     "slug":"jarren-duran"
   },
   {
-    "player_id":"663330",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663330\/headshot\/silo\/current",
-    "name":"Jahmai Jones",
-    "player_url":"\/player\/663330",
-    "jersey":"",
-    "position_group":"Outfielders",
-    "bat_throw":"R\/R",
-    "height":"5' 10\"",
-    "weight":"210",
-    "dob":"08\/04\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"jahmai-jones"
-  },
-  {
     "player_id":"678882",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678882\/headshot\/silo\/current",
     "name":"Ceddanne Rafaela",
@@ -844,5 +826,23 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"nate-eaton"
+  },
+  {
+    "player_id":"663330",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663330\/headshot\/silo\/current",
+    "name":"Jahmai Jones",
+    "player_url":"\/player\/663330",
+    "jersey":"",
+    "position_group":"Outfielders",
+    "bat_throw":"R\/R",
+    "height":"5' 10\"",
+    "weight":"210",
+    "dob":"08\/04\/1997",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"jahmai-jones"
   }
 ]
