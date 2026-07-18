@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.98214285714286,
-        "incorrect_strikes_pct": 9.017857142857139,
-        "total_called_strikes": 2240,
-        "bad_calls_count": 202
+        "correct_strikes_pct": 90.93722369584438,
+        "incorrect_strikes_pct": 9.06277630415562,
+        "total_called_strikes": 2262,
+        "bad_calls_count": 205
     },
     "last_game_summary": {
         "date": "July 17, 2026",
-        "correct_strikes_pct": 92.0,
-        "incorrect_strikes_pct": 8.0,
-        "total_called_strikes": 25,
-        "bad_calls_count": 2,
+        "correct_strikes_pct": 89.36170212765957,
+        "incorrect_strikes_pct": 10.63829787234043,
+        "total_called_strikes": 47,
+        "bad_calls_count": 5,
         "home_plate_umpire": "Mike Estabrook"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.01648351648352,
-        "incorrect_balls_pct": 3.983516483516482,
-        "total_called_balls": 4368,
-        "bad_calls_count": 174
+        "correct_balls_pct": 96.0145752675928,
+        "incorrect_balls_pct": 3.9854247324071963,
+        "total_called_balls": 4391,
+        "bad_calls_count": 175
     },
     "pitching_last_game_summary": {
         "date": "July 17, 2026",
-        "correct_balls_pct": 97.67441860465115,
-        "incorrect_balls_pct": 2.3255813953488484,
-        "total_called_balls": 43,
-        "bad_calls_count": 1
+        "correct_balls_pct": 96.96969696969697,
+        "incorrect_balls_pct": 3.030303030303031,
+        "total_called_balls": 66,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
