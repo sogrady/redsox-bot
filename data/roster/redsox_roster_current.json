@@ -54,24 +54,6 @@
     "slug":"aroldis-chapman"
   },
   {
-    "player_id":"687941",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687941\/headshot\/silo\/current",
-    "name":"Alec Gamboa",
-    "player_url":"\/player\/687941",
-    "jersey":"68",
-    "position_group":"Pitchers",
-    "bat_throw":"S\/L",
-    "height":"6' 1\"",
-    "weight":"205",
-    "dob":"01\/17\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"alec-gamboa"
-  },
-  {
     "player_id":"543243",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/543243\/headshot\/silo\/current",
     "name":"Sonny Gray",
@@ -538,6 +520,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"connelly-early"
+  },
+  {
+    "player_id":"687941",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/687941\/headshot\/silo\/current",
+    "name":"Alec Gamboa",
+    "player_url":"\/player\/687941",
+    "jersey":"68",
+    "position_group":"Pitchers",
+    "bat_throw":"S\/L",
+    "height":"6' 1\"",
+    "weight":"205",
+    "dob":"01\/17\/1997",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"alec-gamboa"
   },
   {
     "player_id":"656557",
