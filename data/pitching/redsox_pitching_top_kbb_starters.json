@@ -1,19 +1,19 @@
 [
     {
         "name":"Jake Bennett*",
-        "era+":173,
-        "fip":3.02,
+        "era+":174,
+        "fip":3.03,
         "so_bb":4.22
     },
     {
         "name":"Ranger Su\u00e1rez (15-day IL)*",
-        "era+":129,
+        "era+":130,
         "fip":2.61,
         "so_bb":3.73
     },
     {
         "name":"Sonny Gray",
-        "era+":160,
+        "era+":161,
         "fip":3.53,
         "so_bb":3.54
     },
@@ -25,8 +25,8 @@
     },
     {
         "name":"Connelly Early (15-day IL)*",
-        "era+":118,
-        "fip":4.6,
+        "era+":119,
+        "fip":4.61,
         "so_bb":2.74
     }
 ]

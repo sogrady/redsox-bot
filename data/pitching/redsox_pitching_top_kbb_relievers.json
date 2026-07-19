@@ -1,19 +1,19 @@
 [
     {
         "name":"Tyron Guerrero",
-        "era+":186,
+        "era+":187,
         "fip":2.61,
         "so_bb":12.0
     },
     {
         "name":"Garrett Whitlock",
-        "era+":193,
-        "fip":2.54,
+        "era+":200,
+        "fip":2.56,
         "so_bb":6.33
     },
     {
         "name":"Justin Slaten",
-        "era+":76,
+        "era+":77,
         "fip":3.36,
         "so_bb":5.33
     },
@@ -24,9 +24,9 @@
         "so_bb":3.36
     },
     {
-        "name":"Aroldis Chapman*",
-        "era+":193,
-        "fip":2.29,
-        "so_bb":3.17
+        "name":"Greg Weissert",
+        "era+":109,
+        "fip":4.33,
+        "so_bb":2.92
     }
 ]
