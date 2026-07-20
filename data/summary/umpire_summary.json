@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.91304347826087,
-        "incorrect_strikes_pct": 9.086956521739125,
-        "total_called_strikes": 2300,
+        "correct_strikes_pct": 90.91699261190786,
+        "incorrect_strikes_pct": 9.083007388092142,
+        "total_called_strikes": 2301,
         "bad_calls_count": 209
     },
     "last_game_summary": {
         "date": "July 19, 2026",
-        "correct_strikes_pct": 86.66666666666667,
-        "incorrect_strikes_pct": 13.333333333333329,
-        "total_called_strikes": 15,
+        "correct_strikes_pct": 87.5,
+        "incorrect_strikes_pct": 12.5,
+        "total_called_strikes": 16,
         "bad_calls_count": 2,
         "home_plate_umpire": "Alfonso M\u00e1rquez"
     },
