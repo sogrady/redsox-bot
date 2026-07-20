@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.91699261190786,
-        "incorrect_strikes_pct": 9.083007388092142,
-        "total_called_strikes": 2301,
+        "correct_strikes_pct": 90.9366869037294,
+        "incorrect_strikes_pct": 9.063313096270605,
+        "total_called_strikes": 2306,
         "bad_calls_count": 209
     },
     "last_game_summary": {
-        "date": "July 19, 2026",
-        "correct_strikes_pct": 87.5,
-        "incorrect_strikes_pct": 12.5,
-        "total_called_strikes": 16,
-        "bad_calls_count": 2,
-        "home_plate_umpire": "Alfonso M\u00e1rquez"
+        "date": "July 20, 2026",
+        "correct_strikes_pct": 100.0,
+        "incorrect_strikes_pct": 0.0,
+        "total_called_strikes": 5,
+        "bad_calls_count": 0,
+        "home_plate_umpire": "Stu Scheurwater"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.04910714285714,
-        "incorrect_balls_pct": 3.950892857142861,
-        "total_called_balls": 4480,
-        "bad_calls_count": 177
+        "correct_balls_pct": 96.01247493873915,
+        "incorrect_balls_pct": 3.987525061260854,
+        "total_called_balls": 4489,
+        "bad_calls_count": 179
     },
     "pitching_last_game_summary": {
-        "date": "July 19, 2026",
-        "correct_balls_pct": 98.0392156862745,
-        "incorrect_balls_pct": 1.9607843137254974,
-        "total_called_balls": 51,
-        "bad_calls_count": 1
+        "date": "July 20, 2026",
+        "correct_balls_pct": 77.77777777777779,
+        "incorrect_balls_pct": 22.222222222222214,
+        "total_called_balls": 9,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
