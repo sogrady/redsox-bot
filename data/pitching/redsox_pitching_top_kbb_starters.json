@@ -1,7 +1,7 @@
 [
     {
         "name":"Jake Bennett*",
-        "era+":174,
+        "era+":175,
         "fip":3.03,
         "so_bb":4.22
     },
@@ -12,16 +12,16 @@
         "so_bb":3.73
     },
     {
-        "name":"Sonny Gray",
-        "era+":161,
-        "fip":3.53,
-        "so_bb":3.54
-    },
-    {
         "name":"Payton Tolle*",
-        "era+":131,
+        "era+":132,
         "fip":3.23,
         "so_bb":3.48
+    },
+    {
+        "name":"Sonny Gray",
+        "era+":165,
+        "fip":3.65,
+        "so_bb":3.21
     },
     {
         "name":"Connelly Early (15-day IL)*",
