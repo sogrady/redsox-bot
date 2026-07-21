@@ -568,9 +568,9 @@
     "height":"6' 3\"",
     "weight":"231",
     "dob":"03\/03\/1995",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
+    "status":"IL-60",
+    "is_minors":false,
+    "is_il":true,
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"zack-kelly"
