@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.0645575032065,
-        "incorrect_strikes_pct": 8.935442496793499,
-        "total_called_strikes": 2339,
-        "bad_calls_count": 209
+        "correct_strikes_pct": 91.04414261460101,
+        "incorrect_strikes_pct": 8.955857385398986,
+        "total_called_strikes": 2356,
+        "bad_calls_count": 211
     },
     "last_game_summary": {
         "date": "July 22, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 15,
-        "bad_calls_count": 0,
-        "home_plate_umpire": "Felix Neon"
+        "correct_strikes_pct": 93.75,
+        "incorrect_strikes_pct": 6.25,
+        "total_called_strikes": 32,
+        "bad_calls_count": 2,
+        "home_plate_umpire": "Rob Drake"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.03157202367902,
-        "incorrect_balls_pct": 3.9684279763209815,
-        "total_called_balls": 4561,
-        "bad_calls_count": 181
+        "correct_balls_pct": 96.04433818735058,
+        "incorrect_balls_pct": 3.9556618126494243,
+        "total_called_balls": 4601,
+        "bad_calls_count": 182
     },
     "pitching_last_game_summary": {
         "date": "July 22, 2026",
-        "correct_balls_pct": 97.95918367346938,
-        "incorrect_balls_pct": 2.040816326530617,
-        "total_called_balls": 49,
-        "bad_calls_count": 1
+        "correct_balls_pct": 97.75280898876404,
+        "incorrect_balls_pct": 2.247191011235955,
+        "total_called_balls": 89,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
