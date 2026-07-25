@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.07067287346592,
-        "incorrect_strikes_pct": 8.929327126534076,
-        "total_called_strikes": 2363,
-        "bad_calls_count": 211
+        "correct_strikes_pct": 91.08040201005025,
+        "incorrect_strikes_pct": 8.91959798994975,
+        "total_called_strikes": 2388,
+        "bad_calls_count": 213
     },
     "last_game_summary": {
         "date": "July 24, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 7,
-        "bad_calls_count": 0,
+        "correct_strikes_pct": 93.75,
+        "incorrect_strikes_pct": 6.25,
+        "total_called_strikes": 32,
+        "bad_calls_count": 2,
         "home_plate_umpire": "Adrian Johnson"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.01127249078691,
-        "incorrect_balls_pct": 3.988727509213092,
-        "total_called_balls": 4613,
-        "bad_calls_count": 184
+        "correct_balls_pct": 95.93373493975903,
+        "incorrect_balls_pct": 4.066265060240966,
+        "total_called_balls": 4648,
+        "bad_calls_count": 189
     },
     "pitching_last_game_summary": {
         "date": "July 24, 2026",
-        "correct_balls_pct": 83.33333333333334,
-        "incorrect_balls_pct": 16.666666666666657,
-        "total_called_balls": 12,
-        "bad_calls_count": 2
+        "correct_balls_pct": 85.1063829787234,
+        "incorrect_balls_pct": 14.893617021276597,
+        "total_called_balls": 47,
+        "bad_calls_count": 7
     },
     "pitching_worst_calls_of_season": []
 }
