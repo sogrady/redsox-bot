@@ -504,24 +504,6 @@
     "slug":"garrett-crochet"
   },
   {
-    "player_id":"813349",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/813349\/headshot\/silo\/current",
-    "name":"Connelly Early",
-    "player_url":"\/player\/813349",
-    "jersey":"71",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 3\"",
-    "weight":"195",
-    "dob":"04\/03\/2002",
-    "status":"IL-15",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"connelly-early"
-  },
-  {
     "player_id":"656557",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/656557\/headshot\/silo\/current",
     "name":"Tanner Houck",
@@ -772,6 +754,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"marcelo-mayer"
+  },
+  {
+    "player_id":"678554",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678554\/headshot\/silo\/current",
+    "name":"Curtis Mead",
+    "player_url":"\/player\/678554",
+    "jersey":"",
+    "position_group":"Infielders",
+    "bat_throw":"R\/R",
+    "height":"6' 1\"",
+    "weight":"225",
+    "dob":"10\/26\/2000",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"curtis-mead"
   },
   {
     "player_id":"686765",
