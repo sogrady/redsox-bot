@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":432,
         "category":"standings",
-        "context_value":"25th",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -108,13 +108,13 @@
         "stat":"stolen_bases",
         "value":76,
         "category":"batting",
-        "context_value":"12th",
+        "context_value":"10th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".248",
+        "value":".251",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.59",
         "category":"pitching",
-        "context_value":"4th",
+        "context_value":"3rd",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 26, 2026, 11:37 AM ET",
+        "value":"July 26, 2026, 7:32 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 26)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>53-50<\/span> record in the 2026 regular season, a <span class='highlight'>52%<\/span> winning percentage.  The last game was a <span class='highlight'>0-6<\/span> home <span class='highlight'>loss<\/span>. and the next game is Sunday at 1:35 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 26)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>54-50<\/span> record in the 2026 regular season, a <span class='highlight'>52%<\/span> winning percentage.  The last game was a <span class='highlight'>6-1<\/span> home <span class='highlight'>win<\/span>. and the next game is Monday at 9:40 p.m. ET at <span class='highlight'>Sutter Health Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"loss",
+        "value":"win",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
