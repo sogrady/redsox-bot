@@ -2,14 +2,14 @@
     {
         "name":"Jake Bennett*",
         "era+":158,
-        "fip":3.12,
+        "fip":3.13,
         "so_bb":4.67
     },
     {
-        "name":"Ranger Suarez (15-day IL)*",
-        "era+":129,
-        "fip":2.61,
-        "so_bb":3.73
+        "name":"Ranger Suarez*",
+        "era+":135,
+        "fip":2.51,
+        "so_bb":3.96
     },
     {
         "name":"Payton Tolle*",
@@ -24,9 +24,9 @@
         "so_bb":3.32
     },
     {
-        "name":"Connelly Early (15-day IL)*",
-        "era+":118,
-        "fip":4.61,
+        "name":"Connelly Early*",
+        "era+":119,
+        "fip":4.62,
         "so_bb":2.74
     }
 ]
