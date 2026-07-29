@@ -1,14 +1,14 @@
 [
     {
         "name":"Jake Bennett*",
-        "era+":158,
-        "fip":3.13,
-        "so_bb":4.67
+        "era+":149,
+        "fip":3.3,
+        "so_bb":4.18
     },
     {
         "name":"Ranger Suarez*",
         "era+":135,
-        "fip":2.51,
+        "fip":2.52,
         "so_bb":3.96
     },
     {
@@ -25,7 +25,7 @@
     },
     {
         "name":"Connelly Early*",
-        "era+":119,
+        "era+":118,
         "fip":4.62,
         "so_bb":2.74
     }

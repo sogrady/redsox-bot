@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.22090649244589,
-        "incorrect_strikes_pct": 8.779093507554109,
-        "total_called_strikes": 2449,
-        "bad_calls_count": 215
+        "correct_strikes_pct": 91.2252325111201,
+        "incorrect_strikes_pct": 8.774767488879903,
+        "total_called_strikes": 2473,
+        "bad_calls_count": 217
     },
     "last_game_summary": {
-        "date": "July 27, 2026",
-        "correct_strikes_pct": 95.65217391304348,
-        "incorrect_strikes_pct": 4.347826086956516,
-        "total_called_strikes": 23,
-        "bad_calls_count": 1,
-        "home_plate_umpire": "Carlos Torres"
+        "date": "July 28, 2026",
+        "correct_strikes_pct": 91.66666666666666,
+        "incorrect_strikes_pct": 8.333333333333343,
+        "total_called_strikes": 24,
+        "bad_calls_count": 2,
+        "home_plate_umpire": "Mark Wegner"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.92693680453496,
-        "incorrect_balls_pct": 4.073063195465039,
-        "total_called_balls": 4763,
+        "correct_balls_pct": 95.95833333333333,
+        "incorrect_balls_pct": 4.041666666666671,
+        "total_called_balls": 4800,
         "bad_calls_count": 194
     },
     "pitching_last_game_summary": {
-        "date": "July 27, 2026",
-        "correct_balls_pct": 90.47619047619048,
-        "incorrect_balls_pct": 9.523809523809518,
-        "total_called_balls": 42,
-        "bad_calls_count": 4
+        "date": "July 28, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 37,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
