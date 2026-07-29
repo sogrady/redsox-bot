@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":445,
         "category":"standings",
-        "context_value":"25th",
+        "context_value":"26th",
         "context_value_label":"League rank"
     },
     {
@@ -116,7 +116,7 @@
         "stat":"batting_avg_risp",
         "value":".249",
         "category":"batting",
-        "context_value":".251",
+        "context_value":".252",
         "context_value_label":"League average"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":3.01,
         "category":"pitching",
-        "context_value":2.54,
+        "context_value":2.53,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 29, 2026, 11:49 AM ET",
+        "value":"July 29, 2026, 7:34 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
