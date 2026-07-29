@@ -50,15 +50,15 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":442,
+        "value":445,
         "category":"standings",
-        "context_value":"24th",
+        "context_value":"25th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":394,
+        "value":398,
         "category":"standings",
         "context_value":676,
         "context_value_label":"This point last season"
@@ -66,7 +66,7 @@
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":48,
+        "value":47,
         "category":"standings",
         "context_value":110,
         "context_value_label":"This point last season"
@@ -74,7 +74,7 @@
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".243",
+        "value":".244",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":99,
+        "value":100,
         "category":"batting",
         "context_value":"29th",
         "context_value_label":"League rank"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".314",
+        "value":".315",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,15 +106,15 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":78,
+        "value":79,
         "category":"batting",
-        "context_value":"11th",
+        "context_value":"10th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".250",
+        "value":".249",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"896",
+        "value":"901",
         "category":"pitching",
-        "context_value":"16th",
+        "context_value":"17th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"297",
+        "value":"299",
         "category":"pitching",
         "context_value":"28th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":3.02,
+        "value":3.01,
         "category":"pitching",
         "context_value":2.54,
         "context_value_label":"League average"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 28, 2026, 7:35 PM ET",
+        "value":"July 29, 2026, 5:12 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 28)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>55-50<\/span> record in the 2026 regular season, a <span class='highlight'>52%<\/span> winning percentage.  The last game was a <span class='highlight'>4-2<\/span> away <span class='highlight'>win<\/span>. and the next game is Tuesday at 9:40 p.m. ET at <span class='highlight'>Sutter Health Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 29)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>55-51<\/span> record in the 2026 regular season, a <span class='highlight'>52%<\/span> winning percentage.  The last game was a <span class='highlight'>3-4<\/span> away <span class='highlight'>loss<\/span>. and the next game is Wednesday at 9:40 p.m. ET at <span class='highlight'>Sutter Health Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"win",
+        "value":"loss",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
