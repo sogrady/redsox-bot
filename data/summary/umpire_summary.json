@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.2252325111201,
-        "incorrect_strikes_pct": 8.774767488879903,
-        "total_called_strikes": 2473,
-        "bad_calls_count": 217
+        "correct_strikes_pct": 91.24,
+        "incorrect_strikes_pct": 8.760000000000005,
+        "total_called_strikes": 2500,
+        "bad_calls_count": 219
     },
     "last_game_summary": {
-        "date": "July 28, 2026",
-        "correct_strikes_pct": 91.66666666666666,
-        "incorrect_strikes_pct": 8.333333333333343,
-        "total_called_strikes": 24,
+        "date": "July 29, 2026",
+        "correct_strikes_pct": 92.5925925925926,
+        "incorrect_strikes_pct": 7.407407407407405,
+        "total_called_strikes": 27,
         "bad_calls_count": 2,
-        "home_plate_umpire": "Mark Wegner"
+        "home_plate_umpire": "Bruce Dreckman"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.95833333333333,
-        "incorrect_balls_pct": 4.041666666666671,
-        "total_called_balls": 4800,
+        "correct_balls_pct": 95.99421845963246,
+        "incorrect_balls_pct": 4.005781540367536,
+        "total_called_balls": 4843,
         "bad_calls_count": 194
     },
     "pitching_last_game_summary": {
-        "date": "July 28, 2026",
+        "date": "July 29, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 37,
+        "total_called_balls": 43,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []

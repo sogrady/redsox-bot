@@ -105,7 +105,7 @@ gm,game_date,home_away,opp,result,r,ra,record,rank,gb,time,time_minutes,day_nigh
 104,2026-07-26,boxscore,TOR,W,6,1,54-50,3,-7.5,2:25:00,145.0,D,36795.0,2026,54,50,0.519
 105,2026-07-27,boxscore,ATH,W,4,2,55-50,3,-7.0,2:35:00,155.0,N,10486.0,2026,55,50,0.524
 106,2026-07-28,boxscore,ATH,L,3,4,55-51,3,-7.0,2:32:00,152.0,N,10356.0,2026,55,51,0.519
-107,2026-07-29,preview,ATH,9:40 pm,0,0,,0,0.0,"Game Preview, and Matchups:00",0.0,"Game Preview, and Matchups",0.0,2026,0,0,0.0
+107,2026-07-29,boxscore,ATH,W,4,2,56-51,3,-7.0,3:16:00,196.0,N,9674.0,2026,56,51,0.523
 108,2026-07-30,preview,ATH,9:40 pm,0,0,,0,0.0,"Game Preview, and Matchups:00",0.0,"Game Preview, and Matchups",0.0,2026,0,0,0.0
 109,2026-07-31,preview,LAD,10:10 pm,0,0,,0,0.0,"Game Preview, and Matchups:00",0.0,"Game Preview, and Matchups",0.0,2026,0,0,0.0
 110,2026-08-01,preview,LAD,9:10 pm,0,0,,0,0.0,"Game Preview, and Matchups:00",0.0,"Game Preview, and Matchups",0.0,2026,0,0,0.0
