@@ -2,31 +2,31 @@
     {
         "name":"Tyron Guerrero",
         "era+":190,
-        "fip":2.43,
+        "fip":2.42,
         "so_bb":9.67
     },
     {
         "name":"Garrett Whitlock",
-        "era+":202,
-        "fip":2.44,
+        "era+":201,
+        "fip":2.43,
         "so_bb":7.0
     },
     {
         "name":"Justin Slaten",
         "era+":89,
-        "fip":3.11,
+        "fip":3.1,
         "so_bb":5.83
+    },
+    {
+        "name":"Greg Weissert",
+        "era+":103,
+        "fip":4.28,
+        "so_bb":3.42
     },
     {
         "name":"Garrett Crochet (60-day IL)*",
         "era+":65,
-        "fip":4.31,
+        "fip":4.3,
         "so_bb":3.36
-    },
-    {
-        "name":"Greg Weissert",
-        "era+":101,
-        "fip":4.36,
-        "so_bb":3.33
     }
 ]
