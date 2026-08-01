@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":7,
+        "value":6,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -50,15 +50,15 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":454,
+        "value":463,
         "category":"standings",
-        "context_value":"24th",
+        "context_value":"21st",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":404,
+        "value":408,
         "category":"standings",
         "context_value":676,
         "context_value_label":"This point last season"
@@ -66,7 +66,7 @@
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":50,
+        "value":55,
         "category":"standings",
         "context_value":110,
         "context_value_label":"This point last season"
@@ -74,7 +74,7 @@
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".244",
+        "value":".245",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":104,
+        "value":105,
         "category":"batting",
         "context_value":"28th",
         "context_value_label":"League rank"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".315",
+        "value":".316",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":80,
+        "value":81,
         "category":"batting",
         "context_value":"10th",
         "context_value_label":"League rank"
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".249",
+        "value":".248",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"923",
+        "value":"928",
         "category":"pitching",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"303",
+        "value":"306",
         "category":"pitching",
         "context_value":"28th",
         "context_value_label":"League rank"
@@ -146,9 +146,9 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":3.05,
+        "value":3.03,
         "category":"pitching",
-        "context_value":2.54,
+        "context_value":2.53,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"July 31, 2026, 7:34 PM ET",
+        "value":"August 1, 2026, 5:01 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(July 31)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>57-51<\/span> record in the 2026 regular season, a <span class='highlight'>53%<\/span> winning percentage.  The last game was a <span class='highlight'>5-4<\/span> away <span class='highlight'>win<\/span>. and the next game is Friday at 10:10 p.m. ET at <span class='highlight'>UNIQLO Field at Dodger Stadium<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 1)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>58-51<\/span> record in the 2026 regular season, a <span class='highlight'>53%<\/span> winning percentage.  The last game was a <span class='highlight'>9-4<\/span> away <span class='highlight'>win<\/span>. and the next game is Saturday at 9:10 p.m. ET at <span class='highlight'>UNIQLO Field at Dodger Stadium<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
