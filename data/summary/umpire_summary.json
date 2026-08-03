@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.17876658860266,
-        "incorrect_strikes_pct": 8.821233411397344,
-        "total_called_strikes": 2562,
-        "bad_calls_count": 226
+        "correct_strikes_pct": 91.05691056910568,
+        "incorrect_strikes_pct": 8.943089430894318,
+        "total_called_strikes": 2583,
+        "bad_calls_count": 231
     },
     "last_game_summary": {
         "date": "August 2, 2026",
-        "correct_strikes_pct": 80.0,
-        "incorrect_strikes_pct": 20.0,
-        "total_called_strikes": 5,
-        "bad_calls_count": 1,
+        "correct_strikes_pct": 76.92307692307693,
+        "incorrect_strikes_pct": 23.076923076923066,
+        "total_called_strikes": 26,
+        "bad_calls_count": 6,
         "home_plate_umpire": "Mike Muchlinski"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 95.9669288162936,
-        "incorrect_balls_pct": 4.033071183706397,
-        "total_called_balls": 4959,
-        "bad_calls_count": 200
+        "correct_balls_pct": 95.96886848932348,
+        "incorrect_balls_pct": 4.031131510676516,
+        "total_called_balls": 5011,
+        "bad_calls_count": 202
     },
     "pitching_last_game_summary": {
         "date": "August 2, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 1,
-        "bad_calls_count": 0
+        "correct_balls_pct": 96.22641509433963,
+        "incorrect_balls_pct": 3.773584905660371,
+        "total_called_balls": 53,
+        "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
 }
