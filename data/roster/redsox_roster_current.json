@@ -234,24 +234,6 @@
     "slug":"garrett-whitlock"
   },
   {
-    "player_id":"665966",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/665966\/headshot\/silo\/current",
-    "name":"Carlos Narváez",
-    "player_url":"\/player\/665966",
-    "jersey":"75",
-    "position_group":"Catchers",
-    "bat_throw":"R\/R",
-    "height":"5' 11\"",
-    "weight":"190",
-    "dob":"11\/26\/1998",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"carlos-narvaez"
-  },
-  {
     "player_id":"657136",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/657136\/headshot\/silo\/current",
     "name":"Connor Wong",
@@ -576,6 +558,24 @@
     "slug":"joe-la-sorsa"
   },
   {
+    "player_id":"669062",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/669062\/headshot\/silo\/current",
+    "name":"Erik Miller",
+    "player_url":"\/player\/669062",
+    "jersey":"",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 5\"",
+    "weight":"269",
+    "dob":"02\/13\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"erik-miller"
+  },
+  {
     "player_id":"670912",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670912\/headshot\/silo\/current",
     "name":"Johan Oviedo",
@@ -630,24 +630,6 @@
     "slug":"tyler-samaniego"
   },
   {
-    "player_id":"700413",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/700413\/headshot\/silo\/current",
-    "name":"Tyler Uberstine",
-    "player_url":"\/player\/700413",
-    "jersey":"79",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 1\"",
-    "weight":"200",
-    "dob":"06\/01\/1999",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"tyler-uberstine"
-  },
-  {
     "player_id":"681508",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
     "name":"Mickey Gasper",
@@ -664,6 +646,42 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"mickey-gasper"
+  },
+  {
+    "player_id":"668670",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/668670\/headshot\/silo\/current",
+    "name":"Jake Rogers",
+    "player_url":"\/player\/668670",
+    "jersey":"34",
+    "position_group":"Catchers",
+    "bat_throw":"R\/R",
+    "height":"5' 11\"",
+    "weight":"201",
+    "dob":"04\/18\/1995",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"jake-rogers"
+  },
+  {
+    "player_id":"668939",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/668939\/headshot\/silo\/current",
+    "name":"Adley Rutschman",
+    "player_url":"\/player\/668939",
+    "jersey":"31",
+    "position_group":"Catchers",
+    "bat_throw":"S\/R",
+    "height":"6' 1\"",
+    "weight":"230",
+    "dob":"02\/06\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"adley-rutschman"
   },
   {
     "player_id":"692225",
@@ -756,24 +774,6 @@
     "slug":"isiah-kiner-falefa"
   },
   {
-    "player_id":"691785",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/691785\/headshot\/silo\/current",
-    "name":"Marcelo Mayer",
-    "player_url":"\/player\/691785",
-    "jersey":"11",
-    "position_group":"Infielders",
-    "bat_throw":"L\/R",
-    "height":"6' 3\"",
-    "weight":"188",
-    "dob":"12\/12\/2002",
-    "status":"IL-10",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"marcelo-mayer"
-  },
-  {
     "player_id":"678554",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678554\/headshot\/silo\/current",
     "name":"Curtis Mead",
@@ -844,5 +844,23 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"nate-eaton"
+  },
+  {
+    "player_id":"642201",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/642201\/headshot\/silo\/current",
+    "name":"Eli White",
+    "player_url":"\/player\/642201",
+    "jersey":"76",
+    "position_group":"Outfielders",
+    "bat_throw":"R\/R",
+    "height":"6' 2\"",
+    "weight":"195",
+    "dob":"06\/26\/1994",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"eli-white"
   }
 ]
