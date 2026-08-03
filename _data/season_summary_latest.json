@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":5.5,
+        "value":5,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -50,15 +50,15 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":466,
+        "value":474,
         "category":"standings",
-        "context_value":"24th",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":410,
+        "value":414,
         "category":"standings",
         "context_value":676,
         "context_value_label":"This point last season"
@@ -66,7 +66,7 @@
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":56,
+        "value":60,
         "category":"standings",
         "context_value":110,
         "context_value_label":"This point last season"
@@ -82,15 +82,15 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":107,
+        "value":111,
         "category":"batting",
-        "context_value":"27th",
+        "context_value":"25th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Home runs\/game",
         "stat":"home_runs_game",
-        "value":0.97,
+        "value":1.0,
         "category":"batting",
         "context_value":1.22,
         "context_value_label":"Last decade average"
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".315",
+        "value":".316",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".249",
+        "value":".248",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"937",
+        "value":"943",
         "category":"pitching",
-        "context_value":"17th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"308",
+        "value":"311",
         "category":"pitching",
         "context_value":"28th",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":3.04,
+        "value":3.03,
         "category":"pitching",
         "context_value":2.53,
         "context_value_label":"League average"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 2, 2026, 7:32 PM ET",
+        "value":"August 3, 2026, 5:25 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 2)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>59-51<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>3-2<\/span> away <span class='highlight'>win<\/span>. and the next game is Tuesday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 3)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>60-51<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>8-4<\/span> away <span class='highlight'>win<\/span>. and the next game is Tuesday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
