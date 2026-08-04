@@ -90,6 +90,24 @@
     "slug":"tyron-guerrero"
   },
   {
+    "player_id":"669062",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/669062\/headshot\/silo\/current",
+    "name":"Erik Miller",
+    "player_url":"\/player\/669062",
+    "jersey":"67",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 5\"",
+    "weight":"269",
+    "dob":"02\/13\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"erik-miller"
+  },
+  {
     "player_id":"663558",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663558\/headshot\/silo\/current",
     "name":"Jovani Morán",
@@ -180,24 +198,6 @@
     "slug":"payton-tolle"
   },
   {
-    "player_id":"670245",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670245\/headshot\/silo\/current",
-    "name":"Ryan Watson",
-    "player_url":"\/player\/670245",
-    "jersey":"56",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 5\"",
-    "weight":"225",
-    "dob":"11\/15\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"ryan-watson"
-  },
-  {
     "player_id":"669711",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/669711\/headshot\/silo\/current",
     "name":"Greg Weissert",
@@ -232,6 +232,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"garrett-whitlock"
+  },
+  {
+    "player_id":"668670",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/668670\/headshot\/silo\/current",
+    "name":"Jake Rogers",
+    "player_url":"\/player\/668670",
+    "jersey":"46",
+    "position_group":"Catchers",
+    "bat_throw":"R\/R",
+    "height":"5' 11\"",
+    "weight":"201",
+    "dob":"04\/18\/1995",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"jake-rogers"
   },
   {
     "player_id":"657136",
@@ -396,22 +414,22 @@
     "slug":"ceddanne-rafaela"
   },
   {
-    "player_id":"663853",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
-    "name":"Romy Gonzalez",
-    "player_url":"\/player\/663853",
-    "jersey":"23",
-    "position_group":"Designated hitter",
+    "player_id":"642201",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/642201\/headshot\/silo\/current",
+    "name":"Eli White",
+    "player_url":"\/player\/642201",
+    "jersey":"38",
+    "position_group":"Outfielders",
     "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"215",
-    "dob":"09\/06\/1996",
+    "height":"6' 2\"",
+    "weight":"195",
+    "dob":"06\/26\/1994",
     "status":"ACTIVE",
     "is_minors":false,
     "is_il":false,
     "is_active_roster":true,
     "is_40_man":true,
-    "slug":"romy-gonzalez"
+    "slug":"eli-white"
   },
   {
     "player_id":"663330",
@@ -558,24 +576,6 @@
     "slug":"joe-la-sorsa"
   },
   {
-    "player_id":"669062",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/669062\/headshot\/silo\/current",
-    "name":"Erik Miller",
-    "player_url":"\/player\/669062",
-    "jersey":"62",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 5\"",
-    "weight":"269",
-    "dob":"02\/13\/1998",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"erik-miller"
-  },
-  {
     "player_id":"670912",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670912\/headshot\/silo\/current",
     "name":"Johan Oviedo",
@@ -646,24 +646,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"mickey-gasper"
-  },
-  {
-    "player_id":"668670",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/668670\/headshot\/silo\/current",
-    "name":"Jake Rogers",
-    "player_url":"\/player\/668670",
-    "jersey":"34",
-    "position_group":"Catchers",
-    "bat_throw":"R\/R",
-    "height":"5' 11\"",
-    "weight":"201",
-    "dob":"04\/18\/1995",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"jake-rogers"
   },
   {
     "player_id":"668939",
@@ -846,21 +828,21 @@
     "slug":"nate-eaton"
   },
   {
-    "player_id":"642201",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/642201\/headshot\/silo\/current",
-    "name":"Eli White",
-    "player_url":"\/player\/642201",
-    "jersey":"38",
-    "position_group":"Outfielders",
+    "player_id":"663853",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663853\/headshot\/silo\/current",
+    "name":"Romy Gonzalez",
+    "player_url":"\/player\/663853",
+    "jersey":"23",
+    "position_group":"Designated hitter",
     "bat_throw":"R\/R",
-    "height":"6' 2\"",
-    "weight":"195",
-    "dob":"06\/26\/1994",
-    "status":"ACTIVE",
-    "is_minors":false,
+    "height":"6' 0\"",
+    "weight":"215",
+    "dob":"09\/06\/1996",
+    "status":"MINORS",
+    "is_minors":true,
     "is_il":false,
     "is_active_roster":false,
     "is_40_man":true,
-    "slug":"eli-white"
+    "slug":"romy-gonzalez"
   }
 ]
