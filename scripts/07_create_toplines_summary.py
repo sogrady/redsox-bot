@@ -336,6 +336,16 @@ def run_differential(standings):
     
     return runs, runs_last, runs_rank, runs_against, runs_against_last, run_diff, run_diff_last, mean_attendance, formatted_mean_attendance, home_games_count
 
+def pythagorean_record(runs_scored, runs_allowed, games_played):
+    """Calculate Pythagorean expected record using 1.83 exponent."""
+    exp = 1.83
+    if runs_scored + runs_allowed == 0:
+        return 0, 0, "0-0"
+    expected_win_pct = runs_scored ** exp / (runs_scored ** exp + runs_allowed ** exp)
+    expected_wins = round(expected_win_pct * games_played)
+    expected_losses = games_played - expected_wins
+    return expected_wins, expected_losses, f"{expected_wins}-{expected_losses}"
+
 def home_run_stats(batting_now, batting_past):
     games = int(batting_now["g"].iloc[0])
     home_runs = int(batting_now["hr"].sum())
@@ -929,6 +939,8 @@ batting_average, batting_average_decade, stolen_bases, stolen_bases_rank, stolen
 batting_avg_risp, league_avg_risp = fetch_batting_avg_risp()
 league_k_bb_ratio, league_hr9 = fetch_league_pitching_averages()
 win_count_trend, loss_count_trend, win_loss_trend = recent_trend(standings.iloc[:10])
+pyth_wins, pyth_losses, pyth_record = pythagorean_record(runs, runs_against, games)
+last_10_record = f"{win_count_trend}-{loss_count_trend}"
 
 # Prepare last_game_info, handling empty standings_now for very early season
 last_game_data = None
@@ -941,9 +953,9 @@ summary = generate_summary(
 
 summary_data = [
     # Standings
-    {"stat_label": "Wins", "stat": "wins", "value": wins, "category": "standings", "context_value": wins_last, "context_value_label": "This point last season"},
-    {"stat_label": "Losses", "stat": "losses", "value": losses, "category": "standings", "context_value": losses_last, "context_value_label": "This point last season"},
     {"stat_label": "Record", "stat": "record", "value": record, "category": "standings", "context_value": record_last, "context_value_label": "This point last season"},
+    {"stat_label": "Pythagorean record", "stat": "pythagorean_record", "value": pyth_record, "category": "standings", "context_value": record, "context_value_label": "Actual record"},
+    {"stat_label": "Last 10", "stat": "last_10", "value": last_10_record, "category": "standings", "context_value": f"{win_pct}%", "context_value_label": "Season win pct"},
    
     {"stat_label": "Win percentage", "stat": "win_pct", "value": f"{win_pct}%", "category": "standings", "context_value": f"{win_pct_last}%", "context_value_label": "This point last season"},
     {"stat_label": "Games up/back", "stat": "games_up_back", "value": games_up_back_value, "category": "standings", "context_value": standings_division_rank_ordinal, "context_value_label": 'Division rank'},
