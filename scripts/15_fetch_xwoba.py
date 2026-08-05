@@ -296,6 +296,7 @@ def main():
                 df = df[df['player_name'].isin(active_players)].copy()
 
             # Filter out players with too few rolling PAs
+            df['rn'] = pd.to_numeric(df['rn'], errors='coerce')
             pa_counts = df.groupby('player_name')['rn'].max()
             enough_pa = pa_counts[pa_counts >= MIN_ROLLING_PA].index
             removed_pa = set(df['player_name'].unique()) - set(enough_pa)
