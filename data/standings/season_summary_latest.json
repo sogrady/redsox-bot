@@ -1,27 +1,27 @@
 [
     {
-        "stat_label":"Wins",
-        "stat":"wins",
-        "value":61,
-        "category":"standings",
-        "context_value":61,
-        "context_value_label":"This point last season"
-    },
-    {
-        "stat_label":"Losses",
-        "stat":"losses",
-        "value":51,
-        "category":"standings",
-        "context_value":51,
-        "context_value_label":"This point last season"
-    },
-    {
         "stat_label":"Record",
         "stat":"record",
         "value":"61-51",
         "category":"standings",
         "context_value":"61-51",
         "context_value_label":"This point last season"
+    },
+    {
+        "stat_label":"Pythagorean record",
+        "stat":"pythagorean_record",
+        "value":"64-48",
+        "category":"standings",
+        "context_value":"61-51",
+        "context_value_label":"Actual record"
+    },
+    {
+        "stat_label":"Last 10",
+        "stat":"last_10",
+        "value":"8-2",
+        "category":"standings",
+        "context_value":"54%",
+        "context_value_label":"Season win pct"
     },
     {
         "stat_label":"Win percentage",
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 5, 2026, 6:53 AM ET",
+        "value":"August 5, 2026, 11:04 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
