@@ -58,6 +58,9 @@ def fetch_current_year_data(url, year):
               .drop(["Unnamed: 2", "Streak", "Orig. Scheduled"], axis=1)
               .rename(columns={"Unnamed: 4": "home_away"})
               .assign(season=year))
+
+    # Filter out unplayed future games (W-L record is NaN for scheduled but unplayed games)
+    src = src.dropna(subset=["W-L"]).copy()
     
     src.columns = src.columns.str.lower().str.replace("/", "_").str.replace("-", "-")
     src.columns = [

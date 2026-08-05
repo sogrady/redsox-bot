@@ -90,7 +90,11 @@ def fetch_year_data(year):
         
         # Filter out header rows and preview games
         src = src.query("Tm != 'Tm' and Inn != 'Game Preview, and Matchups'").copy()
-        
+
+        # Filter out unplayed future games (W-L record is NaN for scheduled but unplayed games)
+        if 'W-L' in src.columns:
+            src = src.dropna(subset=['W-L']).copy()
+
         if src.empty:
             logging.warning(f"No valid game data found for year {year}")
             return None
