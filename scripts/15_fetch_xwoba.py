@@ -18,7 +18,6 @@ import logging
 from io import StringIO
 from datetime import datetime
 import re
-import unicodedata
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -37,29 +36,11 @@ s3_key_csv = "redsox/data/batting/redsox_xwoba_current.csv"
 s3_key_json = "redsox/data/batting/redsox_xwoba_current.json"
 s3_key_parquet = "redsox/data/batting/redsox_xwoba_current.parquet"
 
-# Allowlist of batter names to include (expected input: "First Last")
-ALLOWED_BATTERS = [
-    "Rafael Devers",
-    "Triston Casas",
-    "Jarren Duran",
-    "Masataka Yoshida",
-    "Trevor Story",
-    "Wilyer Abreu",
-    "Ceddanne Rafaela",
-    "Connor Wong",
-    "Rob Refsnyder",
-    "Vaughn Grissom",
-    "Enmanuel Valdez",
-    "David Hamilton",
-]
+# Minimum plate appearances in the rolling window to include a player
+MIN_ROLLING_PA = 50
 
-# Known corrections to help match allowlist typos or alternate spellings
-NAME_CORRECTIONS = {
-    # normalized "first last" -> corrected normalized "first last"
-    "teo hernandex": "teoscar hernandez",
-    "teo hernandez": "teoscar hernandez",
-    "hyeseong kim": "hyeseong kim",  # keep as-is; normalization handles hyphens/accents
-}
+# Days since last game date to consider a player "active" for xwOBA charts
+MAX_DAYS_INACTIVE = 30
 
 # AWS session and S3 resource
 # Determine if running in a GitHub Actions environment
@@ -99,84 +80,30 @@ def format_player_name(name):
         return f"{first.strip()} {last.strip()}"
     return name
 
-def strip_accents(text: str) -> str:
-    """Remove diacritics from text."""
-    text_norm = unicodedata.normalize('NFD', text)
-    return ''.join(ch for ch in text_norm if not unicodedata.combining(ch))
-
-def normalize_name(name: str) -> str:
-    """
-    Normalize a player name for comparison:
-    - lower case
-    - remove accents
-    - remove punctuation, commas, periods
-    - collapse whitespace
-    - remove hyphens
-    Output as "first last" order regardless of input.
-    """
-    if not name:
-        return ""
-    name = name.strip()
-    # If "Last, First" flip to "First Last"
-    if ',' in name:
-        parts = [p.strip() for p in name.split(',')]
-        if len(parts) >= 2:
-            name = f"{parts[1]} {parts[0]}"
-    # Remove accents
-    name = strip_accents(name)
-    # Remove punctuation and hyphens
-    name = re.sub(r"[\-\.]+", " ", name)
-    name = re.sub(r"[^a-zA-Z\s]", " ", name)
-    # Collapse whitespace
-    name = re.sub(r"\s+", " ", name).strip()
-    return name.lower()
-
-def to_last_first(name: str) -> str:
-    """Convert "First Last" to "Last, First" for display."""
-    if not name:
-        return name
-    tokens = name.strip().split()
-    if len(tokens) >= 2:
-        first = " ".join(tokens[:-1])
-        last = tokens[-1]
-        return f"{last}, {first}"
-    return name
-
-def build_allowed_set(raw_names: list[str]) -> set[str]:
-    normalized = set()
-    for nm in raw_names:
-        key = normalize_name(nm)
-        key = NAME_CORRECTIONS.get(key, key)
-        normalized.add(key)
-    return normalized
-
-ALLOWED_NORMALIZED = build_allowed_set(ALLOWED_BATTERS)
-
 def fetch_player_ids():
     """
-    Scrape the Red Sox roster page to get all player IDs.
-    Uses the current year dynamically to ensure we're getting the current roster.
+    Scrape the Red Sox hitting stats page on Baseball Savant to get all batter IDs.
+    Returns all batters (no allowlist filtering).
     """
     logging.info(f"Fetching player IDs from roster page for {CURRENT_YEAR} season.")
     team_url = f'https://baseballsavant.mlb.com/team/{config.TEAM_ID}?view=statcast&nav=hitting&season={CURRENT_YEAR}'
     logging.info(f"Making request to: {team_url}")
-    
+
     try:
         response = requests.get(team_url, headers=headers)
         logging.info(f"Response status code: {response.status_code}")
-        
+
         if response.status_code != 200:
             logging.error(f"Failed to fetch roster page. Status code: {response.status_code}")
-            logging.error(f"Response content: {response.text[:500]}")  # First 500 chars of response
             return {}
-            
+
         logging.info("Successfully fetched roster page")
         soup = BeautifulSoup(response.text, 'html.parser')
-        
+
         # Find all player rows in the roster table
         player_rows = soup.find_all('tr', id=lambda x: x and x.startswith('scg_'))
         logging.info(f"Found {len(player_rows)} player rows")
-        
+
         # Create dictionary mapping player names to IDs
         player_lookup = {}
         for row in player_rows:
@@ -186,44 +113,18 @@ def fetch_player_ids():
                 if player_id in ['119', '999999']:
                     continue
                 player_name_raw = row.find('a').text.strip()
-                # Format to "First Last" then filter by allowlist
                 formatted_name = format_player_name(player_name_raw)
-                normalized = normalize_name(formatted_name)
-                # Apply corrections map before comparison
-                normalized = NAME_CORRECTIONS.get(normalized, normalized)
-                # Check allowlist: require last name exact match and loose first-name prefix match
-                if normalized not in ALLOWED_NORMALIZED:
-                    # try prefix match on first name with exact last name
-                    # split to first/last for both candidate and allowed
-                    cand_tokens = normalized.split()
-                    if len(cand_tokens) >= 2:
-                        cand_first = " ".join(cand_tokens[:-1])
-                        cand_last = cand_tokens[-1]
-                        matched = False
-                        for allowed in ALLOWED_NORMALIZED:
-                            a_tokens = allowed.split()
-                            if len(a_tokens) >= 2:
-                                a_first = " ".join(a_tokens[:-1])
-                                a_last = a_tokens[-1]
-                                if cand_last == a_last and (cand_first.startswith(a_first) or a_first.startswith(cand_first)):
-                                    matched = True
-                                    break
-                        if not matched:
-                            continue
-                    else:
-                        continue
                 player_lookup[formatted_name] = player_id
-                logging.debug(f"Added allowed player: {formatted_name} (ID: {player_id})")
+                logging.debug(f"Added player: {formatted_name} (ID: {player_id})")
             except Exception as e:
                 logging.warning(f"Skipping row with ID {row.get('id', 'unknown')}: {str(e)}")
                 continue
-        
+
         logging.info(f"Successfully created lookup for {len(player_lookup)} players")
         return player_lookup
-        
+
     except Exception as e:
         logging.error(f"Error in fetch_player_ids: {str(e)}")
-        logging.error(f"Response object: {response if 'response' in locals() else 'No response object'}")
         return {}
 
 def fetch_player_xwoba(player_name, player_id):
@@ -384,27 +285,30 @@ def main():
             df = pd.concat(all_player_data, ignore_index=True)
             logging.info(f"Combined data for {len(all_player_data)} players")
             
+            # Filter out inactive players whose most recent data point is too old
+            if 'max_game_date' in df.columns:
+                cutoff = (datetime.now() - pd.Timedelta(days=MAX_DAYS_INACTIVE)).strftime('%Y-%m-%d')
+                most_recent = df.groupby('player_name')['max_game_date'].max().reset_index()
+                active_players = most_recent[most_recent['max_game_date'] >= cutoff]['player_name']
+                removed = set(df['player_name'].unique()) - set(active_players)
+                if removed:
+                    logging.info(f"Filtering out inactive players (no game in {MAX_DAYS_INACTIVE} days): {removed}")
+                df = df[df['player_name'].isin(active_players)].copy()
+
+            # Filter out players with too few rolling PAs
+            pa_counts = df.groupby('player_name')['rn'].max()
+            enough_pa = pa_counts[pa_counts >= MIN_ROLLING_PA].index
+            removed_pa = set(df['player_name'].unique()) - set(enough_pa)
+            if removed_pa:
+                logging.info(f"Filtering out players with < {MIN_ROLLING_PA} rolling PAs: {removed_pa}")
+            df = df[df['player_name'].isin(enough_pa)].copy()
+
+            logging.info(f"After filtering: {df['player_name'].nunique()} players")
+
             # Calculate forward rank, preserving original ordering
-            # In Baseball Savant data, rn=1 is already the most recent plate appearance, 
+            # In Baseball Savant data, rn=1 is already the most recent plate appearance,
             # and rn=50 is the oldest, so we'll keep this ordering
             df["rn_fwd"] = df["rn"]
-            
-            # Add a debugging log to show the range of rn values
-            min_rn = df["rn"].min()
-            max_rn = df["rn"].max()
-            logging.info(f"Source data rn values range from {min_rn} (most recent) to {max_rn} (oldest)")
-            
-            # Validate ordering assumption if date information is available
-            if 'max_game_date' in df.columns:
-                # Get a sample player with multiple records
-                sample_player = df['player_name'].value_counts().idxmax()
-                sample_df = df[df['player_name'] == sample_player].sort_values('rn')
-                
-                logging.info(f"Validating chronological order using {sample_player}'s data:")
-                for idx, row in sample_df.head(3).iterrows():
-                    logging.info(f"  rn={row['rn']}, date={row.get('max_game_date', 'N/A')}")
-                    
-                logging.info("If dates for lower rn values are more recent, the ordering is correct")
             
             # Save league average separately
             league_avg_data = {
@@ -415,7 +319,7 @@ def main():
             with open(f'{output_dir}/league_avg_xwoba.json', 'w') as f:
                 json.dump(league_avg_data, f, indent=2)
             
-            df.drop(columns=['savant_batter_id'], inplace=True)
+            df.drop(columns=['savant_batter_id'], inplace=True, errors='ignore')
             # Save to various formats
             df.to_csv(csv_file, index=False)
             df.to_json(json_file, orient="records", indent=2)
