@@ -2,39 +2,39 @@
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"61-51",
+        "value":"62-51",
         "category":"standings",
-        "context_value":"61-51",
+        "context_value":"62-51",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Pythagorean record",
         "stat":"pythagorean_record",
-        "value":"64-48",
+        "value":"65-48",
         "category":"standings",
-        "context_value":"61-51",
+        "context_value":"62-51",
         "context_value_label":"Actual record"
     },
     {
         "stat_label":"Last 10",
         "stat":"last_10",
-        "value":"8-2",
+        "value":"9-1",
         "category":"standings",
-        "context_value":"54%",
+        "context_value":"55%",
         "context_value_label":"Season win pct"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"54%",
+        "value":"55%",
         "category":"standings",
-        "context_value":"54%",
+        "context_value":"55%",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":6,
+        "value":5.5,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -42,7 +42,7 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,160",
+        "value":"34,558",
         "category":"standings",
         "context_value":25,
         "context_value_label":"Home games this season"
@@ -50,7 +50,7 @@
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":488,
+        "value":492,
         "category":"standings",
         "context_value":"20th",
         "context_value_label":"League rank"
@@ -60,15 +60,15 @@
         "stat":"runs_against",
         "value":416,
         "category":"standings",
-        "context_value":481,
+        "context_value":482,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":72,
+        "value":76,
         "category":"standings",
-        "context_value":73,
+        "context_value":78,
         "context_value_label":"This point last season"
     },
     {
@@ -82,7 +82,7 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":115,
+        "value":116,
         "category":"batting",
         "context_value":"24th",
         "context_value_label":"League rank"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":83,
+        "value":86,
         "category":"batting",
         "context_value":"11th",
         "context_value_label":"League rank"
@@ -122,15 +122,15 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"951",
+        "value":"965",
         "category":"pitching",
-        "context_value":"15th",
+        "context_value":"14th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"316",
+        "value":"319",
         "category":"pitching",
         "context_value":"28th",
         "context_value_label":"League rank"
@@ -138,7 +138,7 @@
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"3.52",
+        "value":"3.49",
         "category":"pitching",
         "context_value":"3rd",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":3.01,
+        "value":3.03,
         "category":"pitching",
         "context_value":2.53,
         "context_value_label":"League average"
@@ -156,7 +156,7 @@
         "stat":"hr9",
         "value":"1.0",
         "category":"pitching",
-        "context_value":1.18,
+        "context_value":1.17,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 5, 2026, 8:13 PM ET",
+        "value":"August 6, 2026, 6:55 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 5)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>61-51<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>14-2<\/span> home <span class='highlight'>win<\/span>. and the next game is Thursday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>62-51<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>4-0<\/span> home <span class='highlight'>win<\/span>. and the next game is Thursday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
