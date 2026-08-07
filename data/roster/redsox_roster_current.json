@@ -558,24 +558,6 @@
     "slug":"zack-kelly"
   },
   {
-    "player_id":"686747",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686747\/headshot\/silo\/current",
-    "name":"Joe La Sorsa",
-    "player_url":"\/player\/686747",
-    "jersey":"60",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 5\"",
-    "weight":"224",
-    "dob":"04\/29\/1998",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"joe-la-sorsa"
-  },
-  {
     "player_id":"670912",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670912\/headshot\/silo\/current",
     "name":"Johan Oviedo",
@@ -724,7 +706,7 @@
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/695391\/headshot\/silo\/current",
     "name":"Brett Harris",
     "player_url":"\/player\/695391",
-    "jersey":"25",
+    "jersey":"",
     "position_group":"Infielders",
     "bat_throw":"R\/R",
     "height":"6' 2\"",
