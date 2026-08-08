@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.9876079609463,
-        "incorrect_strikes_pct": 9.012392039053694,
-        "total_called_strikes": 2663,
-        "bad_calls_count": 240
+        "correct_strikes_pct": 90.8243192838493,
+        "incorrect_strikes_pct": 9.175680716150694,
+        "total_called_strikes": 2681,
+        "bad_calls_count": 246
     },
     "last_game_summary": {
         "date": "August 7, 2026",
-        "correct_strikes_pct": 85.71428571428571,
-        "incorrect_strikes_pct": 14.285714285714292,
-        "total_called_strikes": 7,
-        "bad_calls_count": 1,
+        "correct_strikes_pct": 72.0,
+        "incorrect_strikes_pct": 28.0,
+        "total_called_strikes": 25,
+        "bad_calls_count": 7,
         "home_plate_umpire": "Manny Gonzalez"
     },
     "worst_calls_of_season": [
@@ -45,27 +45,27 @@
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=96a7d3c3-31e6-39e2-b228-523d5adf79d4"
         },
         {
-            "distance_inches": 3.2371487327,
-            "batter": "Caleb Durbin",
-            "pitcher": "Juan Mejia",
-            "pitch_type": "Sinker",
-            "velocity_mph": 96.5,
-            "date": "2026-06-23",
-            "date_formatted": "June 23, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=b22f5bda-5ecf-3449-b8ed-9902abfc9340"
+            "distance_inches": 3.3276755062,
+            "batter": "Andruw Monasterio",
+            "pitcher": "Scott Blewett",
+            "pitch_type": "4-Seam Fastball",
+            "velocity_mph": 96.4,
+            "date": "2026-08-07",
+            "date_formatted": "August 7, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=fbae705e-a716-3707-9703-961bb4caafea"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.04094244882194,
-        "incorrect_balls_pct": 3.959057551178063,
-        "total_called_balls": 5178,
+        "correct_balls_pct": 96.05845029801962,
+        "incorrect_balls_pct": 3.941549701980378,
+        "total_called_balls": 5201,
         "bad_calls_count": 205
     },
     "pitching_last_game_summary": {
         "date": "August 7, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 5,
+        "total_called_balls": 28,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
