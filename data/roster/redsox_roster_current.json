@@ -658,9 +658,9 @@
     "height":"6' 1\"",
     "weight":"230",
     "dob":"02\/06\/1998",
-    "status":"ACTIVE",
+    "status":"IL-10",
     "is_minors":false,
-    "is_il":false,
+    "is_il":true,
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"adley-rutschman"

@@ -1,6 +1,6 @@
 {
     "hitting_runs": 14,
-    "hitting_stolenBases": 11,
+    "hitting_stolenBases": 9,
     "hitting_homeRuns": 23,
     "hitting_battingAverage": 10,
     "hitting_onBasePlusSlugging": 13,
@@ -8,6 +8,6 @@
     "hitting_onBasePercentage": 11,
     "pitching_strikeouts": 13,
     "pitching_walks": 28,
-    "pitching_earnedRunAverage": 2,
+    "pitching_earnedRunAverage": 3,
     "pitching_walksAndHitsPerInningPitched": 24
 }
