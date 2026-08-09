@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.87213599408722,
-        "incorrect_strikes_pct": 9.127864005912784,
-        "total_called_strikes": 2706,
-        "bad_calls_count": 247
+        "correct_strikes_pct": 90.89908256880734,
+        "incorrect_strikes_pct": 9.100917431192656,
+        "total_called_strikes": 2725,
+        "bad_calls_count": 248
     },
     "last_game_summary": {
-        "date": "August 8, 2026",
-        "correct_strikes_pct": 96.0,
-        "incorrect_strikes_pct": 4.0,
-        "total_called_strikes": 25,
+        "date": "August 9, 2026",
+        "correct_strikes_pct": 94.73684210526315,
+        "incorrect_strikes_pct": 5.26315789473685,
+        "total_called_strikes": 19,
         "bad_calls_count": 1,
-        "home_plate_umpire": "Tom Hanahan"
+        "home_plate_umpire": "Ron Kulpa"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.05338417540514,
-        "incorrect_balls_pct": 3.9466158245948577,
-        "total_called_balls": 5245,
+        "correct_balls_pct": 96.08547655068078,
+        "incorrect_balls_pct": 3.914523449319219,
+        "total_called_balls": 5288,
         "bad_calls_count": 207
     },
     "pitching_last_game_summary": {
-        "date": "August 8, 2026",
-        "correct_balls_pct": 95.45454545454545,
-        "incorrect_balls_pct": 4.545454545454547,
-        "total_called_balls": 44,
-        "bad_calls_count": 2
+        "date": "August 9, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 43,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
