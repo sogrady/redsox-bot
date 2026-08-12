@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.88929219600726,
-        "incorrect_strikes_pct": 9.110707803992739,
-        "total_called_strikes": 2755,
-        "bad_calls_count": 251
+        "correct_strikes_pct": 90.925459128556,
+        "incorrect_strikes_pct": 9.074540871444,
+        "total_called_strikes": 2777,
+        "bad_calls_count": 252
     },
     "last_game_summary": {
         "date": "August 11, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 9,
-        "bad_calls_count": 0,
+        "correct_strikes_pct": 96.7741935483871,
+        "incorrect_strikes_pct": 3.225806451612897,
+        "total_called_strikes": 31,
+        "bad_calls_count": 1,
         "home_plate_umpire": "Nestor Ceja"
     },
     "worst_calls_of_season": [
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.08833988396032,
-        "incorrect_balls_pct": 3.911660116039684,
-        "total_called_balls": 5343,
-        "bad_calls_count": 209
+        "correct_balls_pct": 96.08647036898994,
+        "incorrect_balls_pct": 3.9135296310100642,
+        "total_called_balls": 5366,
+        "bad_calls_count": 210
     },
     "pitching_last_game_summary": {
         "date": "August 11, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 16,
-        "bad_calls_count": 0
+        "correct_balls_pct": 97.43589743589743,
+        "incorrect_balls_pct": 2.564102564102569,
+        "total_called_balls": 39,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
