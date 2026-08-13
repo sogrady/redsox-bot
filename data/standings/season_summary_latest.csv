@@ -3,9 +3,9 @@ Record,record,64-55,standings,65-54,This point last season
 Pythagorean record,pythagorean_record,69-50,standings,64-55,Actual record
 Last 10,last_10,6-4,standings,54%,Season win pct
 Win percentage,win_pct,54%,standings,55%,This point last season
-Games up/back,games_up_back,9,standings,3rd,Division rank
+Games up/back,games_up_back,9.5,standings,3rd,Division rank
 Avg. home attendance,mean_attendance,"34,688",standings,24,Home games this season
-Runs,runs,527,standings,17th,League rank
+Runs,runs,527,standings,19th,League rank
 Runs against,runs_against,446,standings,509,This point last season
 Run differential,run_differential,81,standings,84,This point last season
 Batting average,batting_average,.248,batting,.263,Last decade average
@@ -20,6 +20,6 @@ ERA,era,3.49,pitching,3rd,League rank
 K/BB ratio,k_bb_ratio,3.06,pitching,2.52,League average
 HR/9,hr9,1.0,pitching,1.17,League average
 BABIP,babip,.285,pitching,.300,League norm
-Last updated,update_time,"August 12, 2026, 12:12 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 12)</span> — The Red Sox have compiled a <span class='highlight'>64-55</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>3-5</span> away <span class='highlight'>loss</span>. and the next game is Wednesday at 7:07 p.m. ET at <span class='highlight'>Rogers Centre</span>.",summary,,
+Last updated,update_time,"August 12, 2026, 7:59 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 12)</span> — The Red Sox have compiled a <span class='highlight'>64-55</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>3-5</span> away <span class='highlight'>loss</span>. and the next game is Thursday at 3:07 p.m. ET at <span class='highlight'>Rogers Centre</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
