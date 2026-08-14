@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":10,
+        "value":9.5,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":531,
         "category":"standings",
-        "context_value":"18th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":121,
         "category":"batting",
-        "context_value":"26th",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"1,029",
         "category":"pitching",
-        "context_value":"12th",
+        "context_value":"13th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 13, 2026, 12:12 PM ET",
+        "value":"August 13, 2026, 7:59 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 13)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>64-56<\/span> record in the 2026 regular season, a <span class='highlight'>53%<\/span> winning percentage.  The last game was a <span class='highlight'>4-6<\/span> away <span class='highlight'>loss<\/span>. and the next game is Thursday at 3:07 p.m. ET at <span class='highlight'>Rogers Centre<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 13)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>65-56<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>7-0<\/span> away <span class='highlight'>win<\/span>. and the next game is Friday at 6:40 p.m. ET at <span class='highlight'>PNC Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"loss",
+        "value":"win",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
