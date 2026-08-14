@@ -1,6 +1,6 @@
 [
     {
-        "name":"Garrett Whitlock",
+        "name":"Garrett Whitlock (15-day IL)",
         "era+":201.0,
         "fip":2.22,
         "so_bb":7.0
@@ -24,9 +24,9 @@
         "so_bb":3.36
     },
     {
-        "name":"Greg Weissert (40-man)",
-        "era+":103.0,
+        "name":"Greg Weissert",
+        "era+":106.0,
         "fip":4.2,
-        "so_bb":3.14
+        "so_bb":3.0
     }
 ]
