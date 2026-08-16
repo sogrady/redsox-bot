@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":546,
         "category":"standings",
-        "context_value":"17th",
+        "context_value":"18th",
         "context_value_label":"League rank"
     },
     {
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".255",
+        "value":".254",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.48",
         "category":"pitching",
-        "context_value":"2nd",
+        "context_value":"3rd",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 16, 2026, 11:36 AM ET",
+        "value":"August 16, 2026, 7:34 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 16)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>66-57<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>4-0<\/span> away <span class='highlight'>win<\/span>. and the next game is Sunday at 1:35 p.m. ET at <span class='highlight'>PNC Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 16)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>66-58<\/span> record in the 2026 regular season, a <span class='highlight'>53%<\/span> winning percentage.  The last game was a <span class='highlight'>3-8<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"win",
+        "value":"loss",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
