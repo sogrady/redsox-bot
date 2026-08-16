@@ -36,6 +36,24 @@
     "slug":"jake-bennett"
   },
   {
+    "player_id":"670103",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670103\/headshot\/silo\/current",
+    "name":"Raymond Burgos",
+    "player_url":"\/player\/670103",
+    "jersey":"79",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 5\"",
+    "weight":"209",
+    "dob":"11\/29\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"raymond-burgos"
+  },
+  {
     "player_id":"547973",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/547973\/headshot\/silo\/current",
     "name":"Aroldis Chapman",
@@ -162,24 +180,6 @@
     "slug":"patrick-sandoval"
   },
   {
-    "player_id":"686580",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686580\/headshot\/silo\/current",
-    "name":"Justin Slaten",
-    "player_url":"\/player\/686580",
-    "jersey":"63",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 4\"",
-    "weight":"222",
-    "dob":"09\/15\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"justin-slaten"
-  },
-  {
     "player_id":"624133",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/624133\/headshot\/silo\/current",
     "name":"Ranger Suarez",
@@ -232,6 +232,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"greg-weissert"
+  },
+  {
+    "player_id":"681508",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
+    "name":"Mickey Gasper",
+    "player_url":"\/player\/681508",
+    "jersey":"30",
+    "position_group":"Catchers",
+    "bat_throw":"S\/R",
+    "height":"5' 9\"",
+    "weight":"205",
+    "dob":"10\/11\/1995",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"mickey-gasper"
   },
   {
     "player_id":"668939",
@@ -450,42 +468,6 @@
     "slug":"jahmai-jones"
   },
   {
-    "player_id":"807799",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/807799\/headshot\/silo\/current",
-    "name":"Masataka Yoshida",
-    "player_url":"\/player\/807799",
-    "jersey":"7",
-    "position_group":"Designated hitter",
-    "bat_throw":"L\/R",
-    "height":"5' 8\"",
-    "weight":"192",
-    "dob":"07\/15\/1993",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"masataka-yoshida"
-  },
-  {
-    "player_id":"670103",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670103\/headshot\/silo\/current",
-    "name":"Raymond Burgos",
-    "player_url":"\/player\/670103",
-    "jersey":"79",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 5\"",
-    "weight":"209",
-    "dob":"11\/29\/1998",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"raymond-burgos"
-  },
-  {
     "player_id":"676710",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676710\/headshot\/silo\/current",
     "name":"Kutter Crawford",
@@ -612,6 +594,24 @@
     "slug":"tyler-samaniego"
   },
   {
+    "player_id":"686580",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686580\/headshot\/silo\/current",
+    "name":"Justin Slaten",
+    "player_url":"\/player\/686580",
+    "jersey":"63",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 4\"",
+    "weight":"222",
+    "dob":"09\/15\/1997",
+    "status":"IL-15",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"justin-slaten"
+  },
+  {
     "player_id":"676477",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
     "name":"Garrett Whitlock",
@@ -628,24 +628,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"garrett-whitlock"
-  },
-  {
-    "player_id":"681508",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
-    "name":"Mickey Gasper",
-    "player_url":"\/player\/681508",
-    "jersey":"30",
-    "position_group":"Catchers",
-    "bat_throw":"S\/R",
-    "height":"5' 9\"",
-    "weight":"205",
-    "dob":"10\/11\/1995",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"mickey-gasper"
   },
   {
     "player_id":"692225",
@@ -826,5 +808,23 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"romy-gonzalez"
+  },
+  {
+    "player_id":"807799",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/807799\/headshot\/silo\/current",
+    "name":"Masataka Yoshida",
+    "player_url":"\/player\/807799",
+    "jersey":"7",
+    "position_group":"Designated hitter",
+    "bat_throw":"L\/R",
+    "height":"5' 8\"",
+    "weight":"192",
+    "dob":"07\/15\/1993",
+    "status":"IL-10",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"masataka-yoshida"
   }
 ]
