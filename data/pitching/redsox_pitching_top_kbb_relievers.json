@@ -8,11 +8,17 @@
     {
         "name":"Tyron Guerrero",
         "era+":129.0,
-        "fip":2.41,
+        "fip":2.4,
         "so_bb":6.8
     },
     {
-        "name":"Justin Slaten",
+        "name":"Raymond Burgos*",
+        "era+":157.0,
+        "fip":4.98,
+        "so_bb":5.0
+    },
+    {
+        "name":"Justin Slaten (15-day IL)",
         "era+":90.0,
         "fip":3.02,
         "so_bb":4.88
@@ -22,11 +28,5 @@
         "era+":65.0,
         "fip":4.28,
         "so_bb":3.36
-    },
-    {
-        "name":"Greg Weissert",
-        "era+":106.0,
-        "fip":4.21,
-        "so_bb":3.0
     }
 ]

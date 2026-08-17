@@ -430110,7 +430110,7 @@
         "pitcher":"Patrick Sandoval",
         "pitch_name":"4-Seam Fastball",
         "pitch_velocity":93.1,
-        "pitch_call":"swinging_strike",
+        "pitch_call":"foul_tip",
         "pitch_in_zone":true,
         "at_bat_eventual_result":"Walk",
         "at_bat_eventual_desc":"Rafael Flores Jr. walks. Bryan Reynolds to 2nd.",

@@ -871,7 +871,7 @@
             "game_number": 145,
             "mean_projected_wins": 77.2,
             "lower_ci_wins": 73,
-            "upper_ci_wins": 82
+            "upper_ci_wins": 81
         },
         {
             "game_number": 146,
@@ -882,19 +882,19 @@
         {
             "game_number": 147,
             "mean_projected_wins": 78.2,
-            "lower_ci_wins": 73,
+            "lower_ci_wins": 74,
             "upper_ci_wins": 83
         },
         {
             "game_number": 148,
-            "mean_projected_wins": 78.8,
+            "mean_projected_wins": 78.7,
             "lower_ci_wins": 74,
             "upper_ci_wins": 83
         },
         {
             "game_number": 149,
             "mean_projected_wins": 79.3,
-            "lower_ci_wins": 74,
+            "lower_ci_wins": 75,
             "upper_ci_wins": 84
         },
         {
@@ -905,7 +905,7 @@
         },
         {
             "game_number": 151,
-            "mean_projected_wins": 80.4,
+            "mean_projected_wins": 80.3,
             "lower_ci_wins": 75,
             "upper_ci_wins": 85
         },
@@ -936,12 +936,12 @@
         {
             "game_number": 156,
             "mean_projected_wins": 83.0,
-            "lower_ci_wins": 77,
-            "upper_ci_wins": 89
+            "lower_ci_wins": 78,
+            "upper_ci_wins": 88
         },
         {
             "game_number": 157,
-            "mean_projected_wins": 83.6,
+            "mean_projected_wins": 83.5,
             "lower_ci_wins": 78,
             "upper_ci_wins": 89
         },
@@ -959,7 +959,7 @@
         },
         {
             "game_number": 160,
-            "mean_projected_wins": 85.2,
+            "mean_projected_wins": 85.1,
             "lower_ci_wins": 79,
             "upper_ci_wins": 91
         },
@@ -967,7 +967,7 @@
             "game_number": 161,
             "mean_projected_wins": 85.7,
             "lower_ci_wins": 80,
-            "upper_ci_wins": 92
+            "upper_ci_wins": 91
         },
         {
             "game_number": 162,
