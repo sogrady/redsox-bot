@@ -1,19 +1,29 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.89034032313509,
-        "incorrect_strikes_pct": 9.109659676864908,
-        "total_called_strikes": 2909,
-        "bad_calls_count": 265
+        "correct_strikes_pct": 90.85324232081912,
+        "incorrect_strikes_pct": 9.14675767918088,
+        "total_called_strikes": 2930,
+        "bad_calls_count": 268
     },
     "last_game_summary": {
         "date": "August 17, 2026",
-        "correct_strikes_pct": 100.0,
-        "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 2,
-        "bad_calls_count": 0,
+        "correct_strikes_pct": 86.95652173913044,
+        "incorrect_strikes_pct": 13.043478260869563,
+        "total_called_strikes": 23,
+        "bad_calls_count": 3,
         "home_plate_umpire": "Dan Iassogna"
     },
     "worst_calls_of_season": [
+        {
+            "distance_inches": 15.9660897827,
+            "batter": "Andruw Monasterio",
+            "pitcher": "Ildemaro Vargas",
+            "pitch_type": "Eephus",
+            "velocity_mph": 37.8,
+            "date": "2026-08-17",
+            "date_formatted": "August 17, 2026",
+            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=a07255cc-dcda-33b6-b76b-2ea0f5beb147"
+        },
         {
             "distance_inches": 3.6276632636,
             "batter": "Carlos Narv\u00e1ez",
@@ -43,30 +53,20 @@
             "date": "2026-07-08",
             "date_formatted": "July 8, 2026",
             "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=96a7d3c3-31e6-39e2-b228-523d5adf79d4"
-        },
-        {
-            "distance_inches": 3.3276755062,
-            "batter": "Andruw Monasterio",
-            "pitcher": "Scott Blewett",
-            "pitch_type": "4-Seam Fastball",
-            "velocity_mph": 96.4,
-            "date": "2026-08-07",
-            "date_formatted": "August 7, 2026",
-            "video_link": "https://baseballsavant.mlb.com/sporty-videos?playId=fbae705e-a716-3707-9703-961bb4caafea"
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.13733905579399,
-        "incorrect_balls_pct": 3.862660944206013,
-        "total_called_balls": 5592,
-        "bad_calls_count": 216
+        "correct_balls_pct": 96.13741545033821,
+        "incorrect_balls_pct": 3.86258454966179,
+        "total_called_balls": 5618,
+        "bad_calls_count": 217
     },
     "pitching_last_game_summary": {
         "date": "August 17, 2026",
-        "correct_balls_pct": 100.0,
-        "incorrect_balls_pct": 0.0,
-        "total_called_balls": 7,
-        "bad_calls_count": 0
+        "correct_balls_pct": 96.96969696969697,
+        "incorrect_balls_pct": 3.030303030303031,
+        "total_called_balls": 33,
+        "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
 }
