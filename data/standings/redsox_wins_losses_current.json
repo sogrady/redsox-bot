@@ -755,17 +755,17 @@
     "gm": 95,
     "game_date": "2026-07-17",
     "result": "W",
-    "r": 5,
-    "ra": 3,
-    "run_diff": 2
+    "r": 10,
+    "ra": 0,
+    "run_diff": 10
   },
   {
     "gm": 96,
     "game_date": "2026-07-17",
     "result": "W",
-    "r": 10,
-    "ra": 0,
-    "run_diff": 10
+    "r": 5,
+    "ra": 3,
+    "run_diff": 2
   },
   {
     "gm": 97,
@@ -998,5 +998,13 @@
     "r": 11,
     "ra": 1,
     "run_diff": 10
+  },
+  {
+    "gm": 126,
+    "game_date": "2026-08-18",
+    "result": "W",
+    "r": 9,
+    "ra": 4,
+    "run_diff": 5
   }
 ]
