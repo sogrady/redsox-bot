@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.96345514950166,
-        "incorrect_strikes_pct": 9.036544850498345,
-        "total_called_strikes": 3010,
+        "correct_strikes_pct": 90.99039417025506,
+        "incorrect_strikes_pct": 9.009605829744942,
+        "total_called_strikes": 3019,
         "bad_calls_count": 272
     },
     "last_game_summary": {
-        "date": "August 21, 2026",
+        "date": "August 22, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 31,
+        "total_called_strikes": 9,
         "bad_calls_count": 0,
-        "home_plate_umpire": "John Libka"
+        "home_plate_umpire": "James Hoye"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.159169550173,
-        "incorrect_balls_pct": 3.8408304498269956,
-        "total_called_balls": 5780,
+        "correct_balls_pct": 96.16514078424598,
+        "incorrect_balls_pct": 3.8348592157540224,
+        "total_called_balls": 5789,
         "bad_calls_count": 222
     },
     "pitching_last_game_summary": {
-        "date": "August 21, 2026",
-        "correct_balls_pct": 95.74468085106383,
-        "incorrect_balls_pct": 4.255319148936167,
-        "total_called_balls": 47,
-        "bad_calls_count": 2
+        "date": "August 22, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 9,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
