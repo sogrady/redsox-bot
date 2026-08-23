@@ -1,7 +1,7 @@
 [
     {
         "name":"Garrett Whitlock (15-day IL)",
-        "era+":201.0,
+        "era+":200.0,
         "fip":2.22,
         "so_bb":7.0
     },
@@ -14,7 +14,7 @@
     {
         "name":"Raymond Burgos (40-man)*",
         "era+":156.0,
-        "fip":4.99,
+        "fip":4.98,
         "so_bb":5.0
     },
     {
@@ -26,7 +26,7 @@
     {
         "name":"Garrett Crochet (60-day IL)*",
         "era+":65.0,
-        "fip":4.29,
+        "fip":4.28,
         "so_bb":3.36
     }
 ]
