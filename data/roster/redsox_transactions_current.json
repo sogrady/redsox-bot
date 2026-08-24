@@ -22,23 +22,16 @@
   },
   {
     "date":"2026-08-17",
-    "transaction":"Red Sox selected the contract of RHP Wyatt Olds from Worcester Red Sox.",
-    "players":[
-      "Wyatt Olds"
-    ]
-  },
-  {
-    "date":"2026-08-17",
     "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
     "players":[
       "Raymond Burgos"
     ]
   },
   {
-    "date":"2026-08-16",
-    "transaction":"Red Sox sent SS Trevor Story on a rehab assignment to Worcester Red Sox.",
+    "date":"2026-08-17",
+    "transaction":"Red Sox selected the contract of RHP Wyatt Olds from Worcester Red Sox.",
     "players":[
-      "Trevor Story"
+      "Wyatt Olds"
     ]
   },
   {
@@ -57,9 +50,9 @@
   },
   {
     "date":"2026-08-16",
-    "transaction":"Red Sox recalled LHP Raymond Burgos from Worcester Red Sox.",
+    "transaction":"Red Sox sent SS Trevor Story on a rehab assignment to Worcester Red Sox.",
     "players":[
-      "Raymond Burgos"
+      "Trevor Story"
     ]
   },
   {
@@ -67,6 +60,13 @@
     "transaction":"Red Sox recalled C Mickey Gasper from Worcester Red Sox.",
     "players":[
       "Mickey Gasper"
+    ]
+  },
+  {
+    "date":"2026-08-16",
+    "transaction":"Red Sox recalled LHP Raymond Burgos from Worcester Red Sox.",
+    "players":[
+      "Raymond Burgos"
     ]
   },
   {
@@ -127,20 +127,6 @@
   },
   {
     "date":"2026-08-11",
-    "transaction":"Red Sox activated C Adley Rutschman from the 10-day injured list.",
-    "players":[
-      "Adley Rutschman"
-    ]
-  },
-  {
-    "date":"2026-08-11",
-    "transaction":"Red Sox transferred 2B Isiah Kiner-Falefa from the 10-day injured list to the 60-day injured list.",
-    "players":[
-      "Isiah Kiner-Falefa"
-    ]
-  },
-  {
-    "date":"2026-08-11",
     "transaction":"Red Sox designated C Jake Rogers for assignment.",
     "players":[
       "Jake Rogers"
@@ -154,10 +140,17 @@
     ]
   },
   {
-    "date":"2026-08-09",
-    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
+    "date":"2026-08-11",
+    "transaction":"Red Sox activated C Adley Rutschman from the 10-day injured list.",
     "players":[
-      "Raymond Burgos"
+      "Adley Rutschman"
+    ]
+  },
+  {
+    "date":"2026-08-11",
+    "transaction":"Red Sox transferred 2B Isiah Kiner-Falefa from the 10-day injured list to the 60-day injured list.",
+    "players":[
+      "Isiah Kiner-Falefa"
     ]
   },
   {
@@ -165,6 +158,13 @@
     "transaction":"Red Sox selected the contract of RHP Seth Martinez from Worcester Red Sox.",
     "players":[
       "Seth Martinez"
+    ]
+  },
+  {
+    "date":"2026-08-09",
+    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
+    "players":[
+      "Raymond Burgos"
     ]
   },
   {
@@ -183,13 +183,6 @@
   },
   {
     "date":"2026-08-07",
-    "transaction":"Los Angeles Angels claimed RHP Ryan Watson off waivers from Red Sox.",
-    "players":[
-      "Ryan Watson"
-    ]
-  },
-  {
-    "date":"2026-08-07",
     "transaction":"Red Sox optioned RHP Greg Weissert to Worcester Red Sox.",
     "players":[
       "Greg Weissert"
@@ -200,6 +193,13 @@
     "transaction":"Red Sox selected the contract of LHP Raymond Burgos from Worcester Red Sox.",
     "players":[
       "Raymond Burgos"
+    ]
+  },
+  {
+    "date":"2026-08-07",
+    "transaction":"Los Angeles Angels claimed RHP Ryan Watson off waivers from Red Sox.",
+    "players":[
+      "Ryan Watson"
     ]
   },
   {
@@ -218,9 +218,9 @@
   },
   {
     "date":"2026-08-04",
-    "transaction":"Red Sox designated RHP Ryan Watson for assignment.",
+    "transaction":"Red Sox activated LHP Erik Miller.",
     "players":[
-      "Ryan Watson"
+      "Erik Miller"
     ]
   },
   {
@@ -232,9 +232,16 @@
   },
   {
     "date":"2026-08-04",
-    "transaction":"Red Sox activated LHP Erik Miller.",
+    "transaction":"Red Sox activated RF Eli White.",
     "players":[
-      "Erik Miller"
+      "Eli White"
+    ]
+  },
+  {
+    "date":"2026-08-04",
+    "transaction":"Red Sox designated RHP Ryan Watson for assignment.",
+    "players":[
+      "Ryan Watson"
     ]
   },
   {
@@ -242,13 +249,6 @@
     "transaction":"Red Sox activated C Jake Rogers.",
     "players":[
       "Jake Rogers"
-    ]
-  },
-  {
-    "date":"2026-08-04",
-    "transaction":"Red Sox activated RF Eli White.",
-    "players":[
-      "Eli White"
     ]
   },
   {
@@ -260,19 +260,19 @@
   },
   {
     "date":"2026-08-03",
+    "transaction":"Atlanta Braves traded RF Eli White to Red Sox for RHP Tyler Uberstine.",
+    "players":[
+      "Eli White",
+      "Tyler Uberstine"
+    ]
+  },
+  {
+    "date":"2026-08-03",
     "transaction":"Red Sox traded 2B Marcelo Mayer to San Francisco Giants for LHP Erik Miller and CF Carlos Gutierrez.",
     "players":[
       "Marcelo Mayer",
       "Erik Miller",
       "Carlos Gutierrez"
-    ]
-  },
-  {
-    "date":"2026-08-03",
-    "transaction":"Atlanta Braves traded RF Eli White to Red Sox for RHP Tyler Uberstine.",
-    "players":[
-      "Eli White",
-      "Tyler Uberstine"
     ]
   },
   {
@@ -395,23 +395,23 @@
   },
   {
     "date":"2026-07-18",
-    "transaction":"Red Sox released LHP Danny Coulombe.",
-    "players":[
-      "Danny Coulombe"
-    ]
-  },
-  {
-    "date":"2026-07-18",
     "transaction":"Red Sox signed LHP Aiden VanDeHatert.",
     "players":[
       "Aiden VanDeHatert"
     ]
   },
   {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed free agent LHP Carson Revay to a minor league contract.",
+    "date":"2026-07-18",
+    "transaction":"Red Sox released LHP Danny Coulombe.",
     "players":[
-      "Carson Revay"
+      "Danny Coulombe"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed RHP Mason Lei.",
+    "players":[
+      "Mason Lei"
     ]
   },
   {
@@ -423,9 +423,72 @@
   },
   {
     "date":"2026-07-17",
+    "transaction":"Red Sox signed SS Colton Coates.",
+    "players":[
+      "Colton Coates"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed SS Wills Maginnis.",
+    "players":[
+      "Wills Maginnis"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed RHP Lucas Davenport.",
+    "players":[
+      "Lucas Davenport"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed RHP Alex Kranzler.",
+    "players":[
+      "Alex Kranzler"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed RHP Jase Evangelista.",
+    "players":[
+      "Jase Evangelista"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed SS Jacob Webster.",
+    "players":[
+      "Jacob Webster"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed SS Jake Schaffner.",
+    "players":[
+      "Jake Schaffner"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox signed RHP Kaleb LaFavor.",
+    "players":[
+      "Kaleb LaFavor"
+    ]
+  },
+  {
+    "date":"2026-07-17",
     "transaction":"Red Sox signed RHP Luis Calderon.",
     "players":[
       "Luis Calderon"
+    ]
+  },
+  {
+    "date":"2026-07-17",
+    "transaction":"Red Sox activated OF Jahmai Jones.",
+    "players":[
+      "Jahmai Jones"
     ]
   },
   {
@@ -458,65 +521,9 @@
   },
   {
     "date":"2026-07-17",
-    "transaction":"Red Sox signed RHP Alex Kranzler.",
+    "transaction":"Red Sox signed free agent LHP Carson Revay to a minor league contract.",
     "players":[
-      "Alex Kranzler"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed RHP Jase Evangelista.",
-    "players":[
-      "Jase Evangelista"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed RHP Lucas Davenport.",
-    "players":[
-      "Lucas Davenport"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed RHP Kaleb LaFavor.",
-    "players":[
-      "Kaleb LaFavor"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed SS Jacob Webster.",
-    "players":[
-      "Jacob Webster"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed SS Wills Maginnis.",
-    "players":[
-      "Wills Maginnis"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed SS Jace Mataczynski.",
-    "players":[
-      "Jace Mataczynski"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed RHP Mason Lei.",
-    "players":[
-      "Mason Lei"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox activated OF Jahmai Jones.",
-    "players":[
-      "Jahmai Jones"
+      "Carson Revay"
     ]
   },
   {
@@ -528,9 +535,9 @@
   },
   {
     "date":"2026-07-17",
-    "transaction":"Red Sox signed SS Colton Coates.",
+    "transaction":"Red Sox signed SS Jace Mataczynski.",
     "players":[
-      "Colton Coates"
+      "Jace Mataczynski"
     ]
   },
   {
@@ -538,13 +545,6 @@
     "transaction":"Red Sox signed LHP Brett Lanman.",
     "players":[
       "Brett Lanman"
-    ]
-  },
-  {
-    "date":"2026-07-17",
-    "transaction":"Red Sox signed SS Jake Schaffner.",
-    "players":[
-      "Jake Schaffner"
     ]
   },
   {
@@ -591,16 +591,16 @@
   },
   {
     "date":"2026-07-12",
-    "transaction":"Red Sox optioned 3B Nick Sogard to Worcester Red Sox.",
+    "transaction":"Red Sox recalled RHP Brayan Bello from Worcester Red Sox.",
     "players":[
-      "Nick Sogard"
+      "Brayan Bello"
     ]
   },
   {
     "date":"2026-07-12",
-    "transaction":"Red Sox recalled RHP Brayan Bello from Worcester Red Sox.",
+    "transaction":"Red Sox optioned 3B Nick Sogard to Worcester Red Sox.",
     "players":[
-      "Brayan Bello"
+      "Nick Sogard"
     ]
   },
   {
@@ -654,23 +654,16 @@
   },
   {
     "date":"2026-07-07",
-    "transaction":"OF Nate Eaton roster status changed by Red Sox.",
-    "players":[
-      "Nate Eaton"
-    ]
-  },
-  {
-    "date":"2026-07-07",
     "transaction":"Red Sox sent 3B Nick Sogard on a rehab assignment to Worcester Red Sox.",
     "players":[
       "Nick Sogard"
     ]
   },
   {
-    "date":"2026-07-06",
-    "transaction":"Red Sox activated LHP Patrick Sandoval from the 60-day injured list.",
+    "date":"2026-07-07",
+    "transaction":"OF Nate Eaton roster status changed by Red Sox.",
     "players":[
-      "Patrick Sandoval"
+      "Nate Eaton"
     ]
   },
   {
@@ -678,6 +671,13 @@
     "transaction":"Red Sox designated RHP Jack Anderson for assignment.",
     "players":[
       "Jack Anderson"
+    ]
+  },
+  {
+    "date":"2026-07-06",
+    "transaction":"Red Sox activated LHP Patrick Sandoval from the 60-day injured list.",
+    "players":[
+      "Patrick Sandoval"
     ]
   },
   {
