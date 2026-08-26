@@ -6,15 +6,21 @@
         "so_bb":7.0
     },
     {
+        "name":"Erik Miller*",
+        "era+":null,
+        "fip":0.76,
+        "so_bb":6.0
+    },
+    {
         "name":"Tyron Guerrero",
-        "era+":144.0,
-        "fip":2.42,
-        "so_bb":7.0
+        "era+":151.0,
+        "fip":2.53,
+        "so_bb":5.83
     },
     {
         "name":"Raymond Burgos (40-man)*",
         "era+":157.0,
-        "fip":4.99,
+        "fip":4.98,
         "so_bb":5.0
     },
     {
@@ -22,11 +28,5 @@
         "era+":90.0,
         "fip":3.02,
         "so_bb":4.88
-    },
-    {
-        "name":"Garrett Crochet (60-day IL)*",
-        "era+":65.0,
-        "fip":4.29,
-        "so_bb":3.36
     }
 ]
