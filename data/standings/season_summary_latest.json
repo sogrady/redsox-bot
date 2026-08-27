@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":5,
+        "value":6,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":600,
         "category":"standings",
-        "context_value":"13th",
+        "context_value":"14th",
         "context_value_label":"League rank"
     },
     {
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".254",
+        "value":".253",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":2.98,
         "category":"pitching",
-        "context_value":2.52,
+        "context_value":2.51,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 26, 2026, 12:32 PM ET",
+        "value":"August 27, 2026, 12:36 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 26)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>73-59<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>7-3<\/span> away <span class='highlight'>win<\/span>. and the next game is Wednesday at 6:40 p.m. ET at <span class='highlight'>loanDepot park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 27)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>73-60<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>0-4<\/span> away <span class='highlight'>loss<\/span>. and the next game is Friday at 7:15 p.m. ET at <span class='highlight'>Yankee Stadium<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -186,7 +186,7 @@
     {
         "stat_label":"Last game result",
         "stat":"last_game_result",
-        "value":"win",
+        "value":"loss",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
