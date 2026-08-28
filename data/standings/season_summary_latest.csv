@@ -9,7 +9,7 @@ Runs,runs,600,standings,14th,League rank
 Runs against,runs_against,499,standings,556,This point last season
 Run differential,run_differential,101,standings,106,This point last season
 Batting average,batting_average,.250,batting,.263,Last decade average
-Home runs,home_runs,136,batting,22nd,League rank
+Home runs,home_runs,136,batting,23rd,League rank
 Home runs/game,home_runs_game,1.02,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.324,batting,.330,Last decade average
 Stolen bases,stolen_bases,97,batting,11th,League rank
@@ -17,9 +17,9 @@ BA w/ RISP,batting_avg_risp,.253,batting,.251,League average
 Strikeouts,strikeouts,"1,139",pitching,12th,League rank
 Walks,walks,382,pitching,28th,League rank
 ERA,era,3.47,pitching,3rd,League rank
-K/BB ratio,k_bb_ratio,2.98,pitching,2.51,League average
+K/BB ratio,k_bb_ratio,2.98,pitching,2.52,League average
 HR/9,hr9,1.0,pitching,1.16,League average
 BABIP,babip,.284,pitching,.300,League norm
-Last updated,update_time,"August 27, 2026, 3:10 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 27)</span> — The Red Sox have compiled a <span class='highlight'>73-60</span> record in the 2026 regular season, a <span class='highlight'>55%</span> winning percentage.  The last game was a <span class='highlight'>0-4</span> away <span class='highlight'>loss</span>. and the next game is Friday at 7:15 p.m. ET at <span class='highlight'>Yankee Stadium</span>.",summary,,
+Last updated,update_time,"August 28, 2026, 3:00 AM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 28)</span> — The Red Sox have compiled a <span class='highlight'>73-60</span> record in the 2026 regular season, a <span class='highlight'>55%</span> winning percentage.  The last game was a <span class='highlight'>0-4</span> away <span class='highlight'>loss</span>. and the next game is Friday at 7:15 p.m. ET at <span class='highlight'>Yankee Stadium</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
