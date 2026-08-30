@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 30, 2026, 9:53 AM ET",
+        "value":"August 30, 2026, 2:41 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 30)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>74-62<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>2-9<\/span> away <span class='highlight'>loss<\/span>. and the next game is Sunday at 1:35 p.m. ET at <span class='highlight'>Yankee Stadium<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 30)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>74-62<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>2-9<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
