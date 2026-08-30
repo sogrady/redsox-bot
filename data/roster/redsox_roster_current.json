@@ -144,24 +144,6 @@
     "slug":"jovani-moran"
   },
   {
-    "player_id":"681544",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681544\/headshot\/silo\/current",
-    "name":"Wyatt Olds",
-    "player_url":"\/player\/681544",
-    "jersey":"75",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"183",
-    "dob":"08\/05\/1999",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"wyatt-olds"
-  },
-  {
     "player_id":"663776",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663776\/headshot\/silo\/current",
     "name":"Patrick Sandoval",
@@ -232,6 +214,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"greg-weissert"
+  },
+  {
+    "player_id":"676477",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
+    "name":"Garrett Whitlock",
+    "player_url":"\/player\/676477",
+    "jersey":"22",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 5\"",
+    "weight":"222",
+    "dob":"06\/11\/1996",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"garrett-whitlock"
   },
   {
     "player_id":"668939",
@@ -558,6 +558,24 @@
     "slug":"zack-kelly"
   },
   {
+    "player_id":"681544",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681544\/headshot\/silo\/current",
+    "name":"Wyatt Olds",
+    "player_url":"\/player\/681544",
+    "jersey":"75",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 0\"",
+    "weight":"183",
+    "dob":"08\/05\/1999",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"wyatt-olds"
+  },
+  {
     "player_id":"670912",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670912\/headshot\/silo\/current",
     "name":"Johan Oviedo",
@@ -628,24 +646,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"justin-slaten"
-  },
-  {
-    "player_id":"676477",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676477\/headshot\/silo\/current",
-    "name":"Garrett Whitlock",
-    "player_url":"\/player\/676477",
-    "jersey":"22",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 5\"",
-    "weight":"222",
-    "dob":"06\/11\/1996",
-    "status":"IL-15",
-    "is_minors":false,
-    "is_il":true,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"garrett-whitlock"
   },
   {
     "player_id":"692225",
