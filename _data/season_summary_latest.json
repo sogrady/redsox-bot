@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":7.5,
+        "value":8.5,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":608,
         "category":"standings",
-        "context_value":"15th",
+        "context_value":"17th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.48",
         "category":"pitching",
-        "context_value":"3rd",
+        "context_value":"4th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"August 30, 2026, 2:41 PM ET",
+        "value":"August 30, 2026, 9:28 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 30)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>74-62<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>2-9<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(August 30)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>74-63<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>1-16<\/span> away <span class='highlight'>loss<\/span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
