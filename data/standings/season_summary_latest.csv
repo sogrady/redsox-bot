@@ -3,9 +3,9 @@ Record,record,74-62,standings,75-61,This point last season
 Pythagorean record,pythagorean_record,79-57,standings,74-62,Actual record
 Last 10,last_10,6-4,standings,54%,Season win pct
 Win percentage,win_pct,54%,standings,55%,This point last season
-Games up/back,games_up_back,7.5,standings,3rd,Division rank
+Games up/back,games_up_back,8.5,standings,3rd,Division rank
 Avg. home attendance,mean_attendance,"34,879",standings,35,Home games this season
-Runs,runs,608,standings,15th,League rank
+Runs,runs,608,standings,17th,League rank
 Runs against,runs_against,509,standings,564,This point last season
 Run differential,run_differential,99,standings,106,This point last season
 Batting average,batting_average,.249,batting,.263,Last decade average
@@ -16,10 +16,10 @@ Stolen bases,stolen_bases,97,batting,11th,League rank
 BA w/ RISP,batting_avg_risp,.252,batting,.251,League average
 Strikeouts,strikeouts,"1,164",pitching,11th,League rank
 Walks,walks,387,pitching,28th,League rank
-ERA,era,3.48,pitching,3rd,League rank
+ERA,era,3.48,pitching,4th,League rank
 K/BB ratio,k_bb_ratio,3.01,pitching,2.51,League average
 HR/9,hr9,1.0,pitching,1.16,League average
 BABIP,babip,.284,pitching,.300,League norm
-Last updated,update_time,"August 30, 2026, 2:41 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 30)</span> — The Red Sox have compiled a <span class='highlight'>74-62</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>2-9</span> away <span class='highlight'>loss</span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
+Last updated,update_time,"August 30, 2026, 9:28 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(August 30)</span> — The Red Sox have compiled a <span class='highlight'>74-63</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>1-16</span> away <span class='highlight'>loss</span>. and the next game is Monday at 6:45 p.m. ET at <span class='highlight'>Fenway Park</span>.",summary,,
 Last game result,last_game_result,loss,summary,,
