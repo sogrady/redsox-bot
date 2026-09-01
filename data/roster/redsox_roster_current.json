@@ -270,24 +270,6 @@
     "slug":"connor-wong"
   },
   {
-    "player_id":"575929",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
-    "name":"Willson Contreras",
-    "player_url":"\/player\/575929",
-    "jersey":"40",
-    "position_group":"Infielders",
-    "bat_throw":"R\/R",
-    "height":"6' 0\"",
-    "weight":"240",
-    "dob":"05\/13\/1992",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"willson-contreras"
-  },
-  {
     "player_id":"702332",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/702332\/headshot\/silo\/current",
     "name":"Caleb Durbin",
@@ -448,6 +430,24 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"eli-white"
+  },
+  {
+    "player_id":"681508",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
+    "name":"Mickey Gasper",
+    "player_url":"\/player\/681508",
+    "jersey":"30",
+    "position_group":"Designated hitter",
+    "bat_throw":"S\/R",
+    "height":"5' 9\"",
+    "weight":"205",
+    "dob":"10\/11\/1995",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"mickey-gasper"
   },
   {
     "player_id":"663330",
@@ -702,6 +702,24 @@
     "slug":"tsung-che-cheng"
   },
   {
+    "player_id":"575929",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/575929\/headshot\/silo\/current",
+    "name":"Willson Contreras",
+    "player_url":"\/player\/575929",
+    "jersey":"40",
+    "position_group":"Infielders",
+    "bat_throw":"R\/R",
+    "height":"6' 0\"",
+    "weight":"240",
+    "dob":"05\/13\/1992",
+    "status":"IL-10",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"willson-contreras"
+  },
+  {
     "player_id":"695391",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/695391\/headshot\/silo\/current",
     "name":"Brett Harris",
@@ -790,24 +808,6 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"nate-eaton"
-  },
-  {
-    "player_id":"681508",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/681508\/headshot\/silo\/current",
-    "name":"Mickey Gasper",
-    "player_url":"\/player\/681508",
-    "jersey":"30",
-    "position_group":"Designated hitter",
-    "bat_throw":"S\/R",
-    "height":"5' 9\"",
-    "weight":"205",
-    "dob":"10\/11\/1995",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"mickey-gasper"
   },
   {
     "player_id":"663853",
