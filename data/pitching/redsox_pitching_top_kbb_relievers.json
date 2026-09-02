@@ -1,32 +1,32 @@
 [
     {
         "name":"Garrett Whitlock",
-        "era+":206.0,
+        "era+":206,
         "fip":2.2,
         "so_bb":7.14
     },
     {
         "name":"Raymond Burgos (40-man)*",
-        "era+":72.0,
-        "fip":4.3,
+        "era+":72,
+        "fip":4.31,
         "so_bb":7.0
     },
     {
         "name":"Erik Miller*",
-        "era+":531.0,
-        "fip":1.76,
+        "era+":532,
+        "fip":1.77,
         "so_bb":6.67
     },
     {
-        "name":"Tyron Guerrero",
-        "era+":126.0,
-        "fip":2.59,
+        "name":"Tyron Guerrero (15-day IL)",
+        "era+":127,
+        "fip":2.6,
         "so_bb":5.14
     },
     {
         "name":"Justin Slaten (15-day IL)",
-        "era+":90.0,
-        "fip":3.02,
+        "era+":90,
+        "fip":3.03,
         "so_bb":4.88
     }
 ]
