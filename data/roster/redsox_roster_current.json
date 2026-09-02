@@ -36,6 +36,24 @@
     "slug":"jake-bennett"
   },
   {
+    "player_id":"670103",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670103\/headshot\/silo\/current",
+    "name":"Raymond Burgos",
+    "player_url":"\/player\/670103",
+    "jersey":"79",
+    "position_group":"Pitchers",
+    "bat_throw":"L\/L",
+    "height":"6' 5\"",
+    "weight":"209",
+    "dob":"11\/29\/1998",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"raymond-burgos"
+  },
+  {
     "player_id":"547973",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/547973\/headshot\/silo\/current",
     "name":"Aroldis Chapman",
@@ -142,24 +160,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"wyatt-olds"
-  },
-  {
-    "player_id":"699151",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/699151\/headshot\/silo\/current",
-    "name":"Jedixson Paez",
-    "player_url":"\/player\/699151",
-    "jersey":"65",
-    "position_group":"Pitchers",
-    "bat_throw":"R\/R",
-    "height":"6' 1\"",
-    "weight":"170",
-    "dob":"01\/17\/2004",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"jedixson-paez"
   },
   {
     "player_id":"663776",
@@ -504,24 +504,6 @@
     "slug":"jahmai-jones"
   },
   {
-    "player_id":"670103",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/670103\/headshot\/silo\/current",
-    "name":"Raymond Burgos",
-    "player_url":"\/player\/670103",
-    "jersey":"79",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 5\"",
-    "weight":"209",
-    "dob":"11\/29\/1998",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"raymond-burgos"
-  },
-  {
     "player_id":"676710",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/676710\/headshot\/silo\/current",
     "name":"Kutter Crawford",
@@ -628,6 +610,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"johan-oviedo"
+  },
+  {
+    "player_id":"699151",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/699151\/headshot\/silo\/current",
+    "name":"Jedixson Paez",
+    "player_url":"\/player\/699151",
+    "jersey":"65",
+    "position_group":"Pitchers",
+    "bat_throw":"R\/R",
+    "height":"6' 1\"",
+    "weight":"170",
+    "dob":"01\/17\/2004",
+    "status":"MINORS",
+    "is_minors":true,
+    "is_il":false,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"jedixson-paez"
   },
   {
     "player_id":"700842",
