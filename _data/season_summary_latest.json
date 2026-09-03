@@ -34,7 +34,7 @@
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":8.5,
+        "value":9,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":624,
         "category":"standings",
-        "context_value":"15th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":142,
         "category":"batting",
-        "context_value":"23rd",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".252",
+        "value":".253",
         "category":"batting",
         "context_value":".251",
         "context_value_label":"League average"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 2, 2026, 2:40 PM ET",
+        "value":"September 2, 2026, 9:11 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 2)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>75-64<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>6-9<\/span> home <span class='highlight'>loss<\/span>. and the next game is Wednesday at 4:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 2)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>75-65<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>3-8<\/span> home <span class='highlight'>loss<\/span>. and the next game is Thursday at 7:15 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
