@@ -5,11 +5,11 @@ Last 10,last_10,4-6,standings,54%,Season win pct
 Win percentage,win_pct,54%,standings,56%,This point last season
 Games up/back,games_up_back,8.5,standings,3rd,Division rank
 Avg. home attendance,mean_attendance,"34,969",standings,44,Home games this season
-Runs,runs,627,standings,17th,League rank
+Runs,runs,627,standings,15th,League rank
 Runs against,runs_against,550,standings,587,This point last season
 Run differential,run_differential,77,standings,108,This point last season
 Batting average,batting_average,.250,batting,.263,Last decade average
-Home runs,home_runs,143,batting,24th,League rank
+Home runs,home_runs,143,batting,22nd,League rank
 Home runs/game,home_runs_game,1.02,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.323,batting,.330,Last decade average
 Stolen bases,stolen_bases,97,batting,11th,League rank
@@ -20,6 +20,6 @@ ERA,era,3.66,pitching,4th,League rank
 K/BB ratio,k_bb_ratio,2.93,pitching,2.51,League average
 HR/9,hr9,1.0,pitching,1.16,League average
 BABIP,babip,.287,pitching,.300,League norm
-Last updated,update_time,"September 3, 2026, 2:36 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(September 3)</span> — The Red Sox have compiled a <span class='highlight'>75-65</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>3-8</span> home <span class='highlight'>loss</span>. and the next game is Thursday at 7:15 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards</span>.",summary,,
+Last updated,update_time,"September 3, 2026, 9:03 PM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(September 3)</span> — The Red Sox have compiled a <span class='highlight'>75-65</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>3-8</span> home <span class='highlight'>loss</span>. and the next game is Friday at 7:05 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards</span>.",summary,,
 Last game result,last_game_result,loss,summary,,

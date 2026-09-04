@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":627,
         "category":"standings",
-        "context_value":"17th",
+        "context_value":"15th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":143,
         "category":"batting",
-        "context_value":"24th",
+        "context_value":"22nd",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 3, 2026, 2:36 PM ET",
+        "value":"September 3, 2026, 9:03 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 3)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>75-65<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>3-8<\/span> home <span class='highlight'>loss<\/span>. and the next game is Thursday at 7:15 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 3)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>75-65<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>3-8<\/span> home <span class='highlight'>loss<\/span>. and the next game is Friday at 7:05 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
