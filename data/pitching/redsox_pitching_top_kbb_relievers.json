@@ -1,21 +1,15 @@
 [
     {
         "name":"Raymond Burgos*",
-        "era+":83,
+        "era+":84,
         "fip":3.72,
         "so_bb":10.0
     },
     {
         "name":"Garrett Whitlock",
-        "era+":206,
-        "fip":2.21,
-        "so_bb":7.14
-    },
-    {
-        "name":"Erik Miller*",
-        "era+":532,
-        "fip":1.77,
-        "so_bb":6.67
+        "era+":211,
+        "fip":2.14,
+        "so_bb":7.43
     },
     {
         "name":"Tyron Guerrero (15-day IL)",
@@ -28,5 +22,11 @@
         "era+":90,
         "fip":3.03,
         "so_bb":4.88
+    },
+    {
+        "name":"Erik Miller*",
+        "era+":577,
+        "fip":2.04,
+        "so_bb":4.4
     }
 ]
