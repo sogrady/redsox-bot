@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":98,
         "category":"batting",
-        "context_value":"12th",
+        "context_value":"13th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 6, 2026, 8:13 AM ET",
+        "value":"September 6, 2026, 1:43 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>78-65<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>5-0<\/span> away <span class='highlight'>win<\/span>. and the next game is Sunday at 1:35 p.m. ET at <span class='highlight'>Oriole Park at Camden Yards<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 6)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>78-65<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>5-0<\/span> away <span class='highlight'>win<\/span>. and the next game is Monday at 1:35 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
