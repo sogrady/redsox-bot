@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.03995299647474,
-        "incorrect_strikes_pct": 8.960047003525261,
-        "total_called_strikes": 3404,
+        "correct_strikes_pct": 91.10008754012256,
+        "incorrect_strikes_pct": 8.899912459877442,
+        "total_called_strikes": 3427,
         "bad_calls_count": 305
     },
     "last_game_summary": {
         "date": "September 6, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 5,
+        "total_called_strikes": 28,
         "bad_calls_count": 0,
         "home_plate_umpire": "Dexter Kelley"
     },
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.11145131659522,
-        "incorrect_balls_pct": 3.888548683404778,
-        "total_called_balls": 6532,
+        "correct_balls_pct": 96.13099771515613,
+        "incorrect_balls_pct": 3.869002284843873,
+        "total_called_balls": 6565,
         "bad_calls_count": 254
     },
     "pitching_last_game_summary": {
         "date": "September 6, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 1,
+        "total_called_balls": 34,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
