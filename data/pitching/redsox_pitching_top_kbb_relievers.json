@@ -7,14 +7,14 @@
     },
     {
         "name":"Garrett Whitlock",
-        "era+":217,
+        "era+":216,
         "fip":2.16,
         "so_bb":7.43
     },
     {
         "name":"Tyron Guerrero (15-day IL)",
-        "era+":128,
-        "fip":2.6,
+        "era+":127,
+        "fip":2.61,
         "so_bb":5.14
     },
     {
@@ -25,8 +25,8 @@
     },
     {
         "name":"Erik Miller*",
-        "era+":582,
-        "fip":2.04,
-        "so_bb":4.4
+        "era+":626,
+        "fip":1.82,
+        "so_bb":4.8
     }
 ]
