@@ -516585,7 +516585,7 @@
         "pitcher":"Jovani Mor\u00e1n",
         "pitch_name":"4-Seam Fastball",
         "pitch_velocity":93.8,
-        "pitch_call":"swinging_strike",
+        "pitch_call":"called_strike",
         "pitch_in_zone":true,
         "at_bat_eventual_result":"Strikeout",
         "at_bat_eventual_desc":"Mickey Gasper challenged (pitch result), call on the field was overturned: Christian Moore called out on strikes.",
