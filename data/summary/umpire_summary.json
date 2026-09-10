@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.02932719953996,
-        "incorrect_strikes_pct": 8.970672800460036,
-        "total_called_strikes": 3478,
-        "bad_calls_count": 312
+        "correct_strikes_pct": 91.01283880171184,
+        "incorrect_strikes_pct": 8.987161198288163,
+        "total_called_strikes": 3505,
+        "bad_calls_count": 315
     },
     "last_game_summary": {
-        "date": "September 8, 2026",
-        "correct_strikes_pct": 93.10344827586206,
-        "incorrect_strikes_pct": 6.896551724137936,
-        "total_called_strikes": 29,
-        "bad_calls_count": 2,
-        "home_plate_umpire": "Bruce Dreckman"
+        "date": "September 9, 2026",
+        "correct_strikes_pct": 88.88888888888889,
+        "incorrect_strikes_pct": 11.111111111111114,
+        "total_called_strikes": 27,
+        "bad_calls_count": 3,
+        "home_plate_umpire": "Carlos Torres"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.14865877416455,
-        "incorrect_balls_pct": 3.851341225835455,
-        "total_called_balls": 6673,
+        "correct_balls_pct": 96.16932478759875,
+        "incorrect_balls_pct": 3.830675212401246,
+        "total_called_balls": 6709,
         "bad_calls_count": 257
     },
     "pitching_last_game_summary": {
-        "date": "September 8, 2026",
-        "correct_balls_pct": 93.61702127659575,
-        "incorrect_balls_pct": 6.38297872340425,
-        "total_called_balls": 47,
-        "bad_calls_count": 3
+        "date": "September 9, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 36,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
