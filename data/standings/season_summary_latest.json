@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"422",
         "category":"pitching",
-        "context_value":"28th",
+        "context_value":"3rd",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 10, 2026, 9:03 PM ET",
+        "value":"September 10, 2026, 11:24 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
