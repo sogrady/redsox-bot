@@ -78,7 +78,9 @@ def get_team_rank_for_stat(stat_name: str, stat_group: str, team_name_query: str
         The rank of the team for the specified statistic, or None if not found.
     """
     # Determine sort order based on stat - some stats are better lower (e.g., ERA)
-    sort_order = "asc" if stat_name in ["earnedRunAverage"] else "desc"
+    # Lower is better for ERA, WHIP, and walks (pitching)
+    lower_is_better = ["earnedRunAverage", "walksAndHitsPerInningPitched", "walks"]
+    sort_order = "asc" if stat_name in lower_is_better else "desc"
     
     url = (
         f'https://bdfed.stitch.mlbinfra.com/bdfed/stats/team?&env=prod&sportId=1&gameType=R'
