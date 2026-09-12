@@ -342,6 +342,24 @@
     "slug":"andruw-monasterio"
   },
   {
+    "player_id":"678011",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678011\/headshot\/silo\/current",
+    "name":"Anthony Seigler",
+    "player_url":"\/player\/678011",
+    "jersey":"48",
+    "position_group":"Infielders",
+    "bat_throw":"S\/S",
+    "height":"5' 9\"",
+    "weight":"192",
+    "dob":"06\/20\/1999",
+    "status":"ACTIVE",
+    "is_minors":false,
+    "is_il":false,
+    "is_active_roster":true,
+    "is_40_man":true,
+    "slug":"anthony-seigler"
+  },
+  {
     "player_id":"686765",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/686765\/headshot\/silo\/current",
     "name":"Nick Sogard",
@@ -448,24 +466,6 @@
     "is_active_roster":true,
     "is_40_man":true,
     "slug":"nate-eaton"
-  },
-  {
-    "player_id":"642201",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/642201\/headshot\/silo\/current",
-    "name":"Eli White",
-    "player_url":"\/player\/642201",
-    "jersey":"38",
-    "position_group":"Outfielders",
-    "bat_throw":"R\/R",
-    "height":"6' 2\"",
-    "weight":"195",
-    "dob":"06\/26\/1994",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"eli-white"
   },
   {
     "player_id":"681508",
@@ -774,24 +774,6 @@
     "slug":"curtis-mead"
   },
   {
-    "player_id":"678011",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678011\/headshot\/silo\/current",
-    "name":"Anthony Seigler",
-    "player_url":"\/player\/678011",
-    "jersey":"48",
-    "position_group":"Infielders",
-    "bat_throw":"S\/S",
-    "height":"5' 9\"",
-    "weight":"192",
-    "dob":"06\/20\/1999",
-    "status":"MINORS",
-    "is_minors":true,
-    "is_il":false,
-    "is_active_roster":false,
-    "is_40_man":true,
-    "slug":"anthony-seigler"
-  },
-  {
     "player_id":"678882",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/678882\/headshot\/silo\/current",
     "name":"Ceddanne Rafaela",
@@ -808,6 +790,24 @@
     "is_active_roster":false,
     "is_40_man":true,
     "slug":"ceddanne-rafaela"
+  },
+  {
+    "player_id":"642201",
+    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/642201\/headshot\/silo\/current",
+    "name":"Eli White",
+    "player_url":"\/player\/642201",
+    "jersey":"38",
+    "position_group":"Outfielders",
+    "bat_throw":"R\/R",
+    "height":"6' 2\"",
+    "weight":"195",
+    "dob":"06\/26\/1994",
+    "status":"IL-10",
+    "is_minors":false,
+    "is_il":true,
+    "is_active_roster":false,
+    "is_40_man":true,
+    "slug":"eli-white"
   },
   {
     "player_id":"663853",
