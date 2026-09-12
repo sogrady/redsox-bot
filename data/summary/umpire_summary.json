@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 91.07848673066064,
-        "incorrect_strikes_pct": 8.921513269339357,
-        "total_called_strikes": 3542,
+        "correct_strikes_pct": 91.08603667136812,
+        "incorrect_strikes_pct": 8.91396332863188,
+        "total_called_strikes": 3545,
         "bad_calls_count": 316
     },
     "last_game_summary": {
         "date": "September 11, 2026",
         "correct_strikes_pct": 100.0,
         "incorrect_strikes_pct": 0.0,
-        "total_called_strikes": 31,
+        "total_called_strikes": 34,
         "bad_calls_count": 0,
         "home_plate_umpire": "Alan Porter"
     },
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.17040225619712,
-        "incorrect_balls_pct": 3.8295977438028785,
-        "total_called_balls": 6737,
+        "correct_balls_pct": 96.17664493183166,
+        "incorrect_balls_pct": 3.8233550681683397,
+        "total_called_balls": 6748,
         "bad_calls_count": 258
     },
     "pitching_last_game_summary": {
         "date": "September 11, 2026",
-        "correct_balls_pct": 96.42857142857143,
-        "incorrect_balls_pct": 3.5714285714285694,
-        "total_called_balls": 28,
+        "correct_balls_pct": 97.43589743589743,
+        "incorrect_balls_pct": 2.564102564102569,
+        "total_called_balls": 39,
         "bad_calls_count": 1
     },
     "pitching_worst_calls_of_season": []
