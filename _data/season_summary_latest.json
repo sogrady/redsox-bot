@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":652,
         "category":"standings",
-        "context_value":"17th",
+        "context_value":"16th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":153,
         "category":"batting",
-        "context_value":"24th",
+        "context_value":"23rd",
         "context_value_label":"League rank"
     },
     {
@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":99,
         "category":"batting",
-        "context_value":"13th",
+        "context_value":"12th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 11, 2026, 2:29 PM ET",
+        "value":"September 11, 2026, 9:09 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 11)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>80-67<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>4-6<\/span> home <span class='highlight'>loss<\/span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 11)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>80-67<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>4-6<\/span> home <span class='highlight'>loss<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
