@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":659,
         "category":"standings",
-        "context_value":"18th",
+        "context_value":"19th",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":154,
         "category":"batting",
-        "context_value":"24th",
+        "context_value":"23rd",
         "context_value_label":"League rank"
     },
     {
@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":100,
         "category":"batting",
-        "context_value":"13th",
+        "context_value":"12th",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.60",
         "category":"pitching",
-        "context_value":"4th",
+        "context_value":"3rd",
         "context_value_label":"League rank"
     },
     {
@@ -148,7 +148,7 @@
         "stat":"k_bb_ratio",
         "value":3.0,
         "category":"pitching",
-        "context_value":2.52,
+        "context_value":2.51,
         "context_value_label":"League average"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 13, 2026, 2:11 PM ET",
+        "value":"September 13, 2026, 9:02 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 13)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>81-68<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>5-1<\/span> home <span class='highlight'>win<\/span>. and the next game is Sunday at 3:05 p.m. ET at <span class='highlight'>Fenway Park<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 13)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>82-68<\/span> record in the 2026 regular season, a <span class='highlight'>55%<\/span> winning percentage.  The last game was a <span class='highlight'>4-1<\/span> home <span class='highlight'>win<\/span>. and the next game is Tuesday at 8:05 p.m. ET at <span class='highlight'>Globe Life Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
