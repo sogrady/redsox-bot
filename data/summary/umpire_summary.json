@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.98039215686275,
-        "incorrect_strikes_pct": 9.019607843137251,
-        "total_called_strikes": 3570,
-        "bad_calls_count": 322
+        "correct_strikes_pct": 90.9445528002229,
+        "incorrect_strikes_pct": 9.055447199777106,
+        "total_called_strikes": 3589,
+        "bad_calls_count": 325
     },
     "last_game_summary": {
-        "date": "September 12, 2026",
-        "correct_strikes_pct": 76.0,
-        "incorrect_strikes_pct": 24.0,
-        "total_called_strikes": 25,
-        "bad_calls_count": 6,
-        "home_plate_umpire": "Jim Wolf"
+        "date": "September 13, 2026",
+        "correct_strikes_pct": 84.21052631578947,
+        "incorrect_strikes_pct": 15.789473684210535,
+        "total_called_strikes": 19,
+        "bad_calls_count": 3,
+        "home_plate_umpire": "Roberto Ortiz"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.17994100294986,
-        "incorrect_balls_pct": 3.8200589970501397,
-        "total_called_balls": 6780,
+        "correct_balls_pct": 96.2051282051282,
+        "incorrect_balls_pct": 3.7948717948717956,
+        "total_called_balls": 6825,
         "bad_calls_count": 259
     },
     "pitching_last_game_summary": {
-        "date": "September 12, 2026",
-        "correct_balls_pct": 96.875,
-        "incorrect_balls_pct": 3.125,
-        "total_called_balls": 32,
-        "bad_calls_count": 1
+        "date": "September 13, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 45,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
