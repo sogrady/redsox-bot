@@ -108,24 +108,6 @@
     "slug":"sonny-gray"
   },
   {
-    "player_id":"663556",
-    "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/663556\/headshot\/silo\/current",
-    "name":"Shane McClanahan",
-    "player_url":"\/player\/663556",
-    "jersey":"47",
-    "position_group":"Pitchers",
-    "bat_throw":"L\/L",
-    "height":"6' 3\"",
-    "weight":"210",
-    "dob":"04\/28\/1997",
-    "status":"ACTIVE",
-    "is_minors":false,
-    "is_il":false,
-    "is_active_roster":true,
-    "is_40_man":true,
-    "slug":"shane-mcclanahan"
-  },
-  {
     "player_id":"669062",
     "thumb_url":"https:\/\/img.mlbstatic.com\/mlb-photos\/image\/upload\/d_people:generic:headshot:silo:current.png\/r_max\/q_auto:best\/v1\/people\/669062\/headshot\/silo\/current",
     "name":"Erik Miller",
