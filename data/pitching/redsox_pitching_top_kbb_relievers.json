@@ -2,31 +2,31 @@
     {
         "name":"Raymond Burgos*",
         "era+":76,
-        "fip":4.21,
+        "fip":4.2,
         "so_bb":12.0
     },
     {
         "name":"Garrett Whitlock",
-        "era+":227,
-        "fip":1.98,
+        "era+":229,
+        "fip":1.97,
         "so_bb":8.29
     },
     {
         "name":"Tyron Guerrero (15-day IL)",
-        "era+":126,
+        "era+":127,
         "fip":2.61,
         "so_bb":5.14
     },
     {
         "name":"Justin Slaten (15-day IL)",
-        "era+":90,
+        "era+":91,
         "fip":3.04,
         "so_bb":4.88
     },
     {
         "name":"Wyatt Olds",
-        "era+":303,
-        "fip":3.87,
-        "so_bb":3.4
+        "era+":321,
+        "fip":3.68,
+        "so_bb":3.6
     }
 ]
