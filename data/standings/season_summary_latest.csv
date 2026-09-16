@@ -1,25 +1,25 @@
 stat_label,stat,value,category,context_value,context_value_label
-Record,record,82-68,standings,82-68,This point last season
-Pythagorean record,pythagorean_record,85-65,standings,82-68,Actual record
-Last 10,last_10,7-3,standings,55%,Season win pct
-Win percentage,win_pct,55%,standings,55%,This point last season
-Games up/back,games_up_back,9,standings,3rd,Division rank
-Avg. home attendance,mean_attendance,"35,152",standings,30,Home games this season
-Runs,runs,663,standings,19th,League rank
-Runs against,runs_against,575,standings,632,This point last season
-Run differential,run_differential,88,standings,104,This point last season
+Record,record,82-69,standings,82-69,This point last season
+Pythagorean record,pythagorean_record,85-66,standings,82-69,Actual record
+Last 10,last_10,6-4,standings,54%,Season win pct
+Win percentage,win_pct,54%,standings,54%,This point last season
+Games up/back,games_up_back,9.5,standings,3rd,Division rank
+Avg. home attendance,mean_attendance,"34,659",standings,31,Home games this season
+Runs,runs,665,standings,19th,League rank
+Runs against,runs_against,579,standings,634,This point last season
+Run differential,run_differential,86,standings,103,This point last season
 Batting average,batting_average,.248,batting,.263,Last decade average
-Home runs,home_runs,155,batting,23rd,League rank
+Home runs,home_runs,156,batting,23rd,League rank
 Home runs/game,home_runs_game,1.03,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.322,batting,.330,Last decade average
 Stolen bases,stolen_bases,101,batting,13th,League rank
 BA w/ RISP,batting_avg_risp,.252,batting,.253,League average
-Strikeouts,strikeouts,"1,298",pitching,11th,League rank
-Walks,walks,433,pitching,3rd,League rank
-ERA,era,3.58,pitching,3rd,League rank
-K/BB ratio,k_bb_ratio,3.0,pitching,2.51,League average
+Strikeouts,strikeouts,"1,308",pitching,11th,League rank
+Walks,walks,436,pitching,3rd,League rank
+ERA,era,3.59,pitching,3rd,League rank
+K/BB ratio,k_bb_ratio,3.0,pitching,2.52,League average
 HR/9,hr9,1.0,pitching,1.17,League average
-BABIP,babip,.288,pitching,.300,League norm
-Last updated,update_time,"September 15, 2026, 9:25 PM ET",summary,,
-Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(September 15)</span> — The Red Sox have compiled a <span class='highlight'>82-68</span> record in the 2026 regular season, a <span class='highlight'>55%</span> winning percentage.  The last game was a <span class='highlight'>4-1</span> home <span class='highlight'>win</span>. and the next game is Wednesday at 8:05 p.m. ET at <span class='highlight'>Globe Life Field</span>.",summary,,
-Last game result,last_game_result,win,summary,,
+BABIP,babip,.289,pitching,.300,League norm
+Last updated,update_time,"September 16, 2026, 9:31 AM ET",summary,,
+Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(September 16)</span> — The Red Sox have compiled a <span class='highlight'>82-69</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game was a <span class='highlight'>2-4</span> away <span class='highlight'>loss</span>. and the next game is Wednesday at 8:05 p.m. ET at <span class='highlight'>Globe Life Field</span>.",summary,,
+Last game result,last_game_result,loss,summary,,
