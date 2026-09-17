@@ -2,23 +2,23 @@
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"82-69",
+        "value":"82-70",
         "category":"standings",
-        "context_value":"82-69",
+        "context_value":"83-69",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Pythagorean record",
         "stat":"pythagorean_record",
-        "value":"85-66",
+        "value":"85-67",
         "category":"standings",
-        "context_value":"82-69",
+        "context_value":"82-70",
         "context_value_label":"Actual record"
     },
     {
         "stat_label":"Last 10",
         "stat":"last_10",
-        "value":"6-4",
+        "value":"5-5",
         "category":"standings",
         "context_value":"54%",
         "context_value_label":"Season win pct"
@@ -28,13 +28,13 @@
         "stat":"win_pct",
         "value":"54%",
         "category":"standings",
-        "context_value":"54%",
+        "context_value":"55%",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Games up\/back",
         "stat":"games_up_back",
-        "value":10,
+        "value":10.5,
         "category":"standings",
         "context_value":"3rd",
         "context_value_label":"Division rank"
@@ -42,15 +42,15 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,659",
+        "value":"35,088",
         "category":"standings",
-        "context_value":31,
+        "context_value":39,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":665,
+        "value":668,
         "category":"standings",
         "context_value":"19th",
         "context_value_label":"League rank"
@@ -58,23 +58,23 @@
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":579,
+        "value":586,
         "category":"standings",
-        "context_value":634,
+        "context_value":638,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":86,
+        "value":82,
         "category":"standings",
-        "context_value":103,
+        "context_value":104,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Batting average",
         "stat":"batting_average",
-        "value":".248",
+        "value":".247",
         "category":"batting",
         "context_value":".263",
         "context_value_label":"Last decade average"
@@ -82,9 +82,9 @@
     {
         "stat_label":"Home runs",
         "stat":"home_runs",
-        "value":156,
+        "value":157,
         "category":"batting",
-        "context_value":"23rd",
+        "context_value":"24th",
         "context_value_label":"League rank"
     },
     {
@@ -98,7 +98,7 @@
     {
         "stat_label":"On-base percentage",
         "stat":"on_base_pct",
-        "value":".322",
+        "value":".321",
         "category":"batting",
         "context_value":".330",
         "context_value_label":"Last decade average"
@@ -106,7 +106,7 @@
     {
         "stat_label":"Stolen bases",
         "stat":"stolen_bases",
-        "value":101,
+        "value":103,
         "category":"batting",
         "context_value":"13th",
         "context_value_label":"League rank"
@@ -114,7 +114,7 @@
     {
         "stat_label":"BA w\/ RISP",
         "stat":"batting_avg_risp",
-        "value":".252",
+        "value":".250",
         "category":"batting",
         "context_value":".253",
         "context_value_label":"League average"
@@ -122,7 +122,7 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"1,308",
+        "value":"1,317",
         "category":"pitching",
         "context_value":"11th",
         "context_value_label":"League rank"
@@ -130,7 +130,7 @@
     {
         "stat_label":"Walks",
         "stat":"walks",
-        "value":"436",
+        "value":"438",
         "category":"pitching",
         "context_value":"3rd",
         "context_value_label":"League rank"
@@ -138,7 +138,7 @@
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"3.59",
+        "value":"3.61",
         "category":"pitching",
         "context_value":"3rd",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":3.0,
+        "value":3.01,
         "category":"pitching",
         "context_value":2.52,
         "context_value_label":"League average"
@@ -162,7 +162,7 @@
     {
         "stat_label":"BABIP",
         "stat":"babip",
-        "value":".289",
+        "value":".290",
         "category":"pitching",
         "context_value":".300",
         "context_value_label":"League norm"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 16, 2026, 9:24 PM ET",
+        "value":"September 17, 2026, 9:28 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 16)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>82-69<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>2-4<\/span> away <span class='highlight'>loss<\/span>. and the next game is Thursday at 8:05 p.m. ET at <span class='highlight'>Globe Life Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 17)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>82-70<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>3-7<\/span> away <span class='highlight'>loss<\/span>. and the next game is Thursday at 8:05 p.m. ET at <span class='highlight'>Globe Life Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
