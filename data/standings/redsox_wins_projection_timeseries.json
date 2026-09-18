@@ -953,9 +953,9 @@
         },
         {
             "game_number": 159,
-            "mean_projected_wins": 86.2,
+            "mean_projected_wins": 86.3,
             "lower_ci_wins": 84,
-            "upper_ci_wins": 89
+            "upper_ci_wins": 88
         },
         {
             "game_number": 160,
@@ -965,7 +965,7 @@
         },
         {
             "game_number": 161,
-            "mean_projected_wins": 87.4,
+            "mean_projected_wins": 87.3,
             "lower_ci_wins": 85,
             "upper_ci_wins": 90
         },
