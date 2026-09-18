@@ -1,16 +1,16 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.91157952367917,
-        "incorrect_strikes_pct": 9.088420476320834,
-        "total_called_strikes": 3653,
-        "bad_calls_count": 332
+        "correct_strikes_pct": 90.9090909090909,
+        "incorrect_strikes_pct": 9.090909090909093,
+        "total_called_strikes": 3663,
+        "bad_calls_count": 333
     },
     "last_game_summary": {
         "date": "September 17, 2026",
-        "correct_strikes_pct": 84.21052631578947,
-        "incorrect_strikes_pct": 15.789473684210535,
-        "total_called_strikes": 19,
-        "bad_calls_count": 3,
+        "correct_strikes_pct": 86.20689655172413,
+        "incorrect_strikes_pct": 13.793103448275872,
+        "total_called_strikes": 29,
+        "bad_calls_count": 4,
         "home_plate_umpire": "Ben May"
     },
     "worst_calls_of_season": [
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.19267378136718,
-        "incorrect_balls_pct": 3.8073262186328236,
-        "total_called_balls": 6934,
+        "correct_balls_pct": 96.20526088831393,
+        "incorrect_balls_pct": 3.79473911168607,
+        "total_called_balls": 6957,
         "bad_calls_count": 264
     },
     "pitching_last_game_summary": {
         "date": "September 17, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 20,
+        "total_called_balls": 43,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
