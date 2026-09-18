@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.94661529994497,
-        "incorrect_strikes_pct": 9.053384700055034,
-        "total_called_strikes": 3634,
-        "bad_calls_count": 329
+        "correct_strikes_pct": 90.91157952367917,
+        "incorrect_strikes_pct": 9.088420476320834,
+        "total_called_strikes": 3653,
+        "bad_calls_count": 332
     },
     "last_game_summary": {
-        "date": "September 16, 2026",
-        "correct_strikes_pct": 95.0,
-        "incorrect_strikes_pct": 5.0,
-        "total_called_strikes": 20,
-        "bad_calls_count": 1,
-        "home_plate_umpire": "Nick Mahrley"
+        "date": "September 17, 2026",
+        "correct_strikes_pct": 84.21052631578947,
+        "incorrect_strikes_pct": 15.789473684210535,
+        "total_called_strikes": 19,
+        "bad_calls_count": 3,
+        "home_plate_umpire": "Ben May"
     },
     "worst_calls_of_season": [
         {
@@ -56,17 +56,17 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.18166039919005,
-        "incorrect_balls_pct": 3.8183396008099493,
-        "total_called_balls": 6914,
+        "correct_balls_pct": 96.19267378136718,
+        "incorrect_balls_pct": 3.8073262186328236,
+        "total_called_balls": 6934,
         "bad_calls_count": 264
     },
     "pitching_last_game_summary": {
-        "date": "September 16, 2026",
-        "correct_balls_pct": 93.61702127659575,
-        "incorrect_balls_pct": 6.38297872340425,
-        "total_called_balls": 47,
-        "bad_calls_count": 3
+        "date": "September 17, 2026",
+        "correct_balls_pct": 100.0,
+        "incorrect_balls_pct": 0.0,
+        "total_called_balls": 20,
+        "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
 }
