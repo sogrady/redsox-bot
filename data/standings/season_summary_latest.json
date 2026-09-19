@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"1,324",
         "category":"pitching",
-        "context_value":"11th",
+        "context_value":"10th",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 18, 2026, 2:24 PM ET",
+        "value":"September 18, 2026, 9:14 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 18)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>83-70<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>4-3<\/span> away <span class='highlight'>win<\/span>. and the next game is Friday at 7:10 p.m. ET at <span class='highlight'>Tropicana Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 18)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>83-70<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>4-3<\/span> away <span class='highlight'>win<\/span>. and the next game is Saturday at 4:10 p.m. ET at <span class='highlight'>Tropicana Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
