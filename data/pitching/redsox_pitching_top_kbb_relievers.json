@@ -2,7 +2,7 @@
     {
         "name":"Raymond Burgos*",
         "era+":81,
-        "fip":4.13,
+        "fip":4.14,
         "so_bb":12.0
     },
     {
@@ -14,7 +14,7 @@
     {
         "name":"Tyron Guerrero (15-day IL)",
         "era+":127,
-        "fip":2.6,
+        "fip":2.61,
         "so_bb":5.14
     },
     {
@@ -24,9 +24,9 @@
         "so_bb":4.88
     },
     {
-        "name":"Wyatt Olds",
-        "era+":343,
-        "fip":3.51,
-        "so_bb":3.8
+        "name":"Garrett Crochet (60-day IL)*",
+        "era+":66,
+        "fip":4.3,
+        "so_bb":3.36
     }
 ]

@@ -12,16 +12,16 @@
         "so_bb":4.37
     },
     {
-        "name":"Ranger Suarez*",
-        "era+":123,
-        "fip":3.08,
-        "so_bb":3.25
-    },
-    {
         "name":"Sonny Gray",
         "era+":146,
         "fip":3.5,
         "so_bb":3.24
+    },
+    {
+        "name":"Ranger Suarez*",
+        "era+":126,
+        "fip":3.12,
+        "so_bb":3.0
     },
     {
         "name":"Connelly Early*",
