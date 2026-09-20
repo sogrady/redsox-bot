@@ -2,31 +2,31 @@
     {
         "stat_label":"Record",
         "stat":"record",
-        "value":"84-70",
+        "value":"84-71",
         "category":"standings",
-        "context_value":"84-70",
+        "context_value":"85-70",
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Pythagorean record",
         "stat":"pythagorean_record",
-        "value":"86-68",
+        "value":"87-68",
         "category":"standings",
-        "context_value":"84-70",
+        "context_value":"84-71",
         "context_value_label":"Actual record"
     },
     {
         "stat_label":"Last 10",
         "stat":"last_10",
-        "value":"5-5",
+        "value":"4-6",
         "category":"standings",
-        "context_value":"55%",
+        "context_value":"54%",
         "context_value_label":"Season win pct"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"55%",
+        "value":"54%",
         "category":"standings",
         "context_value":"55%",
         "context_value_label":"This point last season"
@@ -42,33 +42,33 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"35,299",
+        "value":"35,117",
         "category":"standings",
-        "context_value":36,
+        "context_value":40,
         "context_value_label":"Home games this season"
     },
     {
         "stat_label":"Runs",
         "stat":"runs",
-        "value":676,
+        "value":677,
         "category":"standings",
-        "context_value":"19th",
+        "context_value":"20th",
         "context_value_label":"League rank"
     },
     {
         "stat_label":"Runs against",
         "stat":"runs_against",
-        "value":591,
+        "value":593,
         "category":"standings",
-        "context_value":650,
+        "context_value":653,
         "context_value_label":"This point last season"
     },
     {
         "stat_label":"Run differential",
         "stat":"run_differential",
-        "value":85,
+        "value":84,
         "category":"standings",
-        "context_value":106,
+        "context_value":109,
         "context_value_label":"This point last season"
     },
     {
@@ -90,7 +90,7 @@
     {
         "stat_label":"Home runs\/game",
         "stat":"home_runs_game",
-        "value":1.04,
+        "value":1.03,
         "category":"batting",
         "context_value":1.22,
         "context_value_label":"Last decade average"
@@ -122,9 +122,9 @@
     {
         "stat_label":"Strikeouts",
         "stat":"strikeouts",
-        "value":"1,333",
+        "value":"1,345",
         "category":"pitching",
-        "context_value":"9th",
+        "context_value":"10th",
         "context_value_label":"League rank"
     },
     {
@@ -138,7 +138,7 @@
     {
         "stat_label":"ERA",
         "stat":"era",
-        "value":"3.59",
+        "value":"3.58",
         "category":"pitching",
         "context_value":"3rd",
         "context_value_label":"League rank"
@@ -146,7 +146,7 @@
     {
         "stat_label":"K\/BB ratio",
         "stat":"k_bb_ratio",
-        "value":2.96,
+        "value":2.98,
         "category":"pitching",
         "context_value":2.52,
         "context_value_label":"League average"
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"September 19, 2026, 9:04 PM ET",
+        "value":"September 20, 2026, 9:08 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 19)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>84-71<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>1-2<\/span> away <span class='highlight'>loss<\/span>. and the next game is Sunday at 1:40 p.m. ET at <span class='highlight'>Tropicana Field<\/span>.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(September 20)<\/span> \u2014 The Red Sox have compiled a <span class='highlight'>84-71<\/span> record in the 2026 regular season, a <span class='highlight'>54%<\/span> winning percentage.  The last game was a <span class='highlight'>1-2<\/span> away <span class='highlight'>loss<\/span>. and the next game is Sunday at 1:40 p.m. ET at <span class='highlight'>Tropicana Field<\/span>.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
