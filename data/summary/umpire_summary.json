@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.95341278439871,
-        "incorrect_strikes_pct": 9.046587215601292,
-        "total_called_strikes": 3692,
-        "bad_calls_count": 334
+        "correct_strikes_pct": 90.97764610826825,
+        "incorrect_strikes_pct": 9.022353891731754,
+        "total_called_strikes": 3713,
+        "bad_calls_count": 335
     },
     "last_game_summary": {
-        "date": "September 18, 2026",
-        "correct_strikes_pct": 96.55172413793103,
-        "incorrect_strikes_pct": 3.448275862068968,
-        "total_called_strikes": 29,
+        "date": "September 19, 2026",
+        "correct_strikes_pct": 95.23809523809523,
+        "incorrect_strikes_pct": 4.761904761904773,
+        "total_called_strikes": 21,
         "bad_calls_count": 1,
-        "home_plate_umpire": "Brock Ballou"
+        "home_plate_umpire": "Jeremie Rehak"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.19928825622776,
-        "incorrect_balls_pct": 3.80071174377224,
-        "total_called_balls": 7025,
-        "bad_calls_count": 267
+        "correct_balls_pct": 96.1734693877551,
+        "incorrect_balls_pct": 3.8265306122448948,
+        "total_called_balls": 7056,
+        "bad_calls_count": 270
     },
     "pitching_last_game_summary": {
-        "date": "September 18, 2026",
-        "correct_balls_pct": 95.58823529411765,
-        "incorrect_balls_pct": 4.411764705882348,
-        "total_called_balls": 68,
+        "date": "September 19, 2026",
+        "correct_balls_pct": 90.32258064516128,
+        "incorrect_balls_pct": 9.677419354838719,
+        "total_called_balls": 31,
         "bad_calls_count": 3
     },
     "pitching_worst_calls_of_season": []
