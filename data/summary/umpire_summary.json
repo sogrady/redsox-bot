@@ -1,17 +1,17 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.96014977266648,
-        "incorrect_strikes_pct": 9.039850227333517,
-        "total_called_strikes": 3739,
-        "bad_calls_count": 338
+        "correct_strikes_pct": 90.2361369063412,
+        "incorrect_strikes_pct": 9.763863093658799,
+        "total_called_strikes": 3769,
+        "bad_calls_count": 368
     },
     "last_game_summary": {
-        "date": "September 20, 2026",
-        "correct_strikes_pct": 88.46153846153845,
-        "incorrect_strikes_pct": 11.538461538461547,
-        "total_called_strikes": 26,
-        "bad_calls_count": 3,
-        "home_plate_umpire": "Adam Beck"
+        "date": "September 22, 2026",
+        "correct_strikes_pct": 0.0,
+        "incorrect_strikes_pct": 100.0,
+        "total_called_strikes": 30,
+        "bad_calls_count": 30,
+        "home_plate_umpire": "Ramon De Jesus"
     },
     "worst_calls_of_season": [
         {
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.18751765038125,
-        "incorrect_balls_pct": 3.8124823496187474,
-        "total_called_balls": 7082,
+        "correct_balls_pct": 96.21530698065601,
+        "incorrect_balls_pct": 3.7846930193439903,
+        "total_called_balls": 7134,
         "bad_calls_count": 270
     },
     "pitching_last_game_summary": {
-        "date": "September 20, 2026",
+        "date": "September 22, 2026",
         "correct_balls_pct": 100.0,
         "incorrect_balls_pct": 0.0,
-        "total_called_balls": 26,
+        "total_called_balls": 52,
         "bad_calls_count": 0
     },
     "pitching_worst_calls_of_season": []
