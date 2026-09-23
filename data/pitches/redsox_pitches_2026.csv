@@ -22693,3 +22693,167 @@ game_pk,game_date,pitch_id,inning,ab_number,pitch_number,batter,pitcher,pitch_na
 822922,2026-09-20,7464f3f5-ebb4-3242-87ee-d853112bf329,9,65,4,Jarren Duran,Kevin Kelly,Changeup,86.1,ball,False,Groundout,"Jarren Duran grounds out, shortstop Taylor Walls to first baseman Ryan Vilade.",11.241461893369625,9.791461893369625,0.0,13.0,-1.3103568303181468,0.9125469171764791,1.63,3.23,thrown_to_redsox
 822922,2026-09-20,8e94ed6f-a8d9-3343-90cd-127c03a90cc7,9,65,5,Jarren Duran,Kevin Kelly,4-Seam Fastball,93.5,ball,False,Groundout,"Jarren Duran grounds out, shortstop Taylor Walls to first baseman Ryan Vilade.",4.9050143877511445,3.4550143877511443,0.0,12.0,0.5383538853837495,3.638751198979262,1.63,3.23,thrown_to_redsox
 822922,2026-09-20,b28b565c-5287-3a75-b6da-7347902af17b,9,65,6,Jarren Duran,Kevin Kelly,Sinker,91.2,hit_into_play,True,Groundout,"Jarren Duran grounds out, shortstop Taylor Walls to first baseman Ryan Vilade.",0.0,-1.45,0.0,1.0,-0.6933757220221686,2.933846627988402,1.63,3.23,thrown_to_redsox
+824709,2026-09-22,,1,5,1,Roman Anthony,Parker Messick,,,ball,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,5,2,Roman Anthony,Parker Messick,,,ball,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,5,3,Roman Anthony,Parker Messick,,,called_strike,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,5,4,Roman Anthony,Parker Messick,,,swinging_strike,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,5,5,Roman Anthony,Parker Messick,,,ball,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,5,6,Roman Anthony,Parker Messick,,,called_strike,False,Strikeout,Roman Anthony called out on strikes.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,1,6,1,Nick Sogard,Parker Messick,,,foul,False,Single,Nick Sogard singles on a line drive to center fielder Steven Kwan.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,1,6,2,Nick Sogard,Parker Messick,,,ball,False,Single,Nick Sogard singles on a line drive to center fielder Steven Kwan.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,1,6,3,Nick Sogard,Parker Messick,,,foul,False,Single,Nick Sogard singles on a line drive to center fielder Steven Kwan.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,1,6,4,Nick Sogard,Parker Messick,,,hit_into_play,False,Single,Nick Sogard singles on a line drive to center fielder Steven Kwan.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,1,7,1,Jahmai Jones,Parker Messick,,,ball,False,Pop Out,Jahmai Jones pops out to first baseman David Fry in foul territory.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,1,7,2,Jahmai Jones,Parker Messick,,,hit_into_play,False,Pop Out,Jahmai Jones pops out to first baseman David Fry in foul territory.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,1,8,1,Wilyer Abreu,Parker Messick,,,ball,False,Forceout,"Wilyer Abreu grounds into a force out, second baseman Travis Bazzana to shortstop Brayan Rocchio. Nick Sogard out at 2nd.",,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,1,8,2,Wilyer Abreu,Parker Messick,,,ball,False,Forceout,"Wilyer Abreu grounds into a force out, second baseman Travis Bazzana to shortstop Brayan Rocchio. Nick Sogard out at 2nd.",,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,1,8,3,Wilyer Abreu,Parker Messick,,,called_strike,False,Forceout,"Wilyer Abreu grounds into a force out, second baseman Travis Bazzana to shortstop Brayan Rocchio. Nick Sogard out at 2nd.",,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,1,8,4,Wilyer Abreu,Parker Messick,,,hit_into_play,False,Forceout,"Wilyer Abreu grounds into a force out, second baseman Travis Bazzana to shortstop Brayan Rocchio. Nick Sogard out at 2nd.",,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,2,16,1,Adley Rutschman,Parker Messick,,,ball,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,16,2,Adley Rutschman,Parker Messick,,,called_strike,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,16,3,Adley Rutschman,Parker Messick,,,ball,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,16,4,Adley Rutschman,Parker Messick,,,ball,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,16,5,Adley Rutschman,Parker Messick,,,foul,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,16,6,Adley Rutschman,Parker Messick,,,hit_into_play,False,Double,"Adley Rutschman doubles (25) on a line drive to center fielder Steven Kwan, deflected by left fielder Angel Martínez.",,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,2,17,1,Caleb Durbin,Parker Messick,,,foul,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,2,Caleb Durbin,Parker Messick,,,foul_tip,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,3,Caleb Durbin,Parker Messick,,,foul,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,4,Caleb Durbin,Parker Messick,,,ball,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,5,Caleb Durbin,Parker Messick,,,ball,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,6,Caleb Durbin,Parker Messick,,,foul,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,7,Caleb Durbin,Parker Messick,,,ball,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,17,8,Caleb Durbin,Parker Messick,,,hit_into_play,False,Groundout,"Caleb Durbin grounds out sharply, second baseman Travis Bazzana to first baseman David Fry. Adley Rutschman to 3rd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,2,18,1,Andruw Monasterio,Parker Messick,,,ball,False,Groundout,"Andruw Monasterio grounds out, shortstop Brayan Rocchio to first baseman David Fry. Adley Rutschman scores.",,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,2,18,2,Andruw Monasterio,Parker Messick,,,ball,False,Groundout,"Andruw Monasterio grounds out, shortstop Brayan Rocchio to first baseman David Fry. Adley Rutschman scores.",,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,2,18,3,Andruw Monasterio,Parker Messick,,,called_strike,False,Groundout,"Andruw Monasterio grounds out, shortstop Brayan Rocchio to first baseman David Fry. Adley Rutschman scores.",,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,2,18,4,Andruw Monasterio,Parker Messick,,,foul,False,Groundout,"Andruw Monasterio grounds out, shortstop Brayan Rocchio to first baseman David Fry. Adley Rutschman scores.",,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,2,18,5,Andruw Monasterio,Parker Messick,,,hit_into_play,False,Groundout,"Andruw Monasterio grounds out, shortstop Brayan Rocchio to first baseman David Fry. Adley Rutschman scores.",,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,2,19,1,Isiah Kiner-Falefa,Parker Messick,,,foul,False,Strikeout,Isiah Kiner-Falefa strikes out swinging.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,2,19,2,Isiah Kiner-Falefa,Parker Messick,,,called_strike,False,Strikeout,Isiah Kiner-Falefa strikes out swinging.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,2,19,3,Isiah Kiner-Falefa,Parker Messick,,,ball,False,Strikeout,Isiah Kiner-Falefa strikes out swinging.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,2,19,4,Isiah Kiner-Falefa,Parker Messick,,,swinging_strike,False,Strikeout,Isiah Kiner-Falefa strikes out swinging.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,3,25,1,Nate Eaton,Parker Messick,,,foul,False,Single,Nate Eaton singles on a line drive to center fielder Steven Kwan.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,3,25,2,Nate Eaton,Parker Messick,,,ball,False,Single,Nate Eaton singles on a line drive to center fielder Steven Kwan.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,3,25,3,Nate Eaton,Parker Messick,,,hit_into_play,False,Single,Nate Eaton singles on a line drive to center fielder Steven Kwan.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,3,26,1,Roman Anthony,Parker Messick,,,ball,False,GIDP,"Roman Anthony grounds into a double play, shortstop Brayan Rocchio to first baseman David Fry. Nate Eaton out at 2nd. Roman Anthony out at 1st.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,3,26,2,Roman Anthony,Parker Messick,,,called_strike,False,GIDP,"Roman Anthony grounds into a double play, shortstop Brayan Rocchio to first baseman David Fry. Nate Eaton out at 2nd. Roman Anthony out at 1st.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,3,26,3,Roman Anthony,Parker Messick,,,ball,False,GIDP,"Roman Anthony grounds into a double play, shortstop Brayan Rocchio to first baseman David Fry. Nate Eaton out at 2nd. Roman Anthony out at 1st.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,3,26,4,Roman Anthony,Parker Messick,,,foul,False,GIDP,"Roman Anthony grounds into a double play, shortstop Brayan Rocchio to first baseman David Fry. Nate Eaton out at 2nd. Roman Anthony out at 1st.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,3,26,5,Roman Anthony,Parker Messick,,,hit_into_play,False,GIDP,"Roman Anthony grounds into a double play, shortstop Brayan Rocchio to first baseman David Fry. Nate Eaton out at 2nd. Roman Anthony out at 1st.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,3,27,1,Nick Sogard,Parker Messick,,,called_strike,False,Double,Nick Sogard doubles (14) on a ground ball to left fielder Angel Martínez.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,3,27,2,Nick Sogard,Parker Messick,,,foul,False,Double,Nick Sogard doubles (14) on a ground ball to left fielder Angel Martínez.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,3,27,3,Nick Sogard,Parker Messick,,,ball,False,Double,Nick Sogard doubles (14) on a ground ball to left fielder Angel Martínez.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,3,27,4,Nick Sogard,Parker Messick,,,hit_into_play,False,Double,Nick Sogard doubles (14) on a ground ball to left fielder Angel Martínez.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,3,28,1,Jahmai Jones,Parker Messick,,,foul,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,3,28,2,Jahmai Jones,Parker Messick,,,ball,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,3,28,3,Jahmai Jones,Parker Messick,,,blocked_ball,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,3,28,4,Jahmai Jones,Parker Messick,,,foul,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,3,28,5,Jahmai Jones,Parker Messick,,,ball,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,3,28,6,Jahmai Jones,Parker Messick,,,swinging_strike,False,Strikeout,Jahmai Jones strikes out swinging.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,4,33,1,Wilyer Abreu,Parker Messick,,,hit_into_play,False,Flyout,Wilyer Abreu flies out to left fielder Angel Martínez.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,4,34,1,Adley Rutschman,Parker Messick,,,ball,False,Double,Adley Rutschman doubles (26) on a sharp line drive to right fielder Chase DeLauter.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,4,34,2,Adley Rutschman,Parker Messick,,,ball,False,Double,Adley Rutschman doubles (26) on a sharp line drive to right fielder Chase DeLauter.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,4,34,3,Adley Rutschman,Parker Messick,,,called_strike,False,Double,Adley Rutschman doubles (26) on a sharp line drive to right fielder Chase DeLauter.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,4,34,4,Adley Rutschman,Parker Messick,,,hit_into_play,False,Double,Adley Rutschman doubles (26) on a sharp line drive to right fielder Chase DeLauter.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,4,35,1,Caleb Durbin,Parker Messick,,,ball,False,Strikeout,"Caleb Durbin strikes out swinging, catcher Austin Hedges to first baseman David Fry.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,4,35,2,Caleb Durbin,Parker Messick,,,foul,False,Strikeout,"Caleb Durbin strikes out swinging, catcher Austin Hedges to first baseman David Fry.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,4,35,3,Caleb Durbin,Parker Messick,,,called_strike,False,Strikeout,"Caleb Durbin strikes out swinging, catcher Austin Hedges to first baseman David Fry.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,4,35,4,Caleb Durbin,Parker Messick,,,swinging_strike_blocked,False,Strikeout,"Caleb Durbin strikes out swinging, catcher Austin Hedges to first baseman David Fry.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,4,36,1,Andruw Monasterio,Parker Messick,,,blocked_ball,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,2,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,3,Andruw Monasterio,Parker Messick,,,ball,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,4,Andruw Monasterio,Parker Messick,,,swinging_strike,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,5,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,6,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,7,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,8,Andruw Monasterio,Parker Messick,,,ball,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,9,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,10,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,11,Andruw Monasterio,Parker Messick,,,foul,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,36,12,Andruw Monasterio,Parker Messick,,,ball,False,Walk,Andruw Monasterio walks.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,4,37,1,Isiah Kiner-Falefa,Parker Messick,,,foul,False,Groundout,Isiah Kiner-Falefa grounds out to first baseman David Fry.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,4,37,2,Isiah Kiner-Falefa,Parker Messick,,,ball,False,Groundout,Isiah Kiner-Falefa grounds out to first baseman David Fry.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,4,37,3,Isiah Kiner-Falefa,Parker Messick,,,foul,False,Groundout,Isiah Kiner-Falefa grounds out to first baseman David Fry.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,4,37,4,Isiah Kiner-Falefa,Parker Messick,,,hit_into_play,False,Groundout,Isiah Kiner-Falefa grounds out to first baseman David Fry.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,5,43,1,Nate Eaton,Parker Messick,,,called_strike,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,43,2,Nate Eaton,Parker Messick,,,swinging_strike,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,43,3,Nate Eaton,Parker Messick,,,foul,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,43,4,Nate Eaton,Parker Messick,,,ball,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,43,5,Nate Eaton,Parker Messick,,,foul,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,43,6,Nate Eaton,Parker Messick,,,hit_into_play,False,Pop Out,Nate Eaton pops out to shortstop Brayan Rocchio.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,5,44,1,Roman Anthony,Parker Messick,,,foul,False,Groundout,"Roman Anthony grounds out, second baseman Travis Bazzana to first baseman David Fry.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,5,44,2,Roman Anthony,Parker Messick,,,called_strike,False,Groundout,"Roman Anthony grounds out, second baseman Travis Bazzana to first baseman David Fry.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,5,44,3,Roman Anthony,Parker Messick,,,hit_into_play,False,Groundout,"Roman Anthony grounds out, second baseman Travis Bazzana to first baseman David Fry.",,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,5,45,1,Nick Sogard,Parker Messick,,,called_strike,False,Strikeout,Nick Sogard strikes out swinging.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,5,45,2,Nick Sogard,Parker Messick,,,ball,False,Strikeout,Nick Sogard strikes out swinging.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,5,45,3,Nick Sogard,Parker Messick,,,ball,False,Strikeout,Nick Sogard strikes out swinging.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,5,45,4,Nick Sogard,Parker Messick,,,called_strike,False,Strikeout,Nick Sogard strikes out swinging.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,5,45,5,Nick Sogard,Parker Messick,,,swinging_strike,False,Strikeout,Nick Sogard strikes out swinging.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,6,50,1,Jahmai Jones,Tim Herrin,,,ball,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,50,2,Jahmai Jones,Tim Herrin,,,called_strike,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,50,3,Jahmai Jones,Tim Herrin,,,swinging_strike,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,50,4,Jahmai Jones,Tim Herrin,,,ball,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,50,5,Jahmai Jones,Tim Herrin,,,foul,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,50,6,Jahmai Jones,Tim Herrin,,,hit_into_play,False,Lineout,Jahmai Jones lines out to third baseman José Ramírez.,,,,,,,1.584,3.138,thrown_to_redsox
+824709,2026-09-22,,6,51,1,Wilyer Abreu,Tim Herrin,,,called_strike,False,Double,Wilyer Abreu doubles (37) on a fly ball to left fielder Angel Martínez.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,6,51,2,Wilyer Abreu,Tim Herrin,,,hit_into_play,False,Double,Wilyer Abreu doubles (37) on a fly ball to left fielder Angel Martínez.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,6,52,1,Adley Rutschman,Tim Herrin,,,ball,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,52,2,Adley Rutschman,Tim Herrin,,,called_strike,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,52,3,Adley Rutschman,Tim Herrin,,,foul,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,52,4,Adley Rutschman,Tim Herrin,,,foul,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,52,5,Adley Rutschman,Tim Herrin,,,ball,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,52,6,Adley Rutschman,Tim Herrin,,,hit_into_play,False,Flyout,Adley Rutschman flies out sharply to center fielder Steven Kwan. Wilyer Abreu to 3rd.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,6,53,1,Caleb Durbin,Craig Yoho,,,ball,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,2,Caleb Durbin,Craig Yoho,,,called_strike,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,3,Caleb Durbin,Craig Yoho,,,ball,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,4,Caleb Durbin,Craig Yoho,,,swinging_strike,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,5,Caleb Durbin,Craig Yoho,,,foul,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,6,Caleb Durbin,Craig Yoho,,,ball,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,7,Caleb Durbin,Craig Yoho,,,foul,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,53,8,Caleb Durbin,Craig Yoho,,,ball,False,Walk,Caleb Durbin walks.,,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,6,54,1,Andruw Monasterio,Craig Yoho,,,called_strike,False,Strikeout,Andruw Monasterio called out on strikes.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,6,54,2,Andruw Monasterio,Craig Yoho,,,swinging_strike,False,Strikeout,Andruw Monasterio called out on strikes.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,6,54,3,Andruw Monasterio,Craig Yoho,,,foul,False,Strikeout,Andruw Monasterio called out on strikes.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,6,54,4,Andruw Monasterio,Craig Yoho,,,ball,False,Strikeout,Andruw Monasterio called out on strikes.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,6,54,5,Andruw Monasterio,Craig Yoho,,,called_strike,False,Strikeout,Andruw Monasterio called out on strikes.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,7,60,1,Isiah Kiner-Falefa,Erik Sabrowski,,,foul,False,Walk,Isiah Kiner-Falefa walks.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,7,60,2,Isiah Kiner-Falefa,Erik Sabrowski,,,ball,False,Walk,Isiah Kiner-Falefa walks.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,7,60,3,Isiah Kiner-Falefa,Erik Sabrowski,,,ball,False,Walk,Isiah Kiner-Falefa walks.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,7,60,4,Isiah Kiner-Falefa,Erik Sabrowski,,,ball,False,Walk,Isiah Kiner-Falefa walks.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,7,60,5,Isiah Kiner-Falefa,Erik Sabrowski,,,ball,False,Walk,Isiah Kiner-Falefa walks.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,7,61,1,Nate Eaton,Erik Sabrowski,,,ball,False,Strikeout,Nate Eaton called out on strikes.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,7,61,2,Nate Eaton,Erik Sabrowski,,,swinging_strike,False,Strikeout,Nate Eaton called out on strikes.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,7,61,3,Nate Eaton,Erik Sabrowski,,,called_strike,False,Strikeout,Nate Eaton called out on strikes.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,7,61,4,Nate Eaton,Erik Sabrowski,,,called_strike,False,Strikeout,Nate Eaton called out on strikes.,,,,,,,1.59,3.151,thrown_to_redsox
+824709,2026-09-22,,7,62,1,Roman Anthony,Erik Sabrowski,,,called_strike,False,Strikeout,Roman Anthony strikes out swinging.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,7,62,2,Roman Anthony,Erik Sabrowski,,,called_strike,False,Strikeout,Roman Anthony strikes out swinging.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,7,62,3,Roman Anthony,Erik Sabrowski,,,swinging_strike,False,Strikeout,Roman Anthony strikes out swinging.,,,,,,,1.68,3.33,thrown_to_redsox
+824709,2026-09-22,,7,63,1,Nick Sogard,Erik Sabrowski,,,called_strike,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,2,Nick Sogard,Erik Sabrowski,,,ball,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,3,Nick Sogard,Erik Sabrowski,,,ball,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,4,Nick Sogard,Erik Sabrowski,,,foul,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,5,Nick Sogard,Erik Sabrowski,,,foul,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,6,Nick Sogard,Erik Sabrowski,,,foul,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,7,63,7,Nick Sogard,Erik Sabrowski,,,foul_tip,False,Strikeout,Nick Sogard strikes out on a foul tip.,,,,,,,1.638,3.245,thrown_to_redsox
+824709,2026-09-22,,8,68,1,Mickey Gasper,Hunter Gaddis,,,hit_into_play,False,Home Run,Mickey Gasper homers (10) on a fly ball to right field.,,,,,,,1.56,3.09,thrown_to_redsox
+824709,2026-09-22,,8,69,1,Wilyer Abreu,Hunter Gaddis,,,called_strike,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,69,2,Wilyer Abreu,Hunter Gaddis,,,ball,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,69,3,Wilyer Abreu,Hunter Gaddis,,,ball,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,69,4,Wilyer Abreu,Hunter Gaddis,,,foul,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,69,5,Wilyer Abreu,Hunter Gaddis,,,ball,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,69,6,Wilyer Abreu,Hunter Gaddis,,,called_strike,False,Strikeout,Wilyer Abreu called out on strikes.,,,,,,,1.573,3.117,thrown_to_redsox
+824709,2026-09-22,,8,70,1,Adley Rutschman,Hunter Gaddis,,,called_strike,False,Single,Adley Rutschman singles on a fly ball to center fielder Petey Halpin.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,8,70,2,Adley Rutschman,Hunter Gaddis,,,hit_into_play,False,Single,Adley Rutschman singles on a fly ball to center fielder Petey Halpin.,,,,,,,1.642,3.253,thrown_to_redsox
+824709,2026-09-22,,8,71,1,Caleb Durbin,Hunter Gaddis,,,hit_into_play,False,Bunt Groundout,"Caleb Durbin bunt grounds out softly, pitcher Hunter Gaddis to first baseman Nathaniel Lowe. Adley Rutschman to 2nd.",,,,,,,1.487,2.947,thrown_to_redsox
+824709,2026-09-22,,8,72,1,Andruw Monasterio,Hunter Gaddis,,,ball,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,2,Andruw Monasterio,Hunter Gaddis,,,ball,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,3,Andruw Monasterio,Hunter Gaddis,,,foul_tip,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,4,Andruw Monasterio,Hunter Gaddis,,,called_strike,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,5,Andruw Monasterio,Hunter Gaddis,,,foul,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,6,Andruw Monasterio,Hunter Gaddis,,,ball,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,7,Andruw Monasterio,Hunter Gaddis,,,foul,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,8,72,8,Andruw Monasterio,Hunter Gaddis,,,swinging_strike,False,Strikeout,Andruw Monasterio strikes out swinging.,,,,,,,1.589,3.148,thrown_to_redsox
+824709,2026-09-22,,9,80,1,Isiah Kiner-Falefa,Cade Smith,,,ball,False,Strikeout,Red Sox challenged (pitch result): Isiah Kiner-Falefa called out on strikes.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,9,80,2,Isiah Kiner-Falefa,Cade Smith,,,foul,False,Strikeout,Red Sox challenged (pitch result): Isiah Kiner-Falefa called out on strikes.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,9,80,3,Isiah Kiner-Falefa,Cade Smith,,,foul_tip,False,Strikeout,Red Sox challenged (pitch result): Isiah Kiner-Falefa called out on strikes.,,,,,,,1.577,3.125,thrown_to_redsox
+824709,2026-09-22,,9,80,4,Isiah Kiner-Falefa,Cade Smith,,,called_strike,False,Strikeout,Red Sox challenged (pitch result): Isiah Kiner-Falefa called out on strikes.,,,,,,,1.577,3.125,thrown_to_redsox
