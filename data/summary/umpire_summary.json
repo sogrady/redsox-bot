@@ -1,15 +1,15 @@
 {
     "season_summary": {
-        "correct_strikes_pct": 90.98814229249011,
-        "incorrect_strikes_pct": 9.01185770750989,
-        "total_called_strikes": 3795,
+        "correct_strikes_pct": 90.99051633298208,
+        "incorrect_strikes_pct": 9.009483667017918,
+        "total_called_strikes": 3796,
         "bad_calls_count": 342
     },
     "last_game_summary": {
         "date": "September 23, 2026",
-        "correct_strikes_pct": 95.83333333333334,
-        "incorrect_strikes_pct": 4.166666666666657,
-        "total_called_strikes": 24,
+        "correct_strikes_pct": 96.0,
+        "incorrect_strikes_pct": 4.0,
+        "total_called_strikes": 25,
         "bad_calls_count": 1,
         "home_plate_umpire": "Paul Clemons"
     },
@@ -56,16 +56,16 @@
         }
     ],
     "pitching_season_summary": {
-        "correct_balls_pct": 96.18927973199331,
-        "incorrect_balls_pct": 3.8107202680066905,
-        "total_called_balls": 7164,
+        "correct_balls_pct": 96.1903432877477,
+        "incorrect_balls_pct": 3.8096567122523055,
+        "total_called_balls": 7166,
         "bad_calls_count": 273
     },
     "pitching_last_game_summary": {
         "date": "September 23, 2026",
-        "correct_balls_pct": 93.33333333333333,
-        "incorrect_balls_pct": 6.666666666666671,
-        "total_called_balls": 30,
+        "correct_balls_pct": 93.75,
+        "incorrect_balls_pct": 6.25,
+        "total_called_balls": 32,
         "bad_calls_count": 2
     },
     "pitching_worst_calls_of_season": []
