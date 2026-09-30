@@ -1,7 +1,7 @@
 {
-    "games_played": 162,
+    "games_played": 163,
     "current_wins": 87,
-    "current_losses": 75,
+    "current_losses": 76,
     "timeseries": [
         {
             "game_number": 1,
@@ -599,9 +599,9 @@
         },
         {
             "game_number": 100,
-            "mean_projected_wins": 52.0,
-            "lower_ci_wins": 52.0,
-            "upper_ci_wins": 52.0
+            "mean_projected_wins": 51.0,
+            "lower_ci_wins": 51.0,
+            "upper_ci_wins": 51.0
         },
         {
             "game_number": 101,
@@ -971,6 +971,12 @@
         },
         {
             "game_number": 162,
+            "mean_projected_wins": 87.0,
+            "lower_ci_wins": 87.0,
+            "upper_ci_wins": 87.0
+        },
+        {
+            "game_number": 163,
             "mean_projected_wins": 87.0,
             "lower_ci_wins": 87.0,
             "upper_ci_wins": 87.0
