@@ -1,9 +1,10 @@
 name: Post Daily Summaries to Bluesky
 
 on:
-  schedule:
-    # Runs during daytime hours ET (converted to UTC)
-    - cron: '0 13,15,17,19 * * *'  # 9 AM, 11 AM, 1 PM, 3 PM ET (during season)
+  # Schedule paused for 2026 off-season; uncomment when 2027 season starts
+  # schedule:
+  #   # Runs during daytime hours ET (converted to UTC)
+  #   - cron: '0 13,15,17,19 * * *'  # 9 AM, 11 AM, 1 PM, 3 PM ET (during season)
   workflow_dispatch:
     inputs:
       summary_type:

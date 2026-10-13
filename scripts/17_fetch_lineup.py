@@ -391,7 +391,7 @@ def main():
     
     lineup_df = fetch_lineup_data(current_date_str)
     
-    if not lineup_df.empty:
+    if lineup_df is not None and not lineup_df.empty:
         # Check if the fetched lineup is for today
         fetched_game_date_str = lineup_df['game_date'].iloc[0]
         fetched_game_date = datetime.strptime(fetched_game_date_str, '%Y-%m-%d').date()
