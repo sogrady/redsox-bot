@@ -4088,8 +4088,8 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchPostseasonStats() {
   try {
     // Try local path first (for development), then fallback to S3
-    const localUrl = '/assets/data/postseason/redsox_postseason_stats_2025.json';
-    const s3Url = 'https://redsox-data.s3.amazonaws.com/redsox/data/postseason/redsox_postseason_stats_2025.json';
+    const localUrl = '/assets/data/postseason/redsox_postseason_stats_2026.json';
+    const s3Url = 'https://redsox-data.s3.amazonaws.com/redsox/data/postseason/redsox_postseason_stats_2026.json';
     
     let response = await fetch(localUrl);
     if (!response.ok) {
@@ -4200,8 +4200,8 @@ async function initPostseasonStats() {
 async function fetchPlayoffJourney() {
   try {
     // Try local path first (for development), then fallback to S3
-    const localUrl = '/assets/data/postseason/redsox_postseason_series_2025.json';
-    const s3Url = 'https://redsox-data.s3.amazonaws.com/redsox/data/postseason/redsox_postseason_series_2025.json';
+    const localUrl = '/assets/data/postseason/redsox_postseason_series_2026.json';
+    const s3Url = 'https://redsox-data.s3.amazonaws.com/redsox/data/postseason/redsox_postseason_series_2026.json';
     
     let response = await fetch(localUrl);
     if (!response.ok) {
