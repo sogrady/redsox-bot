@@ -15,13 +15,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Output files
 output_dir = "data/postseason"
-json_file = f"{output_dir}/redsox_postseason_stats_2025.json"
-series_file = f"{output_dir}/redsox_postseason_series_2025.json"
+year = config.CURRENT_YEAR
+json_file = f"{output_dir}/redsox_postseason_stats_{year}.json"
+series_file = f"{output_dir}/redsox_postseason_series_{year}.json"
 
 # S3 configuration
 s3_bucket = "redsox-data"
-s3_key_stats = "redsox/data/postseason/redsox_postseason_stats_2025.json"
-s3_key_series = "redsox/data/postseason/redsox_postseason_series_2025.json"
+s3_key_stats = f"redsox/data/postseason/redsox_postseason_stats_{year}.json"
+s3_key_series = f"redsox/data/postseason/redsox_postseason_series_{year}.json"
 
 # AWS session
 is_github_actions = os.getenv('GITHUB_ACTIONS') == 'true'
@@ -83,8 +84,7 @@ def get_next_game_info(series_data):
         # Try to get more detailed game info from API
         try:
             # Get current series schedule to find next game
-            current_year = datetime.now().year
-            url = f"https://statsapi.mlb.com/api/v1/schedule/postseason?sportId=1&season={current_year}&hydrate=team,venue,linescore&language=en"
+            url = f"https://statsapi.mlb.com/api/v1/schedule/postseason?sportId=1&season={year}&hydrate=team,venue,linescore&language=en"
             
             response = requests.get(url)
             response.raise_for_status()
@@ -137,11 +137,11 @@ def fetch_postseason_series():
     # Try different parameter combinations to get the most current data
     urls = [
         # Most comprehensive - all postseason game types with current season
-        "https://statsapi.mlb.com/api/v1/schedule/postseason/series?sportId=1&season=2025&language=en&timeZone=America/New_York&hydrate=team,linescore(matchup),flags,statusFlags,broadcasts(all),venue(location),decisions,game(content(media(epg),summary),tickets),seriesStatus(useOverride=true)&sortBy=gameDate",
+        f"https://statsapi.mlb.com/api/v1/schedule/postseason/series?sportId=1&season={year}&language=en&timeZone=America/New_York&hydrate=team,linescore(matchup),flags,statusFlags,broadcasts(all),venue(location),decisions,game(content(media(epg),summary),tickets),seriesStatus(useOverride=true)&sortBy=gameDate",
         # Alternative with specific game types
-        "https://statsapi.mlb.com/api/v1/schedule/postseason/series?sportId=1&gameType=D&gameType=F&gameType=L&gameType=W&season=2025&language=en&hydrate=team,seriesStatus(useOverride=true)&sortBy=gameDate",
+        f"https://statsapi.mlb.com/api/v1/schedule/postseason/series?sportId=1&gameType=D&gameType=F&gameType=L&gameType=W&season={year}&language=en&hydrate=team,seriesStatus(useOverride=true)&sortBy=gameDate",
         # Simpler call to avoid potential caching issues
-        "https://statsapi.mlb.com/api/v1/schedule/postseason?sportId=1&season=2025&hydrate=team,seriesStatus&language=en"
+        f"https://statsapi.mlb.com/api/v1/schedule/postseason?sportId=1&season={year}&hydrate=team,seriesStatus&language=en"
     ]
     
     for i, url in enumerate(urls):
@@ -231,27 +231,27 @@ def fetch_postseason_stats(player_id, player_name):
         response.raise_for_status()
         data = response.json()
         
-        # Extract 2025 postseason stats
-        stats_2025 = None
+        # Extract postseason stats for the configured season
+        season_stats = None
         if 'stats' in data and len(data['stats']) > 0:
             for stat_group in data['stats']:
                 if stat_group['type']['displayName'] == 'yearByYear':
                     for split in stat_group['splits']:
-                        if split['season'] == '2025':
-                            stats_2025 = split['stat']
+                        if split["season"] == str(year):
+                            season_stats = split['stat']
                             break
                     break
         
-        if stats_2025:
-            logging.info(f"Found 2025 postseason stats for {player_name}")
+        if season_stats:
+            logging.info(f"Found {year} postseason stats for {player_name}")
             return {
                 'player_id': player_id,
                 'player_name': player_name,
-                'season': '2025',
-                'stats': stats_2025
+                "season": str(year),
+                'stats': season_stats
             }
         else:
-            logging.warning(f"No 2025 postseason stats found for {player_name}")
+            logging.warning(f"No {year} postseason stats found for {player_name}")
             return None
             
     except Exception as e:
@@ -378,7 +378,7 @@ def main():
         logging.error(f"Failed to upload to S3: {e}")
 
     # Print summary
-    print(f"\n=== {config.TEAM_NAME} 2025 Postseason Journey (as of Oct 13, 2025) ===")
+    print(f"\n=== {config.TEAM_NAME} {year} Postseason Journey (as of {datetime.now().strftime('%b %-d, %Y')}) ===")
     for journey in playoff_journey:
         status_icon = "✅" if journey['status'] == "completed" else "🏃" if journey['status'] == "in_progress" else "❓"
         print(f"{status_icon} {journey['round']}: vs {journey['opponent']} - {journey['result']}")
@@ -416,7 +416,7 @@ def main():
         if previous_series:
             print(f"🏆 Last completed series: {previous_series['round']} vs {previous_series['opponent']} ({previous_series['result']})")
     
-    print(f"\n=== Top {len(top_12_stats)} Players by 2025 Postseason Plate Appearances ===")
+    print(f"\n=== Top {len(top_12_stats)} Players by {year} Postseason Plate Appearances ===")
     for i, player_stats in enumerate(top_12_stats, 1):
         name = player_stats['player_name']
         stats = player_stats['stats']
