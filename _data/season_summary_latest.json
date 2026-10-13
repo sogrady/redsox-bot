@@ -20,15 +20,15 @@
         "stat":"last_10",
         "value":"5-5",
         "category":"standings",
-        "context_value":"54%",
+        "context_value":"53%",
         "context_value_label":"Season win pct"
     },
     {
         "stat_label":"Win percentage",
         "stat":"win_pct",
-        "value":"54%",
+        "value":"53%",
         "category":"standings",
-        "context_value":"55%",
+        "context_value":"54%",
         "context_value_label":"This point last season"
     },
     {
@@ -42,9 +42,9 @@
     {
         "stat_label":"Avg. home attendance",
         "stat":"mean_attendance",
-        "value":"34,937",
+        "value":"nan",
         "category":"standings",
-        "context_value":45,
+        "context_value":0,
         "context_value_label":"Home games this season"
     },
     {
@@ -52,7 +52,7 @@
         "stat":"runs",
         "value":689,
         "category":"standings",
-        "context_value":"23rd",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -84,7 +84,7 @@
         "stat":"home_runs",
         "value":163,
         "category":"batting",
-        "context_value":"26th",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -108,7 +108,7 @@
         "stat":"stolen_bases",
         "value":107,
         "category":"batting",
-        "context_value":"14th",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -124,7 +124,7 @@
         "stat":"strikeouts",
         "value":"1,398",
         "category":"pitching",
-        "context_value":"11th",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -132,7 +132,7 @@
         "stat":"walks",
         "value":"469",
         "category":"pitching",
-        "context_value":"3rd",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -140,7 +140,7 @@
         "stat":"era",
         "value":"3.54",
         "category":"pitching",
-        "context_value":"3rd",
+        "context_value":"N\/A",
         "context_value_label":"League rank"
     },
     {
@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"October 12, 2026, 1:50 PM ET",
+        "value":"October 12, 2026, 10:51 PM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""

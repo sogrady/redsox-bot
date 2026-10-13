@@ -1,25 +1,25 @@
 stat_label,stat,value,category,context_value,context_value_label
 Record,record,87-75,standings,89-73,This point last season
 Pythagorean record,pythagorean_record,90-72,standings,87-75,Actual record
-Last 10,last_10,5-5,standings,54%,Season win pct
-Win percentage,win_pct,54%,standings,55%,This point last season
+Last 10,last_10,5-5,standings,53%,Season win pct
+Win percentage,win_pct,53%,standings,54%,This point last season
 Games up/back,games_up_back,11,standings,3rd,Division rank
-Avg. home attendance,mean_attendance,"34,937",standings,45,Home games this season
-Runs,runs,689,standings,23rd,League rank
+Avg. home attendance,mean_attendance,nan,standings,0,Home games this season
+Runs,runs,689,standings,N/A,League rank
 Runs against,runs_against,611,standings,676,This point last season
 Run differential,run_differential,78,standings,110,This point last season
 Batting average,batting_average,.245,batting,.263,Last decade average
-Home runs,home_runs,163,batting,26th,League rank
+Home runs,home_runs,163,batting,N/A,League rank
 Home runs/game,home_runs_game,1.01,batting,1.22,Last decade average
 On-base percentage,on_base_pct,.319,batting,.330,Last decade average
-Stolen bases,stolen_bases,107,batting,14th,League rank
+Stolen bases,stolen_bases,107,batting,N/A,League rank
 BA w/ RISP,batting_avg_risp,.241,batting,.252,League average
-Strikeouts,strikeouts,"1,398",pitching,11th,League rank
-Walks,walks,469,pitching,3rd,League rank
-ERA,era,3.54,pitching,3rd,League rank
+Strikeouts,strikeouts,"1,398",pitching,N/A,League rank
+Walks,walks,469,pitching,N/A,League rank
+ERA,era,3.54,pitching,N/A,League rank
 K/BB ratio,k_bb_ratio,2.98,pitching,2.53,League average
 HR/9,hr9,1.0,pitching,1.17,League average
 BABIP,babip,.288,pitching,.300,League norm
-Last updated,update_time,"October 12, 2026, 1:50 PM ET",summary,,
+Last updated,update_time,"October 12, 2026, 10:51 PM ET",summary,,
 Team summary,summary,"<span class='highlight'>BOSTON</span> <span class='updated'>(October 12)</span> — The Red Sox have compiled a <span class='highlight'>87-75</span> record in the 2026 regular season, a <span class='highlight'>54%</span> winning percentage.  The last game's result is not yet available..",summary,,
 Last game result,last_game_result,loss,summary,,
