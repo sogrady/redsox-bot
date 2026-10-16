@@ -4225,7 +4225,16 @@ function createPlayoffRoundCard(round) {
   
   // Convert underscore to hyphen for CSS class names
   const statusClass = round.status.replace(/_/g, '-');
-  
+
+  if (round.status === 'not_reached') {
+    return `
+    <div class="playoff-round ${statusClass}">
+      <div class="round-title">${round.round}</div>
+      <div class="round-opponent">Did not advance</div>
+    </div>
+  `;
+  }
+
   return `
     <div class="playoff-round ${statusClass}">
       <div class="round-status"></div>
