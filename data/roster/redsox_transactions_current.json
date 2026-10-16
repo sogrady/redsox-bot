@@ -1,6 +1,20 @@
 [
   {
     "date":"2026-10-09",
+    "transaction":"Red Sox signed free agent LHP Jean Mayorga to a minor league contract.",
+    "players":[
+      "Jean Mayorga"
+    ]
+  },
+  {
+    "date":"2026-10-09",
+    "transaction":"Red Sox signed free agent RHP Juan Velasquez to a minor league contract.",
+    "players":[
+      "Juan Velasquez"
+    ]
+  },
+  {
+    "date":"2026-10-09",
     "transaction":"Red Sox signed free agent SS Farid Cijntje to a minor league contract.",
     "players":[
       "Farid Cijntje"
@@ -14,94 +28,10 @@
     ]
   },
   {
-    "date":"2026-10-09",
-    "transaction":"Red Sox signed free agent RHP Juan Velasquez to a minor league contract.",
-    "players":[
-      "Juan Velasquez"
-    ]
-  },
-  {
-    "date":"2026-10-09",
-    "transaction":"Red Sox signed free agent LHP Jean Mayorga to a minor league contract.",
-    "players":[
-      "Jean Mayorga"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated LHP Raymond Burgos.",
-    "players":[
-      "Raymond Burgos"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated DH Mickey Gasper.",
-    "players":[
-      "Mickey Gasper"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated OF Kristian Campbell.",
-    "players":[
-      "Kristian Campbell"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated RHP Jedixson Paez.",
-    "players":[
-      "Jedixson Paez"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated LHP Jovani Morán.",
-    "players":[
-      "Jovani Morán"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated LHP Patrick Sandoval.",
-    "players":[
-      "Patrick Sandoval"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated RHP Tanner Houck.",
-    "players":[
-      "Tanner Houck"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated DH Romy Gonzalez.",
-    "players":[
-      "Romy Gonzalez"
-    ]
-  },
-  {
     "date":"2026-10-01",
     "transaction":"Red Sox activated LHP Tyler Samaniego.",
     "players":[
       "Tyler Samaniego"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated DH Masataka Yoshida.",
-    "players":[
-      "Masataka Yoshida"
-    ]
-  },
-  {
-    "date":"2026-10-01",
-    "transaction":"Red Sox activated SS Tsung-Che Cheng.",
-    "players":[
-      "Tsung-Che Cheng"
     ]
   },
   {
@@ -123,6 +53,76 @@
     "transaction":"Red Sox activated RHP Tyron Guerrero.",
     "players":[
       "Tyron Guerrero"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated SS Tsung-Che Cheng.",
+    "players":[
+      "Tsung-Che Cheng"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated DH Romy Gonzalez.",
+    "players":[
+      "Romy Gonzalez"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated LHP Jovani Morán.",
+    "players":[
+      "Jovani Morán"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated RHP Jedixson Paez.",
+    "players":[
+      "Jedixson Paez"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated OF Kristian Campbell.",
+    "players":[
+      "Kristian Campbell"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated DH Mickey Gasper.",
+    "players":[
+      "Mickey Gasper"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated DH Masataka Yoshida.",
+    "players":[
+      "Masataka Yoshida"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated LHP Patrick Sandoval.",
+    "players":[
+      "Patrick Sandoval"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated LHP Raymond Burgos.",
+    "players":[
+      "Raymond Burgos"
+    ]
+  },
+  {
+    "date":"2026-10-01",
+    "transaction":"Red Sox activated RHP Tanner Houck.",
+    "players":[
+      "Tanner Houck"
     ]
   },
   {
