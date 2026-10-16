@@ -2927,6 +2927,27 @@ label {
       }
     }
   }
+
+  &.eliminated {
+    border-color: #555;
+    background: #f9f9f9;
+
+    .round-status {
+      background: #555;
+      color: white;
+
+      &::after {
+        content: '✕';
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.not-reached {
+    border-color: #e5e5e5;
+    background: #f9f9f9;
+    opacity: 0.5;
+  }
 }
 
 .round-title {

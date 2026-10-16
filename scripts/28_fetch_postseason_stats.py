@@ -18,6 +18,9 @@ output_dir = "data/postseason"
 year = config.CURRENT_YEAR
 json_file = f"{output_dir}/redsox_postseason_stats_{year}.json"
 series_file = f"{output_dir}/redsox_postseason_series_{year}.json"
+assets_output_dir = "assets/data/postseason"
+assets_json_file = f"{assets_output_dir}/redsox_postseason_stats_{year}.json"
+assets_series_file = f"{assets_output_dir}/redsox_postseason_series_{year}.json"
 
 # S3 configuration
 s3_bucket = "redsox-data"
@@ -326,12 +329,24 @@ def main():
     # Note: Manual overrides removed to allow live API data to flow through
     # The API now correctly provides real-time series status
     logging.info("Using live API data without manual overrides")
-    
-    # Save series data
-    with open(series_file, 'w', encoding='utf-8') as f:
-        json.dump(playoff_journey, f, indent=2, ensure_ascii=False)
-    
-    logging.info(f"Saved postseason series data to {series_file}")
+
+    # Mark a lost series as eliminated and any later rounds as not reached
+    eliminated = False
+    for journey in playoff_journey:
+        if eliminated:
+            journey.update({"status": "not_reached", "opponent": "?", "result": "?"})
+        elif journey['status'] == 'completed' and not journey.get('result', '').startswith(config.TEAM_ABBR):
+            journey['status'] = 'eliminated'
+            eliminated = True
+            logging.info(f"Eliminated in {journey['round']}: {journey['result']}")
+
+    # Save series data (assets copy is what the site loads first)
+    os.makedirs(assets_output_dir, exist_ok=True)
+    for path in (series_file, assets_series_file):
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(playoff_journey, f, indent=2, ensure_ascii=False)
+
+    logging.info(f"Saved postseason series data to {series_file} and {assets_series_file}")
     
     # Fetch player stats
     player_ids = get_all_batters()
@@ -361,11 +376,12 @@ def main():
         if 'plate_appearances' in player_stats:
             del player_stats['plate_appearances']
     
-    # Save to JSON file
-    with open(json_file, 'w', encoding='utf-8') as f:
-        json.dump(top_12_stats, f, indent=2, ensure_ascii=False)
-    
-    logging.info(f"Saved postseason stats for top {len(top_12_stats)} players (by plate appearances) to {json_file}")
+    # Save to JSON file (and the assets copy the site loads first)
+    for path in (json_file, assets_json_file):
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(top_12_stats, f, indent=2, ensure_ascii=False)
+
+    logging.info(f"Saved postseason stats for top {len(top_12_stats)} players (by plate appearances) to {json_file} and {assets_json_file}")
 
     # Upload to S3
     try:
@@ -380,7 +396,7 @@ def main():
     # Print summary
     print(f"\n=== {config.TEAM_NAME} {year} Postseason Journey (as of {datetime.now().strftime('%b %-d, %Y')}) ===")
     for journey in playoff_journey:
-        status_icon = "✅" if journey['status'] == "completed" else "🏃" if journey['status'] == "in_progress" else "❓"
+        status_icon = "✅" if journey["status"] == "completed" else "❌" if journey["status"] == "eliminated" else "🏃" if journey['status'] == "in_progress" else "❓"
         print(f"{status_icon} {journey['round']}: vs {journey['opponent']} - {journey['result']}")
     
     # Enhanced current status with context

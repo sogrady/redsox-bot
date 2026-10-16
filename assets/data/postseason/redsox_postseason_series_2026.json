@@ -2,7 +2,7 @@
   {
     "round": "Wild Card",
     "series_name": "AL Wild Card Series",
-    "status": "completed",
+    "status": "eliminated",
     "opponent": "New York Yankees",
     "result": "NYY wins 2-0",
     "wins": 2,
@@ -11,21 +11,21 @@
   {
     "round": "ALDS",
     "series_name": "AL Division Series",
-    "status": "upcoming",
+    "status": "not_reached",
     "opponent": "?",
     "result": "?"
   },
   {
     "round": "ALCS",
     "series_name": "AL Championship Series",
-    "status": "upcoming",
+    "status": "not_reached",
     "opponent": "?",
     "result": "?"
   },
   {
     "round": "World Series",
     "series_name": "World Series",
-    "status": "upcoming",
+    "status": "not_reached",
     "opponent": "?",
     "result": "?"
   }

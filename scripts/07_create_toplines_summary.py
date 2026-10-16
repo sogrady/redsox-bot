@@ -616,11 +616,24 @@ def get_next_game_info():
         logging.warning(f"Could not fetch next game info: {e}")
         return None
 
+def find_postseason_series_file():
+    """Return the postseason series file for the configured season.
+
+    data/ is gitignored and script 28 runs after this one in fetch.yml, so fall
+    back to the committed assets copy that script 28 also writes.
+    """
+    filename = f"redsox_postseason_series_{config.CURRENT_YEAR}.json"
+    for directory in ("data/postseason", "assets/data/postseason"):
+        path = os.path.join(directory, filename)
+        if os.path.exists(path):
+            return path
+    return os.path.join("data/postseason", filename)
+
 def generate_postseason_summary():
     """Generate a summary of the current postseason status"""
     try:
         # Try to load postseason series data
-        postseason_file = "data/postseason/redsox_postseason_series_2025.json"
+        postseason_file = find_postseason_series_file()
         if os.path.exists(postseason_file):
             with open(postseason_file, 'r') as f:
                 postseason_data = json.load(f)
@@ -629,12 +642,27 @@ def generate_postseason_summary():
             current_series = None
             completed_series = []
             
+            eliminated_series = None
             for series in postseason_data:
                 if series['status'] == 'in_progress':
                     current_series = series
                 elif series['status'] == 'completed':
                     completed_series.append(series)
-            
+                elif series['status'] == 'eliminated':
+                    eliminated_series = series
+
+            if eliminated_series:
+                # Season is over: e.g. "NYY wins 2-0" -> "2-0"
+                series_name = eliminated_series.get('series_name', eliminated_series['round'])
+                score = eliminated_series.get('result', '').split(' ')[-1]
+                return {
+                    "text": (
+                        f"Their season ended in the <span class='highlight'>{series_name}</span>, "
+                        f"where they fell to the <span class='highlight'>{eliminated_series['opponent']}</span> {score}."
+                    ),
+                    "season_over": True
+                }
+
             if current_series:
                 # Currently playing a series
                 opponent = current_series['opponent']
@@ -676,7 +704,7 @@ def generate_postseason_summary():
                     # Check if the last series was the World Series
                     if last_series['round'] == 'World Series':
                         opponent = last_series.get('opponent', 'their opponent')
-                        return {"text": f"The team won the <span class='highlight'>World Series</span>, defeating the <span class='highlight'>{opponent}</span>!"}
+                        return {"text": f"The team won the <span class='highlight'>World Series</span>, defeating the <span class='highlight'>{opponent}</span>!", "season_over": True}
                     else:
                         return {"text": f"The team advanced through the {last_series['round']} and continues in the postseason."}
                 else:
@@ -801,7 +829,7 @@ def generate_summary(
         
         try:
             # Load postseason series data to check for transitions
-            postseason_file = "data/postseason/redsox_postseason_series_2025.json"
+            postseason_file = find_postseason_series_file()
             if os.path.exists(postseason_file):
                 with open(postseason_file, 'r') as f:
                     postseason_data = json.load(f)
@@ -815,7 +843,7 @@ def generate_summary(
                         current_series = series
                     elif series['status'] == 'completed':
                         # Get the most recent completed series (highest round order)
-                        round_order = {'Wild Card': 1, 'NLDS': 2, 'NLCS': 3, 'World Series': 4}
+                        round_order = {"Wild Card": 1, "ALDS": 2, "ALCS": 3, "World Series": 4}
                         if (last_completed_series is None or 
                             round_order.get(series['round'], 0) > round_order.get(last_completed_series['round'], 0)):
                             last_completed_series = series
@@ -874,7 +902,7 @@ def generate_summary(
                 # Extract current series info to compare
                 current_series_info = ""
                 try:
-                    postseason_file = "data/postseason/redsox_postseason_series_2025.json"
+                    postseason_file = find_postseason_series_file()
                     if os.path.exists(postseason_file):
                         with open(postseason_file, 'r') as f:
                             postseason_data = json.load(f)
@@ -913,7 +941,15 @@ def generate_summary(
     else:
         # Simple text format (fallback)
         postseason_text = postseason_summary.get('text', '') if isinstance(postseason_summary, dict) else postseason_summary
-        
+
+        if isinstance(postseason_summary, dict) and postseason_summary.get('season_over'):
+            # Off-season: no "last game" or "next game" lines until next season
+            return (
+                f"<span class='highlight'>{config.TEAM_CITY.upper()}</span> <span class='updated'>({current_date})</span> — "
+                f"The {config.TEAM_NAME_SIMPLE} finished the {config.CURRENT_YEAR} regular season at <span class='highlight'>{record}</span>, a <span class='highlight'>{win_pct:.0f}%</span> winning percentage. "
+                f"{postseason_text}"
+            )
+
         # Check if we need to add a period (avoid double punctuation)
         ending_punctuation = "." if not (postseason_text.endswith('.') or postseason_text.endswith('!') or postseason_text.endswith('?')) else ""
         
