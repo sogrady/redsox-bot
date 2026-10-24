@@ -589,6 +589,13 @@
   },
   {
     "date":"2026-08-30",
+    "transaction":"Red Sox activated SS Trevor Story from the 60-day injured list.",
+    "players":[
+      "Trevor Story"
+    ]
+  },
+  {
+    "date":"2026-08-30",
     "transaction":"Red Sox activated LF Roman Anthony from the 60-day injured list.",
     "players":[
       "Roman Anthony"
@@ -596,9 +603,9 @@
   },
   {
     "date":"2026-08-30",
-    "transaction":"Red Sox activated SS Trevor Story from the 60-day injured list.",
+    "transaction":"Red Sox optioned DH Mickey Gasper to Worcester Red Sox.",
     "players":[
-      "Trevor Story"
+      "Mickey Gasper"
     ]
   },
   {
@@ -613,13 +620,6 @@
     "transaction":"Red Sox optioned 2B Anthony Seigler to Worcester Red Sox.",
     "players":[
       "Anthony Seigler"
-    ]
-  },
-  {
-    "date":"2026-08-30",
-    "transaction":"Red Sox optioned DH Mickey Gasper to Worcester Red Sox.",
-    "players":[
-      "Mickey Gasper"
     ]
   },
   {
@@ -680,21 +680,14 @@
   },
   {
     "date":"2026-08-17",
-    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
-    "players":[
-      "Raymond Burgos"
-    ]
-  },
-  {
-    "date":"2026-08-17",
     "transaction":"Red Sox selected the contract of RHP Wyatt Olds from Worcester Red Sox.",
     "players":[
       "Wyatt Olds"
     ]
   },
   {
-    "date":"2026-08-16",
-    "transaction":"Red Sox recalled LHP Raymond Burgos from Worcester Red Sox.",
+    "date":"2026-08-17",
+    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
     "players":[
       "Raymond Burgos"
     ]
@@ -708,9 +701,16 @@
   },
   {
     "date":"2026-08-16",
-    "transaction":"Red Sox placed RHP Justin Slaten on the 15-day injured list retroactive to August 13, 2026. Right elbow inflammation.",
+    "transaction":"Red Sox recalled LHP Raymond Burgos from Worcester Red Sox.",
     "players":[
-      "Justin Slaten"
+      "Raymond Burgos"
+    ]
+  },
+  {
+    "date":"2026-08-16",
+    "transaction":"Red Sox placed DH Masataka Yoshida on the 10-day injured list. Left hamstring strain.",
+    "players":[
+      "Masataka Yoshida"
     ]
   },
   {
@@ -722,9 +722,9 @@
   },
   {
     "date":"2026-08-16",
-    "transaction":"Red Sox placed DH Masataka Yoshida on the 10-day injured list. Left hamstring strain.",
+    "transaction":"Red Sox placed RHP Justin Slaten on the 15-day injured list retroactive to August 13, 2026. Right elbow inflammation.",
     "players":[
-      "Masataka Yoshida"
+      "Justin Slaten"
     ]
   },
   {
@@ -757,16 +757,16 @@
   },
   {
     "date":"2026-08-12",
-    "transaction":"Red Sox designated RHP Seth Martinez for assignment.",
+    "transaction":"Red Sox signed free agent RHP Morgan McSweeney to a minor league contract.",
     "players":[
-      "Seth Martinez"
+      "Morgan McSweeney"
     ]
   },
   {
     "date":"2026-08-12",
-    "transaction":"Red Sox signed free agent RHP Morgan McSweeney to a minor league contract.",
+    "transaction":"Red Sox designated RHP Seth Martinez for assignment.",
     "players":[
-      "Morgan McSweeney"
+      "Seth Martinez"
     ]
   },
   {
@@ -785,16 +785,16 @@
   },
   {
     "date":"2026-08-11",
-    "transaction":"Red Sox activated C Adley Rutschman from the 10-day injured list.",
+    "transaction":"Red Sox designated C Jake Rogers for assignment.",
     "players":[
-      "Adley Rutschman"
+      "Jake Rogers"
     ]
   },
   {
     "date":"2026-08-11",
-    "transaction":"Red Sox designated C Jake Rogers for assignment.",
+    "transaction":"Red Sox activated C Adley Rutschman from the 10-day injured list.",
     "players":[
-      "Jake Rogers"
+      "Adley Rutschman"
     ]
   },
   {
@@ -813,16 +813,16 @@
   },
   {
     "date":"2026-08-09",
-    "transaction":"Red Sox selected the contract of RHP Seth Martinez from Worcester Red Sox.",
+    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
     "players":[
-      "Seth Martinez"
+      "Raymond Burgos"
     ]
   },
   {
     "date":"2026-08-09",
-    "transaction":"Red Sox optioned LHP Raymond Burgos to Worcester Red Sox.",
+    "transaction":"Red Sox selected the contract of RHP Seth Martinez from Worcester Red Sox.",
     "players":[
-      "Raymond Burgos"
+      "Seth Martinez"
     ]
   },
   {
@@ -841,9 +841,9 @@
   },
   {
     "date":"2026-08-07",
-    "transaction":"Los Angeles Angels claimed RHP Ryan Watson off waivers from Red Sox.",
+    "transaction":"Red Sox optioned RHP Greg Weissert to Worcester Red Sox.",
     "players":[
-      "Ryan Watson"
+      "Greg Weissert"
     ]
   },
   {
@@ -855,9 +855,9 @@
   },
   {
     "date":"2026-08-07",
-    "transaction":"Red Sox optioned RHP Greg Weissert to Worcester Red Sox.",
+    "transaction":"Los Angeles Angels claimed RHP Ryan Watson off waivers from Red Sox.",
     "players":[
-      "Greg Weissert"
+      "Ryan Watson"
     ]
   },
   {
@@ -876,16 +876,16 @@
   },
   {
     "date":"2026-08-04",
-    "transaction":"Red Sox activated RF Eli White.",
+    "transaction":"Red Sox designated RHP Ryan Watson for assignment.",
     "players":[
-      "Eli White"
+      "Ryan Watson"
     ]
   },
   {
     "date":"2026-08-04",
-    "transaction":"Red Sox designated RHP Ryan Watson for assignment.",
+    "transaction":"Red Sox activated RF Eli White.",
     "players":[
-      "Ryan Watson"
+      "Eli White"
     ]
   },
   {
@@ -911,10 +911,14 @@
   },
   {
     "date":"2026-08-03",
-    "transaction":"Atlanta Braves traded RF Eli White to Red Sox for RHP Tyler Uberstine.",
+    "transaction":"Baltimore Orioles traded C Adley Rutschman, C Jake Rogers and cash to Red Sox for RHP Kyson Witherspoon, CF Enddy Azocar, C Carlos Narváez, RHP Anthony Eyanson and Player To Be Named Later.",
     "players":[
-      "Eli White",
-      "Tyler Uberstine"
+      "Adley Rutschman",
+      "Jake Rogers",
+      "Kyson Witherspoon",
+      "Enddy Azocar",
+      "Carlos Narváez",
+      "Anthony Eyanson"
     ]
   },
   {
@@ -928,14 +932,10 @@
   },
   {
     "date":"2026-08-03",
-    "transaction":"Baltimore Orioles traded C Adley Rutschman, C Jake Rogers and cash to Red Sox for RHP Kyson Witherspoon, CF Enddy Azocar, C Carlos Narváez, RHP Anthony Eyanson and Player To Be Named Later.",
+    "transaction":"Atlanta Braves traded RF Eli White to Red Sox for RHP Tyler Uberstine.",
     "players":[
-      "Adley Rutschman",
-      "Jake Rogers",
-      "Kyson Witherspoon",
-      "Enddy Azocar",
-      "Carlos Narváez",
-      "Anthony Eyanson"
+      "Eli White",
+      "Tyler Uberstine"
     ]
   },
   {
