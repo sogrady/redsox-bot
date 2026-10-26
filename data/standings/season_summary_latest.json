@@ -170,7 +170,7 @@
     {
         "stat_label":"Last updated",
         "stat":"update_time",
-        "value":"October 25, 2026, 9:14 PM ET",
+        "value":"October 26, 2026, 11:13 AM ET",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
@@ -178,7 +178,7 @@
     {
         "stat_label":"Team summary",
         "stat":"summary",
-        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(October 25)<\/span> \u2014 The Red Sox finished the 2026 regular season at <span class='highlight'>87-75<\/span>, a <span class='highlight'>54%<\/span> winning percentage. Their season ended in the <span class='highlight'>AL Wild Card Series<\/span>, where they fell to the <span class='highlight'>New York Yankees<\/span> 2-0.",
+        "value":"<span class='highlight'>BOSTON<\/span> <span class='updated'>(October 26)<\/span> \u2014 The Red Sox finished the 2026 regular season at <span class='highlight'>87-75<\/span>, a <span class='highlight'>54%<\/span> winning percentage. Their season ended in the <span class='highlight'>AL Wild Card Series<\/span>, where they fell to the <span class='highlight'>New York Yankees<\/span> 2-0.",
         "category":"summary",
         "context_value":"",
         "context_value_label":""
